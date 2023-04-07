@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+.bg {
+    width: 100%;
+    background-color: #526786;
+    height: 100vh;
+}
+.text {
+    position: absolute;
+    right: 150px;
+    bottom: 150px;
+    color: #fff;
+    font-size: 3rem;
+    text-align: right;
+    font-family: "Rubik Mono One", sans-serif;
+}
+.triangle {
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding-bottom: 15%;
+    background: #526786;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+.star_img {
+    margin: 15px auto;
+    display: block;
+    filter: invert(40%) sepia(56%) saturate(301%) hue-rotate(176deg)
+        brightness(84%) contrast(84%);
+}

@@ -1,0 +1,57 @@
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-scroll";
+import { useState, useEffect } from "react";
+import styles from "css/Top.module.css";
+
+const SideDiv = styled.div`
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 17px 20px -20px rgba(0, 0, 0, 1);
+    z-index: 1;
+    // font-family: "Courier Prime", monospace;
+`;
+
+const Side = () => {
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const updateScroll = () => {
+        setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+    };
+    useEffect(() => {
+        window.addEventListener("scroll", updateScroll);
+    });
+    return (
+        <SideDiv
+            className={
+                scrollPosition < 700
+                    ? `${styles.original_header}`
+                    : `${styles.change_header}`
+            }
+        >
+            <Link to="1" spy={true} smooth={true}>
+                About me
+            </Link>
+            <Link to="2" spy={true} smooth={true}>
+                Skills
+            </Link>
+            <Link to="3" spy={true} smooth={true}>
+                JS
+            </Link>
+            <Link to="4" spy={true} smooth={true}>
+                Prize
+            </Link>
+            <Link to="5" spy={true} smooth={true}>
+                Experience
+            </Link>
+        </SideDiv>
+    );
+};
+
+export default Side;

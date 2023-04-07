@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "ClimateCrisisKRVF";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/ClimateCrisisKRVF.woff2")
+        format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Notable&display=swap");
+/*font-family: "Notable", sans-serif;*/
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+/* font-family: 'Rubik Mono One', sans-serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+/* font-family: 'Courier Prime', monospace; */
+
+@font-face {
+    font-family: "TheJamsil5Bold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2")
+        format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
