@@ -15,7 +15,7 @@ const SideDiv = styled.div`
     padding: 10px 0;
     backdrop-filter: blur(5px);
     box-shadow: 0 17px 20px -20px rgba(0, 0, 0, 1);
-    z-index: 1;
+    z-index: 100;
     // font-family: "Courier Prime", monospace;
 `;
 
@@ -35,19 +35,19 @@ const Side = () => {
                     : `${styles.change_header}`
             }
         >
-            <Link to="1" spy={true} smooth={true}>
+            <Link to="1" spy={true} smooth={true} className={styles.link}>
                 About me
             </Link>
-            <Link to="2" spy={true} smooth={true}>
+            <Link to="2" spy={true} smooth={true} className={styles.link}>
                 Skills
             </Link>
-            <Link to="3" spy={true} smooth={true}>
+            <Link to="3" spy={true} smooth={true} className={styles.link}>
                 JS
             </Link>
-            <Link to="4" spy={true} smooth={true}>
-                Prize
+            <Link to="4" spy={true} smooth={true} className={styles.link}>
+                Archiving
             </Link>
-            <Link to="5" spy={true} smooth={true}>
+            <Link to="5" spy={true} smooth={true} className={styles.link}>
                 Experience
             </Link>
         </SideDiv>

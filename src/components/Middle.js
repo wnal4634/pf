@@ -6,17 +6,17 @@ import Fade from "react-reveal/Fade";
 import Introduce from "components/Introduce";
 import Skills from "components/Skills";
 import JsPractice from "components/JsPractice";
-import Prize from "components/Prize";
+import Url from "components/Url";
 import Experience from "components/Experience";
 
 const MiddleDiv = styled.div`
     div {
-        height: 300px;
+        display: flex;
     }
 `;
 
 const IntroBlock = styled.div`
-    margin-bottom: 135px;
+    margin: 100px auto 0;
     @media (max-width: 768px) {
         padding: 25px;
     }
@@ -38,15 +38,31 @@ const IntroBlock = styled.div`
 const Middle = () => {
     return (
         <MiddleDiv>
-            <Introduce />
-            <Skills />
+            <Fade bottom>
+                <IntroBlock>
+                    <Introduce />
+                </IntroBlock>
+            </Fade>
+            <Fade bottom>
+                <IntroBlock>
+                    <Skills />
+                </IntroBlock>
+            </Fade>
             <Fade bottom>
                 <IntroBlock>
                     <JsPractice />
                 </IntroBlock>
             </Fade>
-            <Prize />
-            <Experience />
+            <Fade bottom>
+                <IntroBlock>
+                    <Url />
+                </IntroBlock>
+            </Fade>
+            <Fade bottom>
+                <IntroBlock>
+                    <Experience />
+                </IntroBlock>
+            </Fade>
         </MiddleDiv>
     );
 };

@@ -1,0 +1,20 @@
+.practice_wrap {
+    border: 1px solid black;
+    flex-direction: column;
+}
+.column {
+    flex-direction: column;
+}
+.row_1 {
+    margin-right: 200px;
+}
+.row_2 {
+    margin-left: 200px;
+}
+.row {
+    margin: 20px;
+    flex-direction: row;
+    border: 1px solid black;
+    width: 250px;
+    height: 300px;
+}

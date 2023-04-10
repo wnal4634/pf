@@ -5,14 +5,9 @@ import Middle from "components/Middle";
 import Top from "components/Top";
 import Intro from "components/Intro";
 
-const MainDiv = styled.div`
-    margin: 0;
-`;
+const MainDiv = styled.div``;
 
-const ContentDiv = styled.div`
-    width: 100%;
-    display: flex;
-`;
+const ContentDiv = styled.div``;
 
 const Home = () => {
     return (
