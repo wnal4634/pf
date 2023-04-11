@@ -9,9 +9,11 @@ const Intro = () => {
         <>
             <div className={styles.bg}>
                 <div className={styles.text}>
-                    Towards the Future,
-                    <br />
-                    Make a Record.
+                    <Fade bottom cascade>
+                        Towards the Future
+                        <br />
+                        Make a Record
+                    </Fade>
                 </div>
             </div>
             <div className={styles.triangle}></div>

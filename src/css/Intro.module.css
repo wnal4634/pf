@@ -5,14 +5,15 @@ body {
     width: 100%;
     background-color: #526786;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .text {
-    position: absolute;
-    right: 150px;
-    bottom: 150px;
     color: #fff;
     font-size: 3rem;
-    text-align: right;
+    text-align: center;
+    line-height: 0.5;
     font-family: "Rubik Mono One", sans-serif;
 }
 .triangle {

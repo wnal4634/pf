@@ -17,10 +17,7 @@ const Prize = () => {
                     >
                         Github
                     </button>
-                    설명
-                </div>
-                <div className={styles.column}>
-                    <button>Email</button>설명
+                    제작한 것들의 저장소입니다.
                 </div>
                 <div className={styles.column}>
                     <button
@@ -30,7 +27,7 @@ const Prize = () => {
                     >
                         Blog
                     </button>
-                    설명
+                    공부했던 내용을 정리했습니다.
                 </div>
             </div>
         </div>

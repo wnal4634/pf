@@ -9,11 +9,9 @@ const Intro = () => {
             <div className={styles.intro}>
                 <img src={img1} alt="증명사진" width={150} />
                 <div className={styles.address}>
-                    김주미 / portfolio
+                    김주미 | Portfolio
                     <br />
-                    어쩌구저쩌구 개발자 김주미입니다.
-                    <br />
-                    어쩌구저쩌구
+                    오늘 날씨 대체로 흐림, 김주미입니다.
                 </div>
             </div>
         </div>
