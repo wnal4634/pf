@@ -1,11 +1,35 @@
 .skills_wrap {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     flex-direction: column;
 }
 .row {
     flex-direction: row;
 }
 .column {
+    width: 200px;
     flex-direction: column;
-    border: 1px solid black;
+    border-radius: 30px;
+    padding-bottom: 15px;
+    background-color: #fff;
+    filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.08))
+        drop-shadow(0 1px 10px rgba(0, 0, 0, 0.1))
+        drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08))
+        drop-shadow(0 -1px 3px rgba(0, 0, 0, 0.06));
+    margin: 0 20px;
+}
+.column div {
+    margin: 10px 15px 0;
+}
+.column div:first-child {
+    border-radius: 30px 30px 0 0;
+    background: linear-gradient(320deg, #9486ff, #9fc4ff, #b7f7ff);
+    margin: 0;
+    padding: 12px 0;
+    display: block;
+    text-align: center;
+    font-size: 17px;
+    box-shadow: 0px 0px 10px #fff inset;
+}
+.column svg {
+    margin-right: 10px;
 }

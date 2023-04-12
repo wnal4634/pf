@@ -18,15 +18,13 @@ const Intro = () => {
             </div>
             <div className={styles.triangle}></div>
             <Fade bottom>
-                <Spin duration={1000} damping={0.7} cascade={2}>
-                    <Spin duration={1000} damping={0.3} cascade={1}>
-                        <img
-                            src={star}
-                            width={50}
-                            alt="별_이미지"
-                            className={styles.star_img}
-                        />
-                    </Spin>
+                <Spin duration={1000}>
+                    <img
+                        src={star}
+                        width={50}
+                        alt="별_이미지"
+                        className={styles.star_img}
+                    />
                 </Spin>
             </Fade>
         </>
