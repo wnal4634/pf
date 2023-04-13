@@ -35,19 +35,64 @@ const Side = () => {
                     : `${styles.change_header}`
             }
         >
-            <Link to="1" spy={true} smooth={true} className={styles.link}>
+            <Link
+                to="1"
+                spy={true}
+                smooth={true}
+                className={
+                    scrollPosition < 700
+                        ? `${styles.original_link}`
+                        : `${styles.change_link}`
+                }
+            >
                 About me
             </Link>
-            <Link to="2" spy={true} smooth={true} className={styles.link}>
+            <Link
+                to="2"
+                spy={true}
+                smooth={true}
+                className={
+                    scrollPosition < 700
+                        ? `${styles.original_link}`
+                        : `${styles.change_link}`
+                }
+            >
                 Skills
             </Link>
-            <Link to="3" spy={true} smooth={true} className={styles.link}>
+            <Link
+                to="3"
+                spy={true}
+                smooth={true}
+                className={
+                    scrollPosition < 700
+                        ? `${styles.original_link}`
+                        : `${styles.change_link}`
+                }
+            >
                 JS
             </Link>
-            <Link to="4" spy={true} smooth={true} className={styles.link}>
+            <Link
+                to="4"
+                spy={true}
+                smooth={true}
+                className={
+                    scrollPosition < 700
+                        ? `${styles.original_link}`
+                        : `${styles.change_link}`
+                }
+            >
                 Archiving
             </Link>
-            <Link to="5" spy={true} smooth={true} className={styles.link}>
+            <Link
+                to="5"
+                spy={true}
+                smooth={true}
+                className={
+                    scrollPosition < 700
+                        ? `${styles.original_link}`
+                        : `${styles.change_link}`
+                }
+            >
                 Experience
             </Link>
         </SideDiv>

@@ -22,6 +22,9 @@ const Skills = () => {
             <div className={styles.row}>
                 <Fade bottom>
                     <div className={styles.column}>
+                        <div class={styles.wave} />
+                        <div class={`${styles.wave} ${styles.wave_layer_1}`} />
+                        <div class={`${styles.wave} ${styles.wave_layer_2}`} />
                         <div>Frontend</div>
                         <div>
                             <SiHtml5 size={50} />
@@ -55,6 +58,9 @@ const Skills = () => {
                 </Fade>
                 <Fade bottom duration={1500}>
                     <div className={styles.column}>
+                        <div class={styles.wave} />
+                        <div class={`${styles.wave} ${styles.wave_layer_1}`} />
+                        <div class={`${styles.wave} ${styles.wave_layer_2}`} />
                         <div>Backend</div>
                         <div>
                             <SiFirebase size={50} />
@@ -64,6 +70,9 @@ const Skills = () => {
                 </Fade>
                 <Fade bottom duration={2000}>
                     <div className={styles.column}>
+                        <div class={styles.wave} />
+                        <div class={`${styles.wave} ${styles.wave_layer_1}`} />
+                        <div class={`${styles.wave} ${styles.wave_layer_2}`} />
                         <div>Version Control</div>
                         <div>
                             <SiGit size={50} />
@@ -77,6 +86,9 @@ const Skills = () => {
                 </Fade>
                 <Fade bottom duration={2500}>
                     <div className={styles.column}>
+                        <div class={styles.wave} />
+                        <div class={`${styles.wave} ${styles.wave_layer_2}`} />
+                        <div class={`${styles.wave} ${styles.wave_layer_1}`} />
                         <div>Communication</div>
                         <div>
                             <SiFigma size={50} />
