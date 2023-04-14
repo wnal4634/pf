@@ -20,19 +20,6 @@ const IntroBlock = styled.div`
     @media (max-width: 768px) {
         padding: 25px;
     }
-
-    h1 {
-        margin: 0;
-        font-weight: 300;
-        font-size: 45px;
-        @media (max-width: 768px) {
-            font-size: 30px;
-        }
-    }
-    h3 {
-        font-weight: 200;
-        font-size: 15px;
-    }
 `;
 
 const Middle = () => {

@@ -5,6 +5,10 @@
 .row {
     flex-direction: row;
 }
+/* .column:hover {
+    transition: ease 0.5s;
+    transform: translateY(-50px);
+} */
 .column {
     width: 200px;
     flex-direction: column;

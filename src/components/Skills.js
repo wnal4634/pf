@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "css/Skills.module.css";
 import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
+import styled from "styled-components";
 import {
     SiJavascript,
     SiBootstrap,
@@ -14,6 +16,14 @@ import {
     SiTypescript,
     SiTailwindcss,
 } from "react-icons/si";
+
+// const Button = styled.div`
+//     transition: ease 0.3s;
+//     :hover {
+//         transition: ease 0.3s;
+//         transform: translateY(-20px);
+//     }
+// `;
 
 const Skills = () => {
     return (
