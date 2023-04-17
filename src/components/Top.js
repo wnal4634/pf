@@ -28,22 +28,81 @@ const Side = () => {
         window.addEventListener("scroll", updateScroll);
     });
     return (
-        <SideDiv
-            className={
-                scrollPosition < 700
-                    ? `${styles.original_header}`
-                    : `${styles.change_header}`
-            }
-        >
+        // <SideDiv
+        //     className={
+        //         scrollPosition < 285
+        //             ? `${styles.original_header}`
+        //             : `${styles.change_header}`
+        //     }
+        // >
+        //     <Link
+        //         to="1"
+        //         spy={true}
+        //         smooth={true}
+        //         className={
+        //             scrollPosition < 700
+        //                 ? `${styles.original_link}`
+        //                 : `${styles.change_link}`
+        //         }
+        //     >
+        //         About me
+        //     </Link>
+        //     <Link
+        //         to="2"
+        //         spy={true}
+        //         smooth={true}
+        //         className={
+        //             scrollPosition < 700
+        //                 ? `${styles.original_link}`
+        //                 : `${styles.change_link}`
+        //         }
+        //     >
+        //         Skills
+        //     </Link>
+        //     <Link
+        //         to="3"
+        //         spy={true}
+        //         smooth={true}
+        //         className={
+        //             scrollPosition < 700
+        //                 ? `${styles.original_link}`
+        //                 : `${styles.change_link}`
+        //         }
+        //     >
+        //         JS
+        //     </Link>
+        //     <Link
+        //         to="4"
+        //         spy={true}
+        //         smooth={true}
+        //         className={
+        //             scrollPosition < 700
+        //                 ? `${styles.original_link}`
+        //                 : `${styles.change_link}`
+        //         }
+        //     >
+        //         Archiving
+        //     </Link>
+        //     <Link
+        //         to="5"
+        //         spy={true}
+        //         smooth={true}
+        //         className={
+        //             scrollPosition < 700
+        //                 ? `${styles.original_link}`
+        //                 : `${styles.change_link}`
+        //         }
+        //     >
+        //         Experience
+        //     </Link>
+        // </SideDiv>
+
+        <SideDiv className={styles.original_header}>
             <Link
                 to="1"
                 spy={true}
                 smooth={true}
-                className={
-                    scrollPosition < 700
-                        ? `${styles.original_link}`
-                        : `${styles.change_link}`
-                }
+                className={styles.change_link}
             >
                 About me
             </Link>
@@ -51,11 +110,7 @@ const Side = () => {
                 to="2"
                 spy={true}
                 smooth={true}
-                className={
-                    scrollPosition < 700
-                        ? `${styles.original_link}`
-                        : `${styles.change_link}`
-                }
+                className={styles.change_link}
             >
                 Skills
             </Link>
@@ -63,11 +118,7 @@ const Side = () => {
                 to="3"
                 spy={true}
                 smooth={true}
-                className={
-                    scrollPosition < 700
-                        ? `${styles.original_link}`
-                        : `${styles.change_link}`
-                }
+                className={styles.change_link}
             >
                 JS
             </Link>
@@ -75,11 +126,7 @@ const Side = () => {
                 to="4"
                 spy={true}
                 smooth={true}
-                className={
-                    scrollPosition < 700
-                        ? `${styles.original_link}`
-                        : `${styles.change_link}`
-                }
+                className={styles.change_link}
             >
                 Archiving
             </Link>
@@ -87,11 +134,7 @@ const Side = () => {
                 to="5"
                 spy={true}
                 smooth={true}
-                className={
-                    scrollPosition < 700
-                        ? `${styles.original_link}`
-                        : `${styles.change_link}`
-                }
+                className={styles.change_link}
             >
                 Experience
             </Link>

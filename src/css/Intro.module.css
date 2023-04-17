@@ -1,34 +1,28 @@
-body {
-    margin: 0;
-}
-.bg {
+.intro_wrap {
     width: 100%;
-    background-color: #526786;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.bg {
+    width: 500px;
+    background-color: #000;
+    height: 200px;
+}
 .text {
-    color: #fff;
-    font-size: 3rem;
+    position: absolute;
+    color: #000;
+    -webkit-text-stroke: 1px #fff;
+    line-height: 0.8;
+    font-size: 3.5rem;
     text-align: center;
-    line-height: 0.5;
     font-family: "Rubik Mono One", sans-serif;
 }
-.triangle {
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding-bottom: 15%;
-    background: #526786;
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-}
 
-.star_img {
+/* .star_img {
     margin: 15px auto;
     display: block;
     filter: invert(40%) sepia(56%) saturate(301%) hue-rotate(176deg)
         brightness(84%) contrast(84%);
-}
+} */

@@ -36,8 +36,8 @@
     text-align: center;
     font-size: 17px;
     z-index: 1;
-    color: #fff;
-    text-shadow: -3px 1px 5px rgba(255, 255, 255, 0.6);
+    color: #000;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
 .column svg {
     margin-right: 10px;
@@ -50,18 +50,19 @@
     left: -160px;
     border-radius: 43%;
     animation: drift 5s infinite linear;
-    background: linear-gradient(320deg, #9486ff, #9fc4ff, #b7f7ff);
+    /* background: linear-gradient(320deg, #9486ff, #9fc4ff, #b7f7ff); */
+    background: #cccccc;
     opacity: 0.5;
     /* 뒤 물결 */
 }
 .wave_layer_1 {
     animation: drift 8s infinite linear;
-    background: linear-gradient(320deg, #9486ff, #9fc4ff, #b7f7ff);
+    background: #fff;
     /* 가운데 물결 */
 }
 .wave_layer_2 {
     animation: drift 11s infinite linear;
-    background: linear-gradient(320deg, #9486ff, #9fc4ff, #b7f7ff);
+    background: #e2e2e2;
     /* 앞 물결 */
 }
 @keyframes drift {

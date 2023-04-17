@@ -1,5 +1,6 @@
 body {
     overflow-y: overlay; /* 반드시 overlay 처리 */
+    margin: 0;
 }
 
 ::-webkit-scrollbar-button:vertical:start:decrement {
