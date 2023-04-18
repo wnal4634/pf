@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import { useState, useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import styles from "css/Top.module.css";
 
 const SideDiv = styled.div`
@@ -14,129 +15,66 @@ const SideDiv = styled.div`
     align-items: center;
     padding: 10px 0;
     backdrop-filter: blur(5px);
-    box-shadow: 0 17px 20px -20px rgba(0, 0, 0, 0.7);
+    // box-shadow: 0 17px 10px -20px rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid #d6d6d6;
     z-index: 100;
     font-family: "Courier Prime", monospace;
 `;
 
 const Side = () => {
-    const [scrollPosition, setScrollPosition] = useState(0);
-    const updateScroll = () => {
-        setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-    };
+    const appearLink_1 = useRef();
+    const appearLink_2 = useRef();
+    const appearLink_3 = useRef();
+    const appearLink_4 = useRef();
+    const appearLink_5 = useRef();
     useEffect(() => {
-        window.addEventListener("scroll", updateScroll);
-    });
+        gsap.from(appearLink_1.current, {
+            x: -20,
+            opacity: 0,
+            duration: 1,
+            delay: 2,
+        });
+        gsap.from(appearLink_2.current, {
+            x: -20,
+            opacity: 0,
+            duration: 1,
+            delay: 2.5,
+        });
+        gsap.from(appearLink_3.current, {
+            x: -20,
+            opacity: 0,
+            duration: 1,
+            delay: 3,
+        });
+        gsap.from(appearLink_4.current, {
+            x: -20,
+            opacity: 0,
+            duration: 1,
+            delay: 3.5,
+        });
+        gsap.from(appearLink_5.current, {
+            x: -20,
+            opacity: 0,
+            duration: 1,
+            delay: 4,
+        });
+    }, []);
     return (
-        // <SideDiv
-        //     className={
-        //         scrollPosition < 285
-        //             ? `${styles.original_header}`
-        //             : `${styles.change_header}`
-        //     }
-        // >
-        //     <Link
-        //         to="1"
-        //         spy={true}
-        //         smooth={true}
-        //         className={
-        //             scrollPosition < 700
-        //                 ? `${styles.original_link}`
-        //                 : `${styles.change_link}`
-        //         }
-        //     >
-        //         About me
-        //     </Link>
-        //     <Link
-        //         to="2"
-        //         spy={true}
-        //         smooth={true}
-        //         className={
-        //             scrollPosition < 700
-        //                 ? `${styles.original_link}`
-        //                 : `${styles.change_link}`
-        //         }
-        //     >
-        //         Skills
-        //     </Link>
-        //     <Link
-        //         to="3"
-        //         spy={true}
-        //         smooth={true}
-        //         className={
-        //             scrollPosition < 700
-        //                 ? `${styles.original_link}`
-        //                 : `${styles.change_link}`
-        //         }
-        //     >
-        //         JS
-        //     </Link>
-        //     <Link
-        //         to="4"
-        //         spy={true}
-        //         smooth={true}
-        //         className={
-        //             scrollPosition < 700
-        //                 ? `${styles.original_link}`
-        //                 : `${styles.change_link}`
-        //         }
-        //     >
-        //         Archiving
-        //     </Link>
-        //     <Link
-        //         to="5"
-        //         spy={true}
-        //         smooth={true}
-        //         className={
-        //             scrollPosition < 700
-        //                 ? `${styles.original_link}`
-        //                 : `${styles.change_link}`
-        //         }
-        //     >
-        //         Experience
-        //     </Link>
-        // </SideDiv>
-
-        <SideDiv className={styles.original_header}>
-            <Link
-                to="1"
-                spy={true}
-                smooth={true}
-                className={styles.change_link}
-            >
-                About me
+        <SideDiv className={styles.header}>
+            <Link to="1" spy={true} smooth={true} className={styles.link}>
+                <div ref={appearLink_1}>About me</div>
             </Link>
-            <Link
-                to="2"
-                spy={true}
-                smooth={true}
-                className={styles.change_link}
-            >
-                Skills
+            <Link to="2" spy={true} smooth={true} className={styles.link}>
+                <div ref={appearLink_2}>Skills</div>
             </Link>
-            <Link
-                to="3"
-                spy={true}
-                smooth={true}
-                className={styles.change_link}
-            >
-                JS
+            <Link to="3" spy={true} smooth={true} className={styles.link}>
+                <div ref={appearLink_3}>JS</div>
             </Link>
-            <Link
-                to="4"
-                spy={true}
-                smooth={true}
-                className={styles.change_link}
-            >
-                Archiving
+            <Link to="4" spy={true} smooth={true} className={styles.link}>
+                <div ref={appearLink_4}>Archiving</div>
             </Link>
-            <Link
-                to="5"
-                spy={true}
-                smooth={true}
-                className={styles.change_link}
-            >
-                Experience
+            <Link to="5" spy={true} smooth={true} className={styles.link}>
+                <div ref={appearLink_5}>Experience</div>
             </Link>
         </SideDiv>
     );
