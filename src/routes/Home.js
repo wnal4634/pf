@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Timeline, Tween } from "react-gsap";
+import React from "react";
 import styled from "styled-components";
 import Middle from "components/Middle";
 import Top from "components/Top";

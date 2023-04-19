@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styles from "css/Intro.module.css";
 import { gsap } from "gsap";
-import { useRef, useEffect } from "react";
 
 const Intro = () => {
     const appearBox = useRef();
@@ -49,16 +48,6 @@ const Intro = () => {
                 <div ref={appearText_1}>Towards the Future</div>
                 <div ref={appearText_2}>Make a Record</div>
             </div>
-            {/* <Fade bottom>
-                <Spin duration={1000}>
-                    <img
-                        src={star}
-                        width={50}
-                        alt="별_이미지"
-                        className={styles.star_img}
-                    />
-                </Spin>
-            </Fade> */}
         </div>
     );
 };

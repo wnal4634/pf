@@ -30,11 +30,9 @@ const Middle = () => {
                     <Introduce />
                 </IntroBlock>
             </Fade>
-            <Fade bottom>
-                <IntroBlock>
-                    <Skills />
-                </IntroBlock>
-            </Fade>
+            <IntroBlock>
+                <Skills />
+            </IntroBlock>
             <Fade bottom>
                 <IntroBlock>
                     <JsPractice />
