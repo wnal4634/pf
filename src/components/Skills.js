@@ -14,7 +14,7 @@ import {
     SiGithub,
     SiFigma,
     SiTypescript,
-    SiTailwindcss,
+    SiFlutter,
 } from "react-icons/si";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -38,65 +38,70 @@ const Skills = () => {
         <div id="2" className={styles.skills_wrap}>
             <h2>skills</h2>
             <div className={styles.row}>
-                <div className={styles.column}>
-                    <div>Frontend</div>
-                    <div>
-                        <SiHtml5 size={50} />
-                        HTML
+                <Fade bottom>
+                    <div className={styles.column}>
+                        <div>Frontend</div>
+                        <div>
+                            <SiHtml5 size={50} />
+                            HTML
+                        </div>
+                        <div>
+                            <SiCss3 size={50} />
+                            CSS
+                        </div>
+                        <div>
+                            <SiJavascript size={50} />
+                            JS
+                        </div>
+                        <div>
+                            <SiReact size={50} />
+                            React
+                        </div>
+                        <div>
+                            <SiBootstrap size={50} />
+                            Bootstrap
+                        </div>
+                        {/* <div>
+                            <SiTypescript size={50} />
+                            ts
+                        </div> */}
+                        <div>
+                            <SiFlutter size={50} />
+                            Flutter
+                        </div>
                     </div>
-                    <div>
-                        <SiCss3 size={50} />
-                        CSS
+                </Fade>
+                <Fade bottom duration={1500}>
+                    <div className={styles.column}>
+                        <div>Backend</div>
+                        <div>
+                            <SiFirebase size={50} />
+                            Firebase
+                        </div>
                     </div>
-                    <div>
-                        <SiJavascript size={50} />
-                        JS
+                </Fade>
+                <Fade bottom duration={2000}>
+                    <div className={styles.column}>
+                        <div>Version Control</div>
+                        <div>
+                            <SiGithub size={50} />
+                            Github
+                        </div>
+                        <div>
+                            <SiGit size={50} />
+                            Git
+                        </div>
                     </div>
-                    <div>
-                        <SiReact size={50} />
-                        React
+                </Fade>
+                <Fade bottom duration={2500}>
+                    <div className={styles.column}>
+                        <div>Communication</div>
+                        <div>
+                            <SiFigma size={50} />
+                            Figma
+                        </div>
                     </div>
-                    <div>
-                        <SiBootstrap size={50} />
-                        Bootstrap
-                    </div>
-                    <div>
-                        <SiTypescript size={50} />
-                        ts
-                    </div>
-                    <div>
-                        <SiTailwindcss size={50} />
-                        tailwind css
-                    </div>
-                </div>
-                <div className={styles.column}>
-                    {/* <div class={styles.wave} />
-                    <div class={`${styles.wave} ${styles.wave_layer_1}`} />
-                    <div class={`${styles.wave} ${styles.wave_layer_2}`} /> */}
-                    <div>Backend</div>
-                    <div>
-                        <SiFirebase size={50} />
-                        Firebase
-                    </div>
-                </div>
-                <div className={styles.column}>
-                    <div>Version Control</div>
-                    <div>
-                        <SiGit size={50} />
-                        Git
-                    </div>
-                    <div>
-                        <SiGithub size={50} />
-                        Github
-                    </div>
-                </div>
-                <div className={styles.column}>
-                    <div>Communication</div>
-                    <div>
-                        <SiFigma size={50} />
-                        Figma
-                    </div>
-                </div>
+                </Fade>
             </div>
         </div>
     );

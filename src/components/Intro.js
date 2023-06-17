@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import styles from "css/Intro.module.css";
 import { gsap } from "gsap";
+import Svg from "components/Svg.js";
 
 const Intro = () => {
     const appearBox = useRef();
@@ -43,6 +44,7 @@ const Intro = () => {
     }, []);
     return (
         <div className={styles.intro_wrap}>
+            <Svg />
             <div className={styles.bg} ref={appearBox} />
             <div className={styles.text}>
                 <div ref={appearText_1}>Towards the Future</div>

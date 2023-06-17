@@ -7,15 +7,18 @@
 }
 .bg {
     width: 500px;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0);
     height: 200px;
 }
 .text {
+    font-style: italic;
     position: absolute;
     color: #000;
-    -webkit-text-stroke: 1px #fff;
+    /* -webkit-text-stroke: 1px #fff; */
     line-height: 0.9;
     font-size: 3.5rem;
     text-align: center;
     font-family: "Rubik Mono One", sans-serif;
+    -webkit-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
 }

@@ -2,40 +2,27 @@
     border: 1px solid black;
     flex-direction: column;
 }
+.column {
+    flex-direction: column;
+}
+.row_1 {
+    margin-right: 200px;
+}
+.row_2 {
+    margin-left: 200px;
+}
 .row {
     margin: 20px;
+    flex-direction: row;
     border: 1px solid black;
     border-radius: 30px;
     width: 250px;
     height: 300px;
 }
-.swiper {
-    width: 100%;
-    --swiper-theme-color: #000;
-    --swiper-navigation-size: 30px;
+.row button {
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+    width: fit-content;
+    height: fit-content;
 }
-.swiper_slide {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.practice_wrap .swiper .swiper_slide .swiper-pagination {
-    justify-content: center;
-    align-items: center;
-}
-
-/* .ExampleComponent
-  .main-wrap
-  .swiper-container
-  .swiper-pagination
-  .swiper-pagination-bullet {
-  width: 22px;
-  height: 22px;
-  background-color: white;
-  margin: 0;
-  margin-right: 25px;
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.16);
-  bottom: 15px;
-  margin-top: 53px;
-} */

@@ -42,31 +42,3 @@
 .column svg {
     margin-right: 10px;
 }
-.wave {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    top: -90%;
-    left: -160px;
-    border-radius: 43%;
-    animation: drift 5s infinite linear;
-    /* background: linear-gradient(320deg, #9486ff, #9fc4ff, #b7f7ff); */
-    background: #cccccc;
-    opacity: 0.5;
-    /* 뒤 물결 */
-}
-.wave_layer_1 {
-    animation: drift 8s infinite linear;
-    background: #fff;
-    /* 가운데 물결 */
-}
-.wave_layer_2 {
-    animation: drift 11s infinite linear;
-    background: #e2e2e2;
-    /* 앞 물결 */
-}
-@keyframes drift {
-    100% {
-        transform: rotate(-360deg);
-    }
-}
