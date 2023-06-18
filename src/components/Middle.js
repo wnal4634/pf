@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { useMediaQuery } from "react-responsive";
 import styles from "css/Middle.module.css";
 import Fade from "react-reveal/Fade";
 import Introduce from "components/Introduce";

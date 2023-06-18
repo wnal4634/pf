@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import styles from "css/Top.module.css";
+import { Mobile, Tablet, PC } from "components/Responsive";
 
 const SideDiv = styled.div`
     width: 100%;
@@ -22,6 +23,7 @@ const SideDiv = styled.div`
 `;
 
 const Side = () => {
+    const [isToggled, setIsToggled] = useState(false);
     const appearLink_1 = useRef();
     const appearLink_2 = useRef();
     const appearLink_3 = useRef();
@@ -59,24 +61,158 @@ const Side = () => {
             delay: 4,
         });
     }, []);
+
     return (
-        <SideDiv className={styles.header}>
-            <Link to="1" spy={true} smooth={true} className={styles.link}>
-                <div ref={appearLink_1}>About me</div>
-            </Link>
-            <Link to="2" spy={true} smooth={true} className={styles.link}>
-                <div ref={appearLink_2}>Skills</div>
-            </Link>
-            <Link to="3" spy={true} smooth={true} className={styles.link}>
-                <div ref={appearLink_3}>JS</div>
-            </Link>
-            <Link to="4" spy={true} smooth={true} className={styles.link}>
-                <div ref={appearLink_4}>Archiving</div>
-            </Link>
-            <Link to="5" spy={true} smooth={true} className={styles.link}>
-                <div ref={appearLink_5}>Experience</div>
-            </Link>
-        </SideDiv>
+        <>
+            <PC>
+                <SideDiv className={styles.header}>
+                    <Link
+                        to="1"
+                        spy={true}
+                        smooth={true}
+                        className={styles.link}
+                    >
+                        <div ref={appearLink_1}>About me</div>
+                    </Link>
+                    <Link
+                        to="2"
+                        spy={true}
+                        smooth={true}
+                        className={styles.link}
+                    >
+                        <div ref={appearLink_2}>Skills</div>
+                    </Link>
+                    <Link
+                        to="3"
+                        spy={true}
+                        smooth={true}
+                        className={styles.link}
+                    >
+                        <div ref={appearLink_3}>JS</div>
+                    </Link>
+                    <Link
+                        to="4"
+                        spy={true}
+                        smooth={true}
+                        className={styles.link}
+                    >
+                        <div ref={appearLink_4}>Archiving</div>
+                    </Link>
+                    <Link
+                        to="5"
+                        spy={true}
+                        smooth={true}
+                        className={styles.link}
+                    >
+                        <div ref={appearLink_5}>Experience</div>
+                    </Link>
+                </SideDiv>
+            </PC>
+            <Tablet>
+                <SideDiv className={styles.header}>
+                    <Link
+                        to="1"
+                        spy={true}
+                        smooth={true}
+                        className={styles.link}
+                    >
+                        <div ref={appearLink_1}>About me</div>
+                    </Link>
+                    <Link
+                        to="2"
+                        spy={true}
+                        smooth={true}
+                        className={styles.link}
+                    >
+                        <div ref={appearLink_2}>Skills</div>
+                    </Link>
+                    <Link
+                        to="3"
+                        spy={true}
+                        smooth={true}
+                        className={styles.link}
+                    >
+                        <div ref={appearLink_3}>JS</div>
+                    </Link>
+                    <Link
+                        to="4"
+                        spy={true}
+                        smooth={true}
+                        className={styles.link}
+                    >
+                        <div ref={appearLink_4}>Archiving</div>
+                    </Link>
+                    <Link
+                        to="5"
+                        spy={true}
+                        smooth={true}
+                        className={styles.link}
+                    >
+                        <div ref={appearLink_5}>Experience</div>
+                    </Link>
+                </SideDiv>
+            </Tablet>
+            <Mobile>
+                <SideDiv className={styles.header}>
+                    {isToggled ? (
+                        <ul>
+                            <li>
+                                <Link
+                                    to="1"
+                                    spy={true}
+                                    smooth={true}
+                                    className={styles.link}
+                                >
+                                    About me
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="2"
+                                    spy={true}
+                                    smooth={true}
+                                    className={styles.link}
+                                >
+                                    Skills
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="3"
+                                    spy={true}
+                                    smooth={true}
+                                    className={styles.link}
+                                >
+                                    JS
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="4"
+                                    spy={true}
+                                    smooth={true}
+                                    className={styles.link}
+                                >
+                                    Archiving
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="5"
+                                    spy={true}
+                                    smooth={true}
+                                    className={styles.link}
+                                >
+                                    Experience
+                                </Link>
+                            </li>
+                        </ul>
+                    ) : (
+                        <div></div>
+                    )}
+                </SideDiv>
+            </Mobile>
+        </>
     );
 };
 
