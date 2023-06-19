@@ -11,7 +11,7 @@ const ModalStyle = {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: "rgba(0, 0, 0, 0.3)",
+        backgroundColor: "rgba(0, 0, 0, 0.1)",
     },
     content: {
         position: "absolute",
@@ -45,6 +45,7 @@ const JsPractice = () => {
                                 alt="앱사진"
                                 onClick={() => setModalIsOpen(true)}
                             />
+                            <div className={styles.click}>Click !</div>
                             <Modal
                                 isOpen={modalIsOpen}
                                 onRequestClose={() => setModalIsOpen(false)}
@@ -63,37 +64,55 @@ const JsPractice = () => {
                     </Fade>
                     <Fade bottom duration={1500}>
                         <div className={styles.row}>
-                            <button
-                                onClick={() => {
-                                    window.open(jsUrl_1);
-                                }}
+                            <img
+                                src={img1}
+                                alt="앱사진"
+                                onClick={() => setModalIsOpen(true)}
+                            />
+                            <div className={styles.click}>Click !</div>
+                            <Modal
+                                isOpen={modalIsOpen}
+                                onRequestClose={() => setModalIsOpen(false)}
+                                style={ModalStyle}
                             >
-                                Blog
-                            </button>
+                                This is Modal content
+                            </Modal>
                         </div>
                     </Fade>
                 </div>
                 <div className={styles.row_2}>
                     <Fade bottom duration={1500}>
                         <div className={styles.row}>
-                            <button
-                                onClick={() => {
-                                    window.open(jsUrl_1);
-                                }}
+                            <img
+                                src={img1}
+                                alt="앱사진"
+                                onClick={() => setModalIsOpen(true)}
+                            />
+                            <div className={styles.click}>Click !</div>
+                            <Modal
+                                isOpen={modalIsOpen}
+                                onRequestClose={() => setModalIsOpen(false)}
+                                style={ModalStyle}
                             >
-                                Blog
-                            </button>
+                                This is Modal content
+                            </Modal>
                         </div>
                     </Fade>
                     <Fade bottom duration={2000}>
                         <div className={styles.row}>
-                            <button
-                                onClick={() => {
-                                    window.open(jsUrl_1);
-                                }}
+                            <img
+                                src={img1}
+                                alt="앱사진"
+                                onClick={() => setModalIsOpen(true)}
+                            />
+                            <div className={styles.click}>Click !</div>
+                            <Modal
+                                isOpen={modalIsOpen}
+                                onRequestClose={() => setModalIsOpen(false)}
+                                style={ModalStyle}
                             >
-                                Blog
-                            </button>
+                                This is Modal content
+                            </Modal>
                         </div>
                     </Fade>
                 </div>

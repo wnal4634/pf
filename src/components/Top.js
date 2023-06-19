@@ -90,16 +90,16 @@ const Side = () => {
                     >
                         <div ref={appearLink_3}>JS</div>
                     </Link>
-                    <Link
+                    {/* <Link
                         to="4"
                         spy={true}
                         smooth={true}
                         className={styles.link}
                     >
                         <div ref={appearLink_4}>Archiving</div>
-                    </Link>
+                    </Link> */}
                     <Link
-                        to="5"
+                        to="4"
                         spy={true}
                         smooth={true}
                         className={styles.link}
@@ -134,16 +134,16 @@ const Side = () => {
                     >
                         <div ref={appearLink_3}>JS</div>
                     </Link>
-                    <Link
+                    {/* <Link
                         to="4"
                         spy={true}
                         smooth={true}
                         className={styles.link}
                     >
                         <div ref={appearLink_4}>Archiving</div>
-                    </Link>
+                    </Link> */}
                     <Link
-                        to="5"
+                        to="4"
                         spy={true}
                         smooth={true}
                         className={styles.link}
@@ -186,7 +186,7 @@ const Side = () => {
                                     JS
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link
                                     to="4"
                                     spy={true}
@@ -195,10 +195,10 @@ const Side = () => {
                                 >
                                     Archiving
                                 </Link>
-                            </li>
+                            </li> */}
                             <li>
                                 <Link
-                                    to="5"
+                                    to="4"
                                     spy={true}
                                     smooth={true}
                                     className={styles.link}

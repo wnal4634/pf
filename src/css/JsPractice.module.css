@@ -1,6 +1,7 @@
 .practice_wrap {
     border: 1px solid black;
     flex-direction: column;
+    padding-top: 30px;
 }
 .column {
     flex-direction: column;
@@ -16,8 +17,8 @@
     flex-direction: row;
     border: 1px solid rgb(179, 179, 179);
     border-radius: 30px;
-    width: 400px;
-    height: 300px;
+    width: 350px;
+    height: 250px;
     overflow: hidden;
     -webkit-box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
     -moz-box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
@@ -39,4 +40,12 @@
     width: 100%;
     object-fit: cover;
     transition: 0.3s;
+}
+.click {
+    position: absolute;
+    color: white;
+    left: 25px;
+    bottom: 20px;
+    font-family: "Rubik Mono One", sans-serif;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }

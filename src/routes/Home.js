@@ -7,14 +7,17 @@ import { Mobile, PC, Tablet } from "components/Responsive";
 
 const MainDiv = styled.div``;
 
-const ContentDiv = styled.div``;
+const ContentDiv = styled.div`
+    div {
+    }
+`;
 
 const Home = () => {
     return (
         <MainDiv>
+            <Top />
             <Intro />
             <ContentDiv>
-                <Top />
                 <Middle />
             </ContentDiv>
         </MainDiv>

@@ -69,6 +69,7 @@ const Skills = () => {
                             <SiFlutter size={50} />
                             Flutter
                         </div>
+                        node js
                     </div>
                 </Fade>
                 <Fade bottom duration={1500}>

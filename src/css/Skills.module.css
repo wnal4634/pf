@@ -1,6 +1,7 @@
 .skills_wrap {
     /* border: 1px solid black; */
     flex-direction: column;
+    padding-top: 30px;
 }
 .row {
     flex-direction: row;
@@ -24,6 +25,7 @@
         drop-shadow(0 -1px 3px rgba(0, 0, 0, 0.06)); */
     margin: 0 20px;
     overflow: hidden;
+    font-family: "Pretendard-Regular";
 }
 .column div {
     margin: 10px 15px 0;

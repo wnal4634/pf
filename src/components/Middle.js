@@ -5,7 +5,6 @@ import Fade from "react-reveal/Fade";
 import Introduce from "components/Introduce";
 import Skills from "components/Skills";
 import JsPractice from "components/JsPractice";
-import Url from "components/Url";
 import Experience from "components/Experience";
 
 const MiddleDiv = styled.div`
@@ -39,11 +38,11 @@ const Middle = () => {
                     <JsPractice />
                 </IntroBlock>
             </Fade>
-            <Fade bottom>
+            {/* <Fade bottom>
                 <IntroBlock>
                     <Url />
                 </IntroBlock>
-            </Fade>
+            </Fade> */}
             <Fade bottom>
                 <IntroBlock>
                     <Experience />
