@@ -20,23 +20,23 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
-    useEffect(() => {
-        gsap.from(`.${styles.column}`, {
-            scrollTrigger: {
-                trigger: `.${styles.column}`,
-                start: "0% 30%", //시작 지점
-                end: "100% 80%", //끝 지점
-                // end: "+=500"//시작 부분부터 500px까지 스크롤 한 후종료
-                scrub: 1, //부드러운 스크러빙
-                markers: true, //개발가이드선
-            },
-            y: 20,
-            opacity: 0,
-        });
-    }, []);
+    // useEffect(() => {
+    //     gsap.from(`.${styles.column}`, {
+    //         scrollTrigger: {
+    //             trigger: `.${styles.column}`,
+    //             start: "0% 30%", //시작 지점
+    //             end: "100% 80%", //끝 지점
+    //             // end: "+=500"//시작 부분부터 500px까지 스크롤 한 후종료
+    //             scrub: 1, //부드러운 스크러빙
+    //             markers: true, //개발가이드선
+    //         },
+    //         y: 20,
+    //         opacity: 0,
+    //     });
+    // }, []);
     return (
         <div id="2" className={styles.skills_wrap}>
-            <h2>skills</h2>
+            <h2>🔧 skills</h2>
             <div className={styles.row}>
                 <Fade bottom>
                     <div className={styles.column}>

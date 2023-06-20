@@ -5,6 +5,9 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import styles from "css/Top.module.css";
 import { Mobile, Tablet, PC } from "components/Responsive";
+import j_icon from "img/j_icon.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const SideDiv = styled.div`
     width: 100%;
@@ -12,7 +15,7 @@ const SideDiv = styled.div`
     left: 0;
     position: fixed;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 0;
     backdrop-filter: blur(5px);
@@ -66,31 +69,35 @@ const Side = () => {
         <>
             <PC>
                 <SideDiv className={styles.header}>
-                    <Link
-                        to="1"
-                        spy={true}
-                        smooth={true}
-                        className={styles.link}
-                    >
-                        <div ref={appearLink_1}>About me</div>
-                    </Link>
-                    <Link
-                        to="2"
-                        spy={true}
-                        smooth={true}
-                        className={styles.link}
-                    >
-                        <div ref={appearLink_2}>Skills</div>
-                    </Link>
-                    <Link
-                        to="3"
-                        spy={true}
-                        smooth={true}
-                        className={styles.link}
-                    >
-                        <div ref={appearLink_3}>JS</div>
-                    </Link>
-                    {/* <Link
+                    <div className={styles.initial}>
+                        <img src={j_icon} width={25} />
+                    </div>
+                    <div className={styles.nav}>
+                        <Link
+                            to="1"
+                            spy={true}
+                            smooth={true}
+                            className={styles.link}
+                        >
+                            <div ref={appearLink_1}>About me</div>
+                        </Link>
+                        <Link
+                            to="2"
+                            spy={true}
+                            smooth={true}
+                            className={styles.link}
+                        >
+                            <div ref={appearLink_2}>Skills</div>
+                        </Link>
+                        <Link
+                            to="3"
+                            spy={true}
+                            smooth={true}
+                            className={styles.link}
+                        >
+                            <div ref={appearLink_3}>JS</div>
+                        </Link>
+                        {/* <Link
                         to="4"
                         spy={true}
                         smooth={true}
@@ -98,95 +105,59 @@ const Side = () => {
                     >
                         <div ref={appearLink_4}>Archiving</div>
                     </Link> */}
-                    <Link
-                        to="4"
-                        spy={true}
-                        smooth={true}
-                        className={styles.link}
-                    >
-                        <div ref={appearLink_5}>Experience</div>
-                    </Link>
+                        <Link
+                            to="4"
+                            spy={true}
+                            smooth={true}
+                            className={styles.link}
+                        >
+                            <div ref={appearLink_5}>Experience</div>
+                        </Link>
+                    </div>
                 </SideDiv>
             </PC>
             <Tablet>
                 <SideDiv className={styles.header}>
-                    <Link
-                        to="1"
-                        spy={true}
-                        smooth={true}
-                        className={styles.link}
-                    >
-                        <div ref={appearLink_1}>About me</div>
-                    </Link>
-                    <Link
-                        to="2"
-                        spy={true}
-                        smooth={true}
-                        className={styles.link}
-                    >
-                        <div ref={appearLink_2}>Skills</div>
-                    </Link>
-                    <Link
-                        to="3"
-                        spy={true}
-                        smooth={true}
-                        className={styles.link}
-                    >
-                        <div ref={appearLink_3}>JS</div>
-                    </Link>
-                    {/* <Link
-                        to="4"
-                        spy={true}
-                        smooth={true}
-                        className={styles.link}
-                    >
-                        <div ref={appearLink_4}>Archiving</div>
-                    </Link> */}
-                    <Link
-                        to="4"
-                        spy={true}
-                        smooth={true}
-                        className={styles.link}
-                    >
-                        <div ref={appearLink_5}>Experience</div>
-                    </Link>
-                </SideDiv>
-            </Tablet>
-            <Mobile>
-                <SideDiv className={styles.header}>
                     {isToggled ? (
-                        <ul>
-                            <li>
-                                <Link
-                                    to="1"
-                                    spy={true}
-                                    smooth={true}
-                                    className={styles.link}
-                                >
-                                    About me
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    to="2"
-                                    spy={true}
-                                    smooth={true}
-                                    className={styles.link}
-                                >
-                                    Skills
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    to="3"
-                                    spy={true}
-                                    smooth={true}
-                                    className={styles.link}
-                                >
-                                    JS
-                                </Link>
-                            </li>
-                            {/* <li>
+                        <div>
+                            <FontAwesomeIcon
+                                icon={faXmark}
+                                onClick={() => {
+                                    setIsToggled(!isToggled);
+                                }}
+                            />
+                            <ul className={styles.toggle_menu}>
+                                <li className={styles.menu_item}>
+                                    <Link
+                                        to="1"
+                                        spy={true}
+                                        smooth={true}
+                                        className={styles.link}
+                                    >
+                                        About me
+                                    </Link>
+                                </li>
+                                <li className={styles.menu_item}>
+                                    <Link
+                                        to="2"
+                                        spy={true}
+                                        smooth={true}
+                                        className={styles.link}
+                                    >
+                                        Skills
+                                    </Link>
+                                </li>
+                                <li className={styles.menu_item}>
+                                    <Link
+                                        to="3"
+                                        spy={true}
+                                        smooth={true}
+                                        className={styles.link}
+                                    >
+                                        JS
+                                    </Link>
+                                </li>
+                                {/* <li>
                                 <Link
                                     to="4"
                                     spy={true}
@@ -196,19 +167,105 @@ const Side = () => {
                                     Archiving
                                 </Link>
                             </li> */}
-                            <li>
+                                <li className={styles.menu_item}>
+                                    <Link
+                                        to="4"
+                                        spy={true}
+                                        smooth={true}
+                                        className={styles.link}
+                                    >
+                                        Experience
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    ) : (
+                        <div className={styles.initial_mobile}>
+                            <img src={j_icon} width={25} />
+                            <FontAwesomeIcon
+                                icon={faBars}
+                                onClick={() => {
+                                    setIsToggled(!isToggled);
+                                }}
+                            />
+                        </div>
+                    )}
+                </SideDiv>
+            </Tablet>
+            <Mobile>
+                <SideDiv className={styles.header}>
+                    {isToggled ? (
+                        <div>
+                            <FontAwesomeIcon
+                                icon={faXmark}
+                                onClick={() => {
+                                    setIsToggled(!isToggled);
+                                }}
+                            />
+                            <ul className={styles.toggle_menu}>
+                                <li className={styles.menu_item}>
+                                    <Link
+                                        to="1"
+                                        spy={true}
+                                        smooth={true}
+                                        className={styles.link}
+                                    >
+                                        About me
+                                    </Link>
+                                </li>
+                                <li className={styles.menu_item}>
+                                    <Link
+                                        to="2"
+                                        spy={true}
+                                        smooth={true}
+                                        className={styles.link}
+                                    >
+                                        Skills
+                                    </Link>
+                                </li>
+                                <li className={styles.menu_item}>
+                                    <Link
+                                        to="3"
+                                        spy={true}
+                                        smooth={true}
+                                        className={styles.link}
+                                    >
+                                        JS
+                                    </Link>
+                                </li>
+                                {/* <li>
                                 <Link
                                     to="4"
                                     spy={true}
                                     smooth={true}
                                     className={styles.link}
                                 >
-                                    Experience
+                                    Archiving
                                 </Link>
-                            </li>
-                        </ul>
+                            </li> */}
+                                <li className={styles.menu_item}>
+                                    <Link
+                                        to="4"
+                                        spy={true}
+                                        smooth={true}
+                                        className={styles.link}
+                                    >
+                                        Experience
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
                     ) : (
-                        <div></div>
+                        <div className={styles.initial_mobile}>
+                            <img src={j_icon} width={25} />
+                            <FontAwesomeIcon
+                                icon={faBars}
+                                onClick={() => {
+                                    setIsToggled(!isToggled);
+                                }}
+                                size="2x"
+                            />
+                        </div>
                     )}
                 </SideDiv>
             </Mobile>
