@@ -5,7 +5,7 @@ import img1 from "img/cookkit.jpg";
 import Modal from "react-modal";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, Mousewheel } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -59,6 +59,7 @@ const JsPractice = () => {
                                 isOpen={modalIsOpen1}
                                 onRequestClose={() => setModalIsOpen1(false)}
                                 style={ModalStyle}
+                                className={styles.modal}
                             >
                                 <Swiper
                                     slidesPerView={1}
@@ -76,19 +77,11 @@ const JsPractice = () => {
                                     <SwiperSlide>Slide 3</SwiperSlide>
                                     <SwiperSlide>Slide 4</SwiperSlide>
                                     <SwiperSlide>Slide 5</SwiperSlide>
-                                    <SwiperSlide>Slide 6</SwiperSlide>
-                                    <SwiperSlide>Slide 7</SwiperSlide>
-                                    <SwiperSlide>Slide 8</SwiperSlide>
-                                    <SwiperSlide>Slide 9</SwiperSlide>
                                 </Swiper>
+                                <div className={styles.modal_content}>
+                                    content
+                                </div>
                             </Modal>
-                            {/* <button
-                                onClick={() => {
-                                    window.open(jsUrl_1);
-                                }}
-                            >
-                                Blog
-                            </button> */}
                         </div>
                     </Fade>
                     <Fade bottom duration={1500}>
@@ -103,6 +96,7 @@ const JsPractice = () => {
                                 isOpen={modalIsOpen2}
                                 onRequestClose={() => setModalIsOpen2(false)}
                                 style={ModalStyle}
+                                className={styles.modal}
                             >
                                 <Swiper
                                     slidesPerView={1}
@@ -125,6 +119,9 @@ const JsPractice = () => {
                                     <SwiperSlide>Slide 8</SwiperSlide>
                                     <SwiperSlide>Slide 9</SwiperSlide>
                                 </Swiper>
+                                <div className={styles.modal_content}>
+                                    content
+                                </div>
                             </Modal>
                         </div>
                     </Fade>
@@ -142,6 +139,7 @@ const JsPractice = () => {
                                 isOpen={modalIsOpen3}
                                 onRequestClose={() => setModalIsOpen3(false)}
                                 style={ModalStyle}
+                                className={styles.modal}
                             >
                                 <Swiper
                                     slidesPerView={1}
@@ -164,6 +162,9 @@ const JsPractice = () => {
                                     <SwiperSlide>Slide 8</SwiperSlide>
                                     <SwiperSlide>Slide 9</SwiperSlide>
                                 </Swiper>
+                                <div className={styles.modal_content}>
+                                    content
+                                </div>
                             </Modal>
                         </div>
                     </Fade>
@@ -179,6 +180,7 @@ const JsPractice = () => {
                                 isOpen={modalIsOpen4}
                                 onRequestClose={() => setModalIsOpen4(false)}
                                 style={ModalStyle}
+                                className={styles.modal}
                             >
                                 <Swiper
                                     slidesPerView={1}
@@ -201,6 +203,9 @@ const JsPractice = () => {
                                     <SwiperSlide>Slide 8</SwiperSlide>
                                     <SwiperSlide>Slide 9</SwiperSlide>
                                 </Swiper>
+                                <div className={styles.modal_content}>
+                                    content
+                                </div>
                             </Modal>
                         </div>
                     </Fade>
