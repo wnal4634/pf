@@ -51,8 +51,10 @@
     margin-right: 30px;
 }
 .initial_mobile {
+    width: 100%;
     display: flex;
     margin: 0 30px;
     justify-content: space-between;
+    align-items: center;
     padding-bottom: 5px;
 }
