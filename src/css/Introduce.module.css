@@ -26,3 +26,55 @@
     cursor: pointer;
     margin: 0 10px;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* 타블렛 */
+    .intro img {
+        border: 5px solid pink;
+        border-radius: 100px;
+    }
+    .intro {
+        font-family: "Pretendard-Regular";
+    }
+    .address {
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .address :first-child {
+        margin-bottom: 30px;
+    }
+    .url_wrap {
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .url a {
+        cursor: pointer;
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* 모바일 */
+    .intro img {
+        border: 5px solid skyblue;
+        border-radius: 100px;
+    }
+    .intro {
+        font-family: "Pretendard-Regular";
+    }
+    .address {
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .address :first-child {
+        margin-bottom: 30px;
+    }
+    .url_wrap {
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .url a {
+        cursor: pointer;
+        margin: 0 10px;
+    }
+}

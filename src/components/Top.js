@@ -17,7 +17,6 @@ const SideDiv = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
     backdrop-filter: blur(5px);
     // box-shadow: 0 17px 10px -20px rgba(0, 0, 0, 0.7);
     border-bottom: 1px solid #d6d6d6;
@@ -108,56 +107,17 @@ const Side = () => {
                     </div>
                 </SideDiv>
             </PC>
-            <Tablet>
-                <SideDiv className={styles.header}>
-                    <div className={styles.initial}>
-                        <img src={j_icon} width={25} />
-                    </div>
-                    <div className={styles.nav}>
-                        <Link
-                            to="1"
-                            spy={true}
-                            smooth={true}
-                            className={styles.link}
-                        >
-                            <div ref={appearLink_1}>About me</div>
-                        </Link>
-                        <Link
-                            to="2"
-                            spy={true}
-                            smooth={true}
-                            className={styles.link}
-                        >
-                            <div ref={appearLink_2}>Skills</div>
-                        </Link>
-                        <Link
-                            to="3"
-                            spy={true}
-                            smooth={true}
-                            className={styles.link}
-                        >
-                            <div ref={appearLink_3}>JS</div>
-                        </Link>
-                        <Link
-                            to="4"
-                            spy={true}
-                            smooth={true}
-                            className={styles.link}
-                        >
-                            <div ref={appearLink_4}>Experience</div>
-                        </Link>
-                    </div>
-                </SideDiv>
-            </Tablet>
+
             <Mobile>
                 <SideDiv className={styles.header}>
                     {isToggled ? (
-                        <div>
+                        <div className={styles.nav_mobile}>
                             <FontAwesomeIcon
                                 icon={faXmark}
                                 onClick={() => {
                                     setIsToggled(!isToggled);
                                 }}
+                                size="lg"
                             />
                             <ul className={styles.toggle_menu}>
                                 <li className={styles.menu_item}>
