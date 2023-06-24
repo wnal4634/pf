@@ -1,47 +1,28 @@
-.introduce_wrap {
-    flex-direction: column;
-    border: 1px solid black;
-    padding-top: 30px;
-    width: 800px;
-}
-.intro img {
-    border: 1px solid black;
-    border-radius: 100px;
-}
-.intro {
-    font-family: "Pretendard-Regular";
-}
-.address {
-    flex-direction: column;
-    margin-left: 30px;
-}
-.address :first-child {
-    margin-bottom: 30px;
-}
-.url_wrap {
-    flex-direction: column;
-    margin-left: 30px;
-}
-.url a {
-    cursor: pointer;
-    margin: 0 10px;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    /* 타블렛 */
+@media screen and (min-width: 1024px) {
+    /* 데탑 */
+    .introduce_wrap {
+        flex-direction: column;
+        padding: 30px 10px;
+        width: 800px;
+    }
     .intro img {
-        border: 5px solid pink;
+        border: 1px solid black;
         border-radius: 100px;
+        height: 200px;
     }
     .intro {
         font-family: "Pretendard-Regular";
+        flex-direction: row;
     }
-    .address {
-        flex-direction: column;
+    .name {
         margin-left: 30px;
+        flex-direction: column;
     }
-    .address :first-child {
-        margin-bottom: 30px;
+    .name h3 {
+        margin: 10px 0 20px 0;
+    }
+    .intro_url_wrap {
+        flex-direction: row;
     }
     .url_wrap {
         flex-direction: column;
@@ -50,31 +31,104 @@
     .url a {
         cursor: pointer;
         margin: 0 10px;
+        color: rgb(100, 100, 100);
+        border-bottom: 1px solid rgb(100, 100, 100);
+        transition: 0.2s;
+        margin-bottom: 10px;
+    }
+    a:hover {
+        color: black;
+        border-bottom: 1px solid black;
+        transition: 0.2s;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* 타블렛 */
+    .introduce_wrap {
+        flex-direction: column;
+        padding: 70px 10px;
+        width: 670px;
+    }
+    .intro img {
+        border: 1px solid black;
+        border-radius: 100px;
+        height: 200px;
+    }
+    .intro {
+        font-family: "Pretendard-Regular";
+        flex-direction: row;
+    }
+    .name {
+        margin-left: 30px;
+        flex-direction: column;
+    }
+    .name h3 {
+        margin: 10px 0 20px 0;
+    }
+    .intro_url_wrap {
+        flex-direction: column;
+    }
+    .url_wrap {
+        margin-top: 30px;
+        flex-direction: column;
+    }
+    .url a {
+        cursor: pointer;
+        margin: 0 10px;
+        color: rgb(100, 100, 100);
+        border-bottom: 1px solid rgb(100, 100, 100);
+        transition: 0.2s;
+        margin-bottom: 10px;
+    }
+    a:hover {
+        color: black;
+        border-bottom: 1px solid black;
+        transition: 0.2s;
     }
 }
 
 @media screen and (max-width: 767px) {
     /* 모바일 */
+    .introduce_wrap {
+        flex-direction: column;
+        padding: 70px 10px;
+        width: 500px;
+    }
     .intro img {
-        border: 5px solid skyblue;
+        border: 1px solid black;
         border-radius: 100px;
+        height: 200px;
     }
     .intro {
         font-family: "Pretendard-Regular";
+        flex-direction: row;
     }
-    .address {
-        flex-direction: column;
+    .name {
         margin-left: 30px;
+        flex-direction: column;
     }
-    .address :first-child {
-        margin-bottom: 30px;
+    .name h3 {
+        margin: 10px 0 20px 0;
+    }
+    .intro_url_wrap {
+        flex-direction: column;
     }
     .url_wrap {
+        margin-top: 30px;
         flex-direction: column;
-        margin-left: 30px;
     }
     .url a {
         cursor: pointer;
         margin: 0 10px;
+        color: rgb(100, 100, 100);
+        border-bottom: 1px solid rgb(100, 100, 100);
+        transition: 0.2s;
+        margin-bottom: 10px;
+    }
+    a:hover {
+        color: black;
+        border-bottom: 1px solid black;
+        transition: 0.2s;
     }
 }

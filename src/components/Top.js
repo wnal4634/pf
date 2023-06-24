@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import styles from "css/Top.module.css";
-import { Mobile, Tablet, PC } from "components/Responsive";
+import { Mobile, PC } from "components/Responsive";
 import j_icon from "img/j_icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -69,7 +69,7 @@ const Side = () => {
             <PC>
                 <SideDiv className={styles.header}>
                     <div className={styles.initial}>
-                        <img src={j_icon} width={25} />
+                        <img src={j_icon} width={25} alt="이니셜 아이콘" />
                     </div>
                     <div className={styles.nav}>
                         <Link
@@ -107,7 +107,6 @@ const Side = () => {
                     </div>
                 </SideDiv>
             </PC>
-
             <Mobile>
                 <SideDiv className={styles.header}>
                     {isToggled ? (
@@ -164,7 +163,7 @@ const Side = () => {
                         </div>
                     ) : (
                         <div className={styles.initial_mobile}>
-                            <img src={j_icon} width={25} />
+                            <img src={j_icon} width={25} alt="이니셜 아이콘" />
                             <FontAwesomeIcon
                                 icon={faBars}
                                 onClick={() => {
