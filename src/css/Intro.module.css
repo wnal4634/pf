@@ -22,3 +22,20 @@
     -webkit-transform: rotate(-7deg);
     -moz-transform: rotate(-7deg);
 }
+.svg {
+    transform: translate(-47px, 45px);
+    stroke-dasharray: 5769.238;
+    stroke-dashoffset: 5769.238;
+    animation: ani 3s linear infinite;
+}
+
+@keyframes ani {
+    0% {
+        stroke-dashoffset: 5769.238;
+    }
+    50% {
+    }
+    100% {
+        stroke-dashoffset: 2884.619;
+    }
+}
