@@ -23,19 +23,35 @@
     -moz-transform: rotate(-7deg);
 }
 .svg {
-    transform: translate(-47px, 45px);
-    stroke-dasharray: 5769.238;
-    stroke-dashoffset: 5769.238;
-    animation: ani 3s linear infinite;
+    transform: translate(-90px, 65px);
+    stroke-dasharray: 2098.479;
+    stroke-dashoffset: 1, 049.2395;
+    /* -webkit-animation: ani 2s linear infinite;
+    -moz-animation: ani 2s linear infinite;
+    -webkit-animation-delay: 5s; */
+    -webkit-animation-name: ani;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-delay: 4s;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: ani;
+    -moz-animation-duration: 2s;
+    -moz-animation-delay: 4s;
+    -moz-animation-iteration-count: infinite;
 }
 
 @keyframes ani {
     0% {
-        stroke-dashoffset: 5769.238;
+        stroke-dashoffset: 2098.479;
     }
     50% {
+        stroke-dashoffset: 0;
     }
     100% {
-        stroke-dashoffset: 2884.619;
+        /* stroke-dashoffset: 2069.3425; */
+        stroke-dashoffset: -2098.479;
     }
+    /* 100% {
+        stroke-dashoffset: 0;
+    } */
 }
