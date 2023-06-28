@@ -26,41 +26,54 @@ const SideDiv = styled.div`
 
 const Side = () => {
     const [isToggled, setIsToggled] = useState(false);
+    const goTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+    const appearInitial = useRef();
     const appearLink_1 = useRef();
     const appearLink_2 = useRef();
     const appearLink_3 = useRef();
     const appearLink_4 = useRef();
     const appearLink_5 = useRef();
     useEffect(() => {
-        gsap.from(appearLink_1.current, {
+        gsap.from(appearInitial.current, {
             x: -20,
             opacity: 0,
             duration: 1,
             delay: 2,
         });
-        gsap.from(appearLink_2.current, {
+        gsap.from(appearLink_1.current, {
             x: -20,
             opacity: 0,
             duration: 1,
             delay: 2.5,
         });
-        gsap.from(appearLink_3.current, {
+        gsap.from(appearLink_2.current, {
             x: -20,
             opacity: 0,
             duration: 1,
             delay: 3,
         });
-        gsap.from(appearLink_4.current, {
+        gsap.from(appearLink_3.current, {
             x: -20,
             opacity: 0,
             duration: 1,
             delay: 3.5,
         });
-        gsap.from(appearLink_5.current, {
+        gsap.from(appearLink_4.current, {
             x: -20,
             opacity: 0,
             duration: 1,
             delay: 4,
+        });
+        gsap.from(appearLink_5.current, {
+            x: -20,
+            opacity: 0,
+            duration: 1,
+            delay: 4.5,
         });
     }, []);
 
@@ -68,8 +81,13 @@ const Side = () => {
         <>
             <PC>
                 <SideDiv className={styles.header}>
-                    <div className={styles.initial}>
-                        <img src={j_icon} width={25} alt="이니셜 아이콘" />
+                    <div className={styles.initial} ref={appearInitial}>
+                        <img
+                            src={j_icon}
+                            width={25}
+                            alt="이니셜 아이콘"
+                            onClick={goTop}
+                        />
                     </div>
                     <div className={styles.nav}>
                         <Link
@@ -163,7 +181,12 @@ const Side = () => {
                         </div>
                     ) : (
                         <div className={styles.initial_mobile}>
-                            <img src={j_icon} width={25} alt="이니셜 아이콘" />
+                            <img
+                                src={j_icon}
+                                width={25}
+                                alt="이니셜 아이콘"
+                                onClick={goTop}
+                            />
                             <FontAwesomeIcon
                                 icon={faBars}
                                 onClick={() => {

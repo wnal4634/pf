@@ -23,12 +23,13 @@
     -moz-transform: rotate(-7deg);
 }
 .svg {
-    transform: translate(-90px, 65px);
+    position: absolute;
+    transform: translate(-295px, 55px);
+    /* 위(위치)는 반응형 조절할 것 */
+
     stroke-dasharray: 2098.479;
-    stroke-dashoffset: 1, 049.2395;
-    /* -webkit-animation: ani 2s linear infinite;
-    -moz-animation: ani 2s linear infinite;
-    -webkit-animation-delay: 5s; */
+    stroke-dashoffset: 1049.2395;
+
     -webkit-animation-name: ani;
     -webkit-animation-duration: 2s;
     -webkit-animation-delay: 4s;

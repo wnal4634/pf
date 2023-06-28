@@ -46,6 +46,9 @@
     }
 }
 
+img {
+    cursor: pointer;
+}
 .initial {
     margin-left: 30px;
 }

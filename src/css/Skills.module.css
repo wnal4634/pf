@@ -1,5 +1,4 @@
 .skills_wrap {
-    border: 1px solid black;
     flex-direction: column;
     font-family: "Pretendard-Regular";
 }
@@ -13,6 +12,7 @@
 .skill_title div {
     padding: 3px 7px 3px 0;
     margin: 5px 5px 5px 0;
+    color: rgb(141, 141, 141);
 }
 .column {
     flex-direction: column;
