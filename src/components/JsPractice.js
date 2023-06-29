@@ -1,14 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import styles from "css/JsPractice.module.css";
 import Fade from "react-reveal/Fade";
-import img1 from "img/cookkit.jpg";
 import Modal from "react-modal";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Mousewheel } from "swiper";
+import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import img1 from "img/cookkit.jpg";
+import images from "components/ImagesImport";
 
 const ModalStyle = {
     overlay: {
@@ -72,11 +72,108 @@ const JsPractice = () => {
                                     modules={[Pagination, Navigation]}
                                     className={styles.mySwiper}
                                 >
-                                    <SwiperSlide>Slide 1</SwiperSlide>
-                                    <SwiperSlide>Slide 2</SwiperSlide>
-                                    <SwiperSlide>Slide 3</SwiperSlide>
-                                    <SwiperSlide>Slide 4</SwiperSlide>
-                                    <SwiperSlide>Slide 5</SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img1}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img2}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img3}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img4}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img5}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img6}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img7}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img8}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img9}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img10}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img11}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img12}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img13}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img14}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img15}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img16}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_1_img17}
+                                            className={styles.js_product}
+                                        />
+                                    </SwiperSlide>
                                 </Swiper>
                                 <div className={styles.modal_content}>
                                     content
