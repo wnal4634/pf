@@ -24,7 +24,7 @@
 }
 .svg {
     position: absolute;
-    transform: translate(-295px, 55px);
+    transform: translate(-293px, 50px);
     /* 위(위치)는 반응형 조절할 것 */
 
     stroke-dasharray: 2098.479;

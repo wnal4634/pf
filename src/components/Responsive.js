@@ -40,3 +40,7 @@ export { Mobile, PC };
 // @media screen and (min-width:768px) {
 //     /* 데탑, 타블렛 같이 */
 // }
+
+// @media screen and (max-width:1023px) {
+//     /* 타블렛, 모바일 같이 */
+// }

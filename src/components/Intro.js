@@ -1,11 +1,13 @@
 import React, { useRef, useEffect } from "react";
 import styles from "css/Intro.module.css";
 import { gsap } from "gsap";
+import Fade from "react-reveal/Fade";
 
 const Intro = () => {
     const appearBox = useRef();
     const appearText_1 = useRef();
     const appearText_2 = useRef();
+    const appearSvg = useRef();
     useEffect(() => {
         let tl = gsap.timeline(); //순서대로 gsap 사용하기
         tl.from(appearBox.current, {
@@ -25,10 +27,14 @@ const Intro = () => {
             duration: 1,
             delay: 1,
         });
+        gsap.from(appearSvg.current, {
+            opacity: 0,
+            duration: 1,
+            delay: 1.5,
+        });
     }, []);
     return (
         <div className={styles.intro_wrap}>
-            {/* <Svg /> */}
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="450"
@@ -36,17 +42,23 @@ const Intro = () => {
                 viewBox="0 0 1595 1595"
                 className={styles.svg}
                 fill="none"
+                ref={appearSvg}
             >
                 <path
                     d="M 1059 732 Q 831 886 586 905 T 506 686 Q 716 413 1114 311 T 1300 511 Q 1295 518 1284 530"
                     stroke="darkslateblue"
                     strokeWidth={1}
                 />
-                {/* <path
-                    d="M1316.2 436.7c.4 3.4 3.2 4.2 4.8 1.3 1.4-2.6.5-4-2.6-4-2.2 0-2.5.4-2.2 2.7zM1297.3 457.7c-.7.3-1.3 1.4-1.3 2.4 0 1.6.6 2 2.7 1.7 1.4-.2 2.8-.8 3-1.5.5-1.4-2.7-3.2-4.4-2.6zM1260.7 500.7c-1.2 1.1-.8 3.1.8 3.7 2 .7 4.5-.3 4.5-1.9 0-1.9-3.9-3.2-5.3-1.8z"
+                <path
+                    d="M 1270 544 L 1267 547 "
                     stroke="black"
                     strokeWidth={1}
-                /> */}
+                />
+                <path
+                    d="M 1253 560 L 1250 563"
+                    stroke="black"
+                    strokeWidth={1}
+                />
                 {/* 점 path length: 50.977 */}
             </svg>
             <div className={styles.bg} ref={appearBox} />

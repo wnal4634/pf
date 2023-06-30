@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "css/JsPractice.module.css";
+import styles from "css/Project.module.css";
 import Fade from "react-reveal/Fade";
 import Modal from "react-modal";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -44,7 +44,7 @@ const JsPractice = () => {
 
     return (
         <div id="3" className={styles.practice_wrap}>
-            <h2>📁 js 작업물</h2>
+            <h2>📁 Project</h2>
             <div className={styles.column}>
                 <div className={styles.row_1}>
                     <Fade bottom>
@@ -76,102 +76,119 @@ const JsPractice = () => {
                                         <img
                                             src={images.js_1_img1}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img2}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img3}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img4}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img5}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img6}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img7}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img8}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img9}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img10}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img11}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img12}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img13}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img14}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img15}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img16}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <img
                                             src={images.js_1_img17}
                                             className={styles.js_product}
+                                            alt="작업물 앱 사진"
                                         />
                                     </SwiperSlide>
                                 </Swiper>
@@ -206,15 +223,34 @@ const JsPractice = () => {
                                     modules={[Pagination, Navigation]}
                                     className={styles.mySwiper}
                                 >
-                                    <SwiperSlide>Slide 1</SwiperSlide>
-                                    <SwiperSlide>Slide 2</SwiperSlide>
-                                    <SwiperSlide>Slide 3</SwiperSlide>
-                                    <SwiperSlide>Slide 4</SwiperSlide>
-                                    <SwiperSlide>Slide 5</SwiperSlide>
-                                    <SwiperSlide>Slide 6</SwiperSlide>
-                                    <SwiperSlide>Slide 7</SwiperSlide>
-                                    <SwiperSlide>Slide 8</SwiperSlide>
-                                    <SwiperSlide>Slide 9</SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_2_img1}
+                                            className={styles.js_product}
+                                            alt="작업물 앱 사진"
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_2_img2}
+                                            className={styles.js_product}
+                                            alt="작업물 앱 사진"
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_2_img3}
+                                            className={styles.js_product}
+                                            alt="작업물 앱 사진"
+                                        />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img
+                                            src={images.js_2_img4}
+                                            className={styles.js_product}
+                                            alt="작업물 앱 사진"
+                                        />
+                                    </SwiperSlide>
                                 </Swiper>
                                 <div className={styles.modal_content}>
                                     content
