@@ -4,7 +4,7 @@ import styles from "css/Middle.module.css";
 import Fade from "react-reveal/Fade";
 import Introduce from "components/Introduce";
 import Skills from "components/Skills";
-import JsPractice from "components/JsPractice";
+import JsPractice from "components/Project";
 import Experience from "components/Experience";
 
 const MiddleDiv = styled.div`
