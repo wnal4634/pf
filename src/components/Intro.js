@@ -49,7 +49,7 @@ const Intro = () => {
                     stroke="darkslateblue"
                     strokeWidth={1}
                 />
-                <path
+                {/* <path
                     d="M 1270 544 L 1267 547 "
                     stroke="black"
                     strokeWidth={1}
@@ -58,8 +58,7 @@ const Intro = () => {
                     d="M 1253 560 L 1250 563"
                     stroke="black"
                     strokeWidth={1}
-                />
-                {/* 점 path length: 50.977 */}
+                /> */}
             </svg>
             <div className={styles.bg} ref={appearBox} />
             <div className={styles.text}>

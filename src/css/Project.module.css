@@ -73,8 +73,81 @@
     }
 }
 
-@media screen and (max-width: 1023px) {
-    /* 타블렛, 모바일 같이 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* 타블렛 */
+    .practice_wrap {
+        border: 1px solid black;
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    .column {
+        flex-direction: column;
+    }
+    .row_1 {
+    }
+    .row_2 {
+    }
+    .row {
+        margin: 20px;
+        flex-direction: row;
+        border: 1px solid rgb(179, 179, 179);
+        border-radius: 30px;
+        width: 300px;
+        height: 250px;
+        overflow: hidden;
+        -webkit-box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
+        -moz-box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
+        box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
+    }
+    .row :hover {
+        transition: 0.3s;
+        filter: brightness(0.7);
+        cursor: pointer;
+    }
+    .row button {
+        position: absolute;
+        left: 20px;
+        bottom: 30px;
+        width: fit-content;
+        height: fit-content;
+    }
+    .row img {
+        width: 100%;
+        object-fit: cover;
+        transition: 0.3s;
+    }
+    .click {
+        position: absolute;
+        color: white;
+        left: 25px;
+        bottom: 20px;
+        font-family: "Rubik Mono One", sans-serif;
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    }
+    .modal {
+        display: flex;
+    }
+    .mySwiper {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        margin-left: 0;
+        --swiper-theme-color: #000;
+        --swiper-navigation-size: 30px;
+    }
+    .modal_content {
+        width: 50%;
+    }
+    .js_product {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-color: gray;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* 모바일 */
     .practice_wrap {
         border: 1px solid black;
         flex-direction: column;
