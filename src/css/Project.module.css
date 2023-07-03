@@ -1,7 +1,6 @@
 @media screen and (min-width: 1024px) {
     /* 데탑 */
     .practice_wrap {
-        border: 1px solid black;
         flex-direction: column;
         padding-top: 30px;
     }
@@ -17,7 +16,7 @@
     .row {
         margin: 20px;
         flex-direction: row;
-        border: 1px solid rgb(179, 179, 179);
+        border: 1px solid rgb(208, 208, 208);
         border-radius: 30px;
         width: 350px;
         height: 250px;
@@ -76,7 +75,6 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     /* 타블렛 */
     .practice_wrap {
-        border: 1px solid black;
         flex-direction: column;
         padding-top: 30px;
     }
@@ -90,7 +88,7 @@
     .row {
         margin: 20px;
         flex-direction: row;
-        border: 1px solid rgb(179, 179, 179);
+        border: 1px solid rgb(208, 208, 208);
         border-radius: 30px;
         width: 300px;
         height: 250px;
@@ -149,7 +147,6 @@
 @media screen and (max-width: 767px) {
     /* 모바일 */
     .practice_wrap {
-        border: 1px solid black;
         flex-direction: column;
         padding-top: 30px;
     }
@@ -165,7 +162,7 @@
     .row {
         margin: 20px;
         flex-direction: row;
-        border: 1px solid rgb(179, 179, 179);
+        border: 1px solid rgb(208, 208, 208);
         border-radius: 30px;
         width: 350px;
         height: 250px;

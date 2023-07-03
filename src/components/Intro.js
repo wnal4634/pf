@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import styles from "css/Intro.module.css";
 import { gsap } from "gsap";
-import Fade from "react-reveal/Fade";
 
 const Intro = () => {
     const appearBox = useRef();

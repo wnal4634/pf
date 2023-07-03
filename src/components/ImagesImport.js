@@ -19,6 +19,10 @@ import js_2_img1 from "img/js_2/1.png";
 import js_2_img2 from "img/js_2/2.png";
 import js_2_img3 from "img/js_2/3.png";
 import js_2_img4 from "img/js_2/4.png";
+import js_2_img5 from "img/js_2/5.png";
+import js_3_img1 from "img/js_3/1.png";
+import js_3_img2 from "img/js_3/2.png";
+import js_3_img3 from "img/js_3/3.png";
 
 const images = {
     js_1_img1,
@@ -42,6 +46,10 @@ const images = {
     js_2_img2,
     js_2_img3,
     js_2_img4,
+    js_2_img5,
+    js_3_img1,
+    js_3_img2,
+    js_3_img3,
 };
 
 export default images;
