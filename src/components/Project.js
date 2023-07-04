@@ -54,7 +54,7 @@ const JsPractice = () => {
                                 alt="앱사진"
                                 onClick={() => setModalIsOpen1(true)}
                             />
-                            <div className={styles.click}>Click!</div>
+                            <div className={styles.click}>Recipe App</div>
                             <Modal
                                 isOpen={modalIsOpen1}
                                 onRequestClose={() => setModalIsOpen1(false)}
@@ -228,7 +228,9 @@ const JsPractice = () => {
                                 alt="앱사진"
                                 onClick={() => setModalIsOpen2(true)}
                             />
-                            <div className={styles.click}>Click!</div>
+                            <div className={styles.click}>
+                                Interval Timer App
+                            </div>
                             <Modal
                                 isOpen={modalIsOpen2}
                                 onRequestClose={() => setModalIsOpen2(false)}
@@ -305,7 +307,7 @@ const JsPractice = () => {
                                 alt="앱사진"
                                 onClick={() => setModalIsOpen3(true)}
                             />
-                            <div className={styles.click}>Click!</div>
+                            <div className={styles.click}>To Do List</div>
                             <Modal
                                 isOpen={modalIsOpen3}
                                 onRequestClose={() => setModalIsOpen3(false)}

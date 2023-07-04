@@ -69,6 +69,7 @@
         height: 100%;
         object-fit: contain;
         background-color: gray;
+        cursor: default;
     }
 }
 
@@ -141,6 +142,7 @@
         height: 100%;
         object-fit: contain;
         background-color: gray;
+        cursor: default;
     }
 }
 
@@ -215,5 +217,6 @@
         height: 100%;
         object-fit: contain;
         background-color: gray;
+        cursor: default;
     }
 }
