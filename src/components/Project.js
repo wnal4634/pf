@@ -44,6 +44,7 @@ const JsPractice = () => {
 
     return (
         <div id="3" className={styles.practice_wrap}>
+            <hr />
             <h2>📁 Project</h2>
             <div className={styles.column}>
                 <div className={styles.row_1}>

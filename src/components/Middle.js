@@ -14,7 +14,7 @@ const MiddleDiv = styled.div`
 `;
 
 const IntroBlock = styled.div`
-    margin: 100px auto 0;
+    margin: 0 auto;
     @media (max-width: 768px) {
         padding: 25px;
     }

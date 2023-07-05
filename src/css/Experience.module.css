@@ -1,10 +1,93 @@
-.experience_wrap {
-    border: 1px solid black;
-    flex-direction: column;
-    padding-top: 30px;
+hr {
+    border: 0.5px solid rgb(226, 226, 226);
+    width: 50px;
     margin-bottom: 100px;
+    margin-top: 100px;
 }
-.img {
-    width: 250px;
-    cursor: default;
+
+@media screen and (min-width: 768px) {
+    /* 데탑, 타블렛 같이 */
+    .experience_wrap {
+        flex-direction: column;
+        padding-top: 30px;
+        margin-bottom: 100px;
+    }
+    .modal_wrap {
+        margin: 20px;
+        flex-direction: row;
+        border: 1px solid rgb(208, 208, 208);
+        border-radius: 30px;
+        width: 350px;
+        height: 250px;
+        overflow: hidden;
+        -webkit-box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
+        -moz-box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
+        box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
+    }
+    .modal_wrap :hover {
+        transition: 0.3s;
+        filter: brightness(0.7);
+        cursor: pointer;
+    }
+    .img {
+        width: 100%;
+        object-fit: contain;
+        cursor: pointer;
+    }
+    .modal_img {
+        cursor: default;
+        width: 50%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .modal_content {
+        width: 50%;
+    }
+    .modal {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* 모바일 */
+    .experience_wrap {
+        flex-direction: column;
+        padding-top: 30px;
+        margin-bottom: 100px;
+    }
+    .modal_wrap {
+        margin: 20px;
+        flex-direction: row;
+        border: 1px solid rgb(208, 208, 208);
+        border-radius: 30px;
+        width: 350px;
+        height: 250px;
+        overflow: hidden;
+        -webkit-box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
+        -moz-box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
+        box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
+    }
+    .modal_wrap :hover {
+        transition: 0.3s;
+        filter: brightness(0.7);
+        cursor: pointer;
+    }
+    .img {
+        width: 100%;
+        object-fit: contain;
+        cursor: pointer;
+    }
+    .modal_img {
+        cursor: default;
+        width: 100%;
+        height: 70%;
+        object-fit: contain;
+    }
+    .modal_content {
+        padding-top: 20px;
+        width: 50%;
+    }
+    .modal {
+        /* display: flex; */
+    }
 }

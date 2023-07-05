@@ -8,6 +8,7 @@ const Introduce = () => {
 
     return (
         <div id="1" className={styles.introduce_wrap}>
+            <hr />
             <h2>👏 About me</h2>
             <div className={styles.intro}>
                 <div className={styles.img}>
@@ -21,8 +22,8 @@ const Introduce = () => {
                             선택했고, 전공 중 프론트엔드를 배우면서 하나씩
                             만들어가는 것에 성취감을 느꼈습니다.
                             <br />
-                            사용자가 원하는 UI를 활용하고 제공할 수 있는
-                            개발자가 되고 싶습니다. 잘 부탁드립니다.
+                            사용자가 원하는 UI를 제공할 수 있는 개발자가 되고
+                            싶습니다. 잘 부탁드립니다.
                         </div>
                         <div className={styles.url_wrap}>
                             <div className={styles.url}>

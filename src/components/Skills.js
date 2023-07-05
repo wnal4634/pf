@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Skills = () => {
     return (
         <div id="2" className={styles.skills_wrap}>
+            <hr />
             <h2>🔧 Skills</h2>
             <div className={styles.row}>
                 <div className={styles.skill_title}>
