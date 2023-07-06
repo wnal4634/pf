@@ -2,11 +2,6 @@ import React, { useState } from "react";
 import styles from "css/Experience.module.css";
 import Modal from "react-modal";
 import img1 from "img/공모전_상장.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 const ModalStyle = {
     overlay: {
@@ -35,14 +30,11 @@ const ModalStyle = {
 
 const Experience = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
-    const close = () => {
-        setModalIsOpen(false);
-    };
 
     return (
         <div id="4" className={styles.experience_wrap}>
             <hr />
-            <h2>😉 경험</h2>
+            <h2>😉 Experience</h2>
             <div className={styles.modal_wrap}>
                 <img
                     src={img1}

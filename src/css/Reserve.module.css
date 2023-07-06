@@ -1,6 +1,9 @@
 .reserve_wrap {
     text-align: center;
-    margin-bottom: 30px;
+    padding: 10px 0 25px 0;
     width: 100%;
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(240, 240, 240);
+    color: rgb(141, 141, 141);
+    font-family: "Pretendard-Regular";
+    font-size: small;
 }
