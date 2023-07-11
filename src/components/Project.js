@@ -9,6 +9,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import img1 from "img/cookkit.jpg";
 import images from "components/ImagesImport";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 const ModalStyle = {
     overlay: {
@@ -36,7 +38,12 @@ const ModalStyle = {
 };
 
 const JsPractice = () => {
-    const jsUrl_1 = "https://wnal4634.github.io/momentum/";
+    const recipe_github = "https://github.com/wnal4634/univ_final_cookkit";
+    const interval_github = "https://github.com/wnal4634/flutter_timer";
+    const interval_demo = "https://interval-timer-flutter.netlify.app";
+    const toDo_github = "https://github.com/wnal4634/momentum";
+    const toDo_demo = "https://wnal4634.github.io/momentum";
+
     const [modalIsOpen1, setModalIsOpen1] = useState(false);
     const [modalIsOpen2, setModalIsOpen2] = useState(false);
     const [modalIsOpen3, setModalIsOpen3] = useState(false);
@@ -194,9 +201,13 @@ const JsPractice = () => {
                                     </SwiperSlide>
                                 </Swiper>
                                 <div className={styles.modal_content}>
-                                    프로젝트 소개
+                                    레시피 공유 및 밀키트 판매 앱입니다.
                                     <br />
-                                    레시피 공유 및 밀키트 판매 앱 입니다.
+                                    자바와 PHP, MySQL을 활용해 제작했고, 앱 내
+                                    결제는 부트페이를 연동했습니다. (테스트
+                                    결제로 실제 결제가 이뤄지지 않습니다.)
+                                    <br />
+                                    개발인원: 4명
                                     <br />
                                     사용자 페이지 주요 기능
                                     <br />
@@ -209,15 +220,22 @@ const JsPractice = () => {
                                     로그인, 회원관리, 게시글 관리, 공지사항 작성
                                     및 관리, 판매 관련 통계 데이터 시각화,
                                     주문목록 확인
-                                    <br />
-                                    <br />
-                                    레시피 공유 및 밀키트 판매 앱 입니다.
-                                    <br />
-                                    자바와 PHP, MySQL을 활용해 제작했고, 앱 내
-                                    결제는 부트페이를 연동했습니다. (테스트
-                                    결제로 실제 결제가 이뤄지지 않습니다.)
-                                    <br />
-                                    개발인원: 4명
+                                    <div className={styles.skills}>
+                                        <div>Java</div>
+                                        <div>PHP</div>
+                                        <div>MySQL</div>
+                                        <div>Bootstrap</div>
+                                    </div>
+                                    <div
+                                        onClick={() => {
+                                            window.open(recipe_github);
+                                        }}
+                                    >
+                                        깃허브
+                                        <FontAwesomeIcon
+                                            icon={faArrowUpRightFromSquare}
+                                        />
+                                    </div>
                                 </div>
                             </Modal>
                         </div>
@@ -295,6 +313,30 @@ const JsPractice = () => {
                                     다크모드를 설정할 수 있습니다.
                                     <br />
                                     개발인원: 1명
+                                    <div className={styles.skills}>
+                                        <div>Flutter</div>
+                                        <div>Dart</div>
+                                    </div>
+                                    <div
+                                        onClick={() => {
+                                            window.open(interval_github);
+                                        }}
+                                    >
+                                        깃허브
+                                        <FontAwesomeIcon
+                                            icon={faArrowUpRightFromSquare}
+                                        />
+                                    </div>
+                                    <div
+                                        onClick={() => {
+                                            window.open(interval_demo);
+                                        }}
+                                    >
+                                        Demo
+                                        <FontAwesomeIcon
+                                            icon={faArrowUpRightFromSquare}
+                                        />
+                                    </div>
                                 </div>
                             </Modal>
                         </div>
@@ -361,6 +403,30 @@ const JsPractice = () => {
                                     때마다 랜덤으로 변경됩니다.
                                     <br />
                                     개발인원: 1명
+                                    <div className={styles.skills}>
+                                        <div>JS</div>
+                                        <div>CSS</div>
+                                    </div>
+                                    <div
+                                        onClick={() => {
+                                            window.open(toDo_github);
+                                        }}
+                                    >
+                                        깃허브
+                                        <FontAwesomeIcon
+                                            icon={faArrowUpRightFromSquare}
+                                        />
+                                    </div>
+                                    <div
+                                        onClick={() => {
+                                            window.open(toDo_demo);
+                                        }}
+                                    >
+                                        Demo
+                                        <FontAwesomeIcon
+                                            icon={faArrowUpRightFromSquare}
+                                        />
+                                    </div>
                                 </div>
                             </Modal>
                         </div>
