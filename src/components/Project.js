@@ -230,6 +230,7 @@ const JsPractice = () => {
                                         onClick={() => {
                                             window.open(recipe_github);
                                         }}
+                                        className={styles.shortcut}
                                     >
                                         깃허브
                                         <FontAwesomeIcon
@@ -317,25 +318,27 @@ const JsPractice = () => {
                                         <div>Flutter</div>
                                         <div>Dart</div>
                                     </div>
-                                    <div
-                                        onClick={() => {
-                                            window.open(interval_github);
-                                        }}
-                                    >
-                                        깃허브
-                                        <FontAwesomeIcon
-                                            icon={faArrowUpRightFromSquare}
-                                        />
-                                    </div>
-                                    <div
-                                        onClick={() => {
-                                            window.open(interval_demo);
-                                        }}
-                                    >
-                                        Demo
-                                        <FontAwesomeIcon
-                                            icon={faArrowUpRightFromSquare}
-                                        />
+                                    <div className={styles.shortcut}>
+                                        <div
+                                            onClick={() => {
+                                                window.open(interval_github);
+                                            }}
+                                        >
+                                            깃허브
+                                            <FontAwesomeIcon
+                                                icon={faArrowUpRightFromSquare}
+                                            />
+                                        </div>
+                                        <div
+                                            onClick={() => {
+                                                window.open(interval_demo);
+                                            }}
+                                        >
+                                            Demo
+                                            <FontAwesomeIcon
+                                                icon={faArrowUpRightFromSquare}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </Modal>
@@ -407,25 +410,27 @@ const JsPractice = () => {
                                         <div>JS</div>
                                         <div>CSS</div>
                                     </div>
-                                    <div
-                                        onClick={() => {
-                                            window.open(toDo_github);
-                                        }}
-                                    >
-                                        깃허브
-                                        <FontAwesomeIcon
-                                            icon={faArrowUpRightFromSquare}
-                                        />
-                                    </div>
-                                    <div
-                                        onClick={() => {
-                                            window.open(toDo_demo);
-                                        }}
-                                    >
-                                        Demo
-                                        <FontAwesomeIcon
-                                            icon={faArrowUpRightFromSquare}
-                                        />
+                                    <div className={styles.shortcut}>
+                                        <div
+                                            onClick={() => {
+                                                window.open(toDo_github);
+                                            }}
+                                        >
+                                            깃허브
+                                            <FontAwesomeIcon
+                                                icon={faArrowUpRightFromSquare}
+                                            />
+                                        </div>
+                                        <div
+                                            onClick={() => {
+                                                window.open(toDo_demo);
+                                            }}
+                                        >
+                                            Demo
+                                            <FontAwesomeIcon
+                                                icon={faArrowUpRightFromSquare}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </Modal>

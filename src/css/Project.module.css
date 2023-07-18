@@ -92,6 +92,23 @@ hr {
     .skills {
         flex-direction: row;
     }
+    .shortcut {
+        position: absolute;
+        bottom: 25px;
+    }
+    .shortcut svg {
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+    .shortcut div {
+        background-color: #e8e8e8;
+        display: inline-block;
+        background-color: #e8e8e8;
+        padding: 3px 7px;
+        margin: 5px 5px 5px 0;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
