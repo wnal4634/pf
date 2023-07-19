@@ -49,10 +49,6 @@
         stroke-dashoffset: 0;
     }
     100% {
-        /* stroke-dashoffset: 2069.3425; */
         stroke-dashoffset: -2098.479;
     }
-    /* 100% {
-        stroke-dashoffset: 0;
-    } */
 }

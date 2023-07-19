@@ -226,16 +226,17 @@ const JsPractice = () => {
                                         <div>MySQL</div>
                                         <div>Bootstrap</div>
                                     </div>
-                                    <div
-                                        onClick={() => {
-                                            window.open(recipe_github);
-                                        }}
-                                        className={styles.shortcut}
-                                    >
-                                        깃허브
-                                        <FontAwesomeIcon
-                                            icon={faArrowUpRightFromSquare}
-                                        />
+                                    <div className={styles.shortcut}>
+                                        <div
+                                            onClick={() => {
+                                                window.open(recipe_github);
+                                            }}
+                                        >
+                                            깃허브
+                                            <FontAwesomeIcon
+                                                icon={faArrowUpRightFromSquare}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </Modal>
@@ -312,6 +313,9 @@ const JsPractice = () => {
                                     <br />
                                     좌측 상단의 아이콘을 누르면 기본모드와
                                     다크모드를 설정할 수 있습니다.
+                                    <br />
+                                    마지막 이미지는 데모버전으로, 웹에서의
+                                    모습입니다.
                                     <br />
                                     개발인원: 1명
                                     <div className={styles.skills}>
@@ -436,7 +440,7 @@ const JsPractice = () => {
                             </Modal>
                         </div>
                     </Fade>
-                    <Fade bottom duration={2000}>
+                    {/* <Fade bottom duration={2000}>
                         <div className={styles.row}>
                             <img
                                 src={img1}
@@ -476,7 +480,7 @@ const JsPractice = () => {
                                 </div>
                             </Modal>
                         </div>
-                    </Fade>
+                    </Fade> */}
                 </div>
             </div>
         </div>

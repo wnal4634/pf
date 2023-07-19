@@ -45,7 +45,7 @@ const Intro = () => {
             >
                 <path
                     d="M 1059 732 Q 831 886 586 905 T 506 686 Q 716 413 1114 311 T 1300 511 Q 1295 518 1284 530"
-                    stroke="darkslateblue"
+                    stroke="darkgray"
                     strokeWidth={1}
                 />
                 {/* <path
