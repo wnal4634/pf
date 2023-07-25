@@ -220,22 +220,26 @@ const JsPractice = () => {
                                     로그인, 회원관리, 게시글 관리, 공지사항 작성
                                     및 관리, 판매 관련 통계 데이터 시각화,
                                     주문목록 확인
-                                    <div className={styles.skills}>
-                                        <div>Java</div>
-                                        <div>PHP</div>
-                                        <div>MySQL</div>
-                                        <div>Bootstrap</div>
-                                    </div>
-                                    <div className={styles.shortcut}>
-                                        <div
-                                            onClick={() => {
-                                                window.open(recipe_github);
-                                            }}
-                                        >
-                                            깃허브
-                                            <FontAwesomeIcon
-                                                icon={faArrowUpRightFromSquare}
-                                            />
+                                    <div className={styles.absol_bottom}>
+                                        <div className={styles.skills}>
+                                            <div>Java</div>
+                                            <div>PHP</div>
+                                            <div>MySQL</div>
+                                            <div>Bootstrap</div>
+                                        </div>
+                                        <div className={styles.shortcut}>
+                                            <div
+                                                onClick={() => {
+                                                    window.open(recipe_github);
+                                                }}
+                                            >
+                                                깃허브
+                                                <FontAwesomeIcon
+                                                    icon={
+                                                        faArrowUpRightFromSquare
+                                                    }
+                                                />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -318,30 +322,38 @@ const JsPractice = () => {
                                     모습입니다.
                                     <br />
                                     개발인원: 1명
-                                    <div className={styles.skills}>
-                                        <div>Flutter</div>
-                                        <div>Dart</div>
-                                    </div>
-                                    <div className={styles.shortcut}>
-                                        <div
-                                            onClick={() => {
-                                                window.open(interval_github);
-                                            }}
-                                        >
-                                            깃허브
-                                            <FontAwesomeIcon
-                                                icon={faArrowUpRightFromSquare}
-                                            />
+                                    <div className={styles.absol_bottom}>
+                                        <div className={styles.skills}>
+                                            <div>Flutter</div>
+                                            <div>Dart</div>
                                         </div>
-                                        <div
-                                            onClick={() => {
-                                                window.open(interval_demo);
-                                            }}
-                                        >
-                                            Demo
-                                            <FontAwesomeIcon
-                                                icon={faArrowUpRightFromSquare}
-                                            />
+                                        <div className={styles.shortcut}>
+                                            <div
+                                                onClick={() => {
+                                                    window.open(
+                                                        interval_github,
+                                                    );
+                                                }}
+                                            >
+                                                깃허브
+                                                <FontAwesomeIcon
+                                                    icon={
+                                                        faArrowUpRightFromSquare
+                                                    }
+                                                />
+                                            </div>
+                                            <div
+                                                onClick={() => {
+                                                    window.open(interval_demo);
+                                                }}
+                                            >
+                                                Demo
+                                                <FontAwesomeIcon
+                                                    icon={
+                                                        faArrowUpRightFromSquare
+                                                    }
+                                                />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -410,30 +422,36 @@ const JsPractice = () => {
                                     때마다 랜덤으로 변경됩니다.
                                     <br />
                                     개발인원: 1명
-                                    <div className={styles.skills}>
-                                        <div>JS</div>
-                                        <div>CSS</div>
-                                    </div>
-                                    <div className={styles.shortcut}>
-                                        <div
-                                            onClick={() => {
-                                                window.open(toDo_github);
-                                            }}
-                                        >
-                                            깃허브
-                                            <FontAwesomeIcon
-                                                icon={faArrowUpRightFromSquare}
-                                            />
+                                    <div className={styles.absol_bottom}>
+                                        <div className={styles.skills}>
+                                            <div>JS</div>
+                                            <div>CSS</div>
                                         </div>
-                                        <div
-                                            onClick={() => {
-                                                window.open(toDo_demo);
-                                            }}
-                                        >
-                                            Demo
-                                            <FontAwesomeIcon
-                                                icon={faArrowUpRightFromSquare}
-                                            />
+                                        <div className={styles.shortcut}>
+                                            <div
+                                                onClick={() => {
+                                                    window.open(toDo_github);
+                                                }}
+                                            >
+                                                깃허브
+                                                <FontAwesomeIcon
+                                                    icon={
+                                                        faArrowUpRightFromSquare
+                                                    }
+                                                />
+                                            </div>
+                                            <div
+                                                onClick={() => {
+                                                    window.open(toDo_demo);
+                                                }}
+                                            >
+                                                Demo
+                                                <FontAwesomeIcon
+                                                    icon={
+                                                        faArrowUpRightFromSquare
+                                                    }
+                                                />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

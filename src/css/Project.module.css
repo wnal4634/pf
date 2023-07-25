@@ -92,7 +92,7 @@ hr {
     .skills {
         flex-direction: row;
     }
-    .shortcut {
+    .absol_bottom {
         position: absolute;
         bottom: 25px;
     }
@@ -103,7 +103,6 @@ hr {
     .shortcut div {
         background-color: #e8e8e8;
         display: inline-block;
-        background-color: #e8e8e8;
         padding: 3px 7px;
         margin: 5px 5px 5px 0;
         border-radius: 5px;

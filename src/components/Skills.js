@@ -6,6 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
+    let color = "#" + Math.round(Math.random() * 0xffffff).toString(16);
+
     return (
         <div id="2" className={styles.skills_wrap}>
             <hr />
@@ -20,8 +22,8 @@ const Skills = () => {
                 </div>
                 <div className={styles.column}>
                     <div className={styles.skills}>
-                        <div>HTML</div>
-                        <div>CSS</div>
+                        <div style={{ color }}>HTML</div>
+                        <div style={{ color }}>CSS</div>
                     </div>
                     <div className={styles.skills}>
                         <div>JS</div>
