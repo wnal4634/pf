@@ -23,6 +23,7 @@ import js_2_img5 from "img/js_2/5.png";
 import js_3_img1 from "img/js_3/1.png";
 import js_3_img2 from "img/js_3/2.png";
 import js_3_img3 from "img/js_3/3.png";
+import js_4_img1 from "img/js_4/1.png";
 
 const images = {
     js_1_img1,
@@ -50,6 +51,7 @@ const images = {
     js_3_img1,
     js_3_img2,
     js_3_img3,
+    js_4_img1,
 };
 
 export default images;

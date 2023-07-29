@@ -35,15 +35,8 @@ hr {
     }
     .row :hover {
         transition: 0.3s;
-        filter: brightness(0.7);
+        filter: brightness(0.8);
         cursor: pointer;
-    }
-    .row button {
-        position: absolute;
-        left: 20px;
-        bottom: 30px;
-        width: fit-content;
-        height: fit-content;
     }
     .row img {
         width: 100%;
@@ -53,11 +46,12 @@ hr {
     }
     .click {
         position: absolute;
-        color: white;
+        color: rgb(112, 112, 112);
         left: 25px;
         bottom: 20px;
-        font-family: "Rubik Mono One", sans-serif;
-        text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        font-family: "TheJamsil5Bold", sans-serif;
+        /* letter-spacing: 1px; */
+        /* text-shadow: 0 0 8px rgba(134, 134, 134, 0.8); */
     }
     .modal {
         display: flex;
@@ -143,13 +137,6 @@ hr {
         filter: brightness(0.7);
         cursor: pointer;
     }
-    .row button {
-        position: absolute;
-        left: 20px;
-        bottom: 30px;
-        width: fit-content;
-        height: fit-content;
-    }
     .row img {
         width: 100%;
         object-fit: cover;
@@ -158,11 +145,11 @@ hr {
     }
     .click {
         position: absolute;
-        color: white;
+        color: rgb(112, 112, 112);
         left: 25px;
         bottom: 20px;
-        font-family: "Rubik Mono One", sans-serif;
-        text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        font-family: "TheJamsil5Bold", sans-serif;
+        /* text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); */
     }
     .modal {
         /* display: flex; */
@@ -249,13 +236,6 @@ hr {
         filter: brightness(0.7);
         cursor: pointer;
     }
-    .row button {
-        position: absolute;
-        left: 20px;
-        bottom: 30px;
-        width: fit-content;
-        height: fit-content;
-    }
     .row img {
         width: 100%;
         object-fit: cover;
@@ -264,11 +244,11 @@ hr {
     }
     .click {
         position: absolute;
-        color: white;
+        color: rgb(112, 112, 112);
         left: 25px;
         bottom: 20px;
-        font-family: "Rubik Mono One", sans-serif;
-        text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        font-family: "TheJamsil5Bold", sans-serif;
+        /* text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); */
     }
     .modal {
         /* display: flex; */

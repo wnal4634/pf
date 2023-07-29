@@ -369,7 +369,12 @@ const JsPractice = () => {
                                 alt="앱사진"
                                 onClick={() => setModalIsOpen3(true)}
                             />
-                            <div className={styles.click}>To Do List</div>
+                            <div
+                                className={styles.click}
+                                style={{ color: "white" }}
+                            >
+                                To Do List
+                            </div>
                             <Modal
                                 isOpen={modalIsOpen3}
                                 onRequestClose={() => setModalIsOpen3(false)}
@@ -458,14 +463,14 @@ const JsPractice = () => {
                             </Modal>
                         </div>
                     </Fade>
-                    {/* <Fade bottom duration={2000}>
+                    <Fade bottom duration={2000}>
                         <div className={styles.row}>
                             <img
-                                src={img1}
+                                src={images.js_4_img1}
                                 alt="앱사진"
                                 onClick={() => setModalIsOpen4(true)}
                             />
-                            <div className={styles.click}>Click!</div>
+                            <div className={styles.click}>Portfolio</div>
                             <Modal
                                 isOpen={modalIsOpen4}
                                 onRequestClose={() => setModalIsOpen4(false)}
@@ -486,19 +491,13 @@ const JsPractice = () => {
                                     <SwiperSlide>Slide 1</SwiperSlide>
                                     <SwiperSlide>Slide 2</SwiperSlide>
                                     <SwiperSlide>Slide 3</SwiperSlide>
-                                    <SwiperSlide>Slide 4</SwiperSlide>
-                                    <SwiperSlide>Slide 5</SwiperSlide>
-                                    <SwiperSlide>Slide 6</SwiperSlide>
-                                    <SwiperSlide>Slide 7</SwiperSlide>
-                                    <SwiperSlide>Slide 8</SwiperSlide>
-                                    <SwiperSlide>Slide 9</SwiperSlide>
                                 </Swiper>
                                 <div className={styles.modal_content}>
                                     content
                                 </div>
                             </Modal>
                         </div>
-                    </Fade> */}
+                    </Fade>
                 </div>
             </div>
         </div>
