@@ -33,8 +33,8 @@ const Experience = () => {
 
     return (
         <div id="4" className={styles.experience_wrap}>
-            <hr />
             <h2>😉 Experience</h2>
+            <hr />
             <div className={styles.modal_wrap}>
                 <img
                     src={img1}

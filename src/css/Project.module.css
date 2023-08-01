@@ -1,41 +1,40 @@
-hr {
-    border: 0.5px solid rgb(226, 226, 226);
-    width: 50px;
-    margin-bottom: 100px;
-    margin-top: 100px;
-}
-
 @media screen and (min-width: 1024px) {
     /* 데탑 */
     .practice_wrap {
         flex-direction: column;
         padding-top: 30px;
-        font-family: "Pretendard-Regular";
+        margin-top: 140px;
+        width: 700px;
     }
     .column {
         flex-direction: column;
     }
-    /* .row_1 {
-        margin-right: 120px;
+    .row_1 {
+        margin-bottom: 20px;
     }
-    .row_2 {
-        margin-left: 120px;
-    } */
     .row {
-        margin: 20px;
         flex-direction: row;
-        border: 1px solid rgb(208, 208, 208);
+        border: 1px solid rgb(234, 234, 234);
         border-radius: 30px;
-        width: 350px;
+        width: 340px;
         height: 250px;
         overflow: hidden;
-        -webkit-box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
-        -moz-box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
-        box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
-    }
-    .row :hover {
         transition: 0.3s;
-        filter: brightness(0.8);
+        -webkit-box-shadow: 0px 14px 15px -6px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 14px 15px -6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 14px 15px -6px rgba(0, 0, 0, 0.1);
+    }
+    .row:first-child {
+        margin-right: 20px;
+    }
+    .row:hover {
+        transition: 0.3s;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.17),
+            0 2px 7px rgba(0, 0, 0, 0.17);
+    }
+    .row img:hover {
+        transform: scale(1.1);
+        transition: 0.3s ease-in-out;
         cursor: pointer;
     }
     .row img {
@@ -46,7 +45,7 @@ hr {
     }
     .click {
         position: absolute;
-        color: rgb(112, 112, 112);
+        color: rgb(46, 46, 46);
         left: 25px;
         bottom: 20px;
         font-family: "TheJamsil5Bold", sans-serif;
@@ -67,7 +66,6 @@ hr {
     .modal_content {
         width: 50%;
         padding-left: 20px;
-        font-family: "Pretendard-Regular";
     }
     .js_product {
         width: 100%;
@@ -111,7 +109,6 @@ hr {
     .practice_wrap {
         flex-direction: column;
         padding-top: 30px;
-        font-family: "Pretendard-Regular";
     }
     .column {
         flex-direction: column;
@@ -164,7 +161,6 @@ hr {
     }
     .modal_content {
         padding-top: 20px;
-        font-family: "Pretendard-Regular";
     }
     .js_product {
         width: 100%;
@@ -208,7 +204,6 @@ hr {
     .practice_wrap {
         flex-direction: column;
         padding-top: 30px;
-        font-family: "Pretendard-Regular";
     }
     .column {
         flex-direction: column;
@@ -263,7 +258,6 @@ hr {
     }
     .modal_content {
         padding-top: 20px;
-        font-family: "Pretendard-Regular";
     }
     .js_product {
         width: 100%;

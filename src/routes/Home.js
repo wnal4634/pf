@@ -17,7 +17,7 @@ const Home = () => {
     return (
         <MainDiv>
             <Top />
-            <Intro />
+            {/* <Intro /> */}
             <ContentDiv>
                 <Middle />
             </ContentDiv>

@@ -2,6 +2,16 @@ body {
     overflow-y: overlay; /* 반드시 overlay 처리 */
     margin: 0;
 }
+hr {
+    border: 0;
+    height: 1px;
+    background-color: rgb(232, 232, 232);
+    width: 100%;
+    margin: 20px 0 30px;
+}
+h2 {
+    margin: 0;
+}
 
 ::-webkit-scrollbar-button:vertical:start:decrement {
     display: block;

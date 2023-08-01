@@ -9,8 +9,8 @@ const ColorDiv = styled.div`
 const Skills = () => {
     return (
         <div id="2" className={styles.skills_wrap}>
-            <hr />
             <h2>🔧 Skills</h2>
+            <hr />
             <div className={styles.row}>
                 <div className={styles.skill_title}>
                     <div>MarkUp</div>
@@ -21,26 +21,27 @@ const Skills = () => {
                 </div>
                 <div className={styles.column}>
                     <div className={styles.skills}>
-                        <div>HTML</div>
-                        <div>CSS</div>
+                        <div style={{ color: `#ff5722` }}>HTML</div>
+                        <div style={{ color: `#264de4` }}>CSS</div>
                     </div>
                     <div className={styles.skills}>
-                        <div>JS</div>
-                        <div>Dart</div>
+                        <div style={{ color: `#CCB100` }}>JS</div>
+                        {/* #f7de1f */}
+                        <div style={{ color: `#00579c` }}>Dart</div>
                     </div>
                     <div className={styles.skills}>
-                        <div>React</div>
-                        <div>Bootstrap</div>
-                        <div>NodeJS</div>
-                        <div>Flutter</div>
+                        <div style={{ color: `#5ed3f3` }}>React</div>
+                        <div style={{ color: `#523b77` }}>Bootstrap</div>
+                        <div style={{ color: `#87bf00` }}>NodeJS</div>
+                        <div style={{ color: `#51bff0` }}>Flutter</div>
                     </div>
                     <div className={styles.skills}>
-                        <div>MySQL</div>
+                        <div style={{ color: `#005e86` }}>MySQL</div>
                     </div>
                     <div className={styles.skills}>
-                        <div>Github</div>
-                        <div>Git</div>
-                        <div>Figma</div>
+                        <div style={{ color: `#000000` }}>Github</div>
+                        <div style={{ color: `#e84d31` }}>Git</div>
+                        <div style={{ color: `#f76e5f` }}>Figma</div>
                     </div>
                 </div>
             </div>
