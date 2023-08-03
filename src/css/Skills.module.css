@@ -1,7 +1,8 @@
 .skills_wrap {
     flex-direction: column;
     /* font-family: "Pretendard-Regular"; */
-    margin-top: 140px;
+    margin-top: 70px;
+    padding-top: 70px;
     width: 700px;
 }
 .row {

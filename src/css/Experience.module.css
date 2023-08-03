@@ -10,7 +10,8 @@
     .experience_wrap {
         flex-direction: column;
         margin-bottom: 100px;
-        margin-top: 140px;
+        margin-top: 70px;
+        padding-top: 70px;
         width: 700px;
     }
     .modal_wrap {

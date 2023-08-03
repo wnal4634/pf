@@ -112,7 +112,7 @@ const Side = () => {
                             smooth={true}
                             className={styles.link}
                         >
-                            <div ref={appearLink_3}>JS</div>
+                            <div ref={appearLink_3}>Project</div>
                         </Link>
                         <Link
                             to="4"
@@ -164,7 +164,7 @@ const Side = () => {
                                         smooth={true}
                                         className={styles.link}
                                     >
-                                        JS
+                                        Project
                                     </Link>
                                 </li>
                                 <li className={styles.menu_item}>
