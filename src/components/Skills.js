@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "css/Skills.module.css";
 import styled from "styled-components";
+import colors from "components/SkillsColor";
 
 const ColorDiv = styled.div`
     background-color: hsl(${parseInt(Math.random() * 24, 10) * 15}, 16%, 57%);
@@ -21,27 +22,27 @@ const Skills = () => {
                 </div>
                 <div className={styles.column}>
                     <div className={styles.skills}>
-                        <div style={{ color: `#ff5722` }}>HTML</div>
-                        <div style={{ color: `#264de4` }}>CSS</div>
+                        <div style={{ color: colors.HTML }}>HTML</div>
+                        <div style={{ color: colors.CSS }}>CSS</div>
                     </div>
                     <div className={styles.skills}>
-                        <div style={{ color: `#CCB100` }}>JS</div>
+                        <div style={{ color: colors.JS }}>JS</div>
                         {/* #f7de1f */}
-                        <div style={{ color: `#00579c` }}>Dart</div>
+                        <div style={{ color: colors.Dart }}>Dart</div>
                     </div>
                     <div className={styles.skills}>
-                        <div style={{ color: `#5ed3f3` }}>React</div>
-                        <div style={{ color: `#523b77` }}>Bootstrap</div>
-                        <div style={{ color: `#87bf00` }}>NodeJS</div>
-                        <div style={{ color: `#51bff0` }}>Flutter</div>
+                        <div style={{ color: colors.React }}>React</div>
+                        <div style={{ color: colors.Bootstrap }}>Bootstrap</div>
+                        <div style={{ color: colors.NodeJS }}>NodeJS</div>
+                        <div style={{ color: colors.Flutter }}>Flutter</div>
                     </div>
                     <div className={styles.skills}>
-                        <div style={{ color: `#005e86` }}>MySQL</div>
+                        <div style={{ color: colors.MySQL }}>MySQL</div>
                     </div>
                     <div className={styles.skills}>
-                        <div style={{ color: `#000000` }}>Github</div>
-                        <div style={{ color: `#e84d31` }}>Git</div>
-                        <div style={{ color: `#f76e5f` }}>Figma</div>
+                        <div>Github</div>
+                        <div style={{ color: colors.Git }}>Git</div>
+                        <div style={{ color: colors.Figma }}>Figma</div>
                     </div>
                 </div>
             </div>

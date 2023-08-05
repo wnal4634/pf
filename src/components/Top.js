@@ -43,37 +43,37 @@ const Side = () => {
             x: -20,
             opacity: 0,
             duration: 1,
-            delay: 2,
+            delay: 0.5,
         });
         gsap.from(appearLink_1.current, {
             x: -20,
             opacity: 0,
             duration: 1,
-            delay: 2.5,
+            delay: 1,
         });
         gsap.from(appearLink_2.current, {
             x: -20,
             opacity: 0,
             duration: 1,
-            delay: 3,
+            delay: 1.5,
         });
         gsap.from(appearLink_3.current, {
             x: -20,
             opacity: 0,
             duration: 1,
-            delay: 3.5,
+            delay: 2,
         });
         gsap.from(appearLink_4.current, {
             x: -20,
             opacity: 0,
             duration: 1,
-            delay: 4,
+            delay: 2.5,
         });
         gsap.from(appearLink_5.current, {
             x: -20,
             opacity: 0,
             duration: 1,
-            delay: 4.5,
+            delay: 3,
         });
     }, []);
 
