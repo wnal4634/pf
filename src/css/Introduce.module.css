@@ -1,3 +1,60 @@
+.introduce_wrap h1 {
+    margin: 50px 0 40px 0;
+}
+.intro {
+    flex-direction: row;
+}
+.intro img {
+    border-radius: 100px;
+    cursor: default;
+    -webkit-user-drag: none;
+    width: 130px;
+    height: fit-content;
+}
+.intro_url_wrap {
+    flex-direction: column;
+    font-weight: 300;
+    margin-left: 30px;
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 10px;
+    padding: 20px 25px;
+}
+.intro_url_wrap div:first-child {
+    color: rgb(66, 66, 66);
+}
+.intro_url_wrap hr {
+    border: 0;
+    height: 1px;
+    background-color: rgb(232, 232, 232);
+    width: 100%;
+    margin: 30px 0 25px 0;
+}
+.url_wrap {
+    flex-direction: column;
+    height: 100%;
+}
+.url:not(.url:last-child) a {
+    margin-bottom: 10px;
+}
+.url a {
+    cursor: pointer;
+    padding: 0 5px;
+    font-weight: 100;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 50%,
+        rgb(255, 221, 0) 50%
+    );
+    background-size: 200%;
+    transition: ease-in 0.3s;
+    margin-left: 5px;
+}
+.url a:hover {
+    color: black;
+    background-position: -100% 0;
+    transition: ease 0.3s;
+}
+
 @media screen and (min-width: 1024px) {
     /* 데탑 */
     .introduce_wrap {
@@ -6,112 +63,15 @@
         padding-top: 20px;
         width: 700px;
     }
-    .introduce_wrap h1 {
-        margin: 50px 0 40px 0;
-    }
-    .intro {
-        flex-direction: row;
-    }
-    .intro img {
-        border-radius: 100px;
-        cursor: default;
-        -webkit-user-drag: none;
-        width: 130px;
-        height: fit-content;
-    }
-    .intro_url_wrap {
-        flex-direction: column;
-        font-weight: 300;
-        margin-left: 30px;
-        border: 1px solid rgb(232, 232, 232);
-        border-radius: 10px;
-        padding: 20px 25px;
-    }
-    .intro_url_wrap div:first-child {
-        color: rgb(66, 66, 66);
-    }
-    .intro_url_wrap hr {
-        border: 0;
-        height: 1px;
-        background-color: rgb(232, 232, 232);
-        width: 100%;
-        margin: 30px 0 25px 0;
-    }
-    .url_wrap {
-        flex-direction: column;
-        height: 100%;
-    }
-    .url:not(.url:last-child) a {
-        margin-bottom: 10px;
-    }
-    .url a {
-        cursor: pointer;
-        padding: 0 5px;
-        font-weight: 100;
-        background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 50%,
-            rgb(255, 221, 0) 50%
-        );
-        background-size: 200%;
-        transition: ease-in 0.3s;
-        margin-left: 5px;
-    }
-    .url a:hover {
-        color: black;
-        background-position: -100% 0;
-        transition: ease 0.3s;
-    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     /* 타블렛 */
     .introduce_wrap {
         flex-direction: column;
-        padding: 70px 10px;
-        width: 670px;
-    }
-    .intro img {
-        border: 1px solid black;
-        border-radius: 100px;
-        height: 200px;
-        cursor: default;
-        -webkit-user-drag: none;
-    }
-    .intro {
-        flex-direction: row;
-    }
-    .name {
-        margin-left: 30px;
-        flex-direction: column;
-    }
-    .name h3 {
-        margin: 10px 0 20px 0;
-    }
-    .intro_url_wrap {
-        flex-direction: column;
-    }
-    .url_wrap {
-        margin-top: 30px;
-        flex-direction: column;
-    }
-    .url a {
-        cursor: pointer;
-        margin: 0 10px;
-        color: rgb(100, 100, 100);
-        margin-bottom: 10px;
-        background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 50%,
-            rgb(255, 221, 0) 50%
-        );
-        background-size: 200%;
-        transition: ease-in 0.3s;
-    }
-    .url a:hover {
-        color: black;
-        background-position: -100% 0;
-        transition: ease 0.3s;
+        margin-top: 120px;
+        padding-top: 20px;
+        width: 630px;
     }
 }
 
@@ -119,49 +79,8 @@
     /* 모바일 */
     .introduce_wrap {
         flex-direction: column;
-        padding: 70px 10px;
+        margin-top: 50px;
+        padding-top: 20px;
         width: 500px;
-    }
-    .intro img {
-        border: 1px solid black;
-        border-radius: 100px;
-        height: 200px;
-        cursor: default;
-        -webkit-user-drag: none;
-    }
-    .intro {
-        flex-direction: row;
-    }
-    .name {
-        margin-left: 30px;
-        flex-direction: column;
-    }
-    .name h3 {
-        margin: 10px 0 20px 0;
-    }
-    .intro_url_wrap {
-        flex-direction: column;
-    }
-    .url_wrap {
-        margin-top: 30px;
-        flex-direction: column;
-    }
-    .url a {
-        cursor: pointer;
-        margin: 0 10px;
-        color: rgb(100, 100, 100);
-        margin-bottom: 10px;
-        background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 50%,
-            rgb(255, 221, 0) 50%
-        );
-        background-size: 200%;
-        transition: ease-in 0.3s;
-    }
-    .url a:hover {
-        color: black;
-        background-position: -100% 0;
-        transition: ease 0.3s;
     }
 }

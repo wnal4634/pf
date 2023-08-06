@@ -364,8 +364,10 @@ const JsPractice = () => {
                     <div className={styles.project_content_row}>
                         바닐라 자바스크립트로 제작한 투두리스트입니다. <br />
                         현재 시각을 한 눈에 볼 수 있으며 투두리스트를 작성하기
-                        전, 이름 혹은 닉네임을 설정할 수 있습니다. 투두리스트를
-                        작성 후에 옆의 X버튼을 누르면 해당 리스트가 삭제됩니다.
+                        전, 이름 혹은 닉네임을 설정할 수 있습니다. 리스트를
+                        작성한 후에 옆의 X버튼을 누르면 해당 리스트가
+                        삭제됩니다. 리스트는 로컬 스토리지에 저장되어 브라우저에
+                        재접속 하거나, 새로고침을 해도 남아 있습니다.
                         <br />
                         배경 이미지와 하단의 글귀는 새로고침을 할 때마다
                         랜덤으로 변경됩니다.
@@ -420,17 +422,13 @@ const JsPractice = () => {
                         <SwiperSlide>Slide 3</SwiperSlide>
                     </Swiper>
                     <div className={styles.project_content}>
-                        레시피 공유 및 밀키트 판매 앱입니다.
+                        포트폴리오입니다.
                         <br />
                         content
                         <div className={styles.skill_shortcut}>
                             <div className={styles.skills}>
-                                <div style={{ color: colors.Java }}>Java</div>
-                                <div style={{ color: colors.PHP }}>PHP</div>
-                                <div style={{ color: colors.MySQL }}>MySQL</div>
-                                <div style={{ color: colors.Bootstrap }}>
-                                    Bootstrap
-                                </div>
+                                <div style={{ color: colors.React }}>React</div>
+                                <div style={{ color: colors.CSS }}>CSS</div>
                             </div>
                             <div className={styles.shortcut}>
                                 <div
