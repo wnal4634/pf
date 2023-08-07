@@ -1,12 +1,34 @@
-/* hr {
-    border: 0.5px solid rgb(226, 226, 226);
-    width: 50px;
-    margin-bottom: 100px;
-    margin-top: 100px;
-} */
+.modal_wrap {
+    flex-direction: row;
+    border: 1px solid rgb(234, 234, 234);
+    border-radius: 30px;
+    width: 340px;
+    height: 250px;
+    overflow: hidden;
+    transition: 0.3s;
+    -webkit-box-shadow: 0px 14px 15px -6px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 14px 15px -6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 14px 15px -6px rgba(0, 0, 0, 0.1);
+}
+.modal_wrap img:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.modal_wrap:hover {
+    transition: 0.3s;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.17), 0 2px 7px rgba(0, 0, 0, 0.17);
+}
+.img {
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    transition: 0.3s;
+}
 
-@media screen and (min-width: 768px) {
-    /* 데탑, 타블렛 같이 */
+@media screen and (min-width: 1024px) {
+    /* 데탑 */
     .experience_wrap {
         flex-direction: column;
         margin-bottom: 100px;
@@ -14,34 +36,30 @@
         padding-top: 70px;
         width: 700px;
     }
-    .modal_wrap {
-        flex-direction: row;
-        border: 1px solid rgb(234, 234, 234);
-        border-radius: 30px;
-        width: 340px;
-        height: 250px;
-        overflow: hidden;
-        transition: 0.3s;
-        -webkit-box-shadow: 0px 14px 15px -6px rgba(0, 0, 0, 0.1);
-        -moz-box-shadow: 0px 14px 15px -6px rgba(0, 0, 0, 0.1);
-        box-shadow: 0px 14px 15px -6px rgba(0, 0, 0, 0.1);
-    }
-    .modal_wrap img:hover {
-        transform: scale(1.1);
-        transition: 0.3s ease-in-out;
-        cursor: pointer;
-    }
-    .modal_wrap:hover {
-        transition: 0.3s;
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.17),
-            0 2px 7px rgba(0, 0, 0, 0.17);
-    }
-    .img {
-        width: 100%;
+    .modal_img {
+        cursor: default;
+        width: 60%;
+        height: 100%;
         object-fit: contain;
-        cursor: pointer;
         -webkit-user-drag: none;
-        transition: 0.3s;
+    }
+    .modal_content {
+        width: 40%;
+        padding-left: 20px;
+    }
+    .modal {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* 타블렛 */
+    .experience_wrap {
+        flex-direction: column;
+        margin-bottom: 100px;
+        margin-top: 70px;
+        padding-top: 70px;
+        width: 630px;
     }
     .modal_img {
         cursor: default;
@@ -63,31 +81,10 @@
     /* 모바일 */
     .experience_wrap {
         flex-direction: column;
-        padding-top: 30px;
         margin-bottom: 100px;
-    }
-    .modal_wrap {
-        margin: 20px;
-        flex-direction: row;
-        border: 1px solid rgb(208, 208, 208);
-        border-radius: 30px;
-        width: 350px;
-        height: 250px;
-        overflow: hidden;
-        -webkit-box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
-        -moz-box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
-        box-shadow: 0px 0px 5px -2px rgba(120, 120, 120, 1);
-    }
-    .modal_wrap :hover {
-        transition: 0.3s;
-        filter: brightness(0.7);
-        cursor: pointer;
-    }
-    .img {
-        width: 100%;
-        object-fit: contain;
-        cursor: pointer;
-        -webkit-user-drag: none;
+        margin-top: 70px;
+        padding-top: 70px;
+        width: 500px;
     }
     .modal_img {
         cursor: default;
@@ -98,9 +95,5 @@
     }
     .modal_content {
         padding-top: 20px;
-        width: 50%;
-    }
-    .modal {
-        /* display: flex; */
     }
 }

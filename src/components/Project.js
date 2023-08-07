@@ -1,43 +1,16 @@
 import React, { useState } from "react";
 import styles from "css/Project.module.css";
 import Fade from "react-reveal/Fade";
-import Modal from "react-modal";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import img1 from "img/cookkit.jpg";
 import images from "components/ImagesImport";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import "css/Swiper-bundle.css";
 import colors from "components/SkillsColor";
-
-const ModalStyle = {
-    overlay: {
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: "rgba(0, 0, 0, 0.3)",
-    },
-    content: {
-        position: "absolute",
-        top: "70px",
-        left: "15vw",
-        right: "15vw",
-        bottom: "40px",
-        // border: "1px solid #ccc",
-        background: "#fff",
-        overflow: "auto",
-        WebkitOverflowScrolling: "touch",
-        borderRadius: "10px",
-        outline: "none",
-        padding: "20px",
-    },
-};
 
 const JsPractice = () => {
     const recipe_github = "https://github.com/wnal4634/univ_final_cookkit";
@@ -46,16 +19,9 @@ const JsPractice = () => {
     const toDo_github = "https://github.com/wnal4634/momentum";
     const toDo_demo = "https://wnal4634.github.io/momentum";
 
-    const [modalIsOpen1, setModalIsOpen1] = useState(false);
-    const [modalIsOpen2, setModalIsOpen2] = useState(false);
-    const [modalIsOpen3, setModalIsOpen3] = useState(false);
-    const [modalIsOpen4, setModalIsOpen4] = useState(false);
-
     return (
         <div id="3" className={styles.practice_wrap}>
             <h2>📁 Project</h2>
-            {/* <hr /> */}
-
             <Fade bottom>
                 <div className={styles.swiper_wrap}>
                     <Swiper

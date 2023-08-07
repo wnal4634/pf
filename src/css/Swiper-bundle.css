@@ -255,7 +255,9 @@
     content: "next";
 }
 .swiper-button-prev:hover,
-.swiper-button-next:hover {
+.swiper-button-next:hover,
+.swiper-button-prev:active,
+.swiper-button-next:active {
     transform: scale(1.5);
     transition: 0.3s;
 }
