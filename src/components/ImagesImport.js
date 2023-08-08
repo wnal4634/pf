@@ -24,6 +24,18 @@ import js_3_img1 from "img/js_3/1.png";
 import js_3_img2 from "img/js_3/2.png";
 import js_3_img3 from "img/js_3/3.png";
 import js_4_img1 from "img/js_4/1.png";
+import bootstrap from "img/skills/bootstrap.png";
+import css from "img/skills/css.png";
+import dart from "img/skills/dart.png";
+import figma from "img/skills/figma.png";
+import flutter from "img/skills/flutter.png";
+import git from "img/skills/git.png";
+import github from "img/skills/github.png";
+import html from "img/skills/html.png";
+import js from "img/skills/js.png";
+import mysql from "img/skills/mysql.png";
+import nodeJs from "img/skills/nodeJs.png";
+import reactJs from "img/skills/reactJs.png";
 
 const images = {
     js_1_img1,
@@ -52,6 +64,18 @@ const images = {
     js_3_img2,
     js_3_img3,
     js_4_img1,
+    bootstrap,
+    css,
+    dart,
+    figma,
+    flutter,
+    git,
+    github,
+    html,
+    js,
+    mysql,
+    nodeJs,
+    reactJs,
 };
 
 export default images;
