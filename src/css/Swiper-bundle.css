@@ -260,6 +260,7 @@
 .swiper-button-next:active {
     transform: scale(1.5);
     transition: 0.3s;
+    filter: drop-shadow(0 0 5px #fff);
 }
 .swiper-button-lock {
     display: none;

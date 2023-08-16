@@ -9,11 +9,21 @@
     flex-direction: column;
 }
 .skills_img div {
-    margin-bottom: 50px;
+    margin-bottom: 15px;
+    padding: 5px;
 }
-.skills_img img {
+.skills_img_row {
+    display: flex;
+    justify-content: space-between;
+}
+.skills_img_row div {
     width: 70px;
     height: 70px;
+    padding: 5px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.skills_img_row img {
     object-fit: cover;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -22,24 +32,24 @@
     -ms-user-select: none;
     user-select: none;
     -webkit-user-drag: none;
-    transition: 0.3s;
-}
-.skills_img img:hover {
-    transform: scale(1.5);
-    transition: 0.3s;
-    /* filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5)); */
     cursor: default;
 }
-.skills_img div:first-child img:nth-child(4) {
-    /* 리액트 로고 */
-    width: 79px;
+.skills_img_row div:hover {
+    transform: scale(1.5);
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.3);
+    filter: brightness(0.7);
 }
-.skills_img div:last-child img:last-child {
-    /* mysql 로고 */
-    width: 103px;
+.skills_img_row div span {
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+    position: absolute;
+    opacity: 0;
 }
-.skills_img img:not(.skills_img img:first-child) {
-    margin-left: 35px;
+.skills_img_row div span:hover {
+    position: absolute;
+    opacity: 1;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
