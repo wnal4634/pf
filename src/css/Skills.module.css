@@ -19,8 +19,8 @@
 .skills_img_row div {
     width: 70px;
     height: 70px;
-    padding: 5px;
-    border-radius: 8px;
+    padding: 6px;
+    border-radius: 10px;
     transition: 0.3s;
 }
 .skills_img_row img {
@@ -33,23 +33,34 @@
     user-select: none;
     -webkit-user-drag: none;
     cursor: default;
+    transition: 0.3s;
 }
 .skills_img_row div:hover {
     transform: scale(1.5);
     transition: 0.3s;
     background-color: rgba(0, 0, 0, 0.3);
-    filter: brightness(0.7);
+}
+.skills_img_row div:hover img {
+    filter: brightness(0.5) blur(2px);
+    opacity: 0.5;
+    transition: 0.3s;
 }
 .skills_img_row div span {
     width: 70px;
     height: 70px;
-    padding: 5px;
     position: absolute;
     opacity: 0;
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+    filter: drop-shadow(0 0 7px #000);
 }
 .skills_img_row div span:hover {
     position: absolute;
     opacity: 1;
+    transition: 0.3s;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
