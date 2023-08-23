@@ -1,4 +1,4 @@
-.swiper_wrap_row .mySwiper_row {
+.mySwiper_row {
     --swiper-theme-color: #fff;
 }
 .practice_wrap h2 {
@@ -82,7 +82,14 @@
         text-align: justify;
         font-weight: 300;
     }
-    .mySwiper_row {
+    .content {
+        flex-direction: column;
+    }
+    .content div {
+        margin-bottom: 10px;
+    }
+    .mySwiper_row,
+    .mySwiper_row_black {
         border: 1px solid rgb(232, 232, 232);
         width: 650px;
     }
@@ -113,7 +120,14 @@
         text-align: justify;
         font-weight: 300;
     }
-    .mySwiper_row {
+    .content {
+        flex-direction: column;
+    }
+    .content div {
+        margin-bottom: 10px;
+    }
+    .mySwiper_row,
+    .mySwiper_row_black {
         border: 1px solid rgb(232, 232, 232);
         width: 580px;
     }
@@ -154,7 +168,8 @@
         -ms-user-select: none;
         user-select: none;
     }
-    .mySwiper_row {
+    .mySwiper_row,
+    .mySwiper_row_black {
         border: 1px solid rgb(232, 232, 232);
         width: 450px;
     }
@@ -165,5 +180,11 @@
         flex-direction: column;
         font-weight: 300;
         text-align: justify;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .content div {
+        margin-bottom: 10px;
     }
 }
