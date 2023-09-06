@@ -13,6 +13,7 @@ const colors = {
     Figma: `#f76e5f`,
     Java: `#0d85bf`,
     PHP: `#7377ad`,
+    Python: `#3872a2`,
 };
 
 export default colors;

@@ -166,20 +166,14 @@ const JsPractice = () => {
                                 있어 회원 정보 등을 확인할 수 있습니다. 관리자
                                 페이지(웹)는 PHP와 부트스트랩을 이용했습니다.
                             </div>
-                            <div>개발인원: 4명</div>
                             <div>
-                                사용자 페이지 주요 기능
-                                <br />
-                                회원가입, 로그인, 회원정보 수정, 글 작성 및
-                                수정, 삭제, 좋아요, 밀키트로 제작할 레시피 투표,
-                                밀키트 구매
-                                <br />
-                                관리자 페이지 주요 기능
-                                <br />
-                                로그인, 회원관리, 게시글 관리, 공지사항 작성 및
-                                관리, 판매 관련 통계 데이터 시각화, 주문목록
-                                확인
+                                사용자 페이지의 경우 회원가입, 로그인, 자동
+                                로그인, 회원정보 수정, 게시글 작성, 게시글 수정,
+                                게시글 삭제, 카테고리별 확인, 검색, 밀키트 구매,
+                                제작할 밀키트 투표, 북마크, 공지사항 확인,
+                                로그아웃이 가능합니다.
                             </div>
+                            <div>개발인원: 4명</div>
                         </div>
                         <div className={styles.skill_shortcut}>
                             <div className={styles.skills}>
@@ -321,9 +315,11 @@ const JsPractice = () => {
                                 위 레시피 공유 및 밀키트 판매 앱의 관리자
                                 페이지입니다.
                                 <br />
-                                PHP와 부트스트랩을 이용해 제작했습니다. 유저와
-                                레시피, 공지, 밀키트 목록, 판매 데이터 시각화
-                                자료 등을 확인할 수 있습니다.
+                                관리자 페이지는 PHP와 부트스트랩을 이용해
+                                제작했고, 데이터 시각화 자료는 파이썬을
+                                사용했습니다. 회원관리, 레시피, 공지사항 작성,
+                                공지사항 삭제, 밀키트 목록, 판매 데이터 시각화
+                                자료 확인 등의 기능이 있습니다.
                             </div>
                             <div>개발인원: 4명</div>
                         </div>
@@ -332,6 +328,9 @@ const JsPractice = () => {
                                 <div style={{ color: colors.PHP }}>PHP</div>
                                 <div style={{ color: colors.Bootstrap }}>
                                     Bootstrap
+                                </div>
+                                <div style={{ color: colors.Python }}>
+                                    Python
                                 </div>
                             </div>
                             <div className={styles.shortcut}>
@@ -405,7 +404,9 @@ const JsPractice = () => {
                                 플러터로 제작한 인터벌 타이머 앱입니다.
                                 <br />
                                 우측 하단의 플로팅 버튼을 통해 시간을 설정할 수
-                                있고, 설정된 시간이 계속 반복됩니다.
+                                있고, 설정된 시간이 계속 반복됩니다. 시간을
+                                설정하지 않았을 경우, 재생 버튼을 눌렀을 때 경고
+                                문구가 뜹니다.
                                 <br />
                                 좌측 상단의 아이콘을 누르면 기본모드와
                                 다크모드를 설정할 수 있습니다.
@@ -486,7 +487,7 @@ const JsPractice = () => {
                     <div className={styles.project_content_row}>
                         <div className={styles.content}>
                             <div>
-                                바닐라 자바스크립트로 제작한 투두리스트입니다.{" "}
+                                바닐라 자바스크립트로 제작한 투두리스트입니다.
                                 <br />
                                 현재 시각을 한 눈에 볼 수 있으며 투두리스트를
                                 작성하기 전, 이름 혹은 닉네임을 설정할 수
@@ -551,8 +552,12 @@ const JsPractice = () => {
                     </Swiper>
                     <div className={styles.project_content}>
                         <div className={styles.content}>
-                            <div>포트폴리오입니다.</div>
-                            <div>content</div>
+                            <div>
+                                리액트로 제작한 현재의 포트폴리오입니다.
+                                React-reveal과 모달, Gsap, Styled-components,
+                                React-scroll, Swiper 등을 사용했습니다.
+                            </div>
+                            <div>개발인원: 1명</div>
                         </div>
                         <div className={styles.skill_shortcut}>
                             <div className={styles.skills}>

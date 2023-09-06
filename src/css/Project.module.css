@@ -14,7 +14,7 @@
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: text;
 }
 .skills div {
     background-color: #f8f8f8;
@@ -42,7 +42,6 @@
     border-radius: 5px;
     cursor: pointer;
 }
-
 .js_product {
     width: 100%;
     height: 100%;
@@ -61,7 +60,7 @@
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: text;
 }
 
 @media screen and (min-width: 1024px) {
@@ -166,7 +165,7 @@
         -khtml-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
-        user-select: none;
+        user-select: text;
     }
     .mySwiper_row,
     .mySwiper_row_black {
