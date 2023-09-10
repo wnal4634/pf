@@ -77,14 +77,38 @@
     }
 }
 
-@media screen and (max-width: 767px) {
-    /* 모바일 */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    /* 타블렛과 모바일 사이 */
     .experience_wrap {
         flex-direction: column;
         margin-bottom: 100px;
         margin-top: 70px;
         padding-top: 70px;
         width: 500px;
+    }
+    .modal_img {
+        cursor: default;
+        width: 100%;
+        height: 70%;
+        object-fit: contain;
+        -webkit-user-drag: none;
+    }
+    .modal_content {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    /* 모바일 */
+    .experience_wrap {
+        flex-direction: column;
+        margin-bottom: 100px;
+        margin-top: 70px;
+        padding-top: 70px;
+        width: 350px;
+    }
+    .modal_wrap {
+        margin: 0 auto;
     }
     .modal_img {
         cursor: default;

@@ -33,7 +33,10 @@ export { Mobile, PC };
 // @media screen and (min-width:768px) and (max-width:1023px) {
 //     /* 타블렛 */
 // }
-// @media screen and (max-width: 767px) {
+// @media screen and (min-width:480px) and (max-width:767px) {
+//     /* 타블렛과 모바일 사이  */
+// }
+// @media screen and (max-width: 479px) {
 //     /* 모바일 */
 // }
 

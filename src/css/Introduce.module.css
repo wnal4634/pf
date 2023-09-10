@@ -75,12 +75,28 @@
     }
 }
 
-@media screen and (max-width: 767px) {
-    /* 모바일 */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    /* 타블렛과 모바일 사이 */
     .introduce_wrap {
         flex-direction: column;
         margin-top: 50px;
         padding-top: 20px;
         width: 500px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    /* 모바일 */
+    .introduce_wrap {
+        flex-direction: column;
+        margin-top: 50px;
+        padding-top: 20px;
+        width: 350px;
+    }
+    .intro {
+        flex-direction: column;
+    }
+    .intro_url_wrap {
+        margin: 20px 0 0 0;
     }
 }

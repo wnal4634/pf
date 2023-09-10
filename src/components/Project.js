@@ -544,18 +544,23 @@ const JsPractice = () => {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className={styles.mySwiper}
+                        className={`${styles.mySwiper} ${styles.one_img}`}
                     >
-                        <SwiperSlide>Slide 1</SwiperSlide>
-                        <SwiperSlide>Slide 2</SwiperSlide>
-                        <SwiperSlide>Slide 3</SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                src={images.js_4_img1}
+                                className={styles.js_product}
+                                alt="포트폴리오 이미지"
+                            />
+                        </SwiperSlide>
                     </Swiper>
                     <div className={styles.project_content}>
                         <div className={styles.content}>
                             <div>
-                                리액트로 제작한 현재의 포트폴리오입니다.
-                                React-reveal과 모달, Gsap, Styled-components,
-                                React-scroll, Swiper 등을 사용했습니다.
+                                개인 웹 포트폴리오이며 모바일과 PC에서 볼 수
+                                있게 최대한 반응형을 고려하여 작업하였습니다.
+                                github.io를 활용해 배포했습니다. 이미지는 모바일
+                                화면으로 보이는 모습입니다.
                             </div>
                             <div>개발인원: 1명</div>
                         </div>
