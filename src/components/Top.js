@@ -18,7 +18,6 @@ const SideDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(5px);
-    // box-shadow: 0 17px 10px -20px rgba(0, 0, 0, 0.7);
     border-bottom: 1px solid #d6d6d6;
     z-index: 100;
     font-family: "Courier Prime", monospace;

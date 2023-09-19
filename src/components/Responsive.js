@@ -1,6 +1,22 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 
+const RealMobile = ({ children }) => {
+    const isRealMobile = useMediaQuery({
+        query: "(max-width: 479px)",
+    });
+
+    return <>{isRealMobile && children}</>;
+};
+
+const PCMinusRealMobile = ({ children }) => {
+    const isPcMinusRealMobile = useMediaQuery({
+        query: "(min-width:480px)",
+    });
+
+    return <>{isPcMinusRealMobile && children}</>;
+};
+
 const Mobile = ({ children }) => {
     const isMobile = useMediaQuery({
         query: "(max-width:767px)",
@@ -25,7 +41,7 @@ const PC = ({ children }) => {
     return <>{isPc && children}</>;
 };
 
-export { Mobile, PC };
+export { Mobile, PC, RealMobile, PCMinusRealMobile };
 
 // @media screen and (min-width:1024px) {
 //     /* 데탑 */

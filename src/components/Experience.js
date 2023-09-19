@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "css/Experience.module.css";
 import Modal from "react-modal";
 import img1 from "img/공모전_상장.png";
+import Fade from "react-reveal/Fade";
 
 const ModalStyle = {
     overlay: {
@@ -32,38 +33,42 @@ const Experience = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     return (
-        <div id="4" className={styles.experience_wrap}>
-            <h2>😉 Experience</h2>
-            <hr />
-            <div className={styles.modal_wrap}>
-                <img
-                    src={img1}
-                    className={styles.img}
-                    alt="상장 이미지"
-                    onClick={() => setModalIsOpen(true)}
-                />
-                <Modal
-                    isOpen={modalIsOpen}
-                    onRequestClose={() => setModalIsOpen(false)}
-                    style={ModalStyle}
-                    className={styles.modal}
-                >
-                    <img
-                        src={img1}
-                        className={styles.modal_img}
-                        alt="상장 이미지"
-                    />
+        <>
+            <Fade bottom>
+                <div id="4" className={styles.experience_wrap}>
+                    <h2>😉 Experience</h2>
+                    <hr />
+                    <div className={styles.modal_wrap}>
+                        <img
+                            src={img1}
+                            className={styles.img}
+                            alt="상장 이미지"
+                            onClick={() => setModalIsOpen(true)}
+                        />
+                        <Modal
+                            isOpen={modalIsOpen}
+                            onRequestClose={() => setModalIsOpen(false)}
+                            style={ModalStyle}
+                            className={styles.modal}
+                        >
+                            <img
+                                src={img1}
+                                className={styles.modal_img}
+                                alt="상장 이미지"
+                            />
 
-                    <div className={styles.modal_content}>
-                        한국정보통신보안윤리학회
-                        <br />
-                        4차 산업혁명 인재양성 공유협업페스티발
-                        <br />
-                        캡스톤경진실적물
+                            <div className={styles.modal_content}>
+                                한국정보통신보안윤리학회
+                                <br />
+                                4차 산업혁명 인재양성 공유협업페스티발
+                                <br />
+                                캡스톤경진실적물
+                            </div>
+                        </Modal>
                     </div>
-                </Modal>
-            </div>
-        </div>
+                </div>
+            </Fade>
+        </>
     );
 };
 

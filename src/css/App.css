@@ -1,3 +1,45 @@
+body {
+    overflow-y: overlay; /* 반드시 overlay 처리 */
+    margin: 0;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-color: rgb(232, 232, 232);
+    width: 100%;
+    margin: 20px 0 30px;
+}
+h2 {
+    margin: 0;
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+    display: block;
+    height: 45px;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 10px;
+    border: 4px solid transparent;
+    box-shadow: inset 6px 6px 0 rgba(34, 34, 34, 0.25);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border: 4px solid transparent;
+    box-shadow: inset 6px 6px 0 rgba(34, 34, 34, 0.5);
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: none;
+    background-color: transparent;
+}
+
 @font-face {
     font-family: "ClimateCrisisKRVF";
     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/ClimateCrisisKRVF.woff2")

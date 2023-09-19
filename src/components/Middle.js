@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import styles from "css/Middle.module.css";
-import Fade from "react-reveal/Fade";
 import Introduce from "components/Introduce";
 import Skills from "components/Skills";
 import JsPractice from "components/Project";
@@ -23,31 +21,18 @@ const IntroBlock = styled.div`
 const Middle = () => {
     return (
         <MiddleDiv>
-            <Fade bottom>
-                <IntroBlock>
-                    <Introduce />
-                </IntroBlock>
-            </Fade>
-            <Fade bottom>
-                <IntroBlock>
-                    <Skills />
-                </IntroBlock>
-            </Fade>
-            <Fade bottom>
-                <IntroBlock>
-                    <JsPractice />
-                </IntroBlock>
-            </Fade>
-            {/* <Fade bottom>
-                <IntroBlock>
-                    <Url />
-                </IntroBlock>
-            </Fade> */}
-            <Fade bottom>
-                <IntroBlock>
-                    <Experience />
-                </IntroBlock>
-            </Fade>
+            <IntroBlock>
+                <Introduce />
+            </IntroBlock>
+            <IntroBlock>
+                <Skills />
+            </IntroBlock>
+            <IntroBlock>
+                <JsPractice />
+            </IntroBlock>
+            <IntroBlock>
+                <Experience />
+            </IntroBlock>
         </MiddleDiv>
     );
 };

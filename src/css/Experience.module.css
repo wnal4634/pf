@@ -31,8 +31,7 @@
     /* 데탑 */
     .experience_wrap {
         flex-direction: column;
-        margin-bottom: 100px;
-        margin-top: 70px;
+        margin: 70px auto 100px;
         padding-top: 70px;
         width: 700px;
     }
@@ -56,8 +55,7 @@
     /* 타블렛 */
     .experience_wrap {
         flex-direction: column;
-        margin-bottom: 100px;
-        margin-top: 70px;
+        margin: 70px auto 100px;
         padding-top: 70px;
         width: 630px;
     }
@@ -81,8 +79,7 @@
     /* 타블렛과 모바일 사이 */
     .experience_wrap {
         flex-direction: column;
-        margin-bottom: 100px;
-        margin-top: 70px;
+        margin: 70px auto 100px;
         padding-top: 70px;
         width: 500px;
     }
@@ -102,8 +99,7 @@
     /* 모바일 */
     .experience_wrap {
         flex-direction: column;
-        margin-bottom: 100px;
-        margin-top: 70px;
+        margin: 70px auto 100px;
         padding-top: 70px;
         width: 350px;
     }
