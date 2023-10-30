@@ -30,6 +30,7 @@
 }
 .skill_shortcut {
     flex-direction: column;
+    margin-top: 10px;
 }
 .skills {
     flex-direction: row;
@@ -85,6 +86,7 @@
         width: 100%;
         text-align: justify;
         font-weight: 300;
+        justify-content: space-between;
     }
     .content {
         flex-direction: column;
@@ -103,6 +105,7 @@
         flex-direction: column;
         font-weight: 300;
         text-align: justify;
+        justify-content: space-between;
     }
 }
 
@@ -124,6 +127,7 @@
         width: 100%;
         text-align: justify;
         font-weight: 300;
+        justify-content: space-between;
     }
     .content {
         flex-direction: column;
@@ -143,6 +147,7 @@
         flex-direction: column;
         font-weight: 300;
         text-align: justify;
+        justify-content: space-between;
     }
 }
 
@@ -165,7 +170,7 @@
         flex-direction: column;
         border: 1px solid rgb(232, 232, 232);
         border-radius: 10px;
-        padding: 20px 25px 120px 25px;
+        padding: 20px 25px;
         margin-bottom: 30px;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -186,6 +191,7 @@
         flex-direction: column;
         font-weight: 300;
         text-align: justify;
+        justify-content: space-between;
     }
     .content {
         flex-direction: column;
@@ -214,7 +220,7 @@
         flex-direction: column;
         border: 1px solid rgb(232, 232, 232);
         border-radius: 10px;
-        padding: 20px 25px 120px 25px;
+        padding: 20px 25px;
         margin-bottom: 30px;
         -webkit-touch-callout: none;
         -webkit-user-select: none;

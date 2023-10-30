@@ -38,6 +38,9 @@ import js_3_img1 from "img/js_3/1.png";
 import js_3_img2 from "img/js_3/2.png";
 import js_3_img3 from "img/js_3/3.png";
 import js_4_img1 from "img/js_4/1.png";
+import js_5_img1 from "img/js_5/1.png";
+import js_5_img2 from "img/js_5/2.png";
+import js_5_img3 from "img/js_5/3.png";
 import bootstrap from "img/skills/bootstrap.png";
 import css from "img/skills/css.png";
 import dart from "img/skills/dart.png";
@@ -92,6 +95,9 @@ const images = {
     js_3_img2,
     js_3_img3,
     js_4_img1,
+    js_5_img1,
+    js_5_img2,
+    js_5_img3,
     bootstrap,
     css,
     dart,

@@ -29,7 +29,7 @@ const Introduce = () => {
                             <div className={styles.url_wrap}>
                                 <div className={styles.url}>
                                     ✉️
-                                    <a>wnal4634@naver.com</a>
+                                    <a>wnal7707@gmail.com</a>
                                 </div>
                                 <div className={styles.url}>
                                     💻
