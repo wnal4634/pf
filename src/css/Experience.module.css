@@ -18,6 +18,7 @@
 .modal_wrap:hover {
     transition: 0.3s;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.17), 0 2px 7px rgba(0, 0, 0, 0.17);
+    border: 1px solid rgb(205, 205, 205);
 }
 .img {
     width: 100%;
@@ -25,6 +26,11 @@
     cursor: pointer;
     -webkit-user-drag: none;
     transition: 0.3s;
+}
+.modal_content div {
+    margin-bottom: 20px;
+    font-weight: 300;
+    text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
@@ -45,6 +51,7 @@
     .modal_content {
         width: 40%;
         padding-left: 20px;
+        align-self: center;
     }
     .modal {
         display: flex;
@@ -69,6 +76,7 @@
     .modal_content {
         width: 50%;
         padding-left: 20px;
+        align-self: center;
     }
     .modal {
         display: flex;

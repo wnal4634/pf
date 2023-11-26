@@ -58,11 +58,22 @@ const Experience = () => {
                             />
 
                             <div className={styles.modal_content}>
-                                한국정보통신보안윤리학회
-                                <br />
-                                4차 산업혁명 인재양성 공유협업페스티발
-                                <br />
-                                캡스톤경진실적물
+                                <div>
+                                    <b>한국정보통신보안윤리학회</b> 주관 공모전
+                                </div>
+                                <div>
+                                    2022년 제6회
+                                    <br />
+                                    <b>
+                                        4차 산업혁명 인재양성
+                                        <br />
+                                        공유·협업페스티발
+                                    </b>
+                                </div>
+                                <div>
+                                    캡스톤경진실적물/기타 부문
+                                    <br /> <b>우수상</b> 수상
+                                </div>
                             </div>
                         </Modal>
                     </div>
