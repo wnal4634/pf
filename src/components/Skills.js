@@ -1,180 +1,58 @@
 import React from "react";
 import styles from "css/Skills.module.css";
-import images from "components/ImagesImport";
-import { Mobile, PC } from "./Responsive";
 import { Fade } from "react-reveal";
+import colors from "components/SkillsColor";
 
 const Skills = () => {
     return (
         <>
-            <PC>
-                <Fade bottom>
-                    <div id="2" className={styles.skills_wrap}>
-                        <h2>🔧 Skills</h2>
-                        <hr />
-                        <div className={styles.skills_img}>
-                            <div className={styles.skills_img_row}>
-                                <div>
-                                    <img src={images.html} alt="html 이미지" />
-                                    <span>HTML</span>
+            <Fade bottom>
+                <div id="2" className={styles.skills_wrap}>
+                    <h2>Skills</h2>
+                    <hr />
+                    <div className={styles.row}>
+                        <div className={styles.skill_title}>
+                            <div>MarkUp</div>
+                            <div>Language</div>
+                            <div>Framework / Library</div>
+                            <div>Database</div>
+                            <div>Tool</div>
+                        </div>
+                        <div className={styles.column}>
+                            <div className={styles.skills}>
+                                <div style={{ color: colors.HTML }}>HTML</div>
+                                <div style={{ color: colors.CSS }}>CSS</div>
+                            </div>
+                            <div className={styles.skills}>
+                                <div style={{ color: colors.JS }}>JS</div>
+                                <div style={{ color: colors.Dart }}>Dart</div>
+                            </div>
+                            <div className={styles.skills}>
+                                <div style={{ color: colors.React }}>React</div>
+                                <div style={{ color: colors.Bootstrap }}>
+                                    Bootstrap
                                 </div>
-                                <div>
-                                    <img src={images.css} alt="css 이미지" />
-                                    <span>CSS</span>
-                                </div>
-                                <div>
-                                    <img src={images.js} alt="js 이미지" />
-                                    <span>JS</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src={images.reactJs}
-                                        alt="reactJs 이미지"
-                                    />
-                                    <span>React</span>
-                                </div>
-                                <div>
-                                    <img src={images.dart} alt="dart 이미지" />
-                                    <span>Dart</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src={images.flutter}
-                                        alt="flutter 이미지"
-                                    />
-                                    <span>Flutter</span>
+                                {/* <div style={{ color: colors.NodeJS }}>
+                                    NodeJS
+                                </div> */}
+                                <div style={{ color: colors.Flutter }}>
+                                    Flutter
                                 </div>
                             </div>
-                            <div className={styles.skills_img_row}>
-                                <div>
-                                    <img
-                                        src={images.github}
-                                        alt="github 이미지"
-                                    />
-                                    <span>Github</span>
+                            <div className={styles.skills}>
+                                <div style={{ color: colors.MySQL }}>MySQL</div>
+                            </div>
+                            <div className={styles.skills}>
+                                <div style={{ color: colors.Github }}>
+                                    Github
                                 </div>
-                                <div>
-                                    <img src={images.git} alt="git 이미지" />
-                                    <span>Git</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src={images.bootstrap}
-                                        alt="bootstrap 이미지"
-                                    />
-                                    <span>Bootstrap</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src={images.figma}
-                                        alt="figma 이미지"
-                                    />
-                                    <span>Figma</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src={images.nodeJs}
-                                        alt="nodeJs 이미지"
-                                    />
-                                    <span>NodeJS</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src={images.mysql}
-                                        alt="mysql 이미지"
-                                    />
-                                    <span>MySQL</span>
-                                </div>
+                                <div style={{ color: colors.Git }}>Git</div>
+                                <div style={{ color: colors.Figma }}>Figma</div>
                             </div>
                         </div>
                     </div>
-                </Fade>
-            </PC>
-            <Mobile>
-                <Fade bottom>
-                    <div id="2" className={styles.skills_wrap}>
-                        <h2>🔧 Skills</h2>
-                        <hr />
-                        <div className={styles.skills_img}>
-                            <div className={styles.skills_img_row}>
-                                <div>
-                                    <img src={images.html} alt="html 이미지" />
-                                    <span>HTML</span>
-                                </div>
-                                <div>
-                                    <img src={images.css} alt="css 이미지" />
-                                    <span>CSS</span>
-                                </div>
-                                <div>
-                                    <img src={images.js} alt="js 이미지" />
-                                    <span>JS</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src={images.reactJs}
-                                        alt="reactJs 이미지"
-                                    />
-                                    <span>React</span>
-                                </div>
-                            </div>
-                            <div className={styles.skills_img_row}>
-                                <div>
-                                    <img src={images.dart} alt="dart 이미지" />
-                                    <span>Dart</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src={images.flutter}
-                                        alt="flutter 이미지"
-                                    />
-                                    <span>Flutter</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src={images.github}
-                                        alt="github 이미지"
-                                    />
-                                    <span>Github</span>
-                                </div>
-                                <div>
-                                    <img src={images.git} alt="git 이미지" />
-                                    <span>Git</span>
-                                </div>
-                            </div>
-                            <div className={styles.skills_img_row}>
-                                <div>
-                                    <img
-                                        src={images.bootstrap}
-                                        alt="bootstrap 이미지"
-                                    />
-                                    <span>Bootstrap</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src={images.figma}
-                                        alt="figma 이미지"
-                                    />
-                                    <span>Figma</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src={images.nodeJs}
-                                        alt="nodeJs 이미지"
-                                    />
-                                    <span>NodeJS</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src={images.mysql}
-                                        alt="mysql 이미지"
-                                    />
-                                    <span>MySQL</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </Fade>
-            </Mobile>
+                </div>
+            </Fade>
         </>
     );
 };

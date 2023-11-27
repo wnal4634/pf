@@ -11,19 +11,19 @@ const Introduce = () => {
         <>
             <Fade bottom>
                 <div id="1" className={styles.introduce_wrap}>
-                    <h1>👏 김주미 Portfolio</h1>
+                    <h1>김주미 Portfolio</h1>
                     <div className={styles.intro}>
                         <div className={styles.img}>
                             <img src={img1} alt="증명사진" />
                         </div>
                         <div className={styles.intro_url_wrap}>
                             <div>
-                                고교 시절에 처음 접한 코딩 수업에 흥미가 생겨
-                                전공을 선택했고, 전공 중 프론트엔드를 배우면서
-                                하나씩 만들어가는 것에 성취감을 느꼈습니다.
+                                끊임없이 생각하는 개발자, 김주미입니다.
                                 <br />
-                                사용자가 원하는 UI를 제공할 수 있는 개발자가
-                                되고 싶습니다. 잘 부탁드립니다.
+                                <br />
+                                하나의 문제에도 여러 방면으로 접근하는 것을
+                                좋아하며, 다양한 시각에서 사고할 수 있는 습관을
+                                기르고 있습니다.
                             </div>
                             <hr />
                             <div className={styles.url_wrap}>

@@ -19,7 +19,7 @@ const JsPractice = () => {
             <div id="3" className={styles.practice_wrap}>
                 <Fade bottom>
                     <div className={styles.fade_column}>
-                        <h2>📁 Project</h2>
+                        <h2>Project</h2>
                         <div className={styles.swiper_wrap}>
                             <Swiper
                                 slidesPerView={1}
@@ -155,8 +155,15 @@ const JsPractice = () => {
                             <div className={styles.project_content}>
                                 <div className={styles.content}>
                                     <div>
-                                        레시피 공유 및 밀키트 판매 앱입니다.
-                                        <br />
+                                        <span>
+                                            <span>
+                                                레시피 공유 및 밀키트 판매 앱
+                                            </span>
+                                            입니다.
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <b>[기술]</b>
                                         앱은 자바와 MySQL을 활용해 제작했고, 앱
                                         내 결제는 부트페이를 연동했습니다.
                                         (테스트 결제로 실제 결제가 이뤄지지
@@ -166,6 +173,7 @@ const JsPractice = () => {
                                         이용했습니다.
                                     </div>
                                     <div>
+                                        <b>[기능]</b>
                                         사용자 페이지의 경우 회원가입, 로그인,
                                         자동 로그인, 회원정보 수정, 게시글 작성,
                                         게시글 수정, 게시글 삭제, 카테고리별
@@ -174,7 +182,7 @@ const JsPractice = () => {
                                         가능합니다.
                                     </div>
                                     <div>
-                                        하단의 '피그마' 바로가기 버튼은 해당
+                                        * 하단의 '피그마' 바로가기 버튼은 해당
                                         앱을 제작할 때 사용했던 피그마 페이지로
                                         이동합니다.
                                     </div>
@@ -332,10 +340,17 @@ const JsPractice = () => {
                         <div className={styles.project_content_row}>
                             <div className={styles.content}>
                                 <div>
-                                    위 레시피 공유 및 밀키트 판매 앱의 관리자
-                                    페이지입니다.
+                                    <span>
+                                        위{" "}
+                                        <span>
+                                            레시피 공유 및 밀키트 판매 앱
+                                        </span>
+                                        의 <span>관리자 페이지</span>
+                                        입니다.
+                                    </span>
                                 </div>
                                 <div>
+                                    <b>[기술 및 기능]</b>
                                     관리자 페이지는 PHP와 부트스트랩을 이용해
                                     제작했고, 데이터 시각화 자료는 파이썬을
                                     사용했습니다. 회원관리, 레시피, 공지사항
@@ -344,7 +359,7 @@ const JsPractice = () => {
                                     있습니다.
                                 </div>
                                 <div>
-                                    하단의 '코랩' 바로가기 버튼은 판매 데이터
+                                    * 하단의 '코랩' 바로가기 버튼은 판매 데이터
                                     시각화 자료를 확인할 수 있는 페이지로
                                     이동합니다.
                                 </div>
@@ -436,9 +451,13 @@ const JsPractice = () => {
                         <div className={styles.project_content}>
                             <div className={styles.content}>
                                 <div>
-                                    플러터로 제작한 인터벌 타이머 앱입니다.
+                                    <span>
+                                        플러터로 제작한{" "}
+                                        <span>인터벌 타이머 앱</span> 입니다.
+                                    </span>
                                 </div>
                                 <div>
+                                    <b>[기능]</b>
                                     우측 하단의 플로팅 버튼을 통해 시간을 설정할
                                     수 있고, 설정된 시간이 계속 반복됩니다.
                                     시간을 설정하지 않았을 경우, 재생 버튼을
@@ -447,7 +466,7 @@ const JsPractice = () => {
                                     수 있습니다.
                                 </div>
                                 <div>
-                                    마지막 이미지는 데모버전으로, 웹에서의
+                                    * 마지막 이미지는 데모버전으로, 웹에서의
                                     모습입니다.
                                 </div>
                             </div>
@@ -522,10 +541,13 @@ const JsPractice = () => {
                         <div className={styles.project_content_row}>
                             <div className={styles.content}>
                                 <div>
-                                    바닐라 자바스크립트로 제작한
-                                    투두리스트입니다.
+                                    <span>
+                                        바닐라 자바스크립트로 제작한{" "}
+                                        <span>투두리스트</span>입니다.
+                                    </span>
                                 </div>
                                 <div>
+                                    <b>[기능]</b>
                                     현재 시각을 한 눈에 볼 수 있으며
                                     투두리스트를 작성하기 전, 이름 혹은 닉네임을
                                     설정할 수 있습니다. 리스트를 작성한 후에
@@ -535,7 +557,7 @@ const JsPractice = () => {
                                     새로고침을 해도 남아 있습니다.
                                 </div>
                                 <div>
-                                    배경 이미지와 하단의 글귀는 새로고침을 할
+                                    * 배경 이미지와 하단의 글귀는 새로고침을 할
                                     때마다 랜덤으로 변경됩니다.
                                 </div>
                             </div>
@@ -592,12 +614,16 @@ const JsPractice = () => {
                         <div className={styles.project_content}>
                             <div className={styles.content}>
                                 <div>
-                                    개인 웹 포트폴리오이며 모바일과 PC에서 볼 수
-                                    있도록 반응형을 고려하여 작업하였습니다.
-                                    react-scroll, styled-components,
-                                    react-reveal 등을 활용했습니다.
+                                    <span>
+                                        <span>개인 웹 포트폴리오</span>이며
+                                        모바일과 PC에서 볼 수 있도록 반응형을
+                                        고려하여 작업하였습니다. react-scroll,
+                                        styled-components, react-reveal 등을
+                                        활용했습니다.
+                                    </span>
                                 </div>
                                 <div>
+                                    <b>[기능]</b>
                                     이미지는 모바일 화면의 크기일 때 보이는
                                     모습으로, 웹 화면의 사이즈와 달리 상단의
                                     메뉴가 접힌 모습으로 변경됩니다. 변경된
@@ -608,7 +634,7 @@ const JsPractice = () => {
                                     최상단으로 이동할 수 있습니다.
                                 </div>
                                 <div>
-                                    소개글 이후로는 다뤄보고 사용할 수 있는
+                                    * 소개글 이후로는 다뤄보고 사용할 수 있는
                                     기술들과 제작한 프로젝트들을 정리했습니다.
                                 </div>
                             </div>
@@ -671,11 +697,17 @@ const JsPractice = () => {
                         <div className={styles.project_content_row}>
                             <div className={styles.content}>
                                 <div>
-                                    공공데이터 API를 사용해 서울시 실시간 날씨와
-                                    대기오염정보를 확인할 수 있는
-                                    웹페이지입니다.
+                                    <span>
+                                        공공데이터 API를 사용해{" "}
+                                        <span>
+                                            서울시 실시간 날씨와 대기오염정보를
+                                            확인할 수 있는 웹페이지
+                                        </span>
+                                        입니다.
+                                    </span>
                                 </div>
                                 <div>
+                                    <b>[기능]</b>
                                     정보는 각 행정구별로 확인할 수 있으며,
                                     날씨와 더불어 해당 기온에 맞는 옷 종류를
                                     추천합니다. 또한 비나 눈이 오는 경우에는
@@ -684,7 +716,7 @@ const JsPractice = () => {
                                     경우에는 아무것도 뜨지 않습니다.
                                 </div>
                                 <div>
-                                    하단에는 API 자료 정보의 출처와 저작권
+                                    * 하단에는 API 자료 정보의 출처와 저작권
                                     라이선스, 오류가능성을 표기했습니다.
                                 </div>
                             </div>

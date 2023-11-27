@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Introduce from "components/Introduce";
 import Skills from "components/Skills";
 import JsPractice from "components/Project";
-import Experience from "components/Experience";
+import Awards from "components/Awards";
 
 const MiddleDiv = styled.div`
     div {
@@ -14,7 +14,7 @@ const MiddleDiv = styled.div`
 const IntroBlock = styled.div`
     margin: 0 auto;
     @media (max-width: 768px) {
-        padding: 25px;
+        padding: 5px 25px;
     }
 `;
 
@@ -31,7 +31,7 @@ const Middle = () => {
                 <JsPractice />
             </IntroBlock>
             <IntroBlock>
-                <Experience />
+                <Awards />
             </IntroBlock>
         </MiddleDiv>
     );

@@ -6,4 +6,16 @@
     color: rgb(141, 141, 141);
     font-size: small;
     margin-top: 40px;
+    transition: 0.3s;
+}
+.reserve_wrap svg {
+    position: fixed;
+    right: 30px;
+    bottom: 35px;
+    color: rgba(0, 0, 0, 0.3);
+    transition: 0.1s;
+}
+.reserve_wrap svg:hover {
+    color: rgba(0, 0, 0, 0.5);
+    transition: 0.1s;
 }

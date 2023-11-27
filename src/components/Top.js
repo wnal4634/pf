@@ -20,7 +20,7 @@ const SideDiv = styled.div`
     backdrop-filter: blur(5px);
     border-bottom: 1px solid #d6d6d6;
     z-index: 100;
-    font-family: "Courier Prime", monospace;
+    font-family: "Pretendard-Regular";
 `;
 
 const Side = () => {
@@ -119,7 +119,7 @@ const Side = () => {
                             smooth={true}
                             className={styles.link}
                         >
-                            <div ref={appearLink_4}>Experience</div>
+                            <div ref={appearLink_4}>Awards</div>
                         </Link>
                     </div>
                 </SideDiv>
@@ -173,7 +173,7 @@ const Side = () => {
                                         smooth={true}
                                         className={styles.link}
                                     >
-                                        Experience
+                                        Awards
                                     </Link>
                                 </li>
                             </ul>

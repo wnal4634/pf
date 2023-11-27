@@ -1,14 +1,14 @@
 .modal_wrap {
     flex-direction: row;
-    border: 1px solid rgb(234, 234, 234);
+    border: 1px solid rgb(219, 219, 219);
     border-radius: 30px;
     width: 340px;
     height: 250px;
     overflow: hidden;
     transition: 0.3s;
-    -webkit-box-shadow: 0px 14px 15px -6px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 14px 15px -6px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 14px 15px -6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
 }
 .modal_wrap img:hover {
     transform: scale(1.1);
@@ -17,7 +17,7 @@
 }
 .modal_wrap:hover {
     transition: 0.3s;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.17), 0 2px 7px rgba(0, 0, 0, 0.17);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.11), 0 2px 7px rgba(0, 0, 0, 0.12);
     border: 1px solid rgb(205, 205, 205);
 }
 .img {
@@ -27,31 +27,31 @@
     -webkit-user-drag: none;
     transition: 0.3s;
 }
-.modal_content div {
-    margin-bottom: 20px;
-    font-weight: 300;
-    text-align: center;
+.modal svg {
+    position: absolute;
+    right: 20px;
+    color: rgba(0, 0, 0, 0.3);
+    transition: 0.1s;
+}
+.modal svg:hover {
+    color: rgba(0, 0, 0, 0.7);
+    transition: 0.1s;
 }
 
 @media screen and (min-width: 1024px) {
     /* 데탑 */
     .experience_wrap {
         flex-direction: column;
-        margin: 70px auto 100px;
+        margin: 30px auto 70px;
         padding-top: 70px;
         width: 700px;
     }
     .modal_img {
         cursor: default;
-        width: 60%;
+        width: 100%;
         height: 100%;
         object-fit: contain;
         -webkit-user-drag: none;
-    }
-    .modal_content {
-        width: 40%;
-        padding-left: 20px;
-        align-self: center;
     }
     .modal {
         display: flex;
@@ -62,21 +62,16 @@
     /* 타블렛 */
     .experience_wrap {
         flex-direction: column;
-        margin: 70px auto 100px;
+        margin: 30px auto 70px;
         padding-top: 70px;
         width: 630px;
     }
     .modal_img {
         cursor: default;
-        width: 50%;
+        width: 100%;
         height: 100%;
         object-fit: contain;
         -webkit-user-drag: none;
-    }
-    .modal_content {
-        width: 50%;
-        padding-left: 20px;
-        align-self: center;
     }
     .modal {
         display: flex;
@@ -87,19 +82,16 @@
     /* 타블렛과 모바일 사이 */
     .experience_wrap {
         flex-direction: column;
-        margin: 70px auto 100px;
+        margin: 0 auto 70px;
         padding-top: 70px;
         width: 500px;
     }
     .modal_img {
         cursor: default;
         width: 100%;
-        height: 70%;
+        height: 100%;
         object-fit: contain;
         -webkit-user-drag: none;
-    }
-    .modal_content {
-        padding-top: 20px;
     }
 }
 
@@ -107,7 +99,7 @@
     /* 모바일 */
     .experience_wrap {
         flex-direction: column;
-        margin: 70px auto 100px;
+        margin: 0 auto 70px;
         padding-top: 70px;
         width: 350px;
     }
@@ -117,11 +109,8 @@
     .modal_img {
         cursor: default;
         width: 100%;
-        height: 70%;
+        height: 100%;
         object-fit: contain;
         -webkit-user-drag: none;
-    }
-    .modal_content {
-        padding-top: 20px;
     }
 }

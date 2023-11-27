@@ -20,6 +20,9 @@
     padding: 20px 25px;
 }
 .intro_url_wrap div:first-child {
+    text-align: justify;
+}
+.intro_url_wrap div:first-child {
     color: rgb(66, 66, 66);
 }
 .intro_url_wrap hr {
@@ -59,7 +62,7 @@
     /* 데탑 */
     .introduce_wrap {
         flex-direction: column;
-        margin: 120px auto 0;
+        margin: 50px auto 0;
         padding-top: 20px;
         width: 700px;
     }
@@ -69,7 +72,7 @@
     /* 타블렛 */
     .introduce_wrap {
         flex-direction: column;
-        margin: 120px auto 0;
+        margin: 50px auto 0;
         padding-top: 20px;
         width: 630px;
     }
@@ -79,7 +82,7 @@
     /* 타블렛과 모바일 사이 */
     .introduce_wrap {
         flex-direction: column;
-        margin: 50px auto 0;
+        margin: 20px auto 0;
         padding-top: 20px;
         width: 500px;
     }
@@ -89,7 +92,7 @@
     /* 모바일 */
     .introduce_wrap {
         flex-direction: column;
-        margin: 50px auto 0;
+        margin: 20px auto 0;
         padding-top: 20px;
         width: 350px;
     }
