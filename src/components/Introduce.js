@@ -11,7 +11,7 @@ const Introduce = () => {
         <>
             <Fade bottom>
                 <div id="1" className={styles.introduce_wrap}>
-                    <h1>김주미 Portfolio(확인용22)</h1>
+                    <h1>김주미 Portfolio</h1>
                     <div className={styles.intro}>
                         <div className={styles.img}>
                             <img src={img1} alt="증명사진" />
