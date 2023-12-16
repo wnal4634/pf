@@ -23,9 +23,6 @@
 .intro_url_wrap div:first-child {
     text-align: justify;
 }
-.intro_url_wrap div:first-child {
-    color: rgb(66, 66, 66);
-}
 .intro_url_wrap hr {
     border: 0;
     height: 1px;
