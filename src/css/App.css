@@ -1,6 +1,7 @@
 body {
     overflow-y: overlay; /* 반드시 overlay 처리 */
     margin: 0;
+    font-family: "Noto Sans KR", sans-serif;
 }
 hr {
     border: 0;
@@ -56,6 +57,12 @@ h2 {
 
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
 /* font-family: 'Courier Prime', monospace; */
+
+@import url("https://fonts.googleapis.com/css2?family=Moirai+One&family=Noto+Sans+KR&display=swap");
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+/* font-family: 'Noto Sans KR:wght@300', sans-serif; */
 
 @font-face {
     font-family: "TheJamsil5Bold";

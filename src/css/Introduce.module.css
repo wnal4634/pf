@@ -9,7 +9,8 @@
     cursor: default;
     -webkit-user-drag: none;
     width: 130px;
-    height: fit-content;
+    height: 173.33px;
+    /* height: fit-content; */
 }
 .intro_url_wrap {
     flex-direction: column;

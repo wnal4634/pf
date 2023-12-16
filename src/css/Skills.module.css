@@ -31,6 +31,48 @@
     flex-direction: row;
 }
 
+@media screen and (min-width: 1024px) {
+    /* 데탑 */
+    .skills_wrap {
+        width: 700px;
+        margin: 0 auto;
+    }
+    .skill_title {
+        margin-right: 30px;
+    }
+    .skills:nth-child(4) {
+        margin-top: 21px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* 타블렛 */
+    .skills_wrap {
+        width: 630px;
+        margin: 0 auto;
+    }
+    .skill_title {
+        margin-right: 30px;
+    }
+    .skills:nth-child(4) {
+        margin-top: 21px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    /* 타블렛과 모바일 사이 */
+    .skills_wrap {
+        width: 500px;
+        margin: 0 auto;
+    }
+    .skill_title {
+        margin-right: 30px;
+    }
+    .skills:nth-child(4) {
+        margin-top: 21px;
+    }
+}
+
 @media screen and (max-width: 479px) {
     /* 모바일 */
     .skills_wrap {
