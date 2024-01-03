@@ -5,6 +5,7 @@ import { faCircleChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const Reserve = () => {
     const [showButton, setShowButton] = useState(false);
+    const year = new Date();
 
     const scrollToTop = () => {
         window.scroll({
@@ -30,7 +31,7 @@ const Reserve = () => {
     return (
         <>
             <div className={styles.reserve_wrap}>
-                <div>©2023 KimJuMi. All Rights Reserved.</div>
+                <div>©{year.getFullYear()} KimJuMi. All Rights Reserved.</div>
                 {showButton && (
                     <>
                         <FontAwesomeIcon
