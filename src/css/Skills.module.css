@@ -40,9 +40,6 @@
     .skill_title {
         margin-right: 30px;
     }
-    .skills:nth-child(4) {
-        margin-top: 21px;
-    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -54,9 +51,6 @@
     .skill_title {
         margin-right: 30px;
     }
-    .skills:nth-child(4) {
-        margin-top: 21px;
-    }
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -67,9 +61,6 @@
     }
     .skill_title {
         margin-right: 30px;
-    }
-    .skills:nth-child(4) {
-        margin-top: 21px;
     }
 }
 
