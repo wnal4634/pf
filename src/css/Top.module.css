@@ -1,7 +1,32 @@
 @media screen and (min-width: 768px) {
     .header {
-        background-color: rgba(255, 255, 255, 0.7);
+        /* background-color: rgba(255, 255, 255, 0.7); */
+        background-color: rgba(213, 199, 236, 0.7);
         padding: 10px 0;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        justify-content: space-between;
+        align-items: center;
+        backdrop-filter: blur(5px);
+        border-bottom: 1px solid #ccb9eb;
+        z-index: 100;
+        font-family: "Pretendard-Regular";
+    }
+    .initial {
+        /* margin-left: 360px; */
+    }
+    .nav {
+        /* margin-right: 325px; */
+    }
+    .header_wrap {
+        display: flex;
+        width: 1200px;
+        margin: 0 auto;
+        text-transform: capitalize;
+        align-items: center;
+        justify-content: space-between;
     }
     ::before,
     ::after {
@@ -15,7 +40,7 @@
         text-align: center;
         line-height: 20px;
         padding: 3px 5px;
-        margin: 0 20px;
+        margin-left: 30px;
     }
     .link::before,
     .link::after {
@@ -48,12 +73,6 @@
 
 img {
     cursor: pointer;
-}
-.initial {
-    margin-left: 30px;
-}
-.nav {
-    margin-right: 15px;
 }
 .initial_mobile {
     width: 100%;

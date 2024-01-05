@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Introduce from "components/Introduce";
 import Skills from "components/Skills";
 import JsPractice from "components/Project";
-import Awards from "components/Awards";
+import Experience from "components/Experience";
 
 const MiddleDiv = styled.div`
     div {
@@ -31,7 +31,7 @@ const Middle = () => {
                 <JsPractice />
             </IntroBlock>
             <IntroBlock>
-                <Awards />
+                <Experience />
             </IntroBlock>
         </MiddleDiv>
     );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "css/Awards.module.css";
+import styles from "css/Experience.module.css";
 import Modal from "react-modal";
 import img1 from "img/공모전_상장.png";
 import Fade from "react-reveal/Fade";

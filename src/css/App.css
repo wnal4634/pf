@@ -2,6 +2,7 @@ body {
     overflow-y: overlay; /* 반드시 overlay 처리 */
     margin: 0;
     font-family: "Noto Sans KR", sans-serif;
+    background-color: #f5f1fc;
 }
 hr {
     border: 0;
@@ -16,7 +17,7 @@ h2 {
 
 ::-webkit-scrollbar-button:vertical:start:decrement {
     display: block;
-    height: 45px;
+    height: 0px;
 }
 
 ::-webkit-scrollbar {

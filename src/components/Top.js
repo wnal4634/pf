@@ -15,6 +15,7 @@ const SideDiv = styled.div`
     left: 0;
     position: fixed;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(5px);
@@ -79,50 +80,52 @@ const Side = () => {
     return (
         <>
             <PC>
-                <SideDiv className={styles.header}>
-                    <div className={styles.initial} ref={appearInitial}>
-                        <img
-                            src={j_icon}
-                            width={25}
-                            alt="이니셜 아이콘"
-                            onClick={goTop}
-                        />
+                <div className={styles.header}>
+                    <div className={styles.header_wrap}>
+                        <div className={styles.initial} ref={appearInitial}>
+                            <img
+                                src={j_icon}
+                                width={25}
+                                alt="이니셜 아이콘"
+                                onClick={goTop}
+                            />
+                        </div>
+                        <div className={styles.nav}>
+                            <Link
+                                to="1"
+                                spy={true}
+                                smooth={true}
+                                className={styles.link}
+                            >
+                                <div ref={appearLink_1}>About me</div>
+                            </Link>
+                            <Link
+                                to="2"
+                                spy={true}
+                                smooth={true}
+                                className={styles.link}
+                            >
+                                <div ref={appearLink_2}>Skills</div>
+                            </Link>
+                            <Link
+                                to="3"
+                                spy={true}
+                                smooth={true}
+                                className={styles.link}
+                            >
+                                <div ref={appearLink_3}>Projects</div>
+                            </Link>
+                            <Link
+                                to="4"
+                                spy={true}
+                                smooth={true}
+                                className={styles.link}
+                            >
+                                <div ref={appearLink_4}>Experience</div>
+                            </Link>
+                        </div>
                     </div>
-                    <div className={styles.nav}>
-                        <Link
-                            to="1"
-                            spy={true}
-                            smooth={true}
-                            className={styles.link}
-                        >
-                            <div ref={appearLink_1}>About me</div>
-                        </Link>
-                        <Link
-                            to="2"
-                            spy={true}
-                            smooth={true}
-                            className={styles.link}
-                        >
-                            <div ref={appearLink_2}>Skills</div>
-                        </Link>
-                        <Link
-                            to="3"
-                            spy={true}
-                            smooth={true}
-                            className={styles.link}
-                        >
-                            <div ref={appearLink_3}>Project</div>
-                        </Link>
-                        <Link
-                            to="4"
-                            spy={true}
-                            smooth={true}
-                            className={styles.link}
-                        >
-                            <div ref={appearLink_4}>Awards</div>
-                        </Link>
-                    </div>
-                </SideDiv>
+                </div>
             </PC>
             <Mobile>
                 <SideDiv className={styles.header}>
@@ -163,7 +166,7 @@ const Side = () => {
                                         smooth={true}
                                         className={styles.link}
                                     >
-                                        Project
+                                        Projects
                                     </Link>
                                 </li>
                                 <li className={styles.menu_item}>
@@ -173,7 +176,7 @@ const Side = () => {
                                         smooth={true}
                                         className={styles.link}
                                     >
-                                        Awards
+                                        Experience
                                     </Link>
                                 </li>
                             </ul>

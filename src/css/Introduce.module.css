@@ -1,4 +1,55 @@
-.introduce_wrap h1 {
+.introduce_wrap {
+    display: flex;
+    margin: 50px auto 0;
+    width: 1200px;
+    height: 837px;
+    background-color: rgb(159, 146, 193);
+    justify-content: flex-start;
+}
+.main_text {
+    position: absolute;
+    flex-direction: column;
+    font-size: 2.5rem;
+    z-index: 1;
+    height: 766px;
+    justify-content: space-between;
+}
+.text_col {
+    flex-direction: column;
+}
+.sub_text {
+    font-size: 1rem;
+    margin-left: 103px;
+    flex-direction: column;
+    width: 175px;
+    white-space: normal;
+}
+.sub_text span {
+    margin-top: 20px;
+    text-align: justify;
+}
+.introduce_wrap img {
+    width: 892px;
+    height: 766px;
+    cursor: default;
+    object-fit: cover;
+    opacity: 0.5;
+}
+.img_and_text {
+    flex-direction: column;
+    margin-left: auto;
+    text-align: right;
+}
+.img_and_text span {
+    margin-top: 40px;
+}
+.bg_square {
+    width: 1437px;
+    height: 907px;
+    background-color: #fff;
+}
+
+/* .introduce_wrap h1 {
     margin: 50px 0 40px 0;
 }
 .intro {
@@ -10,7 +61,6 @@
     -webkit-user-drag: none;
     width: 130px;
     height: 173.33px;
-    /* height: fit-content; */
 }
 .intro_url_wrap {
     flex-direction: column;
@@ -54,16 +104,18 @@
     color: black;
     background-position: -100% 0;
     transition: ease 0.3s;
-}
+} */
 
 @media screen and (min-width: 1024px) {
     /* 데탑 */
-    .introduce_wrap {
+    /* .introduce_wrap {
         flex-direction: column;
         margin: 50px auto 0;
         padding-top: 20px;
-        width: 700px;
-    }
+        width: 1200px;
+        height: 837px;
+        background-color: rgb(209, 192, 255);
+    } */
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
