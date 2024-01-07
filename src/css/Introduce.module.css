@@ -3,7 +3,6 @@
     margin: 50px auto 0;
     width: 1200px;
     height: 837px;
-    background-color: rgb(159, 146, 193);
     justify-content: flex-start;
 }
 .main_text {
@@ -42,11 +41,28 @@
 }
 .img_and_text span {
     margin-top: 40px;
+    font-size: 30px;
+    color: #b6b6b6;
+}
+.bg_square_minus {
+    position: absolute;
+    background-color: #f5f1fc;
+    width: -webkit-fill-available;
+    z-index: -99;
+    height: 398px;
+}
+.bg_square_minus_length {
+    position: absolute;
+    background-color: #f5f1fc;
+    width: 205px;
+    height: inherit;
 }
 .bg_square {
-    width: 1437px;
-    height: 907px;
+    position: absolute;
+    width: -webkit-fill-available;
+    height: inherit;
     background-color: #fff;
+    z-index: -100;
 }
 
 /* .introduce_wrap h1 {

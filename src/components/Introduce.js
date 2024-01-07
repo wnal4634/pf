@@ -60,28 +60,30 @@ const Introduce = () => {
             <div id="1" className={styles.introduce_wrap}>
                 <div className={styles.main_text}>
                     <div className={styles.text_col}>
-                        <span>No back, go forward.</span>
+                        <span>No back, go forward</span>
                         <span>a constantly thinking developer</span>
                     </div>
                     <div className={styles.sub_text}>
                         <div>asdfasdfasdf</div>
                         <span>
-                            하지만 그는 그랬소다. 어쩌구 저쩌구. 삼국지 보고
-                            유선 생각하면 자다가도 뒷목잡고 일어날 수 있다.
-                            그것이 사람인가? 물론 정사는 어떤지 모른다. 하지만
-                            연의를 보았다면 내 심정도 이해할테지. 그것은 사람이
-                            아니다. 사람탈을 쓴 짐승이다. 아니, 정정하겠다.
-                            짐승도 주인을 알아보는 법이다. 유선은 금수만도
-                            못한다고 말하겠다.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
                         </span>
                     </div>
                 </div>
                 <div className={styles.img_and_text}>
                     <img src={img} alt="소개 이미지" />
-                    <span>아아아아아아아아아아아아아아아</span>
+                    <span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                    </span>
                 </div>
+                <div className={styles.bg_square_minus} />
+                <div className={styles.bg_square_minus_length} />
+                <div className={styles.bg_square} />
             </div>
-            {/* <div className={styles.bg_square} /> */}
         </>
     );
 };

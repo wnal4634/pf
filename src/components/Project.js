@@ -13,10 +13,10 @@ import "css/Swiper-bundle.css";
 import colors from "components/SkillsColor";
 import link from "./Link";
 
-const JsPractice = () => {
+const Projects = () => {
     return (
         <>
-            <div id="3" className={styles.practice_wrap}>
+            {/* <div id="3" className={styles.practice_wrap}>
                 <Fade bottom>
                     <div className={styles.fade_column}>
                         <h2>Project</h2>
@@ -754,9 +754,19 @@ const JsPractice = () => {
                         </div>
                     </div>
                 </Fade>
+            </div> */}
+            <div className={styles.projects_wrap}>
+                <div id="3" className={styles.projects_title}>
+                    <h2>Projects</h2>
+                    <hr />
+                </div>
+                <div className={styles.projects_box}>
+                    <div className={styles.projects_img}>이미지</div>
+                    <div className={styles.projcets_content}>콘텐츠</div>
+                </div>
             </div>
         </>
     );
 };
 
-export default JsPractice;
+export default Projects;

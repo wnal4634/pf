@@ -1,3 +1,29 @@
+.projects_wrap {
+    flex-direction: column;
+}
+.projects_title {
+    width: 1200px;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 117px;
+}
+.projects_box {
+    /* width: 433px;
+    height: 610px;
+    background-color: white; */
+    flex-direction: column;
+    width: 100%;
+}
+.projects_img {
+    width: 433px;
+    height: 400px;
+    background-color: white;
+}
+.projcets_content {
+    width: 433px;
+    height: 210px;
+    background-color: beige;
+}
 .mySwiper_row {
     --swiper-theme-color: #fff;
 }
@@ -89,7 +115,7 @@
 
 @media screen and (min-width: 1024px) {
     /* 데탑 */
-    .practice_wrap {
+    /* .practice_wrap {
         flex-direction: column;
         margin: 30px auto 0;
         padding-top: 70px;
@@ -119,7 +145,7 @@
         font-weight: 300;
         text-align: justify;
         justify-content: space-between;
-    }
+    } */
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
