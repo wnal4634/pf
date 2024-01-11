@@ -1,10 +1,10 @@
 .projects_wrap {
     flex-direction: column;
+    margin: 0 auto;
 }
 .projects_title {
     width: 1200px;
     flex-direction: column;
-    margin: 0 auto;
     padding-top: 117px;
 }
 .projects_box {

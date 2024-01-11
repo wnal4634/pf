@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "css/Project.module.css";
 import Fade from "react-reveal/Fade";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -755,15 +755,16 @@ const Projects = () => {
                     </div>
                 </Fade>
             </div> */}
+
             <div className={styles.projects_wrap}>
                 <div id="3" className={styles.projects_title}>
                     <h2>Projects</h2>
                     <hr />
                 </div>
-                <div className={styles.projects_box}>
+                {/* <div className={styles.projects_box}>
                     <div className={styles.projects_img}>이미지</div>
                     <div className={styles.projcets_content}>콘텐츠</div>
-                </div>
+                </div> */}
             </div>
         </>
     );

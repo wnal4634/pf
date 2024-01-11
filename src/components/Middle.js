@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Introduce from "components/Introduce";
 import Skills from "components/Skills";
-import JsPractice from "components/Project";
+import Project from "components/Project";
 import Experience from "components/Experience";
+import Slide from "components/Slide";
 
 const MiddleDiv = styled.div`
     div {
@@ -28,7 +29,10 @@ const Middle = () => {
                 <Skills />
             </IntroBlock>
             <IntroBlock>
-                <JsPractice />
+                <Project />
+            </IntroBlock>
+            <IntroBlock>
+                <Slide />
             </IntroBlock>
             <IntroBlock>
                 <Experience />
