@@ -7,23 +7,6 @@
     flex-direction: column;
     padding-top: 117px;
 }
-.projects_box {
-    /* width: 433px;
-    height: 610px;
-    background-color: white; */
-    flex-direction: column;
-    width: 100%;
-}
-.projects_img {
-    width: 433px;
-    height: 400px;
-    background-color: white;
-}
-.projcets_content {
-    width: 433px;
-    height: 210px;
-    background-color: beige;
-}
 .mySwiper_row {
     --swiper-theme-color: #fff;
 }

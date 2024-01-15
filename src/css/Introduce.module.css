@@ -15,6 +15,7 @@
 }
 .text_col {
     flex-direction: column;
+    margin-top: 160px;
 }
 .sub_text {
     font-size: 1rem;
