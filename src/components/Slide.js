@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "css/Slide.scss";
 import link from "./Link";
+import images from "components/ImagesImport";
 
 const slides = [
     { name: "red", target: "#" },
@@ -15,7 +16,7 @@ const slides2 = [
     {
         name: "레시피 공유 및 밀키트 판매 앱",
         target: "#",
-        img: "",
+        img: images.js_1_img1,
         language: "JAVA",
         language2: "PHP",
         language3: "MySQL",
@@ -26,7 +27,7 @@ const slides2 = [
     {
         name: "레시피 공유 및 밀키트 판매 앱의 관리자 페이지",
         target: "#",
-        img: "",
+        img: images.js_1_2_img1,
         language: "PHP",
         language2: "Bootstrap",
         language3: "Python",
@@ -37,7 +38,7 @@ const slides2 = [
     {
         name: "인터벌 타이머 앱 ",
         target: "#",
-        img: "",
+        img: images.js_2_img1,
         language: "Flutter",
         language2: "Dart",
         language3: "",
@@ -48,7 +49,7 @@ const slides2 = [
     {
         name: "투두리스트",
         target: "#",
-        img: "",
+        img: images.js_3_img1,
         language: "JS",
         language2: "CSS",
         language3: "",
@@ -59,7 +60,7 @@ const slides2 = [
     {
         name: "개인 웹 포트폴리오",
         target: "#",
-        img: "",
+        img: images.js_4_img1,
         language: "React",
         language2: "JS",
         language3: "CSS",
@@ -70,7 +71,7 @@ const slides2 = [
     {
         name: "서울시 실시간 날씨와 대기오염정보를 확인할 수 있는 웹페이지",
         target: "#",
-        img: "",
+        img: images.js_5_img1,
         language: "React",
         language2: "JS",
         language3: "CSS",

@@ -17,16 +17,41 @@
     justify-content: space-between;
 }
 .main_ex img {
-    height: 556px;
-    margin-bottom: 55px;
-    -webkit-user-drag: none;
+    width: 100%;
     object-fit: cover;
     transition: 0.2s;
 }
-.main_ex img:hover {
+.ex_img_wrap {
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    height: 556px;
+    margin-bottom: 55px;
+    -webkit-user-drag: none;
+    transition: 0.2s;
+}
+.ex_img_wrap:hover img {
     transform: scale(0.98);
     transition: 0.3s;
-    filter: brightness(0.9);
+    filter: brightness(0.5);
+}
+.ex_img_wrap text {
+    width: 100%;
+    height: 100%;
+    line-height: 556px;
+    text-align: center;
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s;
+    opacity: 0;
+}
+.ex_img_wrap text:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 .ex_text_wrap {
     flex-direction: column;

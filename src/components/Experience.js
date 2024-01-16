@@ -111,7 +111,10 @@ const Experience = () => {
                     <hr />
                     <div className={styles.ex}>
                         <div className={styles.main_ex}>
-                            <img src={img1} alt="공모전 상장 이미지" />
+                            <div className={styles.ex_img_wrap}>
+                                <img src={img1} alt="공모전 상장 이미지" />
+                                <text>확대하기</text>
+                            </div>
                             <div className={styles.ex_text_wrap}>
                                 <div className={styles.box} />
                                 <div className={styles.ex_text}>
@@ -155,11 +158,10 @@ const Experience = () => {
                                             상세 페이지와 제품 기한카드를
                                             제작했습니다. 상세 페이지에는 제품의
                                             종류 및 맛 설명, 다른 브랜드와의
-                                            차별화 등을 담았습니다.
-                                            <br />
-                                            기한카드는 상반기와 하반기 제품으로
-                                            나뉘어 있으며, 판매 제품들의
-                                            소비기한과 보관 방법을 작성했니다.
+                                            차별화 등을 담았습니다. 기한카드는
+                                            상반기와 하반기 제품으로 나뉘어
+                                            있으며, 판매 제품들의 소비기한과
+                                            보관 방법을 작성했니다.
                                         </div>
                                         <div className={styles.ex_url_wrap}>
                                             <div
