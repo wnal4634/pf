@@ -10,7 +10,7 @@
     flex-direction: column;
     font-size: 2.5rem;
     z-index: 1;
-    height: 766px;
+    height: 753px;
     justify-content: space-between;
 }
 .text_col {
@@ -24,14 +24,13 @@
     width: 175px;
     white-space: normal;
 }
-.sub_text span {
+.sub_text text {
     margin-top: 20px;
     text-align: justify;
 }
 .introduce_wrap img {
     width: 892px;
     height: 766px;
-    cursor: default;
     object-fit: cover;
     opacity: 0.5;
 }
@@ -40,7 +39,7 @@
     margin-left: auto;
     text-align: right;
 }
-.img_and_text span {
+.img_and_text text {
     margin-top: 40px;
     font-size: 30px;
     color: #b6b6b6;
@@ -74,7 +73,6 @@
 }
 .intro img {
     border-radius: 100px;
-    cursor: default;
     -webkit-user-drag: none;
     width: 130px;
     height: 173.33px;
@@ -105,7 +103,6 @@
     margin-bottom: 10px;
 }
 .url a {
-    cursor: pointer;
     padding: 0 5px;
     font-weight: 100;
     background: linear-gradient(

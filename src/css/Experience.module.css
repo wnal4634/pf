@@ -51,7 +51,6 @@
 }
 .ex_img_wrap text:hover {
     opacity: 1;
-    cursor: pointer;
 }
 .ex_text_wrap {
     flex-direction: column;
@@ -126,7 +125,6 @@
 .modal_wrap img:hover {
     transform: scale(1.1);
     transition: 0.3s ease-in-out;
-    cursor: pointer;
 }
 .modal_wrap:hover {
     transition: 0.3s;
@@ -136,7 +134,6 @@
 .img {
     width: 100%;
     object-fit: contain;
-    cursor: pointer;
     -webkit-user-drag: none;
     transition: 0.3s;
 }
@@ -160,7 +157,6 @@
         width: 700px;
     }
     .modal_img {
-        cursor: default;
         width: 100%;
         height: 100%;
         object-fit: contain;
@@ -180,7 +176,6 @@
         width: 630px;
     }
     .modal_img {
-        cursor: default;
         width: 100%;
         height: 100%;
         object-fit: contain;
@@ -200,7 +195,6 @@
         width: 500px;
     }
     .modal_img {
-        cursor: default;
         width: 100%;
         height: 100%;
         object-fit: contain;
@@ -220,7 +214,6 @@
         margin: 0 auto;
     }
     .modal_img {
-        cursor: default;
         width: 100%;
         height: 100%;
         object-fit: contain;

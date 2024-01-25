@@ -11,7 +11,7 @@ import {
     faArrowUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import { Mobile, PC } from "components/Responsive";
-import link from "./Link";
+import link from "components/Link";
 
 const ModalStyle = {
     overlay: {
@@ -164,7 +164,7 @@ const Experience = () => {
                                             보관 방법을 작성했니다.
                                         </div>
                                         <div className={styles.ex_url_wrap}>
-                                            <div
+                                            <a
                                                 className={styles.ex_url}
                                                 onClick={() => {
                                                     window.open(
@@ -180,8 +180,8 @@ const Experience = () => {
                                                         }
                                                     />
                                                 </div>
-                                            </div>
-                                            <div
+                                            </a>
+                                            <a
                                                 className={styles.ex_url}
                                                 onClick={() => {
                                                     window.open(
@@ -197,7 +197,7 @@ const Experience = () => {
                                                         }
                                                     />
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

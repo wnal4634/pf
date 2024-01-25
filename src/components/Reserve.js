@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "css/Reserve.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { SiTistory, SiGithub, SiGmail } from "react-icons/si";
+import link from "components/Link";
 
 const Reserve = () => {
     const [showButton, setShowButton] = useState(false);
@@ -30,17 +30,37 @@ const Reserve = () => {
 
     return (
         <>
-            <div className={styles.reserve_wrap}>
-                <div>©{year.getFullYear()} KimJuMi. All Rights Reserved.</div>
-                {showButton && (
-                    <>
-                        <FontAwesomeIcon
-                            icon={faCircleChevronUp}
-                            size="2x"
-                            onClick={scrollToTop}
-                        />
-                    </>
-                )}
+            <div className={styles.reserve}>
+                <div className={styles.reserve_wrap}>
+                    <div className={styles.contact_title}>Contact</div>
+                    <div className={styles.contact_url}>
+                        <a className={styles.url} href={link.mail}>
+                            <div>Mail</div>
+                        </a>
+                        <a
+                            className={styles.url}
+                            onClick={() => {
+                                window.open(link.github);
+                            }}
+                        >
+                            <div>Github</div>
+                        </a>
+                        <a
+                            className={styles.url}
+                            onClick={() => {
+                                window.open(link.blog);
+                            }}
+                        >
+                            <div>Blog</div>
+                        </a>
+                    </div>
+                    <div className={styles.reserve_n_top}>
+                        <div>
+                            ©{year.getFullYear()} KimJuMi. All Rights Reserved.
+                        </div>
+                        <a onClick={scrollToTop}>Back to top</a>
+                    </div>
+                </div>
             </div>
         </>
     );

@@ -1,3 +1,11 @@
+html {
+    --cursor-color: #333;
+}
+
+html.dark-mode {
+    --cursor-color: #fff;
+}
+
 body {
     overflow-y: overlay; /* 반드시 overlay 처리 */
     margin: 0;
@@ -13,6 +21,15 @@ hr {
 }
 h2 {
     margin: 0;
+}
+
+::-moz-selection {
+    background: rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+::selection {
+    background: rgba(0, 0, 0, 0.1);
+    color: #000;
 }
 
 ::-webkit-scrollbar-button:vertical:start:decrement {
@@ -82,4 +99,9 @@ h2 {
         format("woff");
     font-weight: 400;
     font-style: normal;
+}
+
+@font-face {
+    font-family: "StretchPro";
+    src: url("../font/StretchPro.woff") format("truetype");
 }
