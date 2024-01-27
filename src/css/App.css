@@ -1,7 +1,9 @@
 html {
     --cursor-color: #333;
 }
-
+html:active {
+    --cursor-color: #878787;
+}
 html.dark-mode {
     --cursor-color: #fff;
 }
@@ -23,6 +25,35 @@ h2 {
     margin: 0;
 }
 
+* {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+#progressBarContainer {
+    position: fixed;
+    z-index: 10000;
+    /* background: rgba(255, 255, 255, 0.05); */
+    top: 0;
+    right: 0;
+}
+#progressBar {
+    /* background: linear-gradient(to bottom, red, violet); */
+    background: gray;
+    transform-origin: top;
+    /* transform: scale(0, 0);
+    opacity: 0; */
+}
+#progressBarContainer,
+#progressBar {
+    height: 100%;
+    width: 7px;
+    transition: 0.3s;
+}
+
 ::-moz-selection {
     background: rgba(0, 0, 0, 0.1);
     color: #000;
@@ -32,7 +63,7 @@ h2 {
     color: #000;
 }
 
-::-webkit-scrollbar-button:vertical:start:decrement {
+/* ::-webkit-scrollbar-button:vertical:start:decrement {
     display: block;
     height: 0px;
 }
@@ -57,7 +88,7 @@ h2 {
 ::-webkit-scrollbar-track {
     box-shadow: none;
     background-color: transparent;
-}
+} */
 
 @font-face {
     font-family: "ClimateCrisisKRVF";
