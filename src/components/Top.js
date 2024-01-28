@@ -82,14 +82,14 @@ const Side = () => {
             <PC>
                 <div className={styles.header}>
                     <div className={styles.header_wrap}>
-                        <div className={styles.initial} ref={appearInitial}>
+                        {/* <div className={styles.initial} ref={appearInitial}>
                             <img
                                 src={j_icon}
                                 width={25}
                                 alt="이니셜 아이콘"
                                 onClick={goTop}
                             />
-                        </div>
+                        </div> */}
                         <div className={styles.nav}>
                             <Link
                                 to="1"
@@ -97,7 +97,7 @@ const Side = () => {
                                 smooth={true}
                                 className={styles.link}
                             >
-                                <div ref={appearLink_1}>About me</div>
+                                <div ref={appearLink_1}>skills</div>
                             </Link>
                             <Link
                                 to="2"
@@ -105,7 +105,7 @@ const Side = () => {
                                 smooth={true}
                                 className={styles.link}
                             >
-                                <div ref={appearLink_2}>Skills</div>
+                                <div ref={appearLink_2}>projects</div>
                             </Link>
                             <Link
                                 to="3"
@@ -113,7 +113,7 @@ const Side = () => {
                                 smooth={true}
                                 className={styles.link}
                             >
-                                <div ref={appearLink_3}>Projects</div>
+                                <div ref={appearLink_3}>experience</div>
                             </Link>
                             <Link
                                 to="4"
@@ -121,7 +121,7 @@ const Side = () => {
                                 smooth={true}
                                 className={styles.link}
                             >
-                                <div ref={appearLink_4}>Experience</div>
+                                <div ref={appearLink_4}>contact me</div>
                             </Link>
                         </div>
                     </div>
@@ -146,7 +146,7 @@ const Side = () => {
                                         smooth={true}
                                         className={styles.link}
                                     >
-                                        About me
+                                        skills
                                     </Link>
                                 </li>
                                 <li className={styles.menu_item}>
@@ -156,7 +156,7 @@ const Side = () => {
                                         smooth={true}
                                         className={styles.link}
                                     >
-                                        Skills
+                                        projects
                                     </Link>
                                 </li>
                                 <li className={styles.menu_item}>
@@ -166,7 +166,7 @@ const Side = () => {
                                         smooth={true}
                                         className={styles.link}
                                     >
-                                        Projects
+                                        experience
                                     </Link>
                                 </li>
                                 <li className={styles.menu_item}>
@@ -176,7 +176,7 @@ const Side = () => {
                                         smooth={true}
                                         className={styles.link}
                                     >
-                                        Experience
+                                        contact me
                                     </Link>
                                 </li>
                             </ul>

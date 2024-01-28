@@ -30,7 +30,7 @@ const Reserve = () => {
 
     return (
         <>
-            <div className={styles.reserve}>
+            <div id="4" className={styles.reserve}>
                 <div className={styles.reserve_wrap}>
                     <div className={styles.contact_title}>Contact</div>
                     <div className={styles.contact_url}>

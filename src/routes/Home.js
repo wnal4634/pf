@@ -7,7 +7,7 @@ import AnimatedCursor from "react-animated-cursor";
 const Home = () => {
     return (
         <div>
-            <AnimatedCursor
+            {/* <AnimatedCursor
                 trailingSpeed={1}
                 innerSize={7}
                 outerSize={50}
@@ -36,7 +36,7 @@ const Home = () => {
                         },
                     },
                 ]}
-            />
+            /> */}
             <Top />
             <div>
                 <Middle />

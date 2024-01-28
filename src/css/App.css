@@ -1,8 +1,9 @@
 html {
-    --cursor-color: #333;
+    /* --cursor-color: #1d1a3f; */
+    --cursor-color: black;
 }
 html:active {
-    --cursor-color: #878787;
+    --cursor-color: #807ba9;
 }
 html.dark-mode {
     --cursor-color: #fff;
@@ -12,15 +13,15 @@ body {
     overflow-y: overlay; /* 반드시 overlay 처리 */
     margin: 0;
     font-family: "Noto Sans KR", sans-serif;
-    background-color: #f5f1fc;
+    background-color: #f2f2ff;
 }
-hr {
+/* hr {
     border: 0;
     height: 1px;
     background-color: rgb(232, 232, 232);
     width: 100%;
     margin: 20px 0 30px;
-}
+} */
 h2 {
     margin: 0;
 }
@@ -42,7 +43,7 @@ h2 {
 }
 #progressBar {
     /* background: linear-gradient(to bottom, red, violet); */
-    background: gray;
+    background: #1d1a3f;
     transform-origin: top;
     /* transform: scale(0, 0);
     opacity: 0; */
@@ -135,4 +136,20 @@ h2 {
 @font-face {
     font-family: "StretchPro";
     src: url("../font/StretchPro.woff") format("truetype");
+}
+
+@font-face {
+    font-family: "JalnanGothic";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neurimboGothicRegular";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/neurimboGothicRegular.woff2")
+        format("woff2");
+    font-weight: normal;
+    font-style: normal;
 }

@@ -59,30 +59,9 @@ const Introduce = () => {
             </Fade> */}
             <div id="1" className={styles.introduce_wrap}>
                 <div className={styles.main_text}>
-                    <div className={styles.text_col}>
-                        <text>No back, go forward</text>
-                        <text>a constantly thinking developer</text>
-                    </div>
-                    <div className={styles.sub_text}>
-                        <div>asdfasdfasdf</div>
-                        <text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                        </text>
-                    </div>
+                    <text>No back, go forward</text>
+                    <text>a constantly thinking developer</text>
                 </div>
-                <div className={styles.img_and_text}>
-                    <img src={img} alt="소개 이미지" />
-                    <text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                    </text>
-                </div>
-                <div className={styles.bg_square_minus} />
-                <div className={styles.bg_square_minus_length} />
-                <div className={styles.bg_square} />
             </div>
         </>
     );

@@ -757,7 +757,7 @@ const Projects = () => {
             </div> */}
 
             <div className={styles.projects_wrap}>
-                <div id="3" className={styles.projects_title}>
+                <div id="2" className={styles.projects_title}>
                     <h2>Projects</h2>
                     <hr />
                 </div>

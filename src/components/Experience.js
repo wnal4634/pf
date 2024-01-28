@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "css/Experience.module.css";
 import Modal from "react-modal";
 import img1 from "img/ex/공모전_상장.png";
@@ -65,7 +65,7 @@ const ModalStyleMobile = {
 };
 
 const Experience = () => {
-    const [modalIsOpen, setModalIsOpen] = useState(false);
+    // const [modalIsOpen, setModalIsOpen] = useState(false);
 
     return (
         <>
@@ -105,8 +105,8 @@ const Experience = () => {
                     </div>
                 </Fade>
             </PC> */}
-            <PC>
-                <div id="4" className={styles.ex_wrap}>
+            {/* <PC>
+                <div id="3" className={styles.ex_wrap}>
                     <h2>Experience</h2>
                     <hr />
                     <div className={styles.ex}>
@@ -202,6 +202,60 @@ const Experience = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </PC> */}
+            <PC>
+                <div id="3" className={styles.ex_wrap}>
+                    <div className={styles.ex}>
+                        <div className={styles.text}>
+                            <text className={styles.text_main}>
+                                What I've
+                                <br />
+                                experienced
+                            </text>
+                            <text className={styles.text_sub}>CLick !</text>
+                        </div>
+                        <div className={styles.ex_content_wrap}>
+                            <div className={styles.ex_list_header}>
+                                <div className={styles.title}>award</div>
+                                <div className={styles.title}>platform</div>
+                                <div className={styles.title}>project</div>
+                            </div>
+                            <hr />
+                            <div className={styles.ex_list_content}>
+                                <img src={img1} alt="공모전 이미지" />
+                                <div className={styles.content}>
+                                    제6회 4차 산업혁명 인재양성
+                                    공유·협업페스티발
+                                </div>
+                                <div className={styles.content}>
+                                    한국정보통신보안윤리학회
+                                </div>
+                                <div className={styles.content}>
+                                    한국정보통신보안윤리학회
+                                </div>
+                            </div>
+                            <hr />
+                            <div className={styles.ex_list_content}>
+                                <img src={img2} alt="앙꼬 협업 이미지1" />
+                                <div className={styles.content}>
+                                    cooperation
+                                </div>
+                                <div className={styles.content}>ankko</div>
+                                <div className={styles.content}>ankko</div>
+                            </div>
+                            <hr />
+                            <div className={styles.ex_list_content}>
+                                <img src={img3} alt="앙꼬 협업 이미지2" />
+                                <div className={styles.content}>
+                                    cooperation
+                                </div>
+                                <div className={styles.content}>ankko</div>
+                                <div className={styles.content}>ankko</div>
+                            </div>
+                            <hr />
                         </div>
                     </div>
                 </div>
