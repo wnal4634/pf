@@ -77,6 +77,10 @@ const Side = () => {
         });
     }, []);
 
+    const reload = () => {
+        window.location.reload();
+    };
+
     return (
         <>
             <PC>
@@ -90,6 +94,10 @@ const Side = () => {
                                 onClick={goTop}
                             />
                         </div> */}
+                        <div className={styles.initial} onClick={reload}>
+                            asdf
+                            {/* 링크들 오른쪽으로 밀리는 현상있음 */}
+                        </div>
                         <div className={styles.nav}>
                             <Link
                                 to="1"

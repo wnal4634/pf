@@ -57,10 +57,12 @@ const Introduce = () => {
                     </div>
                 </div>
             </Fade> */}
-            <div id="1" className={styles.introduce_wrap}>
+            <div className={styles.introduce_wrap}>
                 <div className={styles.main_text}>
-                    <text>No back, go forward</text>
-                    <text>a constantly thinking developer</text>
+                    {/* <span>Hello.</span>
+                    <span>I'm Jumi Kim</span> */}
+                    <span>No back, go forward.</span>
+                    <span>A constantly thinking developer</span>
                 </div>
             </div>
         </>

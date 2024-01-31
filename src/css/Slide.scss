@@ -8,9 +8,10 @@ li {
 }
 
 .wrapper {
-    overflow: hidden;
-
+    margin: 50px 0;
     .slide_container {
+        overflow: hidden;
+
         .slide_wrapper {
             display: flex;
             flex-wrap: nowrap;
@@ -22,7 +23,6 @@ li {
             position: relative;
             border-top: 1px solid #bbb;
             border-bottom: 1px solid #bbb;
-            padding: 40px 0;
 
             &::before {
                 content: "";
@@ -37,23 +37,23 @@ li {
                 z-index: 1;
             }
             &.original {
-                animation: 50s linear infinite normal none running
+                animation: 20s linear infinite normal none running
                     infiniteAnimation1;
             }
             &.clone {
-                animation: 50s linear infinite infiniteAnimation2;
+                animation: 20s linear infinite infiniteAnimation2;
             }
             &.stop {
                 animation-play-state: paused;
             }
 
             li {
-                margin: 0 20px;
+                margin: 0 5px;
+                // cursor: pointer;
                 z-index: 2;
                 transition: 0.3s;
-                transform: scale(1);
                 &:hover {
-                    transform: scale(0.98);
+                    transform: scale(0.97);
                     &::after {
                         content: "";
                         position: absolute;
@@ -63,27 +63,146 @@ li {
                         right: 0;
                         width: 100%;
                         height: 100%;
-                        background-color: rgba(0, 0, 0, 0.2);
+                        // background-color: rgba(0, 0, 0, 0.2);
+                        border-radius: 1.5vw;
                     }
                 }
-                &.size {
-                    width: 433px;
-                    height: 610px;
+                &.square,
+                &.radiusStrong,
+                &.rectangle,
+                &.shape,
+                &.flower {
+                    width: 17vw;
+                    // height: 17vw;
+                    height: 260px;
+                    border-radius: 1.5vw;
                 }
+                &.flower {
+                    --angle: 360deg / var(--sides, 6);
+                    --r: 20%;
+                    --posX: 50%;
+                    --posY: 50%;
+                    --color: black;
+                    --grad: var(--color) var(--size),
+                        transparent calc(var(--size) + 1px);
 
+                    --a1: calc(var(--angle) * 1);
+                    --x1: calc(var(--posX) + (cos(var(--a1)) * var(--r)));
+                    --y1: calc(var(--posY) + (sin(var(--a1)) * var(--r)));
+
+                    --a2: calc(var(--angle) * 2);
+                    --x2: calc(var(--posX) + (cos(var(--a2)) * var(--r)));
+                    --y2: calc(var(--posY) + (sin(var(--a2)) * var(--r)));
+
+                    --a3: calc(var(--angle) * 3);
+                    --x3: calc(var(--posX) + (cos(var(--a3)) * var(--r)));
+                    --y3: calc(var(--posY) + (sin(var(--a3)) * var(--r)));
+
+                    --a4: calc(var(--angle) * 4);
+                    --x4: calc(var(--posX) + (cos(var(--a4)) * var(--r)));
+                    --y4: calc(var(--posY) + (sin(var(--a4)) * var(--r)));
+
+                    --a5: calc(var(--angle) * 5);
+                    --x5: calc(var(--posX) + (cos(var(--a5)) * var(--r)));
+                    --y5: calc(var(--posY) + (sin(var(--a5)) * var(--r)));
+
+                    --a6: calc(var(--angle) * 6);
+                    --x6: calc(var(--posX) + (cos(var(--a6)) * var(--r)));
+                    --y6: calc(var(--posY) + (sin(var(--a6)) * var(--r)));
+
+                    --a7: calc(var(--angle) * 7);
+                    --x7: calc(var(--posX) + (cos(var(--a7)) * var(--r)));
+                    --y7: calc(var(--posY) + (sin(var(--a7)) * var(--r)));
+
+                    --a8: calc(var(--angle) * 8);
+                    --x8: calc(var(--posX) + (cos(var(--a8)) * var(--r)));
+                    --y8: calc(var(--posY) + (sin(var(--a8)) * var(--r)));
+
+                    --a9: calc(var(--angle) * 9);
+                    --x9: calc(var(--posX) + (cos(var(--a9)) * var(--r)));
+                    --y9: calc(var(--posY) + (sin(var(--a9)) * var(--r)));
+
+                    --a10: calc(var(--angle) * 10);
+                    --x10: calc(var(--posX) + (cos(var(--a10)) * var(--r)));
+                    --y10: calc(var(--posY) + (sin(var(--a10)) * var(--r)));
+
+                    --a11: calc(var(--angle) * 11);
+                    --x11: calc(var(--posX) + (cos(var(--a11)) * var(--r)));
+                    --y11: calc(var(--posY) + (sin(var(--a11)) * var(--r)));
+
+                    --baseGradient: 
+    /* Center */ radial-gradient(
+                            circle at var(--posX) var(--posY),
+                            var(--color) var(--r),
+                            transparent calc(var(--r) + 1px)
+                        ),
+                        radial-gradient(
+                            circle at var(--x1) var(--y1),
+                            var(--grad)
+                        ),
+                        radial-gradient(
+                            circle at var(--x2) var(--y2),
+                            var(--grad)
+                        ),
+                        radial-gradient(
+                            circle at var(--x3) var(--y3),
+                            var(--grad)
+                        ),
+                        radial-gradient(
+                            circle at var(--x4) var(--y4),
+                            var(--grad)
+                        ),
+                        radial-gradient(
+                            circle at var(--x5) var(--y5),
+                            var(--grad)
+                        ),
+                        radial-gradient(
+                            circle at var(--x6) var(--y6),
+                            var(--grad)
+                        );
+
+                    aspect-ratio: 1;
+
+                    --sides: 11;
+                    --size: 15%;
+                    --r: 32%;
+
+                    background: var(--baseGradient),
+                        radial-gradient(
+                            circle at var(--x7) var(--y7),
+                            var(--grad)
+                        ),
+                        radial-gradient(
+                            circle at var(--x8) var(--y8),
+                            var(--grad)
+                        ),
+                        radial-gradient(
+                            circle at var(--x9) var(--y9),
+                            var(--grad)
+                        ),
+                        radial-gradient(
+                            circle at var(--x10) var(--y10),
+                            var(--grad)
+                        ),
+                        radial-gradient(
+                            circle at var(--x11) var(--y11),
+                            var(--grad)
+                        );
+                }
                 .item {
                     width: 100%;
                     height: 100%;
                     flex-direction: column;
-                    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-                    border-radius: 10px;
-                    overflow: hidden;
+                    justify-content: center;
+                    text-align: center;
+                    font-size: 1.5rem;
                 }
                 .item img {
                     width: 100%;
-                    height: 400px;
-                    background-color: gray;
+                    height: 100%;
                     object-fit: cover;
+                    border-radius: 1.5vw;
+                    opacity: 0.7;
                 }
             }
         }

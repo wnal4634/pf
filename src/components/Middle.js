@@ -29,10 +29,10 @@ const Middle = () => {
                 <Skills />
             </IntroBlock>
             <IntroBlock>
-                <Project />
+                <Slide />
             </IntroBlock>
             <IntroBlock>
-                <Slide />
+                <Project />
             </IntroBlock>
             <IntroBlock>
                 <Experience />

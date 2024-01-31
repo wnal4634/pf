@@ -19,7 +19,7 @@ function App() {
         window.addEventListener("scroll", progressBarHandler);
 
         return () => window.removeEventListener("scroll", progressBarHandler);
-    });
+    }, []);
 
     return (
         <>

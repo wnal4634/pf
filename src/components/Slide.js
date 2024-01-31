@@ -2,83 +2,52 @@ import React, { useState } from "react";
 import "css/Slide.scss";
 import link from "./Link";
 import images from "components/ImagesImport";
+import styled from "styled-components";
+import colors from "./SkillsColor";
 
 const slides = [
-    { name: "red", target: "#" },
-    { name: "orange", target: "#" },
-    { name: "yellow", target: "#" },
-    { name: "green", target: "#" },
-    { name: "blue", target: "#" },
-    { name: "navy", target: "#" },
-    { name: "purple", target: "#" },
-];
-const slides2 = [
     {
-        name: "레시피 공유 및 밀키트 판매 앱",
+        content1: "HTML",
+        content2: "CSS",
         target: "#",
-        img: images.js_1_img1,
-        language: "JAVA",
-        language2: "PHP",
-        language3: "MySQL",
-        url: link.recipe_github,
-        url2: link.recipe_figma,
-        team: "팀 프로젝트",
+        bgColor: "#D9DBEE",
+        color: "#403973",
     },
     {
-        name: "레시피 공유 및 밀키트 판매 앱의 관리자 페이지",
+        content1: "JS",
+        content2: "DART",
+        content3: "Flutter",
         target: "#",
-        img: images.js_1_2_img1,
-        language: "PHP",
-        language2: "Bootstrap",
-        language3: "Python",
-        url: link.recipe_php_github,
-        url2: link.colab,
-        team: "팀 프로젝트",
+        bgColor: "#D9DBEE",
+        color: "#403973",
+        shape: "radiusStrong",
+    },
+    { target: "#" },
+    {
+        content1: "React",
+        content2: "Bootstrap",
+        content3: "CSS",
+        target: "#",
+        bgColor: "#D9DBEE",
+        color: "#403973",
+        shape: "shape",
+    },
+    { target: "#", shape: "rectangle" },
+    {
+        content1: "MySQL",
+        target: "#",
+        bgColor: "#D9DBEE",
+        color: "#403973",
     },
     {
-        name: "인터벌 타이머 앱 ",
+        content1: "Github",
+        content2: "Figma",
+        content3: "Git",
         target: "#",
-        img: images.js_2_img1,
-        language: "Flutter",
-        language2: "Dart",
-        language3: "",
-        url: link.interval_github,
-        url2: link.interval_demo,
-        team: "개인 프로젝트",
+        bgColor: "#D9DBEE",
+        color: "#403973",
     },
-    {
-        name: "투두리스트",
-        target: "#",
-        img: images.js_3_img1,
-        language: "JS",
-        language2: "CSS",
-        language3: "",
-        url: link.toDo_github,
-        url2: link.toDo_demo,
-        team: "개인 프로젝트",
-    },
-    {
-        name: "개인 웹 포트폴리오",
-        target: "#",
-        img: images.js_4_img1,
-        language: "React",
-        language2: "JS",
-        language3: "CSS",
-        url: link.pf_github,
-        url2: "",
-        team: "개인 프로젝트",
-    },
-    {
-        name: "서울시 실시간 날씨와 대기오염정보를 확인할 수 있는 웹페이지",
-        target: "#",
-        img: images.js_5_img1,
-        language: "React",
-        language2: "JS",
-        language3: "CSS",
-        url: link.weatherRec_github,
-        url2: link.weatherRec_demo,
-        team: "개인 프로젝트",
-    },
+    { target: "#", shape: "flower" },
 ];
 
 const Slide = () => {
@@ -99,32 +68,35 @@ const Slide = () => {
                             animate ? "" : " stop",
                         )}
                     >
-                        {/* {slides.map((s, i) => (
-                            <li key={i} className={"size"}>
-                                <div
-                                    className="item"
-                                    style={{ background: s.name }}
-                                ></div>
-                            </li>
-                        ))} */}
-                        {slides2.map((s, i) => (
-                            <li key={i} className={"size"}>
+                        {slides.map((s, i) => (
+                            <li
+                                key={i}
+                                className={
+                                    s.shape == null
+                                        ? "square"
+                                        : s.shape == "radiusStrong"
+                                        ? "radiusStrong"
+                                        : s.shape == "rectangle"
+                                        ? "rectangle"
+                                        : s.shape == "shape"
+                                        ? "shape"
+                                        : "flower"
+                                }
+                                style={{
+                                    backgroundColor: s.bgColor,
+                                    color: s.color,
+                                }}
+                            >
                                 <div className="item">
-                                    <img src={s.img} alt="작업물 이미지" />
-                                    <div>
-                                        {s.name}
-                                        {s.language}
-                                        {s.language2}
-                                        {s.language3}
-                                    </div>
-                                    <div>
-                                        <a href={s.url} target="_blank">
-                                            깃허브
-                                        </a>
-                                        <a href={s.url2} target="_blank">
-                                            데모
-                                        </a>
-                                    </div>
+                                    {s.content1 == null ? (
+                                        <img
+                                            src="https://source.unsplash.com/DPlEQT7Hlpk"
+                                            className="noContent"
+                                        />
+                                    ) : null}
+                                    <span>{s.content1}</span>
+                                    <span>{s.content2}</span>
+                                    <span>{s.content3}</span>
                                 </div>
                             </li>
                         ))}
@@ -132,32 +104,35 @@ const Slide = () => {
                     <div
                         className={"slide clone".concat(animate ? "" : " stop")}
                     >
-                        {/* {slides.map((s, i) => (
-                            <li key={i} className={"size"}>
-                                <div
-                                    className="item"
-                                    style={{ background: s.name }}
-                                ></div>
-                            </li>
-                        ))} */}
-                        {slides2.map((s, i) => (
-                            <li key={i} className={"size"}>
+                        {slides.map((s, i) => (
+                            <li
+                                key={i}
+                                className={
+                                    s.shape == null
+                                        ? "square"
+                                        : s.shape == "radiusStrong"
+                                        ? "radiusStrong"
+                                        : s.shape == "rectangle"
+                                        ? "rectangle"
+                                        : s.shape == "shape"
+                                        ? "shape"
+                                        : "flower"
+                                }
+                                style={{
+                                    backgroundColor: s.bgColor,
+                                    color: s.color,
+                                }}
+                            >
                                 <div className="item">
-                                    <img src={s.img} alt="작업물 이미지" />
-                                    <div>
-                                        {s.name}
-                                        {s.language}
-                                        {s.language2}
-                                        {s.language3}
-                                    </div>
-                                    <div>
-                                        <a href={s.url} target="_blank">
-                                            깃허브
-                                        </a>
-                                        <a href={s.url2} target="_blank">
-                                            데모
-                                        </a>
-                                    </div>
+                                    {s.content1 == null ? (
+                                        <img
+                                            src="https://source.unsplash.com/DPlEQT7Hlpk"
+                                            className="noContent"
+                                        />
+                                    ) : null}
+                                    <span>{s.content1}</span>
+                                    <span>{s.content2}</span>
+                                    <span>{s.content3}</span>
                                 </div>
                             </li>
                         ))}

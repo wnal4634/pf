@@ -14,6 +14,7 @@ body {
     margin: 0;
     font-family: "Noto Sans KR", sans-serif;
     background-color: #f2f2ff;
+    overflow-x: hidden;
 }
 /* hr {
     border: 0;
@@ -57,11 +58,11 @@ h2 {
 
 ::-moz-selection {
     background: rgba(0, 0, 0, 0.1);
-    color: #000;
+    /* color: #000; */
 }
 ::selection {
     background: rgba(0, 0, 0, 0.1);
-    color: #000;
+    /* color: #000; */
 }
 
 /* ::-webkit-scrollbar-button:vertical:start:decrement {

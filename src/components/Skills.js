@@ -8,9 +8,12 @@ const Skills = () => {
         <>
             {/* <Fade bottom> */}
             <div id="1" className={styles.skills_wrap}>
-                <h2>Skills</h2>
-                <hr />
-                <div className={styles.row}>
+                <span>
+                    skills
+                    <br />
+                    available
+                </span>
+                {/* <div className={styles.row}>
                     <div>
                         <div className={styles.skill_title}>
                             <div>MarkUp</div>
@@ -33,9 +36,6 @@ const Skills = () => {
                                 <div style={{ color: colors.Bootstrap }}>
                                     Bootstrap
                                 </div>
-                                {/* <div style={{ color: colors.NodeJS }}>
-                                    NodeJS
-                                </div> */}
                                 <div style={{ color: colors.Flutter }}>
                                     Flutter
                                 </div>
@@ -53,7 +53,7 @@ const Skills = () => {
                         </div>
                     </div>
                     <div className={styles.rotate_text}>Language</div>
-                </div>
+                </div> */}
             </div>
             {/* </Fade> */}
         </>

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "css/Experience.module.css";
 import Modal from "react-modal";
+import { gsap } from "gsap";
 import img1 from "img/ex/공모전_상장.png";
 import img2 from "img/ex/ankkoDetailPage.png";
 import img3 from "img/ex/ankkoMenu.png";
@@ -66,6 +67,13 @@ const ModalStyleMobile = {
 
 const Experience = () => {
     // const [modalIsOpen, setModalIsOpen] = useState(false);
+    const appearLink_5 = useRef();
+    gsap.from(appearLink_5.current, {
+        x: -20,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+    });
 
     return (
         <>
@@ -113,7 +121,7 @@ const Experience = () => {
                         <div className={styles.main_ex}>
                             <div className={styles.ex_img_wrap}>
                                 <img src={img1} alt="공모전 상장 이미지" />
-                                <text>확대하기</text>
+                                <span>확대하기</span>
                             </div>
                             <div className={styles.ex_text_wrap}>
                                 <div className={styles.box} />
@@ -210,12 +218,12 @@ const Experience = () => {
                 <div id="3" className={styles.ex_wrap}>
                     <div className={styles.ex}>
                         <div className={styles.text}>
-                            <text className={styles.text_main}>
+                            <span className={styles.text_main}>
                                 What I've
                                 <br />
                                 experienced
-                            </text>
-                            <text className={styles.text_sub}>CLick !</text>
+                            </span>
+                            <span className={styles.text_sub}>CLick !</span>
                         </div>
                         <div className={styles.ex_content_wrap}>
                             <div className={styles.ex_list_header}>
@@ -225,7 +233,11 @@ const Experience = () => {
                             </div>
                             <hr />
                             <div className={styles.ex_list_content}>
-                                <img src={img1} alt="공모전 이미지" />
+                                <img
+                                    src={img1}
+                                    alt="공모전 이미지"
+                                    ref={appearLink_5}
+                                />
                                 <div className={styles.content}>
                                     제6회 4차 산업혁명 인재양성
                                     공유·협업페스티발
