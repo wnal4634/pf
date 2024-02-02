@@ -1,11 +1,66 @@
 .projects_wrap {
     flex-direction: column;
     width: 100%;
-    padding: 117px 27px 0 20px;
-}
-.projects_title {
-    flex-direction: column;
-    padding: 0 12vw;
+    margin: 117px 27px 0 20px;
+    padding: 0 15vw;
+
+    .projects_title {
+        font-family: "neurimboGothicRegular";
+        font-size: 5rem;
+        margin-bottom: 10vw;
+    }
+    .project {
+        margin-bottom: 130px;
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        img {
+            width: 700px;
+            height: 165px;
+            object-fit: cover;
+            filter: grayscale(100%);
+        }
+        &:nth-child(4) img,
+        &:last-child img {
+            // width: 400px;
+            // height: 500px;
+            object-position: 50% 65%;
+        }
+        .noise {
+            width: 700px;
+            height: 165px;
+            position: absolute;
+            z-index: 1001;
+            background-image: url("https://i.ibb.co/x3TCktM/645cbb8ec449398255b76326-noise.gif");
+            background-position: 0 0;
+            background-size: auto;
+            pointer-events: none;
+            opacity: 0.05;
+            transition: opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            visibility: visible;
+            &:nth-child(odd) {
+                right: 0;
+            }
+        }
+        .info {
+            // background-color: pink;
+            flex: 1;
+            flex-direction: column;
+            padding-left: 50px;
+            span {
+                width: 100%;
+                line-height: 1;
+                margin-bottom: 20px;
+                font: {
+                    size: 2rem;
+                    family: "neurimboGothicRegular";
+                }
+            }
+        }
+        &:nth-child(odd) .info {
+            padding: 0 50px 0 100px;
+        }
+    }
 }
 .mySwiper_row {
     --swiper-theme-color: #fff;

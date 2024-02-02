@@ -11,7 +11,7 @@ const Skills = () => {
                 <span>
                     skills
                     <br />
-                    available
+                    available'
                 </span>
                 {/* <div className={styles.row}>
                     <div>

@@ -12,48 +12,70 @@ const slides = [
         target: "#",
         bgColor: "#D9DBEE",
         color: "#403973",
+        shape: "square",
     },
     {
         content1: "JS",
         content2: "DART",
         content3: "Flutter",
         target: "#",
-        bgColor: "#D9DBEE",
-        color: "#403973",
+        bgColor: "#8E97F0",
+        color: "#fff",
         shape: "radiusStrong",
     },
-    { target: "#" },
+    { target: "#", shape: "square" },
     {
         content1: "React",
         content2: "Bootstrap",
         content3: "CSS",
         target: "#",
-        bgColor: "#D9DBEE",
-        color: "#403973",
-        shape: "shape",
+        // bgColor: "#434A8A",
+        color: "#fff",
+        shape: "flower",
     },
-    { target: "#", shape: "rectangle" },
+    { target: "#", bgColor: "#D9DBEE", color: "#403973", shape: "rectangle" },
     {
         content1: "MySQL",
         target: "#",
-        bgColor: "#D9DBEE",
-        color: "#403973",
+        bgColor: "#868FAD",
+        color: "#fff",
+        shape: "circle",
     },
     {
         content1: "Github",
         content2: "Figma",
         content3: "Git",
         target: "#",
-        bgColor: "#D9DBEE",
-        color: "#403973",
+        bgColor: "#E0C7F2",
+        color: "#655280",
+        shape: "square",
     },
-    { target: "#", shape: "flower" },
+    {
+        target: "#",
+        // bgColor: "#434A8A",
+        color: "#fff",
+        shape: "flower",
+    }, //이미지 넣기
 ];
 
 const Slide = () => {
     const [animate, setAnimate] = useState(true);
     const onStop = () => setAnimate(false);
     const onRun = () => setAnimate(true);
+    const img = "https://source.unsplash.com/DPlEQT7Hlpk";
+    const img2 = "https://source.unsplash.com/q4TfWtnz_xw";
+    const img3 = "https://source.unsplash.com/EUeP0jK6Rmw";
+    const list = `HTML
+    CSS
+    JS
+    DART
+    Flutter
+    React
+    Bootstrap
+    MySQL
+    Github
+    Figma
+    Git`;
 
     return (
         <div className="wrapper">
@@ -72,14 +94,14 @@ const Slide = () => {
                             <li
                                 key={i}
                                 className={
-                                    s.shape == null
+                                    s.shape == "square"
                                         ? "square"
                                         : s.shape == "radiusStrong"
                                         ? "radiusStrong"
                                         : s.shape == "rectangle"
                                         ? "rectangle"
-                                        : s.shape == "shape"
-                                        ? "shape"
+                                        : s.shape == "circle"
+                                        ? "circle"
                                         : "flower"
                                 }
                                 style={{
@@ -88,11 +110,17 @@ const Slide = () => {
                                 }}
                             >
                                 <div className="item">
-                                    {s.content1 == null ? (
-                                        <img
-                                            src="https://source.unsplash.com/DPlEQT7Hlpk"
-                                            className="noContent"
-                                        />
+                                    {s.content1 == null &&
+                                    s.shape == "square" ? (
+                                        <img src={img} className="noContent" />
+                                    ) : null}
+                                    {s.content1 == null &&
+                                    s.shape == "rectangle" ? (
+                                        <img src={img2} className="" />
+                                    ) : null}
+                                    {s.content1 == null &&
+                                    s.shape == "flower" ? (
+                                        <img src={img3} className="" />
                                     ) : null}
                                     <span>{s.content1}</span>
                                     <span>{s.content2}</span>
@@ -108,14 +136,14 @@ const Slide = () => {
                             <li
                                 key={i}
                                 className={
-                                    s.shape == null
+                                    s.shape == "square"
                                         ? "square"
                                         : s.shape == "radiusStrong"
                                         ? "radiusStrong"
                                         : s.shape == "rectangle"
                                         ? "rectangle"
-                                        : s.shape == "shape"
-                                        ? "shape"
+                                        : s.shape == "circle"
+                                        ? "circle"
                                         : "flower"
                                 }
                                 style={{
@@ -124,11 +152,17 @@ const Slide = () => {
                                 }}
                             >
                                 <div className="item">
-                                    {s.content1 == null ? (
-                                        <img
-                                            src="https://source.unsplash.com/DPlEQT7Hlpk"
-                                            className="noContent"
-                                        />
+                                    {s.content1 == null &&
+                                    s.shape == "square" ? (
+                                        <img src={img} className="noContent" />
+                                    ) : null}
+                                    {s.content1 == null &&
+                                    s.shape == "rectangle" ? (
+                                        <img src={img2} className="" />
+                                    ) : null}
+                                    {s.content1 == null &&
+                                    s.shape == "flower" ? (
+                                        <img src={img3} className="" />
                                     ) : null}
                                     <span>{s.content1}</span>
                                     <span>{s.content2}</span>
@@ -139,6 +173,13 @@ const Slide = () => {
                     </div>
                 </ul>
             </div>
+            <span
+                class="tool"
+                data-tip="Use this data-tip attribute to store your tool tip message."
+                tabindex="2"
+            >
+                data-tip
+            </span>
         </div>
     );
 };

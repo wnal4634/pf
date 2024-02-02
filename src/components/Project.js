@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "css/Project.module.css";
+import styles from "css/Project.module.scss";
 import Fade from "react-reveal/Fade";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
@@ -758,13 +758,78 @@ const Projects = () => {
 
             <div className={styles.projects_wrap}>
                 <div id="2" className={styles.projects_title}>
-                    <h2>Projects</h2>
-                    <hr />
+                    <span>projects;</span>
                 </div>
-                {/* <div className={styles.projects_box}>
-                    <div className={styles.projects_img}>이미지</div>
-                    <div className={styles.projcets_content}>콘텐츠</div>
-                </div> */}
+                <div className={styles.project}>
+                    <img
+                        src="https://source.unsplash.com/5YM26lUicfU"
+                        className={styles.random_img}
+                    />
+                    <div className={styles.noise} />
+                    <div className={styles.info}>
+                        <span>
+                            레시피 공유 및 밀키트
+                            <br />
+                            판매 어플리케이션
+                        </span>
+                        <p>content</p>
+                    </div>
+                </div>
+                <div className={styles.project}>
+                    <img
+                        src="https://source.unsplash.com/random/?black-abstract"
+                        className={styles.random_img}
+                    />
+                    <div className={styles.noise} />
+                    <div className={styles.info}>
+                        <span>우효옷</span>
+                        <p>content</p>
+                    </div>
+                </div>
+                <div className={styles.project}>
+                    <img
+                        src="https://source.unsplash.com/random/?nebula"
+                        className={styles.random_img}
+                    />
+                    <div className={styles.noise} />
+                    <div className={styles.info}>
+                        <span>인터벌 타이머</span>
+                        <p>content</p>
+                    </div>
+                </div>
+                <div className={styles.project}>
+                    <img
+                        src="https://source.unsplash.com/XaVNix5mpDQ"
+                        className={styles.random_img}
+                    />
+                    <div className={styles.noise} />
+                    <div className={styles.info}>
+                        <span>투두리스트</span>
+                        <p>content</p>
+                    </div>
+                </div>
+                <div className={styles.project}>
+                    <img
+                        src="https://source.unsplash.com/random/?black-aesthetic"
+                        className={styles.random_img}
+                    />
+                    <div className={styles.noise} />
+                    <div className={styles.info}>
+                        <span>개인 웹 포트폴리오</span>
+                        <p>content</p>
+                    </div>
+                </div>
+                <div className={styles.project}>
+                    <img
+                        src="https://source.unsplash.com/ExJRuwczytw"
+                        className={styles.random_img}
+                    />
+                    <div className={styles.noise} />
+                    <div className={styles.info}>
+                        <span>서울시 실시간 날씨 & 대기오염정보 웹페이지</span>
+                        <p>content</p>
+                    </div>
+                </div>
             </div>
         </>
     );
