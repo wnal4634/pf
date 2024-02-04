@@ -11,9 +11,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import "css/Swiper-bundle.css";
 import colors from "components/SkillsColor";
-import link from "./Link";
+import link from "components/Link";
+import WaveSVG from "components/WaveSVG";
+import { gsap } from "gsap";
 
 const Projects = () => {
+    const [click, setClick] = useState(false);
+    const changeClick = () => {
+        setClick((click) => !click);
+        console.log(click);
+    };
+    // const nextSlide = () => {
+    //     gsap.from(`${styles.random_img1}`, {
+    //         x: -360,
+    //         duration: 1,
+    //     });
+    // };
+
     return (
         <>
             {/* <div id="3" className={styles.practice_wrap}>
@@ -758,12 +772,20 @@ const Projects = () => {
 
             <div className={styles.projects_wrap}>
                 <div id="2" className={styles.projects_title}>
-                    <span>projects;</span>
+                    <span>
+                        projects
+                        <br />
+                        programmed;
+                    </span>
                 </div>
-                <div className={styles.project}>
+                <div
+                    className={click ? `${styles.click}` : `${styles.project}`}
+                    onClick={changeClick}
+                >
+                    {/* <div className={styles.project} > */}
                     <img
                         src="https://source.unsplash.com/5YM26lUicfU"
-                        className={styles.random_img}
+                        className={styles.random_img1}
                     />
                     <div className={styles.noise} />
                     <div className={styles.info}>
@@ -772,7 +794,11 @@ const Projects = () => {
                             <br />
                             판매 어플리케이션
                         </span>
-                        <p>content</p>
+                        <p>
+                            게시글 관련 기능과 유저간의 공유가 가능한 안드로이드
+                            어플리케이션
+                            <WaveSVG />
+                        </p>
                     </div>
                 </div>
                 <div className={styles.project}>
@@ -781,9 +807,13 @@ const Projects = () => {
                         className={styles.random_img}
                     />
                     <div className={styles.noise} />
+                    <div className={styles.wave} />
                     <div className={styles.info}>
                         <span>우효옷</span>
-                        <p>content</p>
+                        <p>
+                            content
+                            <WaveSVG />
+                        </p>
                     </div>
                 </div>
                 <div className={styles.project}>
@@ -792,9 +822,13 @@ const Projects = () => {
                         className={styles.random_img}
                     />
                     <div className={styles.noise} />
+                    <div className={styles.wave} />
                     <div className={styles.info}>
                         <span>인터벌 타이머</span>
-                        <p>content</p>
+                        <p>
+                            지정한 시간만큼 계속 반복하는 타이머
+                            <WaveSVG />
+                        </p>
                     </div>
                 </div>
                 <div className={styles.project}>
@@ -803,9 +837,14 @@ const Projects = () => {
                         className={styles.random_img}
                     />
                     <div className={styles.noise} />
+                    <div className={styles.wave} />
                     <div className={styles.info}>
                         <span>투두리스트</span>
-                        <p>content</p>
+                        <p>
+                            배경 이미지와 하단의 글귀가 새로고침 시에 랜덤으로
+                            변경되는 투두리스트
+                            <WaveSVG />
+                        </p>
                     </div>
                 </div>
                 <div className={styles.project}>
@@ -814,9 +853,13 @@ const Projects = () => {
                         className={styles.random_img}
                     />
                     <div className={styles.noise} />
+                    <div className={styles.wave} />
                     <div className={styles.info}>
                         <span>개인 웹 포트폴리오</span>
-                        <p>content</p>
+                        <p>
+                            현재 화면의 포트폴리오
+                            <WaveSVG />
+                        </p>
                     </div>
                 </div>
                 <div className={styles.project}>
@@ -825,9 +868,19 @@ const Projects = () => {
                         className={styles.random_img}
                     />
                     <div className={styles.noise} />
+                    <div className={styles.wave} />
                     <div className={styles.info}>
-                        <span>서울시 실시간 날씨 & 대기오염정보 웹페이지</span>
-                        <p>content</p>
+                        <span>
+                            서울시 실시간 날씨
+                            <br />& 대기오염정보 확인
+                        </span>
+                        <p>
+                            공공데이터 API 사용,
+                            <br />
+                            행정구별 날씨와 해당 기온에 맞는 옷 종류 제안하는 웹
+                            페이지
+                            <WaveSVG />
+                        </p>
                     </div>
                 </div>
             </div>

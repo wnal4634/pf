@@ -12,9 +12,11 @@ html.dark-mode {
 body {
     overflow-y: overlay; /* 반드시 overlay 처리 */
     margin: 0;
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "Pretendard-Regular", sans-serif;
+    /* font-family: "Noto Sans KR", sans-serif; */
     background-color: #f2f2ff;
     overflow-x: hidden;
+    color: #1d1a3f;
 }
 /* hr {
     border: 0;
@@ -46,6 +48,7 @@ h2 {
     /* background: linear-gradient(to bottom, red, violet); */
     background: #1d1a3f;
     transform-origin: top;
+    z-index: 10;
     /* transform: scale(0, 0);
     opacity: 0; */
 }

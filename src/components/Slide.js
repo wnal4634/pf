@@ -94,13 +94,13 @@ const Slide = () => {
                             <li
                                 key={i}
                                 className={
-                                    s.shape == "square"
+                                    s.shape === "square"
                                         ? "square"
-                                        : s.shape == "radiusStrong"
+                                        : s.shape === "radiusStrong"
                                         ? "radiusStrong"
-                                        : s.shape == "rectangle"
+                                        : s.shape === "rectangle"
                                         ? "rectangle"
-                                        : s.shape == "circle"
+                                        : s.shape === "circle"
                                         ? "circle"
                                         : "flower"
                                 }
@@ -111,15 +111,15 @@ const Slide = () => {
                             >
                                 <div className="item">
                                     {s.content1 == null &&
-                                    s.shape == "square" ? (
+                                    s.shape === "square" ? (
                                         <img src={img} className="noContent" />
                                     ) : null}
                                     {s.content1 == null &&
-                                    s.shape == "rectangle" ? (
+                                    s.shape === "rectangle" ? (
                                         <img src={img2} className="" />
                                     ) : null}
                                     {s.content1 == null &&
-                                    s.shape == "flower" ? (
+                                    s.shape === "flower" ? (
                                         <img src={img3} className="" />
                                     ) : null}
                                     <span>{s.content1}</span>
@@ -136,13 +136,13 @@ const Slide = () => {
                             <li
                                 key={i}
                                 className={
-                                    s.shape == "square"
+                                    s.shape === "square"
                                         ? "square"
-                                        : s.shape == "radiusStrong"
+                                        : s.shape === "radiusStrong"
                                         ? "radiusStrong"
-                                        : s.shape == "rectangle"
+                                        : s.shape === "rectangle"
                                         ? "rectangle"
-                                        : s.shape == "circle"
+                                        : s.shape === "circle"
                                         ? "circle"
                                         : "flower"
                                 }
@@ -153,15 +153,15 @@ const Slide = () => {
                             >
                                 <div className="item">
                                     {s.content1 == null &&
-                                    s.shape == "square" ? (
+                                    s.shape === "square" ? (
                                         <img src={img} className="noContent" />
                                     ) : null}
                                     {s.content1 == null &&
-                                    s.shape == "rectangle" ? (
+                                    s.shape === "rectangle" ? (
                                         <img src={img2} className="" />
                                     ) : null}
                                     {s.content1 == null &&
-                                    s.shape == "flower" ? (
+                                    s.shape === "flower" ? (
                                         <img src={img3} className="" />
                                     ) : null}
                                     <span>{s.content1}</span>
@@ -174,9 +174,9 @@ const Slide = () => {
                 </ul>
             </div>
             <span
-                class="tool"
+                className="tool"
                 data-tip="Use this data-tip attribute to store your tool tip message."
-                tabindex="2"
+                tabIndex="2"
             >
                 data-tip
             </span>

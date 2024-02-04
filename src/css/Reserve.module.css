@@ -1,7 +1,9 @@
 .reserve {
     padding: 25px 0 40px 0;
-    background-color: #1d1a3f80;
-    color: beige;
+    background-color: rgba(29, 26, 63);
+    background-color: #d9dbee;
+    /* ㄴ #1D1A3F 와 같은 색상 */
+    /* color: beige; */
     font-size: small;
     margin: 170px 17px 10px 10px;
     transition: 0.3s;
@@ -40,7 +42,7 @@
     transition: 0.3s;
 }
 .reserve_n_top a:last-child:hover {
-    color: beige;
+    /* color: beige; */
     transition: 0.2s;
 }
 /* .reserve_wrap svg {
