@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import styles from "css/Reserve.module.css";
+import styles from "css/Reserve.module.scss";
 import { SiTistory, SiGithub, SiGmail } from "react-icons/si";
 import link from "components/Link";
 
 const Reserve = () => {
-    const [showButton, setShowButton] = useState(false);
+    // const [showButton, setShowButton] = useState(false);
     const year = new Date();
 
     const scrollToTop = () => {
@@ -13,20 +13,20 @@ const Reserve = () => {
         });
     };
 
-    useEffect(() => {
-        const ShowButtonClick = () => {
-            if (window.scrollY > 400) {
-                setShowButton(true);
-            } else {
-                setShowButton(false);
-            }
-        };
+    // useEffect(() => {
+    //     const ShowButtonClick = () => {
+    //         if (window.scrollY > 400) {
+    //             setShowButton(true);
+    //         } else {
+    //             setShowButton(false);
+    //         }
+    //     };
 
-        window.addEventListener("scroll", ShowButtonClick);
-        return () => {
-            window.removeEventListener("scroll", ShowButtonClick);
-        };
-    }, []);
+    //     window.addEventListener("scroll", ShowButtonClick);
+    //     return () => {
+    //         window.removeEventListener("scroll", ShowButtonClick);
+    //     };
+    // }, []);
 
     return (
         <>

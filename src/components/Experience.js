@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import styles from "css/Experience.module.css";
+import styles from "css/Experience.module.scss";
 import Modal from "react-modal";
 import { gsap } from "gsap";
 import img1 from "img/ex/공모전_상장.png";
@@ -67,13 +67,6 @@ const ModalStyleMobile = {
 
 const Experience = () => {
     // const [modalIsOpen, setModalIsOpen] = useState(false);
-    const appearLink_5 = useRef();
-    gsap.from(appearLink_5.current, {
-        x: -20,
-        opacity: 0,
-        duration: 1,
-        delay: 0.5,
-    });
 
     return (
         <>
@@ -233,11 +226,7 @@ const Experience = () => {
                             </div>
                             <hr />
                             <div className={styles.ex_list_content}>
-                                <img
-                                    src={img1}
-                                    alt="공모전 이미지"
-                                    ref={appearLink_5}
-                                />
+                                <img src={img1} alt="공모전 이미지" />
                                 <div className={styles.content}>
                                     제6회 4차 산업혁명 인재양성
                                     공유·협업페스티발

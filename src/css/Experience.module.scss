@@ -3,61 +3,67 @@
     padding: 70px 20px 0;
     flex-direction: column;
     width: 100%;
-}
-.ex {
-    padding-left: 12vw;
-    justify-content: space-between;
-}
-.text {
-    flex-direction: column;
-}
-.text_main {
-    font-size: 2rem;
-}
-.text_sub {
-    font-size: 1rem;
-    margin-top: 1vh;
-    align-self: flex-end;
-}
-.ex_content_wrap {
-    flex-direction: column;
-    padding-top: 1vw;
-    width: 60vw;
-}
-.ex_content_wrap hr {
-    border: 0;
-    height: 1px;
-    background-color: #1d1a3f;
-    width: 100%;
-}
-.title {
-    flex: 1;
-    margin: 20px 0;
-}
-.content {
-    flex: 1;
-    margin: 20px 0;
-}
-.ex_list_content {
-    cursor: pointer;
-}
-.ex_list_content img {
-    width: 18vw;
-    /* display: none; */
-    opacity: 0;
-    position: absolute;
-    right: 8vw;
-    transform: translateY(-20%) rotate(7deg);
-    transition: 0.3s;
-}
-/* .ex_list_content:hover :not(.ex_list_content img) {
-    opacity: 0;
-} */
-.ex_list_content:hover img {
-    /* display: block; */
-    /* opacity: 1;
-    transform: translateY(-30%) rotate(7deg);
-    transition: 0.3s; */
+
+    .ex {
+        padding-left: 12vw;
+        justify-content: space-between;
+        .text {
+            flex-direction: column;
+            font: {
+                family: "neurimboGothicRegular";
+                size: 5rem;
+            }
+            .text_main {
+                line-height: 0.8;
+            }
+            .text_sub {
+                font-size: 2rem;
+                margin-top: 1vh;
+                align-self: flex-end;
+            }
+        }
+        .ex_content_wrap {
+            flex-direction: column;
+            padding-top: 1vw;
+            width: 60vw;
+            hr {
+                border: 0;
+                height: 1px;
+                background-color: #1d1a3f;
+                width: 100%;
+            }
+            .title {
+                flex: 1;
+                margin: 20px 0;
+            }
+            .ex_list_content {
+                cursor: pointer;
+                .content {
+                    flex: 1;
+                    margin: 20px 0;
+                }
+                img {
+                    width: 18vw;
+                    /* display: none; */
+                    opacity: 0;
+                    position: absolute;
+                    right: 8vw;
+                    transform: translateY(-20%) rotate(7deg);
+                    transform: scaleY(0);
+                    transition: 0.3s;
+                }
+                // &:hover:not(.ex_list_content img) {
+                //     opacity: 0;
+                // }
+                // &:hover img {
+                //     display: block;
+                //     opacity: 1;
+                //     transform: translateY(-30%) rotate(7deg);
+                //     transition: 0.3s;
+                // }
+            }
+        }
+    }
 }
 
 @keyframes infiniteAnimation1 {

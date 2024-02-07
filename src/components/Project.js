@@ -16,18 +16,113 @@ import WaveSVG from "components/WaveSVG";
 import { gsap } from "gsap";
 
 const Projects = () => {
-    const [click, setClick] = useState(false);
-    const changeClick = () => {
-        setClick((click) => !click);
-        console.log(click);
-    };
-    // const nextSlide = () => {
-    //     gsap.from(`${styles.random_img1}`, {
-    //         x: -360,
-    //         duration: 1,
-    //     });
+    // const [click, setClick] = useState(false);
+    // const changeClick = () => {
+    //     setClick((click) => !click);
     // };
 
+    const data = [
+        {
+            title: "레시피 공유 및 밀키트\n판매 어플리케이션",
+            info: "asdf11",
+            detail_info: "111",
+            img: "https://source.unsplash.com/5YM26lUicfU",
+            github: link.recipe_github,
+            demo: null,
+            figma: link.recipe_github,
+            colab: null,
+        },
+        {
+            title: "레시피 공유 및 밀키트\n판매 어플리케이션 관리자 페이지",
+            info: "asdf22",
+            detail_info: "22",
+            img: "https://source.unsplash.com/random/?black-abstract",
+            github: link.recipe_github,
+            demo: null,
+            figma: link.recipe_github,
+            colab: null,
+        },
+        {
+            title: "인터벌 타이머",
+            info: "asdf33",
+            detail_info: "33",
+            img: "https://source.unsplash.com/random/?nebula",
+            github: link.recipe_github,
+            demo: null,
+            figma: link.recipe_github,
+            colab: null,
+        },
+        {
+            title: "투두리스트",
+            info: "asdf4",
+            detail_info: "44",
+            img: "https://source.unsplash.com/XaVNix5mpDQ",
+            github: link.recipe_github,
+            demo: null,
+            figma: link.recipe_github,
+            colab: null,
+        },
+        {
+            title: "개인 웹 포트폴리오",
+            info: "asdf5",
+            detail_info: "55",
+            img: "https://source.unsplash.com/random/?black-aesthetic",
+            github: link.recipe_github,
+            demo: null,
+            figma: link.recipe_github,
+            colab: null,
+        },
+        {
+            title: `서울시 실시간 날씨\n& 대기오염정보`,
+            info: "asdf6",
+            detail_info: "66",
+            img: "https://source.unsplash.com/ExJRuwczytw",
+            github: link.recipe_github,
+            demo: null,
+            figma: link.recipe_github,
+            colab: null,
+        },
+    ];
+
+    function show() {
+        let tl = gsap.timeline();
+
+        gsap.set(`.${styles.gsap_before}`, {
+            pointerEvents: "none",
+        });
+
+        tl.fromTo(
+            `.${styles.gsap_bg}`,
+            {
+                scaleX: 0,
+                transformOrigin: "left center",
+            },
+            {
+                duration: 0.5,
+                scaleX: 1,
+                ease: "Expo.inOut",
+            },
+        ).set(`.${styles.gsap_before}`, {
+            pointerEvents: "auto",
+        });
+    }
+
+    function hide() {
+        let tl = gsap.timeline();
+
+        gsap.set(`.${styles.gsap_before}`, {
+            pointerEvents: "none",
+        });
+
+        tl.to(`.${styles.gsap_bg}`, {
+            duration: 0.5,
+            transformOrigin: "100% 0",
+            scaleX: 0,
+            ease: "Expo.inOut",
+        }).set(`.${styles.gsap_before}`, {
+            pointerEvents: "auto",
+        });
+    }
     return (
         <>
             {/* <div id="3" className={styles.practice_wrap}>
@@ -778,111 +873,27 @@ const Projects = () => {
                         programmed;
                     </span>
                 </div>
-                <div
-                    className={click ? `${styles.click}` : `${styles.project}`}
-                    onClick={changeClick}
-                >
-                    {/* <div className={styles.project} > */}
-                    <img
-                        src="https://source.unsplash.com/5YM26lUicfU"
-                        className={styles.random_img1}
-                    />
-                    <div className={styles.noise} />
-                    <div className={styles.info}>
-                        <span>
-                            레시피 공유 및 밀키트
-                            <br />
-                            판매 어플리케이션
-                        </span>
-                        <p>
-                            게시글 관련 기능과 유저간의 공유가 가능한 안드로이드
-                            어플리케이션
-                            <WaveSVG />
-                        </p>
+                {data.map((s, i) => (
+                    <div key={i} className={styles.project}>
+                        <div className={styles.gsap_before} onClick={show}>
+                            <img src={s.img} className={styles.random_img1} />
+                            <div className={styles.noise} />
+                            <div className={styles.info}>
+                                <span>{s.title}</span>
+                                <p>
+                                    {s.info}
+                                    <WaveSVG />
+                                </p>
+                            </div>
+                        </div>
+                        <div className={styles.gsap_bg}>
+                            <div className={styles.close} onClick={hide}>
+                                close
+                            </div>
+                            <div className={styles.detail}>{s.title}</div>
+                        </div>
                     </div>
-                </div>
-                <div className={styles.project}>
-                    <img
-                        src="https://source.unsplash.com/random/?black-abstract"
-                        className={styles.random_img}
-                    />
-                    <div className={styles.noise} />
-                    <div className={styles.wave} />
-                    <div className={styles.info}>
-                        <span>우효옷</span>
-                        <p>
-                            content
-                            <WaveSVG />
-                        </p>
-                    </div>
-                </div>
-                <div className={styles.project}>
-                    <img
-                        src="https://source.unsplash.com/random/?nebula"
-                        className={styles.random_img}
-                    />
-                    <div className={styles.noise} />
-                    <div className={styles.wave} />
-                    <div className={styles.info}>
-                        <span>인터벌 타이머</span>
-                        <p>
-                            지정한 시간만큼 계속 반복하는 타이머
-                            <WaveSVG />
-                        </p>
-                    </div>
-                </div>
-                <div className={styles.project}>
-                    <img
-                        src="https://source.unsplash.com/XaVNix5mpDQ"
-                        className={styles.random_img}
-                    />
-                    <div className={styles.noise} />
-                    <div className={styles.wave} />
-                    <div className={styles.info}>
-                        <span>투두리스트</span>
-                        <p>
-                            배경 이미지와 하단의 글귀가 새로고침 시에 랜덤으로
-                            변경되는 투두리스트
-                            <WaveSVG />
-                        </p>
-                    </div>
-                </div>
-                <div className={styles.project}>
-                    <img
-                        src="https://source.unsplash.com/random/?black-aesthetic"
-                        className={styles.random_img}
-                    />
-                    <div className={styles.noise} />
-                    <div className={styles.wave} />
-                    <div className={styles.info}>
-                        <span>개인 웹 포트폴리오</span>
-                        <p>
-                            현재 화면의 포트폴리오
-                            <WaveSVG />
-                        </p>
-                    </div>
-                </div>
-                <div className={styles.project}>
-                    <img
-                        src="https://source.unsplash.com/ExJRuwczytw"
-                        className={styles.random_img}
-                    />
-                    <div className={styles.noise} />
-                    <div className={styles.wave} />
-                    <div className={styles.info}>
-                        <span>
-                            서울시 실시간 날씨
-                            <br />& 대기오염정보 확인
-                        </span>
-                        <p>
-                            공공데이터 API 사용,
-                            <br />
-                            행정구별 날씨와 해당 기온에 맞는 옷 종류 제안하는 웹
-                            페이지
-                            <WaveSVG />
-                        </p>
-                    </div>
-                </div>
+                ))}
             </div>
         </>
     );
