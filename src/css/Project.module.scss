@@ -112,15 +112,60 @@
             background-color: black;
             transform: scaleX(0);
             .close {
+                position: absolute;
+                top: 20px;
+                right: 30px;
                 color: white;
                 letter-spacing: 5px;
+                z-index: 2;
                 font: {
                     size: 1.5rem;
                     family: "neurimboGothicRegular";
                 }
             }
             .detail {
+                flex-direction: column;
                 color: white;
+                flex: 1;
+                span {
+                    margin: 0 auto;
+                    padding: 0 10vw 10vh;
+                }
+            }
+            .noise {
+                width: 50vw;
+                height: 100vh;
+                right: 0;
+                position: absolute;
+                z-index: 10;
+                pointer-events: none;
+                opacity: 0.05;
+                transition: opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+                visibility: visible;
+                background: {
+                    position: 0 0;
+                    size: auto;
+                    image: url("https://i.ibb.co/x3TCktM/645cbb8ec449398255b76326-noise.gif");
+                }
+            }
+            .img {
+                width: 50vw;
+                height: 100vh;
+                right: 0;
+                z-index: 1;
+                position: absolute;
+                background: rgb(0, 0, 0);
+                background: linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 1) 0%,
+                    rgba(0, 0, 0, 0) 100%
+                );
+            }
+            img {
+                width: 50vw;
+                z-index: 0;
+                height: auto;
+                filter: brightness(0.5) grayscale(100%);
             }
         }
     }

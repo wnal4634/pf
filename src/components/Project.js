@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "css/Project.module.scss";
 import Fade from "react-reveal/Fade";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -24,7 +24,7 @@ const Projects = () => {
     const data = [
         {
             title: "레시피 공유 및 밀키트\n판매 어플리케이션",
-            info: "asdf11",
+            info: "게시글 관련 기능과 유저간의 공유가 가능한 안드로이드 어플리케이션",
             detail_info: "111",
             img: "https://source.unsplash.com/5YM26lUicfU",
             github: link.recipe_github,
@@ -34,7 +34,7 @@ const Projects = () => {
         },
         {
             title: "레시피 공유 및 밀키트\n판매 어플리케이션 관리자 페이지",
-            info: "asdf22",
+            info: "위 어플리케이션의 관리자 페이지",
             detail_info: "22",
             img: "https://source.unsplash.com/random/?black-abstract",
             github: link.recipe_github,
@@ -44,7 +44,7 @@ const Projects = () => {
         },
         {
             title: "인터벌 타이머",
-            info: "asdf33",
+            info: "지정한 시간만큼 계속 반복하는 타이머",
             detail_info: "33",
             img: "https://source.unsplash.com/random/?nebula",
             github: link.recipe_github,
@@ -54,7 +54,7 @@ const Projects = () => {
         },
         {
             title: "투두리스트",
-            info: "asdf4",
+            info: "배경 이미지와 하단의 글귀가 새로고침 시에 랜덤으로 변경되는 투두리스트",
             detail_info: "44",
             img: "https://source.unsplash.com/XaVNix5mpDQ",
             github: link.recipe_github,
@@ -64,7 +64,7 @@ const Projects = () => {
         },
         {
             title: "개인 웹 포트폴리오",
-            info: "asdf5",
+            info: "현재 화면의 포트폴리오",
             detail_info: "55",
             img: "https://source.unsplash.com/random/?black-aesthetic",
             github: link.recipe_github,
@@ -74,7 +74,7 @@ const Projects = () => {
         },
         {
             title: `서울시 실시간 날씨\n& 대기오염정보`,
-            info: "asdf6",
+            info: "공공데이터 API 사용,\n행정구별 날씨와 해당 기온에 맞는 옷 종류 제안하는 웹 페이지",
             detail_info: "66",
             img: "https://source.unsplash.com/ExJRuwczytw",
             github: link.recipe_github,
@@ -84,7 +84,7 @@ const Projects = () => {
         },
     ];
 
-    function show() {
+    const show = (i) => {
         let tl = gsap.timeline();
 
         gsap.set(`.${styles.gsap_before}`, {
@@ -92,7 +92,7 @@ const Projects = () => {
         });
 
         tl.fromTo(
-            `.${styles.gsap_bg}`,
+            `#${styles.gsap_bg}` + `${i}`,
             {
                 scaleX: 0,
                 transformOrigin: "left center",
@@ -105,6 +105,10 @@ const Projects = () => {
         ).set(`.${styles.gsap_before}`, {
             pointerEvents: "auto",
         });
+    };
+
+    function hi(num) {
+        console.log(num);
     }
 
     function hide() {
@@ -875,7 +879,12 @@ const Projects = () => {
                 </div>
                 {data.map((s, i) => (
                     <div key={i} className={styles.project}>
-                        <div className={styles.gsap_before} onClick={show}>
+                        <div
+                            className={styles.gsap_before}
+                            onClick={() => {
+                                show(i);
+                            }}
+                        >
                             <img src={s.img} className={styles.random_img1} />
                             <div className={styles.noise} />
                             <div className={styles.info}>
@@ -886,11 +895,23 @@ const Projects = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className={styles.gsap_bg}>
+                        <div
+                            className={`${styles.gsap_bg}`}
+                            id={`${styles.gsap_bg}` + `${i}`}
+                        >
+                            <div className={styles.noise} />
+                            <div className={styles.detail}>
+                                <div className={styles.detail_title}>
+                                    {s.title}
+                                </div>
+                                <div className={styles.detail_info}>
+                                    {s.detail_info}
+                                </div>
+                            </div>
                             <div className={styles.close} onClick={hide}>
                                 close
                             </div>
-                            <div className={styles.detail}>{s.title}</div>
+                            <img src={s.img} />
                         </div>
                     </div>
                 ))}

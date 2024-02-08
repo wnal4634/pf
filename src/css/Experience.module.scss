@@ -45,22 +45,23 @@
                 img {
                     width: 18vw;
                     /* display: none; */
-                    opacity: 0;
+                    // visibility: hidden;
+                    // opacity: 0;
                     position: absolute;
                     right: 8vw;
                     transform: translateY(-20%) rotate(7deg);
-                    transform: scaleY(0);
-                    transition: 0.3s;
+                    // transition: 0.3s;
                 }
                 // &:hover:not(.ex_list_content img) {
                 //     opacity: 0;
                 // }
-                // &:hover img {
-                //     display: block;
-                //     opacity: 1;
-                //     transform: translateY(-30%) rotate(7deg);
-                //     transition: 0.3s;
-                // }
+                &:hover img {
+                    // display: block;
+                    // visibility: visible;
+                    // opacity: 1;
+                    // transform: translateY(-30%) rotate(7deg);
+                    // transition: 0.3s;
+                }
             }
         }
     }
