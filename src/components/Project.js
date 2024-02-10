@@ -16,11 +16,6 @@ import WaveSVG from "components/WaveSVG";
 import { gsap } from "gsap";
 
 const Projects = () => {
-    // const [click, setClick] = useState(false);
-    // const changeClick = () => {
-    //     setClick((click) => !click);
-    // };
-
     const data = [
         {
             title: "레시피 공유 및 밀키트\n판매 어플리케이션",
@@ -102,14 +97,26 @@ const Projects = () => {
                 scaleX: 1,
                 ease: "Expo.inOut",
             },
-        ).set(`.${styles.gsap_before}`, {
-            pointerEvents: "auto",
-        });
+        )
+            .from(`.${styles.close}`, {
+                delay: 0.2,
+                translateY: -100,
+                duration: 1,
+                ease: "elastic.out(0.3,0.2)",
+            })
+            .from(`.${styles.img_inside}`, {
+                translateY: "-130%",
+                duration: 0.8,
+                ease: "elastic.out(0.2,0.3)",
+            })
+            .from(`.${styles.detail}`, {
+                opacity: 0,
+                duration: 0.8,
+            })
+            .set(`.${styles.gsap_before}`, {
+                pointerEvents: "auto",
+            });
     };
-
-    function hi(num) {
-        console.log(num);
-    }
 
     function hide() {
         let tl = gsap.timeline();
@@ -118,15 +125,36 @@ const Projects = () => {
             pointerEvents: "none",
         });
 
-        tl.to(`.${styles.gsap_bg}`, {
-            duration: 0.5,
-            transformOrigin: "100% 0",
-            scaleX: 0,
-            ease: "Expo.inOut",
-        }).set(`.${styles.gsap_before}`, {
-            pointerEvents: "auto",
-        });
+        tl.to(`.${styles.close}`, {
+            delay: 0.2,
+            translateY: -100,
+            duration: 1,
+            ease: "elastic.out(0.3,0.2)",
+        })
+            .to(`.${styles.img_inside}`, {
+                translateY: "-130%",
+                duration: 0.8,
+                ease: "elastic.out(0.2,0.3)",
+            })
+            .to(`.${styles.detail}`, {
+                opacity: 0,
+                duration: 0.8,
+            })
+            .to(`.${styles.gsap_bg}`, {
+                duration: 0.5,
+                transformOrigin: "100% 0",
+                scaleX: 0,
+                ease: "Expo.inOut",
+            })
+            .set(`.${styles.gsap_before}`, {
+                pointerEvents: "auto",
+            })
+            .set(`.${styles.close}, .${styles.img_inside}, .${styles.detail}`, {
+                opacity: 1,
+                translateY: 0,
+            });
     }
+
     return (
         <>
             {/* <div id="3" className={styles.practice_wrap}>
@@ -899,8 +927,8 @@ const Projects = () => {
                             className={`${styles.gsap_bg}`}
                             id={`${styles.gsap_bg}` + `${i}`}
                         >
-                            <div className={styles.noise} />
                             <div className={styles.detail}>
+                                <div className={styles.imsi} />
                                 <div className={styles.detail_title}>
                                     {s.title}
                                 </div>
@@ -908,10 +936,15 @@ const Projects = () => {
                                     {s.detail_info}
                                 </div>
                             </div>
-                            <div className={styles.close} onClick={hide}>
-                                close
+                            <div className={styles.right}>
+                                <div className={styles.close} onClick={hide}>
+                                    close
+                                </div>
+                                <div className={styles.img_inside}>
+                                    <div className={styles.noise} />
+                                    <img src={s.img} />
+                                </div>
                             </div>
-                            <img src={s.img} />
                         </div>
                     </div>
                 ))}

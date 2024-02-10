@@ -103,6 +103,7 @@
             }
         }
         .gsap_bg {
+            cursor: default;
             z-index: 10000;
             position: fixed;
             top: 0;
@@ -111,19 +112,14 @@
             height: 100vh;
             background-color: black;
             transform: scaleX(0);
-            .close {
-                position: absolute;
-                top: 20px;
-                right: 30px;
-                color: white;
-                letter-spacing: 5px;
-                z-index: 2;
-                font: {
-                    size: 1.5rem;
-                    family: "neurimboGothicRegular";
-                }
-            }
             .detail {
+                margin: auto;
+                align-items: center;
+                .imsi {
+                    background-color: pink;
+                    width: 300px;
+                    height: 300px;
+                }
                 flex-direction: column;
                 color: white;
                 flex: 1;
@@ -131,9 +127,21 @@
                     margin: 0 auto;
                     padding: 0 10vw 10vh;
                 }
+                .detail_title {
+                    margin: 0 auto;
+                    font: {
+                        size: 2rem;
+                        family: "neurimboGothicRegular";
+                    }
+                }
+                .detail_info {
+                    font: {
+                        size: 1rem;
+                    }
+                }
             }
             .noise {
-                width: 50vw;
+                width: 20vw;
                 height: 100vh;
                 right: 0;
                 position: absolute;
@@ -148,24 +156,29 @@
                     image: url("https://i.ibb.co/x3TCktM/645cbb8ec449398255b76326-noise.gif");
                 }
             }
-            .img {
-                width: 50vw;
-                height: 100vh;
-                right: 0;
-                z-index: 1;
-                position: absolute;
-                background: rgb(0, 0, 0);
-                background: linear-gradient(
-                    90deg,
-                    rgba(0, 0, 0, 1) 0%,
-                    rgba(0, 0, 0, 0) 100%
-                );
-            }
-            img {
-                width: 50vw;
-                z-index: 0;
-                height: auto;
-                filter: brightness(0.5) grayscale(100%);
+            .right {
+                flex-direction: column;
+                .close {
+                    margin: 4vh 3vw 0 auto;
+                    cursor: pointer;
+                    justify-content: flex-end;
+                    color: white;
+                    letter-spacing: 5px;
+                    z-index: 2;
+                    font: {
+                        size: 1.5rem;
+                        family: "neurimboGothicRegular";
+                    }
+                }
+                .img_inside {
+                    margin: auto 100px auto 0;
+                    img {
+                        width: 20vw;
+                        height: 70vh;
+                        z-index: 0;
+                        filter: brightness(0.5) grayscale(100%);
+                    }
+                }
             }
         }
     }
