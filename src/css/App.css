@@ -138,6 +138,14 @@ h2 {
 }
 
 @font-face {
+    font-family: "Pretendard-ExtraLight";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff")
+        format("woff");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "StretchPro";
     src: url("../font/StretchPro.woff") format("truetype");
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "css/Project.module.scss";
 import Fade from "react-reveal/Fade";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -14,6 +14,7 @@ import colors from "components/SkillsColor";
 import link from "components/Link";
 import WaveSVG from "components/WaveSVG";
 import { gsap } from "gsap";
+import imggg from "img/cookkit.jpg";
 
 const Projects = () => {
     const data = [
@@ -95,23 +96,31 @@ const Projects = () => {
             {
                 duration: 0.5,
                 scaleX: 1,
-                ease: "Expo.inOut",
+                ease: "Expo.in",
             },
         )
             .from(`.${styles.close}`, {
-                delay: 0.2,
-                translateY: -100,
-                duration: 1,
-                ease: "elastic.out(0.3,0.2)",
+                // delay: 0.1,
+                translateY: "-30%",
+                opacity: 0,
+                ease: "elastic.inOut(1,0.5)",
             })
-            .from(`.${styles.img_inside}`, {
-                translateY: "-130%",
-                duration: 0.8,
-                ease: "elastic.out(0.2,0.3)",
-            })
+            .fromTo(
+                `.${styles.img_inside}`,
+                {
+                    // translateY: "-30%",
+                    scaleY: 0,
+                    transformOrigin: "top",
+                },
+                {
+                    scaleY: 1,
+                    duration: 1,
+                    ease: "Expo.in",
+                },
+            )
             .from(`.${styles.detail}`, {
                 opacity: 0,
-                duration: 0.8,
+                ease: "elastic.inOut(1,0.5)",
             })
             .set(`.${styles.gsap_before}`, {
                 pointerEvents: "auto",
@@ -126,19 +135,19 @@ const Projects = () => {
         });
 
         tl.to(`.${styles.close}`, {
-            delay: 0.2,
+            delay: 0.1,
             translateY: -100,
-            duration: 1,
-            ease: "elastic.out(0.3,0.2)",
+            opacity: 0,
+            duration: 0.5,
         })
             .to(`.${styles.img_inside}`, {
                 translateY: "-130%",
-                duration: 0.8,
-                ease: "elastic.out(0.2,0.3)",
+                opacity: 0,
+                duration: 0.5,
             })
             .to(`.${styles.detail}`, {
+                duration: 0.5,
                 opacity: 0,
-                duration: 0.8,
             })
             .to(`.${styles.gsap_bg}`, {
                 duration: 0.5,
@@ -924,16 +933,43 @@ const Projects = () => {
                             </div>
                         </div>
                         <div
-                            className={`${styles.gsap_bg}`}
+                            className={styles.gsap_bg}
                             id={`${styles.gsap_bg}` + `${i}`}
                         >
                             <div className={styles.detail}>
-                                <div className={styles.imsi} />
+                                <div className={styles.swiper}>
+                                    <Swiper
+                                        slidesPerView={1}
+                                        spaceBetween={30}
+                                        centeredSlides={true}
+                                        autoplay={{
+                                            delay: 2500,
+                                            disableOnInteraction: false,
+                                        }}
+                                        pagination={{
+                                            clickable: true,
+                                        }}
+                                        navigation={true}
+                                        modules={[
+                                            Autoplay,
+                                            Pagination,
+                                            Navigation,
+                                        ]}
+                                        className={styles.mySwiper}
+                                    >
+                                        <SwiperSlide>
+                                            <img src={imggg} />
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <img src={imggg} />
+                                        </SwiperSlide>
+                                    </Swiper>
+                                </div>
                                 <div className={styles.detail_title}>
                                     {s.title}
                                 </div>
                                 <div className={styles.detail_info}>
-                                    {s.detail_info}
+                                    {s.info}
                                 </div>
                             </div>
                             <div className={styles.right}>

@@ -17,7 +17,7 @@
     font-style: normal;
 }
 :root {
-    --swiper-theme-color: #000;
+    --swiper-theme-color: #fff;
 }
 .swiper {
     margin-left: auto;
@@ -200,7 +200,7 @@
     height: var(--swiper-virtual-size);
 }
 :root {
-    --swiper-navigation-size: 25px;
+    --swiper-navigation-size: 30px;
     /*
     --swiper-navigation-color: var(--swiper-theme-color);
     */
@@ -268,7 +268,6 @@
 :root {
     /*
     --swiper-pagination-color: var(--swiper-theme-color);
-    --swiper-pagination-bullet-size: 8px;
     --swiper-pagination-bullet-width: 8px;
     --swiper-pagination-bullet-height: 8px;
     --swiper-pagination-bullet-inactive-color: #000;

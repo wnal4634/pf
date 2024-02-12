@@ -22,8 +22,6 @@ li {
             align-items: center;
             flex-wrap: nowrap;
             position: relative;
-            border-top: 1px solid #bbb;
-            border-bottom: 1px solid #bbb;
 
             &::before {
                 content: "";
@@ -34,15 +32,14 @@ li {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                background-color: #bbb;
                 z-index: 1;
             }
             &.original {
-                animation: 20s linear infinite normal none running
+                animation: 50s linear infinite normal none running
                     infiniteAnimation1;
             }
             &.clone {
-                animation: 20s linear infinite infiniteAnimation2;
+                animation: 50s linear infinite infiniteAnimation2;
             }
             &.stop {
                 animation-play-state: paused;
@@ -73,24 +70,25 @@ li {
                 &.rectangle,
                 &.circle,
                 &.flower {
-                    width: 13vw;
+                    width: 250px;
                     // height: 17vw;
-                    height: 15vw;
+                    height: 250px;
                     border-radius: 1.5vw;
                 }
                 &.radiusStrong {
-                    width: 20vw;
+                    width: 300px;
                     border-radius: 10vw;
                 }
                 &.rectangle {
-                    width: 22vw;
+                    width: 400px;
                 }
                 &.circle {
-                    width: 15vw;
+                    width: 250px;
                     border-radius: 50vw;
                 }
                 &.flower {
                     &:last-child {
+                        width: 250px;
                         --color: rgb(220 220 0);
 
                         --baseGradient: 
@@ -156,7 +154,6 @@ li {
                                 var(--grad)
                             );
                     }
-                    width: 15vw;
                     --angle: 360deg / var(--sides, 6);
                     --posX: 50%;
                     --posY: 50%;
@@ -244,9 +241,9 @@ li {
                     flex-direction: column;
                     justify-content: center;
                     text-align: center;
-                    font-size: 1.5vw;
                     border-radius: inherit;
                     font: {
+                        size: 1.5rem;
                         family: "Pretendard-Regular";
                         weight: 600;
                     }
