@@ -26,55 +26,29 @@ const SideDiv = styled.div`
 
 const Side = () => {
     const [isToggled, setIsToggled] = useState(false);
+    const appearLink = useRef();
+
     const goTop = () => {
         window.scrollTo({
             top: 0,
             behavior: "smooth",
         });
     };
-    const appearInitial = useRef();
-    const appearLink_1 = useRef();
-    const appearLink_2 = useRef();
-    const appearLink_3 = useRef();
-    const appearLink_4 = useRef();
-    const appearLink_5 = useRef();
+
     useEffect(() => {
-        gsap.from(appearInitial.current, {
-            x: -20,
+        gsap.from(appearLink.current, {
+            y: -5,
             opacity: 0,
             duration: 1,
             delay: 0.5,
+            ease: "expo.out",
         });
-        gsap.from(appearLink_1.current, {
-            x: -20,
-            opacity: 0,
-            duration: 1,
-            delay: 1,
-        });
-        gsap.from(appearLink_2.current, {
-            x: -20,
-            opacity: 0,
-            duration: 1,
-            delay: 1.5,
-        });
-        gsap.from(appearLink_3.current, {
-            x: -20,
-            opacity: 0,
-            duration: 1,
-            delay: 2,
-        });
-        gsap.from(appearLink_4.current, {
-            x: -20,
-            opacity: 0,
-            duration: 1,
-            delay: 2.5,
-        });
-        gsap.from(appearLink_5.current, {
-            x: -20,
-            opacity: 0,
-            duration: 1,
-            delay: 3,
-        });
+        // gsap.from(appearLink_1.current, {
+        //     x: -20,
+        //     opacity: 0,
+        //     duration: 1,
+        //     delay: 1,
+        // });
     }, []);
 
     const reload = () => {
@@ -96,16 +70,15 @@ const Side = () => {
                         </div> */}
                         <div className={styles.initial} onClick={reload}>
                             asdf
-                            {/* 링크들 오른쪽으로 밀리는 현상있음 */}
                         </div>
-                        <div className={styles.nav}>
+                        <div className={styles.nav} ref={appearLink}>
                             <Link
                                 to="1"
                                 spy={true}
                                 smooth={true}
                                 className={styles.link}
                             >
-                                <div ref={appearLink_1}>skills</div>
+                                <div>skills</div>
                             </Link>
                             <Link
                                 to="2"
@@ -113,7 +86,7 @@ const Side = () => {
                                 smooth={true}
                                 className={styles.link}
                             >
-                                <div ref={appearLink_2}>projects</div>
+                                <div>projects</div>
                             </Link>
                             <Link
                                 to="3"
@@ -121,7 +94,7 @@ const Side = () => {
                                 smooth={true}
                                 className={styles.link}
                             >
-                                <div ref={appearLink_3}>experience</div>
+                                <div>experience</div>
                             </Link>
                             <Link
                                 to="4"
@@ -129,7 +102,7 @@ const Side = () => {
                                 smooth={true}
                                 className={styles.link}
                             >
-                                <div ref={appearLink_4}>contact me</div>
+                                <div>contact me</div>
                             </Link>
                         </div>
                     </div>

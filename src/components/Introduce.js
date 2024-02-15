@@ -1,12 +1,35 @@
-import React from "react";
-import styles from "css/Introduce.module.css";
-import img1 from "img/id_pic.jpg";
-import Fade from "react-reveal/Fade";
-import img from "img/1.jpg";
+import React, { useEffect, useRef } from "react";
+import styles from "css/Introduce.module.scss";
+import { gsap } from "gsap";
 
 const Introduce = () => {
-    const githubUrl = "https://github.com/wnal4634";
-    const blogUrl = "https://wnal4634.tistory.com/";
+    const appearText_1 = useRef();
+    const appearText_2 = useRef();
+    const appearText_3 = useRef();
+
+    useEffect(() => {
+        gsap.from(appearText_1.current, {
+            y: 10,
+            opacity: 0,
+            duration: 0.8,
+            delay: 1,
+            ease: "expo.out",
+        });
+        gsap.from(appearText_2.current, {
+            y: 10,
+            opacity: 0,
+            duration: 0.8,
+            delay: 1.25,
+            ease: "expo.out",
+        });
+        gsap.from(appearText_3.current, {
+            y: 10,
+            opacity: 0,
+            duration: 0.8,
+            delay: 1.5,
+            ease: "expo.out",
+        });
+    }, []);
 
     return (
         <>
@@ -61,8 +84,18 @@ const Introduce = () => {
                 <div className={styles.main_text}>
                     {/* <span>Hello.</span>
                     <span>I'm Jumi Kim</span> */}
-                    <span>No back, go forward.</span>
-                    <span>A constantly thinking developer</span>
+                    <span className={styles.text} ref={appearText_1}>
+                        Hello.
+                        <span>No back, go forward.</span>
+                    </span>
+                    <span className={styles.text} ref={appearText_2}>
+                        I'm
+                        <span>A constantly thinking</span>
+                    </span>
+                    <span className={styles.text} ref={appearText_3}>
+                        Jumi Kim
+                        <span>developer</span>
+                    </span>
                 </div>
             </div>
         </>

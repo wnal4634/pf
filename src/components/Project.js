@@ -17,6 +17,11 @@ import { gsap } from "gsap";
 import imggg from "img/cookkit.jpg";
 
 const Projects = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const openToggle = () => {
+        setIsOpen((e) => !e);
+    };
+
     const data = [
         {
             title: "레시피 공유 및 밀키트\n판매 어플리케이션",
@@ -94,40 +99,39 @@ const Projects = () => {
                 transformOrigin: "left center",
             },
             {
-                duration: 0.5,
                 scaleX: 1,
                 ease: "Expo.in",
             },
         )
             .from(`.${styles.close}`, {
-                // delay: 0.1,
-                translateY: "-30%",
                 opacity: 0,
-                ease: "elastic.inOut(1,0.5)",
+                translateY: "-30%",
+                ease: "Expo.in",
             })
             .fromTo(
-                `.${styles.img_inside}`,
+                `.${styles.img_bg}`,
                 {
                     // translateY: "-30%",
-                    scaleY: 0,
-                    transformOrigin: "top",
+                    scaleY: 1,
+                    transformOrigin: "0 100%",
                 },
                 {
-                    scaleY: 1,
+                    scaleY: 0,
                     duration: 1,
                     ease: "Expo.in",
                 },
             )
             .from(`.${styles.detail}`, {
                 opacity: 0,
-                ease: "elastic.inOut(1,0.5)",
+                duration: 0.3,
+                ease: "Expo.in",
             })
             .set(`.${styles.gsap_before}`, {
                 pointerEvents: "auto",
             });
     };
 
-    function hide() {
+    const hide = () => {
         let tl = gsap.timeline();
 
         gsap.set(`.${styles.gsap_before}`, {
@@ -135,22 +139,29 @@ const Projects = () => {
         });
 
         tl.to(`.${styles.close}`, {
-            delay: 0.1,
-            translateY: -100,
             opacity: 0,
-            duration: 0.5,
+            translateY: "-30%",
+            ease: "Expo.in",
         })
-            .to(`.${styles.img_inside}`, {
-                translateY: "-130%",
-                opacity: 0,
-                duration: 0.5,
-            })
+            .fromTo(
+                `.${styles.img_bg}`,
+                {
+                    // translateY: "-30%",
+                    scaleY: 0,
+                    transformOrigin: "0 100%",
+                },
+                {
+                    scaleY: 1,
+                    duration: 1,
+                    ease: "Expo.in",
+                },
+            )
             .to(`.${styles.detail}`, {
-                duration: 0.5,
                 opacity: 0,
+                duration: 0.3,
+                ease: "Expo.in",
             })
             .to(`.${styles.gsap_bg}`, {
-                duration: 0.5,
                 transformOrigin: "100% 0",
                 scaleX: 0,
                 ease: "Expo.inOut",
@@ -162,7 +173,7 @@ const Projects = () => {
                 opacity: 1,
                 translateY: 0,
             });
-    }
+    };
 
     return (
         <>
@@ -971,12 +982,76 @@ const Projects = () => {
                                 <div className={styles.detail_info}>
                                     {s.info}
                                 </div>
+                                <div className={styles.detail_url}>
+                                    <svg
+                                        viewBox="0 0 100 100"
+                                        width="120"
+                                        height="120"
+                                        onClick={openToggle}
+                                    >
+                                        <defs>
+                                            <path
+                                                id="circle"
+                                                d=" M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                                            />
+                                        </defs>
+                                        <text>
+                                            <textPath
+                                                xlinkHref="#circle"
+                                                className={styles.circle}
+                                            >
+                                                more detail more
+                                            </textPath>
+                                        </text>
+                                    </svg>
+                                    {isOpen === true ? null : (
+                                        <ul>
+                                            {s.github !== null ? (
+                                                <li
+                                                    onClick={() => {
+                                                        window.open(s.github);
+                                                    }}
+                                                >
+                                                    깃허브
+                                                </li>
+                                            ) : null}
+                                            {s.demo !== null ? (
+                                                <li
+                                                    onClick={() => {
+                                                        window.open(s.demo);
+                                                    }}
+                                                >
+                                                    데모
+                                                </li>
+                                            ) : null}
+                                            {s.figma !== null ? (
+                                                <li
+                                                    onClick={() => {
+                                                        window.open(s.figma);
+                                                    }}
+                                                >
+                                                    피그마
+                                                </li>
+                                            ) : null}
+                                            {s.colab !== null ? (
+                                                <li
+                                                    onClick={() => {
+                                                        window.open(s.colab);
+                                                    }}
+                                                >
+                                                    코랩
+                                                </li>
+                                            ) : null}
+                                        </ul>
+                                    )}
+                                </div>
                             </div>
                             <div className={styles.right}>
                                 <div className={styles.close} onClick={hide}>
                                     close
                                 </div>
                                 <div className={styles.img_inside}>
+                                    <div className={styles.img_bg} />
                                     <div className={styles.noise} />
                                     <img src={s.img} />
                                 </div>
