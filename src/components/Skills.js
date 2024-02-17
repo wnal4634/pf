@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "css/Skills.module.css";
+import styles from "css/Skills.module.scss";
 import { Fade } from "react-reveal";
 import colors from "components/SkillsColor";
 

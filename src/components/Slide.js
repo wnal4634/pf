@@ -59,17 +59,7 @@ const Slide = () => {
     const img = "https://source.unsplash.com/DPlEQT7Hlpk";
     const img2 = "https://source.unsplash.com/q4TfWtnz_xw";
     const img3 = "https://source.unsplash.com/EUeP0jK6Rmw";
-    const list = `HTML
-    CSS
-    JS
-    DART
-    Flutter
-    React
-    Bootstrap
-    MySQL
-    Github
-    Figma
-    Git`;
+    const list = `HTML\nCSS\nJS\nDART\nFlutter\nReact\nBootstrap\nMySQL\nGithub\nFigma\nGit`;
 
     return (
         <div className="wrapper">
@@ -167,13 +157,11 @@ const Slide = () => {
                     </div>
                 </ul>
             </div>
-            <span
-                className="tool"
-                data-tip="Use this data-tip attribute to store your tool tip message."
-                tabIndex="2"
-            >
-                data-tip
-            </span>
+            <div className="tool_wrap">
+                <span className="tool" data-tip={list} tabindex="1">
+                    view all lists
+                </span>
+            </div>
         </div>
     );
 };
