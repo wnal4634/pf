@@ -305,7 +305,7 @@ li {
                 content: "";
                 margin-left: -0.5em;
                 transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26),
-                    opacity 0.65s 0.5s;
+                    opacity 0.65s 0.1s;
                 transform: scale(0.6) translateY(90%);
             }
             &:hover::before,

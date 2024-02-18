@@ -158,7 +158,7 @@ const Slide = () => {
                 </ul>
             </div>
             <div className="tool_wrap">
-                <span className="tool" data-tip={list} tabindex="1">
+                <span className="tool" data-tip={list} tabIndex="1">
                     view all lists
                 </span>
             </div>

@@ -1,12 +1,12 @@
 .ex_wrap {
     margin-top: 125px;
-    padding: 70px 20px 0;
-    flex-direction: column;
+    padding: 70px 27px 0 20px;
+    display: flex;
     width: 100%;
-
     .ex {
-        padding-left: 12vw;
-        justify-content: space-between;
+        padding: 0 15vw;
+        width: 100%;
+        flex-direction: column;
         .text {
             flex-direction: column;
             font: {
@@ -15,78 +15,81 @@
             }
             .text_main {
                 line-height: 0.8;
-            }
-            .text_sub {
-                font-size: 2rem;
-                margin-top: 1vh;
-                align-self: flex-end;
+                margin-bottom: 50px;
             }
         }
         .ex_content_wrap {
-            flex-direction: column;
-            padding-top: 1vw;
-            width: 60vw;
-            hr {
-                border: 0;
-                height: 1px;
-                background-color: #1d1a3f;
-                width: 100%;
-            }
-            .title {
-                flex: 1;
-                margin: 20px 0;
-            }
+            justify-content: space-between;
             .ex_list_content {
-                cursor: pointer;
+                width: 18vw;
+                flex-direction: column;
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}) {
+                        margin-top: 50px * $i;
+                    }
+                }
+                .img_wrap {
+                    span {
+                        position: absolute;
+                        z-index: 1;
+                        width: 100%;
+                        text-align: center;
+                        color: white;
+                        opacity: 0;
+                        transition: 0.2s;
+                        line-height: 25.5vw;
+                        font: {
+                            size: 2rem;
+                            family: "JalnanGothic";
+                        }
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        img {
+                            transform: scale(0.97);
+                            transition: 0.3s;
+                            filter: brightness(0.5);
+                        }
+                        span {
+                            transform: scale(1.03);
+                            opacity: 1;
+                            transition: 0.2s;
+                        }
+                    }
+                    img {
+                        transition: 0.3s;
+                        width: 18vw;
+                    }
+                }
+                &:last-child span {
+                    line-height: 27vw;
+                }
                 .content {
-                    flex: 1;
+                    font-family: "Pretendard-ExtraLight";
                     margin: 20px 0;
-                }
-                img {
+                    text-align: justify;
                     width: 18vw;
-                    /* display: none; */
-                    // visibility: hidden;
-                    // opacity: 0;
-                    position: absolute;
-                    right: 8vw;
-                    transform: translateY(-20%) rotate(7deg);
-                    // transition: 0.3s;
+                    line-height: 1.5;
                 }
-                // &:hover:not(.ex_list_content img) {
-                //     opacity: 0;
-                // }
-                &:hover img {
-                    // display: block;
-                    // visibility: visible;
-                    // opacity: 1;
-                    // transform: translateY(-30%) rotate(7deg);
-                    // transition: 0.3s;
+                strong {
+                    margin-top: 30px;
+                    font-size: 1.05rem;
+                }
+                .ex_url_wrap {
+                    .ex_url {
+                        margin-right: 10px;
+                        cursor: pointer;
+                        background-color: #d9dbee;
+                        padding: 3px 7px;
+                        border-radius: 5px;
+                    }
+                    svg {
+                        margin-left: 5px;
+                        align-self: center;
+                    }
                 }
             }
         }
-    }
-}
-
-@keyframes infiniteAnimation1 {
-    0% {
-        transform: translateX(0%);
-    }
-    50% {
-        transform: translateX(-100%);
-    }
-    50.1% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-@keyframes infiniteAnimation2 {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-200%);
     }
 }
 

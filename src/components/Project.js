@@ -17,9 +17,12 @@ import { gsap } from "gsap";
 import imggg from "img/cookkit.jpg";
 
 const Projects = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const openToggle = () => {
-        setIsOpen((e) => !e);
+    // const imgData = [images]
+    const scrollStop = () => {
+        document.body.style.overflow = "hidden";
+    };
+    const scrollMove = () => {
+        document.body.style.overflow = "unset";
     };
 
     const data = [
@@ -32,6 +35,25 @@ const Projects = () => {
             demo: null,
             figma: link.recipe_github,
             colab: null,
+            imgData: [
+                images.js_1_img1,
+                images.js_1_img2,
+                images.js_1_img3,
+                images.js_1_img4,
+                images.js_1_img5,
+                images.js_1_img6,
+                images.js_1_img7,
+                images.js_1_img8,
+                images.js_1_img9,
+                images.js_1_img10,
+                images.js_1_img11,
+                images.js_1_img12,
+                images.js_1_img13,
+                images.js_1_img14,
+                images.js_1_img15,
+                images.js_1_img16,
+                images.js_1_img17,
+            ],
         },
         {
             title: "레시피 공유 및 밀키트\n판매 어플리케이션 관리자 페이지",
@@ -931,6 +953,7 @@ const Projects = () => {
                             className={styles.gsap_before}
                             onClick={() => {
                                 show(i);
+                                scrollStop();
                             }}
                         >
                             <img src={s.img} className={styles.random_img1} />
@@ -983,53 +1006,54 @@ const Projects = () => {
                                     {s.info}
                                 </div>
                                 <div className={styles.detail_url}>
-                                    <span onClick={openToggle}>
-                                        more detail
-                                    </span>
-                                    {isOpen === true ? null : (
-                                        <ul>
-                                            {s.github !== null ? (
-                                                <li
-                                                    onClick={() => {
-                                                        window.open(s.github);
-                                                    }}
-                                                >
-                                                    깃허브
-                                                </li>
-                                            ) : null}
-                                            {s.demo !== null ? (
-                                                <li
-                                                    onClick={() => {
-                                                        window.open(s.demo);
-                                                    }}
-                                                >
-                                                    데모
-                                                </li>
-                                            ) : null}
-                                            {s.figma !== null ? (
-                                                <li
-                                                    onClick={() => {
-                                                        window.open(s.figma);
-                                                    }}
-                                                >
-                                                    피그마
-                                                </li>
-                                            ) : null}
-                                            {s.colab !== null ? (
-                                                <li
-                                                    onClick={() => {
-                                                        window.open(s.colab);
-                                                    }}
-                                                >
-                                                    코랩
-                                                </li>
-                                            ) : null}
-                                        </ul>
-                                    )}
+                                    <ul>
+                                        {s.github !== null ? (
+                                            <li
+                                                onClick={() => {
+                                                    window.open(s.github);
+                                                }}
+                                            >
+                                                깃허브
+                                            </li>
+                                        ) : null}
+                                        {s.demo !== null ? (
+                                            <li
+                                                onClick={() => {
+                                                    window.open(s.demo);
+                                                }}
+                                            >
+                                                데모
+                                            </li>
+                                        ) : null}
+                                        {s.figma !== null ? (
+                                            <li
+                                                onClick={() => {
+                                                    window.open(s.figma);
+                                                }}
+                                            >
+                                                피그마
+                                            </li>
+                                        ) : null}
+                                        {s.colab !== null ? (
+                                            <li
+                                                onClick={() => {
+                                                    window.open(s.colab);
+                                                }}
+                                            >
+                                                코랩
+                                            </li>
+                                        ) : null}
+                                    </ul>
                                 </div>
                             </div>
                             <div className={styles.right}>
-                                <div className={styles.close} onClick={hide}>
+                                <div
+                                    className={styles.close}
+                                    onClick={() => {
+                                        hide();
+                                        scrollMove();
+                                    }}
+                                >
                                     close
                                 </div>
                                 <div className={styles.img_inside}>
