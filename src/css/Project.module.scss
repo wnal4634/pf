@@ -15,6 +15,15 @@
     }
     .project {
         margin-bottom: 130px;
+        svg {
+            position: absolute;
+            right: 3vw;
+            opacity: 0;
+            &:nth-child(2) {
+                right: 5vw;
+                transform: translateY(40px);
+            }
+        }
         .gsap_before {
             display: flex;
             width: 100%;
@@ -76,7 +85,6 @@
                     position: absolute;
                     right: 0;
                     bottom: 0;
-                    opacity: 0;
                     transform: rotate(-5deg);
                     stroke-dasharray: 1646.887px;
                     z-index: -1;
@@ -99,8 +107,16 @@
         &:hover {
             cursor: pointer;
             svg {
-                stroke-dasharray: 1646.887px;
-                animation: stroke 1s ease-in-out forwards;
+                stroke-dasharray: 125.6px;
+                animation: circle 0.5s 1s ease-in-out forwards;
+                &:nth-child(2) {
+                    stroke-dasharray: 43.96px;
+                    animation: smallCircle 0.3s 1.5s ease-in-out forwards;
+                }
+                &:last-child {
+                    stroke-dasharray: 1646.887px;
+                    animation: stroke 1s ease-in-out forwards;
+                }
             }
         }
         .gsap_bg {
@@ -113,11 +129,14 @@
             height: 100vh;
             background-color: black;
             transform: scaleX(0);
-            .detail {
+            .detail_wrap {
                 margin: auto;
+                flex-direction: column;
+                color: white;
+                flex: 1;
                 align-items: center;
                 .swiper {
-                    width: 50vw;
+                    width: 35vw;
                     margin-bottom: 30px;
                     padding: 0 1vw;
                     -webkit-touch-callout: none;
@@ -128,45 +147,70 @@
                     user-select: text;
                     .mySwiper {
                         width: 50vw;
-                    }
-                    img {
-                        filter: grayscale(0%);
-                        width: 45vw;
-                        height: auto;
-                        margin: 0 auto;
-                    }
-                }
-                flex-direction: column;
-                color: white;
-                flex: 1;
-                // span {
-                //     margin: 0 auto;
-                //     padding: 0 10vw 10vh;
-                // }
-                .detail_title {
-                    margin: 0 auto;
-                    font: {
-                        size: 2rem;
-                        family: "neurimboGothicRegular";
-                    }
-                }
-                .detail_info {
-                    color: rgb(227, 227, 227);
-                    font: {
-                        family: "Pretendard-ExtraLight";
-                        size: 1rem;
-                    }
-                }
-                .detail_url {
-                    // width: 50vw;
-                    margin-top: 50px;
-                    span {
-                        text-transform: uppercase;
-                        font: {
-                            weight: 600;
-                            family: "JalnanGothic";
+                        img {
+                            filter: grayscale(0%);
+                            width: 45vw;
+                            height: auto;
+                            margin: 0 auto;
+                            object-fit: contain;
                         }
-                        &:hover {
+                        .detail_img {
+                            background-color: #9b9b9b;
+                            object-fit: contain;
+                        }
+                    }
+                }
+                .detail {
+                    flex-direction: column;
+                    padding: 0 10vw;
+                    align-items: center;
+                    @for $i from 1 through 3 {
+                        & div:nth-child(#{$i}) {
+                            margin-bottom: 10px * $i;
+                        }
+                    }
+                    .detail_title {
+                        font: {
+                            size: 2rem;
+                            family: "neurimboGothicRegular";
+                        }
+                    }
+                    .detail_sum {
+                        // color: rgba(250, 250, 250, 0.7);
+                    }
+                    .detail_info {
+                        // color: rgb(227, 227, 227);
+                        color: rgba(250, 250, 250, 0.5);
+                        text-align: justify;
+                        font: {
+                            family: "Pretendard-ExtraLight";
+                            size: 1rem;
+                        }
+                    }
+                    .detail_url {
+                        align-self: end;
+                        li {
+                            color: #1d1a3f;
+                            padding: 3px 7px;
+                            border-radius: 5px;
+                            background-color: #f2f2ff;
+                            cursor: pointer;
+                            transition: 0.3s;
+                            &:first-child {
+                                margin-right: 10px;
+                            }
+                            svg {
+                                margin-left: 5px;
+                                align-self: center;
+                            }
+                            font: {
+                                // weight: 600;
+                                // family: "JalnanGothic";
+                            }
+                            &:hover {
+                                letter-spacing: 5px;
+                                transition: 0.3s;
+                            }
                         }
                     }
                 }
@@ -174,9 +218,10 @@
             .right {
                 flex-direction: column;
                 .close {
+                    position: absolute;
+                    right: 0;
                     margin: 4vh 3vw 0 auto;
                     cursor: pointer;
-                    justify-content: flex-end;
                     color: white;
                     letter-spacing: 5px;
                     z-index: 2;
@@ -191,24 +236,19 @@
                     }
                 }
                 .img_inside {
-                    margin: auto 100px auto 0;
                     img {
-                        width: 20vw;
-                        height: 70vh;
+                        width: 40vw;
+                        height: 100vh;
                         z-index: 0;
                         filter: brightness(0.5) grayscale(100%);
                     }
                     .noise {
-                        width: 20vw;
+                        width: 40vw;
                         height: 100vh;
-                        right: 0;
-                        position: absolute;
                         z-index: 10;
-                        pointer-events: none;
                         opacity: 0.05;
                         transition: opacity 0.2s
                             cubic-bezier(0.445, 0.05, 0.55, 0.95);
-                        visibility: visible;
                         background: {
                             position: 0 0;
                             size: auto;
@@ -237,6 +277,27 @@
         stroke-dashoffset: 0px;
     }
 }
+@keyframes circle {
+    0% {
+        opacity: 1;
+        stroke-dashoffset: 125.6px;
+    }
+    100% {
+        opacity: 1;
+        stroke-dashoffset: 0px;
+    }
+}
+@keyframes smallCircle {
+    0% {
+        opacity: 1;
+        stroke-dashoffset: 43.96px;
+    }
+    100% {
+        opacity: 1;
+        stroke-dashoffset: 0px;
+    }
+}
+
 .mySwiper_row {
     --swiper-theme-color: #fff;
 }

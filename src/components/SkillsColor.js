@@ -14,6 +14,7 @@ const colors = {
     Java: `#0d85bf`,
     PHP: `#7377ad`,
     Python: `#3872a2`,
+    Colab: `##f1a600`,
 };
 
 export default colors;

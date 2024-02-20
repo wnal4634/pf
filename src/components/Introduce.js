@@ -82,8 +82,6 @@ const Introduce = () => {
             </Fade> */}
             <div className={styles.introduce_wrap}>
                 <div className={styles.main_text}>
-                    {/* <span>Hello.</span>
-                    <span>I'm Jumi Kim</span> */}
                     <span className={styles.text} ref={appearText_1}>
                         Hello.
                         <span>No back, go forward.</span>

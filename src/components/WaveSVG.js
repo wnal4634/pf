@@ -27,4 +27,22 @@ const WaveSVG = () => {
     );
 };
 
-export default WaveSVG;
+const CircleSVG = (props) => {
+    const len = props.len;
+    const includStroke = props.includStroke;
+
+    return (
+        <svg>
+            <circle
+                cx={includStroke}
+                cy={includStroke}
+                r={len}
+                fill="none"
+                stroke="#8E97F0"
+                strokeWidth="3.5"
+            />
+        </svg>
+    );
+};
+
+export { WaveSVG, CircleSVG };

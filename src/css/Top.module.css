@@ -18,6 +18,8 @@
     }
     .initial {
         /* margin-left: 360px; */
+        /* font-family: "neurimboGothicRegular"; */
+        cursor: pointer;
     }
     .nav {
         /* margin-right: 325px; */
@@ -34,6 +36,7 @@
         line-height: 20px;
         padding: 3px 5px;
         margin-left: 30px;
+        cursor: pointer;
     }
     .link::before,
     .link::after {

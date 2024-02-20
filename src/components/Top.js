@@ -69,7 +69,7 @@ const Side = () => {
                             />
                         </div> */}
                         <div className={styles.initial} onClick={reload}>
-                            asdf
+                            JM
                         </div>
                         <div className={styles.nav} ref={appearLink}>
                             <Link

@@ -229,15 +229,31 @@ const Experience = () => {
                         <div className={styles.ex_content_wrap}>
                             <Fade bottom>
                                 <div className={styles.ex_list_content}>
-                                    <div className={styles.img_wrap}>
-                                        <span
-                                            onClick={() => {
-                                                setModalIsOpen(true);
-                                                scrollStop();
-                                            }}
-                                        >
-                                            zoom in
-                                        </span>
+                                    <div
+                                        className={styles.rolling_wrap}
+                                        onClick={() => {
+                                            setModalIsOpen(true);
+                                            scrollStop();
+                                        }}
+                                    >
+                                        <div className={styles.text}>
+                                            <ul>
+                                                <li>
+                                                    <span>click zoom in</span>
+                                                </li>
+                                                <li>
+                                                    <span>click zoom in</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <span>click zoom in</span>
+                                                </li>
+                                                <li>
+                                                    <span>click zoom in</span>
+                                                </li>
+                                            </ul>
+                                        </div>
                                         <img src={img1} alt="공모전 이미지" />
                                     </div>
                                     <Modal
@@ -276,15 +292,31 @@ const Experience = () => {
                             </Fade>
                             <Fade bottom delay={300}>
                                 <div className={styles.ex_list_content}>
-                                    <div className={styles.img_wrap}>
-                                        <span
-                                            onClick={() => {
-                                                setModalIsOpen2(true);
-                                                scrollStop();
-                                            }}
-                                        >
-                                            zoom in
-                                        </span>
+                                    <div
+                                        className={styles.rolling_wrap}
+                                        onClick={() => {
+                                            setModalIsOpen2(true);
+                                            scrollStop();
+                                        }}
+                                    >
+                                        <div className={styles.text}>
+                                            <ul>
+                                                <li>
+                                                    <span>click zoom in</span>
+                                                </li>
+                                                <li>
+                                                    <span>click zoom in</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <span>click zoom in</span>
+                                                </li>
+                                                <li>
+                                                    <span>click zoom in</span>
+                                                </li>
+                                            </ul>
+                                        </div>
                                         <img
                                             src={img2}
                                             alt="앙꼬 협업 이미지1"
@@ -309,7 +341,7 @@ const Experience = () => {
                                             }}
                                         />
                                     </Modal>
-                                    <strong>협업 앙꼬</strong>
+                                    <strong>앙꼬와의 협업</strong>
                                     <div className={styles.content}>
                                         식품 브랜드 '앙꼬'와 작업한
                                         메뉴판입니다. 각 메뉴의 일러스트는 실제
@@ -321,15 +353,31 @@ const Experience = () => {
                             </Fade>
                             <Fade bottom delay={600}>
                                 <div className={styles.ex_list_content}>
-                                    <div className={styles.img_wrap}>
-                                        <span
-                                            onClick={() => {
-                                                setModalIsOpen3(true);
-                                                scrollStop();
-                                            }}
-                                        >
-                                            zoom in
-                                        </span>
+                                    <div
+                                        className={styles.rolling_wrap}
+                                        onClick={() => {
+                                            setModalIsOpen3(true);
+                                            scrollStop();
+                                        }}
+                                    >
+                                        <div className={styles.text}>
+                                            <ul>
+                                                <li>
+                                                    <span>click zoom in</span>
+                                                </li>
+                                                <li>
+                                                    <span>click zoom in</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <span>click zoom in</span>
+                                                </li>
+                                                <li>
+                                                    <span>click zoom in</span>
+                                                </li>
+                                            </ul>
+                                        </div>
                                         <img
                                             src={img3}
                                             alt="앙꼬 협업 이미지2"
@@ -354,7 +402,7 @@ const Experience = () => {
                                             }}
                                         />
                                     </Modal>
-                                    <strong>협업 앙꼬</strong>
+                                    <strong>앙꼬와의 협업</strong>
                                     <div className={styles.content}>
                                         식품 브랜드 '앙꼬'와의 두 번째 작업으로,
                                         판매 제품인 도라야끼의 상세 페이지와

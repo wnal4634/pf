@@ -4,7 +4,6 @@ import { SiTistory, SiGithub, SiGmail } from "react-icons/si";
 import link from "components/Link";
 
 const Reserve = () => {
-    // const [showButton, setShowButton] = useState(false);
     const year = new Date();
 
     const scrollToTop = () => {
@@ -12,21 +11,6 @@ const Reserve = () => {
             top: 0,
         });
     };
-
-    // useEffect(() => {
-    //     const ShowButtonClick = () => {
-    //         if (window.scrollY > 400) {
-    //             setShowButton(true);
-    //         } else {
-    //             setShowButton(false);
-    //         }
-    //     };
-
-    //     window.addEventListener("scroll", ShowButtonClick);
-    //     return () => {
-    //         window.removeEventListener("scroll", ShowButtonClick);
-    //     };
-    // }, []);
 
     return (
         <>

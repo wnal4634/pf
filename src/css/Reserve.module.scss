@@ -23,7 +23,6 @@
             margin-bottom: 25px;
             .url {
                 display: inline-block;
-                font-size: 16px;
                 margin-right: 15px;
                 text-decoration: none;
                 color: inherit;
@@ -31,6 +30,27 @@
                 font: {
                     size: 1.5rem;
                     family: "neurimboGothicRegular";
+                }
+                div {
+                    display: inline;
+                    cursor: pointer;
+                    position: relative;
+                    &:before {
+                        width: 0%;
+                        transition: width 0.3s;
+                        transform: translateX(-50%);
+                        position: absolute;
+                        bottom: -6px;
+                        left: 50%;
+                        height: 2px;
+                        background: #1d1a3f;
+                        content: "";
+                        display: block;
+                    }
+                    &:hover::before {
+                        width: 100%;
+                        transition: width 0.3s;
+                    }
                 }
             }
         }
