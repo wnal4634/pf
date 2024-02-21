@@ -226,232 +226,75 @@ const Experience = () => {
                                 experienced
                             </span>
                         </div>
-                        <div className={styles.ex_content_wrap}>
-                            <Fade bottom>
+                        <div className={styles.col}>
+                            <div className={styles.ex_content_wrap}>
+                                <div className={styles.ex_list_header}>
+                                    <div className={styles.title}>award</div>
+                                    <div className={styles.title}>platform</div>
+                                    <div className={styles.title}>project</div>
+                                </div>
+                                <hr />
                                 <div className={styles.ex_list_content}>
+                                    {/* <img src={img1} alt="공모전 이미지" /> */}
                                     <div
                                         className={styles.rolling_wrap}
                                         onClick={() => {
-                                            setModalIsOpen(true);
-                                            scrollStop();
+                                            // setModalIsOpen(true);
+                                            // scrollStop();
                                         }}
                                     >
-                                        <div className={styles.text}>
+                                        <div className={styles.rolling_text}>
                                             <ul>
                                                 <li>
-                                                    <span>click zoom in</span>
+                                                    <span>click me</span>
                                                 </li>
                                                 <li>
-                                                    <span>click zoom in</span>
+                                                    <span>click me</span>
                                                 </li>
                                             </ul>
                                             <ul>
                                                 <li>
-                                                    <span>click zoom in</span>
+                                                    <span>click me</span>
                                                 </li>
                                                 <li>
-                                                    <span>click zoom in</span>
+                                                    <span>click me</span>
                                                 </li>
                                             </ul>
                                         </div>
-                                        <img src={img1} alt="공모전 이미지" />
                                     </div>
-                                    <Modal
-                                        isOpen={modalIsOpen}
-                                        onRequestClose={() => {
-                                            setModalIsOpen(false);
-                                            scrollMove();
-                                        }}
-                                        style={ModalStyle}
-                                        className={styles.modal}
-                                    >
-                                        <img
-                                            src={img1}
-                                            className={styles.modal_img}
-                                            alt="공모전 이미지"
-                                            style={{
-                                                width: "100%",
-                                                height: "100%",
-                                            }}
-                                        />
-                                    </Modal>
-                                    <strong>
+                                    <div className={styles.content}>
                                         제6회 4차 산업혁명 인재양성
-                                        공유·협업페스티발 공모전
-                                    </strong>
-                                    <div className={styles.content}>
-                                        한국정보통신보안윤리학회 주관 공모전
-                                        제6회 산업혁명 인재양성
-                                        공유·협업페스티발에 졸업작품 '레시피
-                                        공유 및 밀키트 판매 앱'을 출품해
-                                        캡스톤경진실적물/기타 부문에서 우수상을
-                                        수상했습니다.
+                                        공유·협업페스티발
                                     </div>
-                                    <div className={styles.url}></div>
+                                    <div className={styles.content}>
+                                        한국정보통신보안윤리학회
+                                    </div>
+                                    <div className={styles.content}>
+                                        한국정보통신보안윤리학회
+                                    </div>
                                 </div>
-                            </Fade>
-                            <Fade bottom delay={300}>
+                                <hr />
                                 <div className={styles.ex_list_content}>
-                                    <div
-                                        className={styles.rolling_wrap}
-                                        onClick={() => {
-                                            setModalIsOpen2(true);
-                                            scrollStop();
-                                        }}
-                                    >
-                                        <div className={styles.text}>
-                                            <ul>
-                                                <li>
-                                                    <span>click zoom in</span>
-                                                </li>
-                                                <li>
-                                                    <span>click zoom in</span>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <span>click zoom in</span>
-                                                </li>
-                                                <li>
-                                                    <span>click zoom in</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <img
-                                            src={img2}
-                                            alt="앙꼬 협업 이미지1"
-                                        />
-                                    </div>
-                                    <Modal
-                                        isOpen={modalIsOpen2}
-                                        onRequestClose={() => {
-                                            setModalIsOpen2(false);
-                                            scrollMove();
-                                        }}
-                                        style={ModalStyle}
-                                        className={styles.modal}
-                                    >
-                                        <img
-                                            src={img2}
-                                            className={styles.modal_img}
-                                            alt="앙꼬 협업 이미지1"
-                                            style={{
-                                                width: "100%",
-                                                height: "100%",
-                                            }}
-                                        />
-                                    </Modal>
-                                    <strong>앙꼬와의 협업</strong>
+                                    {/* <img src={img2} alt="앙꼬 협업 이미지1" /> */}
+                                    <span>click me click me</span>
                                     <div className={styles.content}>
-                                        식품 브랜드 '앙꼬'와 작업한
-                                        메뉴판입니다. 각 메뉴의 일러스트는 실제
-                                        이미지와 근접하도록 직접 그렸으며, 각
-                                        제품에 간단한 설명을 더해 쉬운 파악이
-                                        가능하도록 제작했습니다.
+                                        cooperation
                                     </div>
+                                    <div className={styles.content}>ankko</div>
+                                    <div className={styles.content}>ankko</div>
                                 </div>
-                            </Fade>
-                            <Fade bottom delay={600}>
+                                <hr />
                                 <div className={styles.ex_list_content}>
-                                    <div
-                                        className={styles.rolling_wrap}
-                                        onClick={() => {
-                                            setModalIsOpen3(true);
-                                            scrollStop();
-                                        }}
-                                    >
-                                        <div className={styles.text}>
-                                            <ul>
-                                                <li>
-                                                    <span>click zoom in</span>
-                                                </li>
-                                                <li>
-                                                    <span>click zoom in</span>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <span>click zoom in</span>
-                                                </li>
-                                                <li>
-                                                    <span>click zoom in</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <img
-                                            src={img3}
-                                            alt="앙꼬 협업 이미지2"
-                                        />
-                                    </div>
-                                    <Modal
-                                        isOpen={modalIsOpen3}
-                                        onRequestClose={() => {
-                                            setModalIsOpen3(false);
-                                            scrollMove();
-                                        }}
-                                        style={ModalStyle}
-                                        className={styles.modal}
-                                    >
-                                        <img
-                                            src={img3}
-                                            className={styles.modal_img}
-                                            alt="앙꼬 협업 이미지2"
-                                            style={{
-                                                width: "100%",
-                                                height: "100%",
-                                            }}
-                                        />
-                                    </Modal>
-                                    <strong>앙꼬와의 협업</strong>
+                                    {/* <img src={img3} alt="앙꼬 협업 이미지2" /> */}
+                                    <span>click me click me</span>
                                     <div className={styles.content}>
-                                        식품 브랜드 '앙꼬'와의 두 번째 작업으로,
-                                        판매 제품인 도라야끼의 상세 페이지와
-                                        제품 기한카드를 제작했습니다. 상세
-                                        페이지에는 제품의 종류 및 맛 설명, 다른
-                                        브랜드와의 차별화 등을 담았습니다.
-                                        기한카드는 상반기와 하반기 제품으로
-                                        나뉘어 있으며, 판매 제품들의 소비기한과
-                                        보관 방법을 작성했습니다.
-                                        <br />
-                                        전문은 아래 링크인 사용처 혹은
-                                        피그마에서 확인하실 수 있습니다.
+                                        cooperation
                                     </div>
-                                    <div className={styles.ex_url_wrap}>
-                                        <div
-                                            className={styles.ex_url}
-                                            onClick={() => {
-                                                window.open(link.outsource_use);
-                                            }}
-                                        >
-                                            <div>
-                                                사용처
-                                                <FontAwesomeIcon
-                                                    icon={
-                                                        faArrowUpRightFromSquare
-                                                    }
-                                                />
-                                            </div>
-                                        </div>
-                                        <div
-                                            className={styles.ex_url}
-                                            onClick={() => {
-                                                window.open(
-                                                    link.outsource_figma,
-                                                );
-                                            }}
-                                        >
-                                            <div>
-                                                피그마
-                                                <FontAwesomeIcon
-                                                    icon={
-                                                        faArrowUpRightFromSquare
-                                                    }
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <div className={styles.content}>ankko</div>
+                                    <div className={styles.content}>ankko</div>
                                 </div>
-                            </Fade>
+                                <hr />
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -17,11 +17,17 @@
         margin-bottom: 130px;
         svg {
             position: absolute;
-            right: 3vw;
             opacity: 0;
+            &:first-child:not(svg:last-child) {
+                right: 16vw;
+                width: 50px;
+                height: 50px;
+            }
             &:nth-child(2) {
-                right: 5vw;
-                transform: translateY(40px);
+                right: 19vw;
+                width: 20px;
+                height: 20px;
+                transform: translateY(35px);
             }
         }
         .gsap_before {
@@ -94,19 +100,45 @@
                 // }
             }
         }
-        &:nth-of-type(odd) .gsap_before {
-            flex-direction: row-reverse;
-        }
-        &:nth-child(odd) .info {
-            padding: 0 50px 0 100px;
+        .rect {
+            position: absolute;
+            height: 30%;
             svg {
-                left: 0;
-                transform: rotate(5deg);
+                transform: translate(-20px, 145px) rotate(30deg);
+            }
+        }
+        &:nth-child(odd) {
+            svg:not(.detail_url svg) {
+                &:first-child {
+                    left: 16vw;
+                }
+                &:nth-child(2) {
+                    left: 19vw;
+                }
+            }
+            .gsap_before {
+                flex-direction: row-reverse;
+            }
+            .info {
+                padding: 0 50px 0 100px;
+                svg {
+                    left: 0;
+                    transform: rotate(5deg);
+                }
+            }
+            .rect {
+                // right: 19vw;
+                right: 18vw;
+                padding-left: 15vw;
+                svg {
+                    // transform: translateY(145px) rotate(-30deg);
+                    transform: translateY(50px) rotate(-30deg);
+                }
             }
         }
         &:hover {
             cursor: pointer;
-            svg {
+            svg:not(.detail_url svg) {
                 stroke-dasharray: 125.6px;
                 animation: circle 0.5s 1s ease-in-out forwards;
                 &:nth-child(2) {
@@ -116,6 +148,12 @@
                 &:last-child {
                     stroke-dasharray: 1646.887px;
                     animation: stroke 1s ease-in-out forwards;
+                }
+            }
+            .rect {
+                svg {
+                    stroke-dasharray: 134px;
+                    animation: rect 0.5s 1.8s ease-in-out forwards;
                 }
             }
         }
@@ -202,14 +240,16 @@
                             svg {
                                 margin-left: 5px;
                                 align-self: center;
+                                position: relative;
+                                opacity: 1;
                             }
                             font: {
                                 // weight: 600;
                                 // family: "JalnanGothic";
                             }
                             &:hover {
-                                letter-spacing: 5px;
-                                transition: 0.3s;
+                                // letter-spacing: 5px;
+                                // transition: 0.3s;
                             }
                         }
                     }
@@ -291,6 +331,16 @@
     0% {
         opacity: 1;
         stroke-dashoffset: 43.96px;
+    }
+    100% {
+        opacity: 1;
+        stroke-dashoffset: 0px;
+    }
+}
+@keyframes rect {
+    0% {
+        opacity: 1;
+        stroke-dashoffset: 134px;
     }
     100% {
         opacity: 1;

@@ -12,7 +12,7 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import "css/Swiper-bundle.css";
 import colors from "components/SkillsColor";
 import link from "components/Link";
-import { WaveSVG, CircleSVG } from "components/WaveSVG";
+import { WaveSVG, CircleSVG, RectSVG } from "components/WaveSVG";
 import { gsap } from "gsap";
 import imggg from "img/cookkit.jpg";
 
@@ -952,8 +952,8 @@ const Projects = () => {
                 </div>
                 {data.map((s, i) => (
                     <div key={i} className={styles.project}>
-                        <CircleSVG len="20" includStroke="24" />
-                        <CircleSVG len="7" includStroke="11" />
+                        <CircleSVG len="20" includStroke="24" color="#434a8a" />
+                        <CircleSVG len="7" includStroke="11" color="#1d1a3f" />
                         <div
                             className={styles.gsap_before}
                             onClick={() => {
@@ -970,6 +970,9 @@ const Projects = () => {
                                     <WaveSVG />
                                 </p>
                             </div>
+                        </div>
+                        <div className={styles.rect}>
+                            <RectSVG />
                         </div>
                         <div
                             className={styles.gsap_bg}

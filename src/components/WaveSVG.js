@@ -30,6 +30,7 @@ const WaveSVG = () => {
 const CircleSVG = (props) => {
     const len = props.len;
     const includStroke = props.includStroke;
+    const color = props.color;
 
     return (
         <svg>
@@ -38,11 +39,25 @@ const CircleSVG = (props) => {
                 cy={includStroke}
                 r={len}
                 fill="none"
-                stroke="#8E97F0"
+                stroke={color}
                 strokeWidth="3.5"
             />
         </svg>
     );
 };
 
-export { WaveSVG, CircleSVG };
+const RectSVG = () => {
+    return (
+        <svg width="40" height="40" viewBox="-2 0 40 35">
+            <rect
+                width="30"
+                height="30"
+                fill="none"
+                stroke="#868FAD"
+                strokeWidth="3.5"
+            />
+        </svg>
+    );
+};
+
+export { WaveSVG, CircleSVG, RectSVG };

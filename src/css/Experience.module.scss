@@ -1,11 +1,10 @@
 .ex_wrap {
     margin-top: 125px;
     padding: 70px 27px 0 20px;
-    display: flex;
     width: 100%;
+
     .ex {
         padding: 0 15vw;
-        width: 100%;
         flex-direction: column;
         .text {
             flex-direction: column;
@@ -15,142 +14,68 @@
             }
             .text_main {
                 line-height: 0.8;
-                margin-bottom: 50px;
+            }
+            .text_sub {
+                font-size: 2rem;
+                margin-top: 1vh;
+                align-self: flex-end;
             }
         }
-        .ex_content_wrap {
-            justify-content: space-between;
-            .ex_list_content {
-                width: 18vw;
+        .col {
+            // background-color: pink;
+            height: 500px;
+            .ex_content_wrap {
+                position: absolute;
                 flex-direction: column;
-                @for $i from 1 through 3 {
-                    &:nth-child(#{$i}) {
-                        margin-top: 50px * $i;
-                    }
+                right: 7px;
+                transform: translateY(30px);
+                width: 60vw;
+                hr {
+                    border: 0;
+                    height: 1px;
+                    background-color: #1d1a3f;
+                    width: 100%;
                 }
-                &:last-child {
+                .title {
+                    flex: 1;
+                    margin: 1.5vw 0;
+                }
+                .ex_list_content {
+                    cursor: pointer;
                     .rolling_wrap {
-                        .text {
-                            height: 27vw;
-                        }
-                    }
-                }
-                .rolling_wrap {
-                    width: inherit;
-                    .text {
-                        cursor: pointer;
-                        position: absolute;
-                        display: flex;
-                        width: inherit;
-                        height: 25.5vw;
-                        justify-content: center;
-                        overflow: hidden;
-                        z-index: 1;
-                        opacity: 0;
-                        transition: 0.2s;
-                        ul {
-                            position: absolute;
+                        .rolling_text {
+                            position: relative;
                             display: flex;
-                            width: max-content;
-                            animation: aniScroll 3s linear infinite;
-                            &:last-child {
-                                animation: aniScroll2 3s linear infinite;
-                            }
-                            li {
-                                list-style: none;
-                                margin-right: 5px;
-                                text-align: center;
-                                color: #fff;
-                                font: {
-                                    size: 2.5vw;
-                                    weight: 600;
-                                    family: "JalnanGothic";
+                            align-items: center;
+                            margin: 80px auto;
+                            width: 1000px;
+                            height: 150px;
+                            overflow: hidden;
+                            background: #efefef;
+                            ul {
+                                position: absolute;
+                                display: flex;
+                                width: max-content;
+                                animation: aniScroll 5s linear infinite;
+                                &:last-child {
+                                    animation: aniScroll2 5s linear infinite;
+                                }
+                                li {
+                                    list-style: none;
+                                    width: 180px;
+                                    height: 100px;
+                                    line-height: 100px;
+                                    text-align: center;
+                                    color: #000;
+                                    border: 1px solid #ddd;
                                 }
                             }
-                        }
-                    }
-                    img {
-                        width: inherit;
-                        transition: 0.2s;
-                    }
-                    &:hover {
-                        .text {
-                            opacity: 1;
-                            transition: 0.2s;
-                        }
-                        img {
-                            filter: brightness(0.5);
-                            transition: 0.2s;
-                            transform: scale(0.97);
-                        }
-                    }
-                }
-                .svg_img {
-                    svg {
-                        opacity: 0;
-                        transition: 0.2s;
-                        &:not(svg:last-child) {
-                            position: absolute;
-                            top: 1vw;
-                            left: 1vh;
-                            z-index: 1;
-                            // transform: translate(-30%, -30%);
-                            animation: rotate 3s infinite linear;
-                            .circle {
-                                text-transform: uppercase;
-                                fill: #fff;
-                                font: {
-                                    weight: 600;
-                                    family: "JalnanGothic";
-                                }
-                            }
-                        }
-                    }
-                    img {
-                        width: 18vw;
-                        transition: 0.2s;
-                    }
-                    &:hover {
-                        cursor: pointer;
-                        svg {
-                            opacity: 1;
-                            transition: 0.2s;
-                        }
-                        img {
-                            transition: 0.2s;
-                            filter: brightness(0.5);
                         }
                     }
                 }
                 .content {
-                    font-family: "Pretendard-ExtraLight";
-                    margin: 20px 0;
-                    text-align: justify;
-                    width: 18vw;
-                    line-height: 1.5;
-                    // color: rgba(29, 26, 63, 0.5);
-                }
-                strong {
-                    margin-top: 30px;
-                    font-size: 1.05rem;
-                }
-                .ex_url_wrap {
-                    .ex_url {
-                        margin-right: 10px;
-                        cursor: pointer;
-                        background-color: #d9dbee;
-                        padding: 3px 7px;
-                        border-radius: 5px;
-                        transition: 0.3s;
-                        &:hover {
-                            letter-spacing: 5px;
-                            transition: 0.3s;
-                        }
-                    }
-                    svg {
-                        margin-left: 5px;
-                        align-self: center;
-                    }
+                    flex: 1;
+                    margin: 1.5vw 0;
                 }
             }
         }
@@ -164,7 +89,6 @@
         transform: rotate(360deg);
     }
 }
-
 @keyframes aniScroll {
     0% {
         transform: translateX(0%);
