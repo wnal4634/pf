@@ -30,11 +30,9 @@
                 right: 7px;
                 transform: translateY(30px);
                 width: 60vw;
-                hr {
-                    border: 0;
-                    height: 1px;
-                    background-color: #1d1a3f;
-                    width: 100%;
+                .ex_list_header,
+                .ex_list_content {
+                    border-bottom: 1px solid #1d1a3f;
                 }
                 .title {
                     flex: 1;
@@ -44,14 +42,13 @@
                     cursor: pointer;
                     .rolling_wrap {
                         .rolling_text {
-                            position: relative;
+                            opacity: 0;
+                            position: absolute;
                             display: flex;
                             align-items: center;
-                            margin: 80px auto;
-                            width: 1000px;
-                            height: 150px;
+                            width: 60vw;
+                            height: 4.16vw;
                             overflow: hidden;
-                            background: #efefef;
                             ul {
                                 position: absolute;
                                 display: flex;
@@ -62,20 +59,48 @@
                                 }
                                 li {
                                     list-style: none;
-                                    width: 180px;
-                                    height: 100px;
-                                    line-height: 100px;
+                                    width: 14vw;
                                     text-align: center;
-                                    color: #000;
-                                    border: 1px solid #ddd;
+                                    color: #f2f2ff;
+                                    // padding: 1.26vw 0;
+                                    font: {
+                                        size: 1.5vw;
+                                        family: "JalnanGothic";
+                                    }
                                 }
                             }
                         }
                     }
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        height: 4.15vw;
+                        filter: grayscale(100%) brightness(0.7);
+                        object-fit: cover;
+                        opacity: 0;
+                        z-index: -10;
+                    }
+                    &:hover {
+                        .content {
+                            opacity: 0;
+                            transition: 0.2s;
+                        }
+                        .rolling_text {
+                            opacity: 1;
+                            transition: 0.2s;
+                        }
+                        img {
+                            animation: slide 0.5s ease-out forwards;
+                        }
+                    }
                 }
                 .content {
+                    opacity: 1;
                     flex: 1;
                     margin: 1.5vw 0;
+                    font: {
+                        size: 1rem;
+                    }
                 }
             }
         }
@@ -102,6 +127,16 @@
         transform: translateX(100%);
     }
     100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
         transform: translateX(0%);
     }
 }

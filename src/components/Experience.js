@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "css/Experience.module.scss";
 import Modal from "react-modal";
 import { gsap } from "gsap";
-import img1 from "img/ex/공모전_상장.png";
-import img2 from "img/ex/ankkoMenu.png";
-import img3 from "img/ex/ankkoDetailPage.png";
+// import img1 from "img/ex/공모전_상장.png";
+// import img2 from "img/ex/ankkoMenu.png";
+// import img3 from "img/ex/ankkoDetailPage.png";
 import Fade from "react-reveal/Fade";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -65,8 +65,51 @@ const ModalStyleMobile = {
         padding: "20px",
     },
 };
+const ScrollDiv = () => {
+    return (
+        <div className={styles.rolling_text}>
+            <ul>
+                <li>
+                    <span>click me click me</span>
+                </li>
+                <li>
+                    <span>click me click me</span>
+                </li>
+                <li>
+                    <span>click me click me</span>
+                </li>
+                <li>
+                    <span>click me click me</span>
+                </li>
+                <li>
+                    <span>click me click me</span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span>click me click me</span>
+                </li>
+                <li>
+                    <span>click me click me</span>
+                </li>
+                <li>
+                    <span>click me click me</span>
+                </li>
+                <li>
+                    <span>click me click me</span>
+                </li>
+                <li>
+                    <span>click me click me</span>
+                </li>
+            </ul>
+        </div>
+    );
+};
 
 const Experience = () => {
+    const img1 = "https://source.unsplash.com/1rBg5YSi00c";
+    const img2 = "https://source.unsplash.com/5TK1F5VfdIk";
+    const img3 = "https://source.unsplash.com/SAQl58G-RYs";
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [modalIsOpen2, setModalIsOpen2] = useState(false);
     const [modalIsOpen3, setModalIsOpen3] = useState(false);
@@ -233,9 +276,9 @@ const Experience = () => {
                                     <div className={styles.title}>platform</div>
                                     <div className={styles.title}>project</div>
                                 </div>
-                                <hr />
                                 <div className={styles.ex_list_content}>
                                     {/* <img src={img1} alt="공모전 이미지" /> */}
+                                    <img src={img1} alt="" />
                                     <div
                                         className={styles.rolling_wrap}
                                         onClick={() => {
@@ -243,24 +286,7 @@ const Experience = () => {
                                             // scrollStop();
                                         }}
                                     >
-                                        <div className={styles.rolling_text}>
-                                            <ul>
-                                                <li>
-                                                    <span>click me</span>
-                                                </li>
-                                                <li>
-                                                    <span>click me</span>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <span>click me</span>
-                                                </li>
-                                                <li>
-                                                    <span>click me</span>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <ScrollDiv />
                                     </div>
                                     <div className={styles.content}>
                                         제6회 4차 산업혁명 인재양성
@@ -273,27 +299,42 @@ const Experience = () => {
                                         한국정보통신보안윤리학회
                                     </div>
                                 </div>
-                                <hr />
                                 <div className={styles.ex_list_content}>
                                     {/* <img src={img2} alt="앙꼬 협업 이미지1" /> */}
-                                    <span>click me click me</span>
+                                    <img src={img2} alt="" />
+                                    <div
+                                        className={styles.rolling_wrap}
+                                        onClick={() => {
+                                            // setModalIsOpen(true);
+                                            // scrollStop();
+                                        }}
+                                    >
+                                        <ScrollDiv />
+                                    </div>
                                     <div className={styles.content}>
                                         cooperation
                                     </div>
                                     <div className={styles.content}>ankko</div>
                                     <div className={styles.content}>ankko</div>
                                 </div>
-                                <hr />
                                 <div className={styles.ex_list_content}>
                                     {/* <img src={img3} alt="앙꼬 협업 이미지2" /> */}
-                                    <span>click me click me</span>
+                                    <img src={img3} alt="" />
+                                    <div
+                                        className={styles.rolling_wrap}
+                                        onClick={() => {
+                                            // setModalIsOpen(true);
+                                            // scrollStop();
+                                        }}
+                                    >
+                                        <ScrollDiv />
+                                    </div>
                                     <div className={styles.content}>
                                         cooperation
                                     </div>
                                     <div className={styles.content}>ankko</div>
                                     <div className={styles.content}>ankko</div>
                                 </div>
-                                <hr />
                             </div>
                         </div>
                     </div>
