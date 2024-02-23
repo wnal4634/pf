@@ -2,9 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "css/Experience.module.scss";
 import Modal from "react-modal";
 import { gsap } from "gsap";
-// import img1 from "img/ex/공모전_상장.png";
-// import img2 from "img/ex/ankkoMenu.png";
-// import img3 from "img/ex/ankkoDetailPage.png";
+import img1 from "img/ex/공모전_상장.png";
+import img2 from "img/ex/ankkoMenu.png";
+import img3 from "img/ex/ankkoDetailPage.png";
+import { ArrowSVG } from "components/SVG";
 import Fade from "react-reveal/Fade";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -107,9 +108,9 @@ const ScrollDiv = () => {
 };
 
 const Experience = () => {
-    const img1 = "https://source.unsplash.com/1rBg5YSi00c";
-    const img2 = "https://source.unsplash.com/5TK1F5VfdIk";
-    const img3 = "https://source.unsplash.com/SAQl58G-RYs";
+    const backImg1 = "https://source.unsplash.com/1rBg5YSi00c";
+    const backImg2 = "https://source.unsplash.com/5TK1F5VfdIk";
+    const backImg3 = "https://source.unsplash.com/SAQl58G-RYs";
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [modalIsOpen2, setModalIsOpen2] = useState(false);
     const [modalIsOpen3, setModalIsOpen3] = useState(false);
@@ -118,6 +119,90 @@ const Experience = () => {
     };
     const scrollMove = () => {
         document.body.style.overflow = "unset";
+    };
+    const data = [
+        {
+            title: "제6회 4차 산업혁명 인재양성 공유·협업페스티발",
+            platform: "한국정보통신보안윤리학회",
+            project: "한국정보통신보안윤리학회",
+            backImg: backImg1,
+            img: img1,
+            content: "",
+        },
+        {
+            title: "cooperation",
+            platform: "ankko",
+            project: "ankko",
+            backImg: backImg2,
+            img: img2,
+            content: "",
+        },
+        {
+            title: "cooperation",
+            platform: "ankko",
+            project: "ankko",
+            backImg: backImg3,
+            img: img3,
+            content: "",
+        },
+    ];
+
+    const show = (i) => {
+        let tl = gsap.timeline();
+
+        gsap.set(`.${styles.ex_wrap}`, {
+            pointerEvents: "none",
+        });
+        // gsap.set(`.${styles.close}`, {
+        //     opacity: 1,
+        //     translateY: 0,
+        // });
+
+        tl.fromTo(
+            `#${styles.modal}` + `${i}`,
+            {
+                scaleX: 0,
+                transformOrigin: "left center",
+            },
+            {
+                scaleX: 1,
+                ease: "Expo.in",
+            },
+        )
+            .from(`.${styles.close}`, {
+                opacity: 0,
+                translateY: "-30%",
+                ease: "Expo.in",
+            })
+            .set(`.${styles.ex_wrap}`, {
+                pointerEvents: "auto",
+            });
+    };
+
+    const hide = () => {
+        let tl = gsap.timeline();
+
+        gsap.set(`.${styles.ex_wrap}`, {
+            pointerEvents: "none",
+        });
+
+        tl.to(`.${styles.close}`, {
+            opacity: 0,
+            translateY: "-30%",
+            ease: "Expo.in",
+        })
+            .to(`.${styles.modal}`, {
+                transformOrigin: "left center",
+                scaleX: 0,
+                ease: "Expo.inOut",
+            })
+            .set(`.${styles.ex_wrap}`, {
+                pointerEvents: "auto",
+            })
+            .set(`.${styles.close}`, {
+                opacity: 1,
+                translateY: 0,
+            });
     };
 
     return (
@@ -276,65 +361,45 @@ const Experience = () => {
                                     <div className={styles.title}>platform</div>
                                     <div className={styles.title}>project</div>
                                 </div>
-                                <div className={styles.ex_list_content}>
-                                    {/* <img src={img1} alt="공모전 이미지" /> */}
-                                    <img src={img1} alt="" />
+                                {data.map((s, i) => (
                                     <div
-                                        className={styles.rolling_wrap}
+                                        className={styles.ex_list_content}
+                                        key={i}
                                         onClick={() => {
-                                            // setModalIsOpen(true);
+                                            show(i);
                                             // scrollStop();
                                         }}
                                     >
-                                        <ScrollDiv />
+                                        <img src={s.img} alt="" />
+                                        <img src={s.backImg} alt="" />
+                                        <div className={styles.rolling_wrap}>
+                                            <ScrollDiv />
+                                        </div>
+                                        <div className={styles.content}>
+                                            {s.title}
+                                        </div>
+                                        <div className={styles.content}>
+                                            {s.platform}
+                                        </div>
+                                        <div className={styles.content}>
+                                            {s.project}
+                                        </div>
+                                        <div
+                                            className={styles.modal}
+                                            id={`${styles.modal}` + `${i}`}
+                                        >
+                                            <div
+                                                className={styles.close}
+                                                onClick={() => {
+                                                    hide();
+                                                    // scrollMove();
+                                                }}
+                                            >
+                                                close
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className={styles.content}>
-                                        제6회 4차 산업혁명 인재양성
-                                        공유·협업페스티발
-                                    </div>
-                                    <div className={styles.content}>
-                                        한국정보통신보안윤리학회
-                                    </div>
-                                    <div className={styles.content}>
-                                        한국정보통신보안윤리학회
-                                    </div>
-                                </div>
-                                <div className={styles.ex_list_content}>
-                                    {/* <img src={img2} alt="앙꼬 협업 이미지1" /> */}
-                                    <img src={img2} alt="" />
-                                    <div
-                                        className={styles.rolling_wrap}
-                                        onClick={() => {
-                                            // setModalIsOpen(true);
-                                            // scrollStop();
-                                        }}
-                                    >
-                                        <ScrollDiv />
-                                    </div>
-                                    <div className={styles.content}>
-                                        cooperation
-                                    </div>
-                                    <div className={styles.content}>ankko</div>
-                                    <div className={styles.content}>ankko</div>
-                                </div>
-                                <div className={styles.ex_list_content}>
-                                    {/* <img src={img3} alt="앙꼬 협업 이미지2" /> */}
-                                    <img src={img3} alt="" />
-                                    <div
-                                        className={styles.rolling_wrap}
-                                        onClick={() => {
-                                            // setModalIsOpen(true);
-                                            // scrollStop();
-                                        }}
-                                    >
-                                        <ScrollDiv />
-                                    </div>
-                                    <div className={styles.content}>
-                                        cooperation
-                                    </div>
-                                    <div className={styles.content}>ankko</div>
-                                    <div className={styles.content}>ankko</div>
-                                </div>
+                                ))}
                             </div>
                         </div>
                     </div>

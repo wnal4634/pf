@@ -12,7 +12,7 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import "css/Swiper-bundle.css";
 import colors from "components/SkillsColor";
 import link from "components/Link";
-import { WaveSVG, CircleSVG, RectSVG } from "components/WaveSVG";
+import { WaveSVG, CircleSVG, RectSVG } from "components/SVG";
 import { gsap } from "gsap";
 import imggg from "img/cookkit.jpg";
 
@@ -113,6 +113,13 @@ const Projects = () => {
         gsap.set(`.${styles.gsap_before}`, {
             pointerEvents: "none",
         });
+        gsap.set(
+            `.${styles.close}, .${styles.img_inside}, .${styles.detail}, .${styles.detail_wrap}`,
+            {
+                opacity: 1,
+                translateY: 0,
+            },
+        );
 
         tl.fromTo(
             `#${styles.gsap_bg}` + `${i}`,
