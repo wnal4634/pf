@@ -20,7 +20,7 @@
             }
         }
         .col {
-            height: 600px;
+            height: 30vw;
             .ex_content_wrap {
                 position: absolute;
                 flex-direction: column;
@@ -113,7 +113,7 @@
                             }
                         }
                     }
-                    .modal {
+                    .modal_bg {
                         cursor: default;
                         z-index: 10000;
                         position: fixed;
@@ -121,11 +121,22 @@
                         left: 0;
                         width: 100vw;
                         height: 100vh;
-                        background-color: black;
-                        // transform: scaleX(0) translate(-50%, -50%);
+                        background-color: rgba(0, 0, 0, 0.5);
                         transform: scaleX(0);
-                        .close {
-                            color: #fff;
+                        .modal {
+                            position: absolute;
+                            background-color: #fff;
+                            width: 50vw;
+                            height: 85vh;
+                            // top: 50%;
+                            // left: 50%;
+                            border-radius: 3% 3% 0 0;
+                            padding: 3vw;
+                            // transform: translate(-50%, -41%);
+                            .close {
+                                color: #000;
+                                position: absolute;
+                            }
                         }
                     }
                 }
@@ -282,21 +293,21 @@
 @keyframes up {
     0% {
         opacity: 0;
-        transform: translate(-25vw, 0px) rotate(-5deg);
+        transform: translate(-25vw, 0) rotate(-5deg);
     }
     100% {
         opacity: 1;
-        transform: translate(-25vw, -50px) rotate(-5deg);
+        transform: translate(-25vw, -2.5vw) rotate(-5deg);
     }
 }
 @keyframes down {
     0% {
         opacity: 1;
-        transform: translate(-25vw, -50px) rotate(-5deg);
+        transform: translate(-25vw, -2.5vw) rotate(-5deg);
     }
     100% {
         opacity: 0;
-        transform: translate(-25vw, 0px) rotate(-5deg);
+        transform: translate(-25vw, 0) rotate(-5deg);
     }
 }
 @keyframes arrow {

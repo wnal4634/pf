@@ -153,13 +153,9 @@ const Experience = () => {
         gsap.set(`.${styles.ex_wrap}`, {
             pointerEvents: "none",
         });
-        // gsap.set(`.${styles.close}`, {
-        //     opacity: 1,
-        //     translateY: 0,
-        // });
 
         tl.fromTo(
-            `#${styles.modal}` + `${i}`,
+            `#${styles.modal_bg}` + `${i}`,
             {
                 scaleX: 0,
                 transformOrigin: "left center",
@@ -169,12 +165,25 @@ const Experience = () => {
                 ease: "Expo.in",
             },
         )
+            .fromTo(
+                `.${styles.modal}`,
+                {
+                    // translateY: "-30%",
+                    scaleY: 0,
+                    transformOrigin: "0 100%",
+                },
+                {
+                    scaleY: 1,
+                    duration: 1,
+                    ease: "Expo.in",
+                },
+            )
             .from(`.${styles.close}`, {
                 opacity: 0,
                 translateY: "-30%",
                 ease: "Expo.in",
             })
-            .set(`.${styles.ex_wrap}`, {
+            .set(`.${styles.modal_bg}`, {
                 pointerEvents: "auto",
             });
     };
@@ -191,18 +200,39 @@ const Experience = () => {
             translateY: "-30%",
             ease: "Expo.in",
         })
-            .to(`.${styles.modal}`, {
-                transformOrigin: "left center",
+            .fromTo(
+                `.${styles.modal}`,
+                {
+                    // translateY: "-30%",
+                    scaleY: 0,
+                    transformOrigin: "0 100%",
+                },
+                {
+                    scaleY: 1,
+                    duration: 1,
+                    ease: "Expo.in",
+                },
+            )
+            // .to(`.${styles.detail}, .${styles.detail_wrap}`, {
+            //     opacity: 0,
+            //     duration: 0.3,
+            //     ease: "Expo.in",
+            // })
+            .to(`.${styles.modal_bg}`, {
+                transformOrigin: "100% 0",
                 scaleX: 0,
                 ease: "Expo.inOut",
             })
             .set(`.${styles.ex_wrap}`, {
                 pointerEvents: "auto",
-            })
-            .set(`.${styles.close}`, {
-                opacity: 1,
-                translateY: 0,
             });
+        // .set(
+        //     `.${styles.close}, .${styles.img_inside}, .${styles.detail}, .${styles.detail_wrap}`,
+        //     {
+        //         opacity: 1,
+        //         translateY: 0,
+        //     },
+        // );
     };
 
     return (
@@ -385,17 +415,19 @@ const Experience = () => {
                                             {s.project}
                                         </div>
                                         <div
-                                            className={styles.modal}
-                                            id={`${styles.modal}` + `${i}`}
+                                            className={styles.modal_bg}
+                                            id={`${styles.modal_bg}` + `${i}`}
                                         >
-                                            <div
-                                                className={styles.close}
-                                                onClick={() => {
-                                                    hide();
-                                                    // scrollMove();
-                                                }}
-                                            >
-                                                close
+                                            <div className={styles.modal}>
+                                                <div
+                                                    className={styles.close}
+                                                    onClick={() => {
+                                                        hide();
+                                                        // scrollMove();
+                                                    }}
+                                                >
+                                                    close
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
