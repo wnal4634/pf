@@ -127,7 +127,10 @@ const Experience = () => {
             project: "한국정보통신보안윤리학회",
             backImg: backImg1,
             img: img1,
-            content: "",
+            content:
+                "한국정보통신보안윤리학회 주관 공모전 제6회 산업혁명 인재양성 공유·협업페스티발에 졸업작품 '레시피 공유 및 밀키트 판매 앱'을 출품해 캡스톤경진실적물/기타 부문에서 우수상을 수상했습니다.",
+            url1: null,
+            url2: null,
         },
         {
             title: "cooperation",
@@ -135,7 +138,10 @@ const Experience = () => {
             project: "ankko",
             backImg: backImg2,
             img: img2,
-            content: "",
+            content:
+                "식품 브랜드 '앙꼬'와 작업한 메뉴판입니다. 각 메뉴의 일러스트는 실제 이미지와 근접하도록 직접 그렸으며, 각 제품에 간단한 설명을 더해 쉬운 파악이 가능하도록 제작했습니다.",
+            url1: null,
+            url2: null,
         },
         {
             title: "cooperation",
@@ -143,47 +149,61 @@ const Experience = () => {
             project: "ankko",
             backImg: backImg3,
             img: img3,
-            content: "",
+            content:
+                "식품 브랜드 '앙꼬'와의 두 번째 작업으로, 판매 제품인 도라야끼의 상세 페이지와 제품 기한카드를 제작했습니다. 상세 페이지에는 제품의 종류 및 맛 설명, 다른 브랜드와의 차별화 등을 담았습니다. 기한카드는 상반기와 하반기 제품으로 나뉘어 있으며, 판매 제품들의 소비기한과 보관 방법을 작성했습니다. \n전문은 아래 링크인 사용처 혹은 피그마에서 확인하실 수 있습니다.",
+            url1: link.outsource_use,
+            url2: link.outsource_figma,
         },
     ];
 
     const show = (i) => {
         let tl = gsap.timeline();
 
-        gsap.set(`.${styles.ex_wrap}`, {
+        gsap.set(`.${styles.gsap_before}`, {
             pointerEvents: "none",
         });
+        // gsap.set(
+        //     `.${styles.close}, .${styles.img_inside}, .${styles.detail}, .${styles.detail_wrap}`,
+        //     {
+        //         opacity: 1,
+        //         translateY: 0,
+        //     },
+        // );
 
         tl.fromTo(
-            `#${styles.modal_bg}` + `${i}`,
+            `#${styles.gsap_bg}` + `${i}`,
             {
-                scaleX: 0,
-                transformOrigin: "left center",
+                opacity: 0,
+                // scaleX: 0,
+                // transformOrigin: "left center",
             },
             {
-                scaleX: 1,
+                opacity: 1,
+                // scaleX: 1,
                 ease: "Expo.in",
+                pointerEvents: "auto",
             },
         )
             .fromTo(
                 `.${styles.modal}`,
                 {
-                    // translateY: "-30%",
-                    scaleY: 0,
-                    transformOrigin: "0 100%",
+                    translateY: "100%",
+                    // scaleY: 0,
+                    // transformOrigin: "0 100%",
                 },
                 {
-                    scaleY: 1,
+                    translateY: 0,
+                    // scaleY: 1,
                     duration: 1,
                     ease: "Expo.in",
                 },
             )
             .from(`.${styles.close}`, {
                 opacity: 0,
-                translateY: "-30%",
+                translateY: "-10%",
                 ease: "Expo.in",
             })
-            .set(`.${styles.modal_bg}`, {
+            .set(`.${styles.gsap_before}`, {
                 pointerEvents: "auto",
             });
     };
@@ -191,48 +211,34 @@ const Experience = () => {
     const hide = () => {
         let tl = gsap.timeline();
 
-        gsap.set(`.${styles.ex_wrap}`, {
+        gsap.set(`.${styles.gsap_before}`, {
             pointerEvents: "none",
         });
 
         tl.to(`.${styles.close}`, {
             opacity: 0,
-            translateY: "-30%",
+            translateY: "-10%",
             ease: "Expo.in",
         })
-            .fromTo(
-                `.${styles.modal}`,
-                {
-                    // translateY: "-30%",
-                    scaleY: 0,
-                    transformOrigin: "0 100%",
-                },
-                {
-                    scaleY: 1,
-                    duration: 1,
-                    ease: "Expo.in",
-                },
-            )
-            // .to(`.${styles.detail}, .${styles.detail_wrap}`, {
-            //     opacity: 0,
-            //     duration: 0.3,
-            //     ease: "Expo.in",
-            // })
-            .to(`.${styles.modal_bg}`, {
-                transformOrigin: "100% 0",
-                scaleX: 0,
+            .to(`.${styles.modal}`, {
+                translateY: "100%",
+                duration: 1,
+                ease: "Expo.in",
+            })
+            .to(`.${styles.gsap_bg}`, {
+                // transformOrigin: "100% 0",
+                // scaleX: 0,
+                opacity: 0,
+                pointerEvents: "none",
                 ease: "Expo.inOut",
             })
-            .set(`.${styles.ex_wrap}`, {
+            .set(`.${styles.gsap_before}`, {
                 pointerEvents: "auto",
+            })
+            .set(`.${styles.close}, .${styles.modal}`, {
+                opacity: 1,
+                translateY: 0,
             });
-        // .set(
-        //     `.${styles.close}, .${styles.img_inside}, .${styles.detail}, .${styles.detail_wrap}`,
-        //     {
-        //         opacity: 1,
-        //         translateY: 0,
-        //     },
-        // );
     };
 
     return (
@@ -387,43 +393,100 @@ const Experience = () => {
                         <div className={styles.col}>
                             <div className={styles.ex_content_wrap}>
                                 <div className={styles.ex_list_header}>
-                                    <div className={styles.title}>award</div>
-                                    <div className={styles.title}>platform</div>
+                                    <div className={styles.title}>
+                                        award / kind
+                                    </div>
+                                    <div className={styles.title}>
+                                        platform / host
+                                    </div>
                                     <div className={styles.title}>project</div>
                                 </div>
                                 {data.map((s, i) => (
                                     <div
                                         className={styles.ex_list_content}
                                         key={i}
-                                        onClick={() => {
-                                            show(i);
-                                            // scrollStop();
-                                        }}
                                     >
-                                        <img src={s.img} alt="" />
-                                        <img src={s.backImg} alt="" />
-                                        <div className={styles.rolling_wrap}>
-                                            <ScrollDiv />
-                                        </div>
-                                        <div className={styles.content}>
-                                            {s.title}
-                                        </div>
-                                        <div className={styles.content}>
-                                            {s.platform}
-                                        </div>
-                                        <div className={styles.content}>
-                                            {s.project}
+                                        <div
+                                            className={styles.gsap_before}
+                                            onClick={() => {
+                                                show(i);
+                                                scrollStop();
+                                            }}
+                                        >
+                                            <img src={s.img} alt="" />
+                                            <img src={s.backImg} alt="" />
+                                            <div
+                                                className={styles.rolling_wrap}
+                                            >
+                                                <ScrollDiv />
+                                            </div>
+                                            <div className={styles.content}>
+                                                {s.title}
+                                            </div>
+                                            <div className={styles.content}>
+                                                {s.platform}
+                                            </div>
+                                            <div className={styles.content}>
+                                                {s.project}
+                                            </div>
                                         </div>
                                         <div
-                                            className={styles.modal_bg}
-                                            id={`${styles.modal_bg}` + `${i}`}
+                                            className={styles.gsap_bg}
+                                            id={`${styles.gsap_bg}` + `${i}`}
                                         >
                                             <div className={styles.modal}>
+                                                <div>
+                                                    <img src={s.img} />
+                                                    {s.content}
+                                                    {s.url1 !== null &&
+                                                    s.url2 !== null ? (
+                                                        <>
+                                                            <div
+                                                                className={
+                                                                    styles.ex_url
+                                                                }
+                                                                onClick={() => {
+                                                                    window.open(
+                                                                        s.url1,
+                                                                    );
+                                                                }}
+                                                            >
+                                                                <div>
+                                                                    사용처
+                                                                    <FontAwesomeIcon
+                                                                        icon={
+                                                                            faArrowUpRightFromSquare
+                                                                        }
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                className={
+                                                                    styles.ex_url
+                                                                }
+                                                                onClick={() => {
+                                                                    window.open(
+                                                                        s.url2,
+                                                                    );
+                                                                }}
+                                                            >
+                                                                <div>
+                                                                    피그마
+                                                                    <FontAwesomeIcon
+                                                                        icon={
+                                                                            faArrowUpRightFromSquare
+                                                                        }
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        </>
+                                                    ) : null}
+                                                </div>
                                                 <div
                                                     className={styles.close}
                                                     onClick={() => {
                                                         hide();
-                                                        // scrollMove();
+                                                        scrollMove();
                                                     }}
                                                 >
                                                     close
