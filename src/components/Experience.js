@@ -111,9 +111,6 @@ const Experience = () => {
     const backImg1 = "https://source.unsplash.com/1rBg5YSi00c";
     const backImg2 = "https://source.unsplash.com/5TK1F5VfdIk";
     const backImg3 = "https://source.unsplash.com/SAQl58G-RYs";
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [modalIsOpen2, setModalIsOpen2] = useState(false);
-    const [modalIsOpen3, setModalIsOpen3] = useState(false);
     const scrollStop = () => {
         document.body.style.overflow = "hidden";
     };
@@ -195,8 +192,10 @@ const Experience = () => {
                     translateY: 0,
                     // scaleY: 1,
                     duration: 1,
-                    ease: "Expo.in",
+                    ease: "elastic.out(1,1)",
+                    stagger: 0.15,
                 },
+                "-=0.15",
             )
             .from(`.${styles.close}`, {
                 opacity: 0,
@@ -220,11 +219,16 @@ const Experience = () => {
             translateY: "-10%",
             ease: "Expo.in",
         })
-            .to(`.${styles.modal}`, {
-                translateY: "100%",
-                duration: 1,
-                ease: "Expo.in",
-            })
+            .to(
+                `.${styles.modal}`,
+                {
+                    translateY: "100%",
+                    duration: 1,
+                    ease: "elastic.inOut(1,1)",
+                    stagger: 0.15,
+                },
+                "-=0.15",
+            )
             .to(`.${styles.gsap_bg}`, {
                 // transformOrigin: "100% 0",
                 // scaleX: 0,
@@ -435,8 +439,23 @@ const Experience = () => {
                                             id={`${styles.gsap_bg}` + `${i}`}
                                         >
                                             <div className={styles.modal}>
-                                                <div>
-                                                    <img src={s.img} />
+                                                <img src={s.img} />
+                                            </div>
+                                            <div className={styles.modal}>
+                                                <div
+                                                    className={styles.close}
+                                                    onClick={() => {
+                                                        hide();
+                                                        scrollMove();
+                                                    }}
+                                                >
+                                                    close
+                                                </div>
+                                                <div
+                                                    className={
+                                                        styles.modal_content
+                                                    }
+                                                >
                                                     {s.content}
                                                     {s.url1 !== null &&
                                                     s.url2 !== null ? (
@@ -481,15 +500,6 @@ const Experience = () => {
                                                             </div>
                                                         </>
                                                     ) : null}
-                                                </div>
-                                                <div
-                                                    className={styles.close}
-                                                    onClick={() => {
-                                                        hide();
-                                                        scrollMove();
-                                                    }}
-                                                >
-                                                    close
                                                 </div>
                                             </div>
                                         </div>

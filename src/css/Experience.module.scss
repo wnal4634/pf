@@ -131,17 +131,51 @@
                         // transform: scaleX(0);
                         .modal {
                             background-color: #fff;
-                            width: 50vw;
+                            width: 30vw;
                             height: 85vh;
                             position: inherit;
                             top: 15vh;
-                            left: 50%;
-                            border-radius: 3% 3% 0 0;
+                            left: 13vw;
+                            // border-radius: 3% 3% 0 0;
                             padding: 3vw;
-                            // transform: scaleY(0);
-                            transform: translate(-50%, 0);
+                            &:nth-child(2) {
+                                left: 51vw;
+                            }
+                            &::before {
+                                position: absolute;
+                                top: -1.5vw;
+                                left: 0;
+                                display: block;
+                                content: "";
+                                background: radial-gradient(
+                                    circle,
+                                    transparent 1vw,
+                                    white 1.05vw
+                                );
+                                background-size: 4vw 3vw;
+                                background-position: -2vw -1.5vw;
+                                width: 100%;
+                                height: 3vw;
+                                z-index: -1;
+                            }
+                            img {
+                                width: 100%;
+                                height: fit-content;
+                            }
+                            .modal_content {
+                                flex-direction: column;
+                                white-space: pre-wrap;
+                                border: 1px solid black;
+                                padding: 1.5vw;
+                                .ex_url {
+                                }
+                            }
                             .close {
                                 color: #000;
+                                position: absolute;
+                                top: 10px;
+                                right: 20px;
+                                cursor: pointer;
                             }
                         }
                     }
