@@ -173,30 +173,35 @@
                 color: white;
                 flex: 1;
                 align-items: center;
-                .swiper {
-                    width: 35vw;
-                    margin-bottom: 30px;
-                    padding: 0 1vw;
-                    -webkit-touch-callout: none;
-                    -webkit-user-select: none;
-                    -khtml-user-select: none;
-                    -moz-user-select: none;
-                    -ms-user-select: none;
-                    user-select: text;
-                    .mySwiper {
-                        width: 50vw;
-                        img {
-                            filter: grayscale(0%);
-                            width: 45vw;
-                            height: auto;
-                            margin: 0 auto;
-                            object-fit: contain;
-                        }
-                        .detail_img {
-                            background-color: #9b9b9b;
-                            object-fit: contain;
-                        }
-                    }
+                // .swiper {
+                //     width: 35vw;
+                //     margin-bottom: 30px;
+                //     padding: 0 1vw;
+                //     -webkit-touch-callout: none;
+                //     -webkit-user-select: none;
+                //     -khtml-user-select: none;
+                //     -moz-user-select: none;
+                //     -ms-user-select: none;
+                //     user-select: text;
+                //     .mySwiper {
+                //         width: 50vw;
+                //         img {
+                //             filter: grayscale(0%);
+                //             width: 45vw;
+                //             height: auto;
+                //             margin: 0 auto;
+                //             object-fit: contain;
+                //         }
+                //         .detail_img {
+                //             background-color: #9b9b9b;
+                //             object-fit: contain;
+                //         }
+                //     }
+                // }
+                img {
+                    filter: grayscale(0%);
+                    padding: 0 10vw;
+                    height: auto;
                 }
                 .detail {
                     flex-direction: column;
@@ -240,7 +245,7 @@
                             svg {
                                 margin-left: 5px;
                                 align-self: center;
-                                position: relative;
+                                position: unset;
                                 opacity: 1;
                             }
                         }

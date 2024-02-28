@@ -15,6 +15,7 @@ import js_1_img14 from "img/js_1/14.png";
 import js_1_img15 from "img/js_1/15.png";
 import js_1_img16 from "img/js_1/16.png";
 import js_1_img17 from "img/js_1/17.png";
+import cookkit from "img/js_1/cookkit.png";
 import js_2_img1 from "img/js_2/1.png";
 import js_2_img2 from "img/js_2/2.png";
 import js_2_img3 from "img/js_2/3.png";
@@ -29,11 +30,13 @@ import js_2_img11 from "img/js_2/11.png";
 import js_2_img12 from "img/js_2/12.png";
 import js_2_img13 from "img/js_2/13.png";
 import js_2_img14 from "img/js_2/14.png";
+import cookkitAdmin from "img/js_2/cookkitAdmin.png";
 import js_3_img1 from "img/js_3/1.png";
 import js_3_img2 from "img/js_3/2.png";
 import js_3_img3 from "img/js_3/3.png";
 import js_3_img4 from "img/js_3/4.png";
 import js_3_img5 from "img/js_3/5.png";
+import repTimer from "img/js_3/repTimer.png";
 import js_4_img1 from "img/js_4/1.png";
 import js_4_img2 from "img/js_4/2.png";
 import js_4_img3 from "img/js_4/3.png";
@@ -72,6 +75,7 @@ const images = {
     js_1_img15,
     js_1_img16,
     js_1_img17,
+    cookkit,
     js_2_img1,
     js_2_img2,
     js_2_img3,
@@ -86,11 +90,13 @@ const images = {
     js_2_img12,
     js_2_img13,
     js_2_img14,
+    cookkitAdmin,
     js_3_img1,
     js_3_img2,
     js_3_img3,
     js_3_img4,
     js_3_img5,
+    repTimer,
     js_4_img1,
     js_4_img2,
     js_4_img3,

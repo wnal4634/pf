@@ -14,6 +14,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Mobile, PC } from "components/Responsive";
 import link from "components/Link";
+import BgAni from "./BgAni";
 
 const ModalStyle = {
     overlay: {
@@ -147,7 +148,17 @@ const Experience = () => {
             backImg: backImg3,
             img: img3,
             content:
-                "식품 브랜드 '앙꼬'와의 두 번째 작업으로, 판매 제품인 도라야끼의 상세 페이지와 제품 기한카드를 제작했습니다. 상세 페이지에는 제품의 종류 및 맛 설명, 다른 브랜드와의 차별화 등을 담았습니다. 기한카드는 상반기와 하반기 제품으로 나뉘어 있으며, 판매 제품들의 소비기한과 보관 방법을 작성했습니다. \n전문은 아래 링크인 사용처 혹은 피그마에서 확인하실 수 있습니다.",
+                "식품 브랜드 '앙꼬'와의 두 번째 작업으로, 판매 제품인 도라야끼의 상세 페이지와 제품 기한카드를 제작했습니다. 상세 페이지에는 제품의 종류 및 맛 설명, 다른 브랜드와의 차별화 등을 담았습니다. 기한카드는 상반기와 하반기 제품으로 나뉘어 있으며, 판매 제품들의 소비기한과 보관 방법을 작성했습니다. \n\n전체 이미지는 아래 링크인 사용처 혹은 피그마에서 확인하실 수 있습니다.",
+
+            //     content:
+            //     "식품 브랜드 '앙꼬'와의 두 번째 작업으로, 판매 제품인 도라야끼의 상세 페이지와 제품 기한카드를 제작했습니다. 상세 페이지에는 제품의 종류 및 맛 설명, 다른 브랜드와의 차별화 등을 담았습니다. 기한카드는 상반기와 하반기 제품으로 나뉘어 있으며, 판매 제품들의 소비기한과 보관 방법을 작성했습니다.",
+            // content2: [
+            //     "전문은 아래 링크인 ",
+            //     <b>사용처</b>,
+            //     " 혹은 ",
+            //     <b>피그마</b>,
+            //     "에서 확인하실 수 있습니다.",
+            // ],
             url1: link.outsource_use,
             url2: link.outsource_figma,
         },
@@ -195,7 +206,7 @@ const Experience = () => {
                     ease: "elastic.out(1,1)",
                     stagger: 0.15,
                 },
-                "-=0.15",
+                "-=0.5",
             )
             .from(`.${styles.close}`, {
                 opacity: 0,
@@ -224,10 +235,10 @@ const Experience = () => {
                 {
                     translateY: "100%",
                     duration: 1,
-                    ease: "elastic.inOut(1,1)",
+                    ease: "elastic.in(1,1)",
                     stagger: 0.15,
                 },
-                "-=0.15",
+                "-=0.5",
             )
             .to(`.${styles.gsap_bg}`, {
                 // transformOrigin: "100% 0",
@@ -440,8 +451,12 @@ const Experience = () => {
                                         >
                                             <div className={styles.modal}>
                                                 <img src={s.img} />
+                                                {/* <div className={styles.noise} />
+                                                <BgAni /> */}
                                             </div>
                                             <div className={styles.modal}>
+                                                <div className={styles.noise} />
+                                                <BgAni />
                                                 <div
                                                     className={styles.close}
                                                     onClick={() => {
@@ -457,45 +472,52 @@ const Experience = () => {
                                                     }
                                                 >
                                                     {s.content}
+                                                    {/* <div>{s.content2}</div> */}
                                                     {s.url1 !== null &&
                                                     s.url2 !== null ? (
                                                         <>
                                                             <div
                                                                 className={
-                                                                    styles.ex_url
+                                                                    styles.ex_url_wrap
                                                                 }
-                                                                onClick={() => {
-                                                                    window.open(
-                                                                        s.url1,
-                                                                    );
-                                                                }}
                                                             >
-                                                                <div>
-                                                                    사용처
-                                                                    <FontAwesomeIcon
-                                                                        icon={
-                                                                            faArrowUpRightFromSquare
-                                                                        }
-                                                                    />
+                                                                <div
+                                                                    className={
+                                                                        styles.ex_url
+                                                                    }
+                                                                    onClick={() => {
+                                                                        window.open(
+                                                                            s.url1,
+                                                                        );
+                                                                    }}
+                                                                >
+                                                                    <div>
+                                                                        사용처
+                                                                        <FontAwesomeIcon
+                                                                            icon={
+                                                                                faArrowUpRightFromSquare
+                                                                            }
+                                                                        />
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div
-                                                                className={
-                                                                    styles.ex_url
-                                                                }
-                                                                onClick={() => {
-                                                                    window.open(
-                                                                        s.url2,
-                                                                    );
-                                                                }}
-                                                            >
-                                                                <div>
-                                                                    피그마
-                                                                    <FontAwesomeIcon
-                                                                        icon={
-                                                                            faArrowUpRightFromSquare
-                                                                        }
-                                                                    />
+                                                                <div
+                                                                    className={
+                                                                        styles.ex_url
+                                                                    }
+                                                                    onClick={() => {
+                                                                        window.open(
+                                                                            s.url2,
+                                                                        );
+                                                                    }}
+                                                                >
+                                                                    <div>
+                                                                        피그마
+                                                                        <FontAwesomeIcon
+                                                                            icon={
+                                                                                faArrowUpRightFromSquare
+                                                                            }
+                                                                        />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </>
