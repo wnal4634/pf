@@ -18,6 +18,8 @@ const link = {
     mail: "mailto:wnal7707@gmail.com",
     blog: "https://wnal4634.tistory.com/",
     github: "https://github.com/wnal4634",
+    menu_pdf:
+        "https://drive.google.com/file/d/1DKcpQu9gWtmGrAM_q6qHr-GhJmop1xnw/view?usp=sharing",
 };
 
 export default link;

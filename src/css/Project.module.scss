@@ -129,7 +129,7 @@
             .rect {
                 // right: 19vw;
                 right: 18vw;
-                padding-left: 15vw;
+                margin-right: 15vw;
                 svg {
                     // transform: translateY(145px) rotate(-30deg);
                     transform: translateY(50px) rotate(-30deg);
@@ -236,7 +236,7 @@
                             color: #1d1a3f;
                             padding: 3px 7px;
                             border-radius: 5px;
-                            background-color: #f2f2ff;
+                            background-color: #f2f2ffb9;
                             cursor: pointer;
                             transition: 0.3s;
                             &:first-child {
@@ -247,6 +247,11 @@
                                 align-self: center;
                                 position: unset;
                                 opacity: 1;
+                            }
+                            &:hover {
+                                letter-spacing: 3px;
+                                transition: 0.3s;
+                                background-color: #f2f2ff;
                             }
                         }
                     }
@@ -352,7 +357,7 @@
                         white-space: normal;
                     }
                     svg {
-                        animation: none;
+                        transform: rotate(-7deg) translateY(-100px);
                     }
                 }
             }
@@ -367,19 +372,9 @@
                         span {
                             white-space: normal;
                         }
-                    }
-                }
-            }
-            &:hover {
-                svg:not(.detail_url svg) {
-                    animation-delay: 0.5s;
-                    &:nth-child(2) {
-                        animation-delay: 0;
-                    }
-                }
-                .rect {
-                    svg {
-                        animation-delay: 0.8;
+                        svg {
+                            transform: rotate(7deg) translateY(-100px);
+                        }
                     }
                 }
             }

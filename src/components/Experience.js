@@ -132,6 +132,7 @@ const Experience = () => {
                 "한국정보통신보안윤리학회 주관 공모전 제6회 산업혁명 인재양성 공유·협업페스티발에 졸업작품 '레시피 공유 및 밀키트 판매 앱'을 출품해 캡스톤경진실적물/기타 부문에서 우수상을 수상했습니다.",
             url1: null,
             url2: null,
+            url3: null,
         },
         {
             kind: "cooperation",
@@ -146,6 +147,7 @@ const Experience = () => {
                 "식품 브랜드 '앙꼬'와 작업한 메뉴판입니다. 각 메뉴의 일러스트는 실제 이미지와 근접하도록 직접 그렸으며, 각 제품에 간단한 설명을 더해 쉬운 파악이 가능하도록 제작했습니다.",
             url1: null,
             url2: null,
+            url3: link.menu_pdf,
         },
         {
             kind: "cooperation",
@@ -170,6 +172,7 @@ const Experience = () => {
             // ],
             url1: link.outsource_use,
             url2: link.outsource_figma,
+            url3: null,
         },
     ];
 
@@ -524,46 +527,91 @@ const Experience = () => {
                                                     s.url2 !== null ? (
                                                         <>
                                                             <div
-                                                                className={
-                                                                    styles.ex_url_wrap
-                                                                }
+                                                                className={`${styles.cnt} ${styles.check}`}
                                                             >
+                                                                <span>
+                                                                    Link to
+                                                                    check
+                                                                </span>
                                                                 <div
                                                                     className={
-                                                                        styles.ex_url
+                                                                        styles.ex_url_wrap
                                                                     }
-                                                                    onClick={() => {
-                                                                        window.open(
-                                                                            s.url1,
-                                                                        );
-                                                                    }}
                                                                 >
-                                                                    <div>
-                                                                        사용처
-                                                                        <FontAwesomeIcon
-                                                                            icon={
-                                                                                faArrowUpRightFromSquare
-                                                                            }
-                                                                        />
+                                                                    <div
+                                                                        className={
+                                                                            styles.ex_url
+                                                                        }
+                                                                        onClick={() => {
+                                                                            window.open(
+                                                                                s.url1,
+                                                                            );
+                                                                        }}
+                                                                    >
+                                                                        <div>
+                                                                            사용처
+                                                                            <FontAwesomeIcon
+                                                                                icon={
+                                                                                    faArrowUpRightFromSquare
+                                                                                }
+                                                                            />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        className={
+                                                                            styles.ex_url
+                                                                        }
+                                                                        onClick={() => {
+                                                                            window.open(
+                                                                                s.url2,
+                                                                            );
+                                                                        }}
+                                                                    >
+                                                                        <div>
+                                                                            피그마
+                                                                            <FontAwesomeIcon
+                                                                                icon={
+                                                                                    faArrowUpRightFromSquare
+                                                                                }
+                                                                            />
+                                                                        </div>
                                                                     </div>
                                                                 </div>
+                                                            </div>
+                                                        </>
+                                                    ) : null}
+                                                    {s.url3 !== null ? (
+                                                        <>
+                                                            <div
+                                                                className={`${styles.cnt} ${styles.check}`}
+                                                            >
+                                                                <span>
+                                                                    Link to
+                                                                    check
+                                                                </span>
                                                                 <div
                                                                     className={
-                                                                        styles.ex_url
+                                                                        styles.ex_url_wrap
                                                                     }
-                                                                    onClick={() => {
-                                                                        window.open(
-                                                                            s.url2,
-                                                                        );
-                                                                    }}
                                                                 >
-                                                                    <div>
-                                                                        피그마
-                                                                        <FontAwesomeIcon
-                                                                            icon={
-                                                                                faArrowUpRightFromSquare
-                                                                            }
-                                                                        />
+                                                                    <div
+                                                                        className={
+                                                                            styles.ex_url
+                                                                        }
+                                                                        onClick={() => {
+                                                                            window.open(
+                                                                                s.url3,
+                                                                            );
+                                                                        }}
+                                                                    >
+                                                                        <div>
+                                                                            드라이브
+                                                                            <FontAwesomeIcon
+                                                                                icon={
+                                                                                    faArrowUpRightFromSquare
+                                                                                }
+                                                                            />
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>

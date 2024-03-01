@@ -86,7 +86,7 @@
                             &:first-child {
                                 width: 18vw;
                                 pointer-events: none;
-                                animation: down 0.1s ease-out forwards;
+                                animation: down 0.2s ease-out forwards;
                             }
                             &:nth-child(2) {
                                 width: 100%;
@@ -193,6 +193,7 @@
                                     padding: 1.5vw;
                                     span {
                                         margin-right: 10px;
+                                        text-align: left;
                                         font: {
                                             weight: 600;
                                         }
@@ -201,24 +202,36 @@
                                         width: 70%;
                                     }
                                 }
+                                .title {
+                                }
                                 .content {
                                     line-height: 1.4;
                                 }
+                                .check {
+                                    span {
+                                        align-self: center;
+                                    }
+                                    div {
+                                        all: unset;
+                                        width: 70%;
+                                    }
+                                }
                                 .ex_url_wrap {
-                                    padding: 1.5vw;
+                                    // padding: 1.5vw;
                                     .ex_url {
                                         div {
                                             padding: 3px 7px;
                                             // background-color: #f2f2ff;
-                                            border: 1px solid #1500ff4e;
+                                            // border: 1px solid #1500ff4e;
                                             border-radius: 5px;
                                             align-items: center;
                                             margin-right: 5px;
                                             cursor: pointer;
-                                            transition: 0.2s;
+                                            transition: 0.3s;
                                             &:hover {
                                                 background-color: #1500ff1c;
-                                                transition: 0.2s;
+                                                letter-spacing: 3px;
+                                                transition: 0.3s;
                                             }
                                         }
                                         svg {
@@ -264,11 +277,17 @@
                                 width: 30vw;
                                 justify-content: space-between;
                                 align-items: baseline;
-                                & div:first-child {
-                                    font-family: "JalnanGothic";
+                                & div {
+                                    &:first-child {
+                                        font-family: "JalnanGothic";
+                                    }
+                                    &:last-child:not(.close) {
+                                        font-family: "Pretendard-ExtraLight";
+                                    }
                                 }
                                 .close {
                                     cursor: pointer;
+                                    font-weight: 600;
                                 }
                             }
                         }
