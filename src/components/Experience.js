@@ -2,9 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "css/Experience.module.scss";
 import Modal from "react-modal";
 import { gsap } from "gsap";
-import img1 from "img/ex/공모전_상장.png";
-import img2 from "img/ex/ankkoMenu.png";
-import img3 from "img/ex/ankkoDetailPage.png";
 import { ArrowSVG } from "components/SVG";
 import Fade from "react-reveal/Fade";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,6 +12,7 @@ import {
 import { Mobile, PC } from "components/Responsive";
 import link from "components/Link";
 import BgAni from "./BgAni";
+import { ExperienceData } from "components/ArrayData";
 
 const ModalStyle = {
     overlay: {
@@ -109,72 +107,13 @@ const ScrollDiv = () => {
 };
 
 const Experience = () => {
-    const backImg1 = "https://source.unsplash.com/1rBg5YSi00c";
-    const backImg2 = "https://source.unsplash.com/5TK1F5VfdIk";
-    const backImg3 = "https://source.unsplash.com/SAQl58G-RYs";
+    let [data, setData] = useState(ExperienceData);
     const scrollStop = () => {
         document.body.style.overflow = "hidden";
     };
     const scrollMove = () => {
         document.body.style.overflow = "unset";
     };
-    const data = [
-        {
-            kind: "제6회 4차 산업혁명 인재양성 공유·협업페스티발",
-            title: "레시피 공유 및 밀키트 판매 어플리케이션",
-            platform: "한국정보통신보안윤리학회",
-            project: "한국정보통신보안윤리학회",
-            backImg: backImg1,
-            img: img1,
-            date: 2022,
-            contrib: "김주미, 권희선, 이다혜, 이지은(4명)",
-            content:
-                "한국정보통신보안윤리학회 주관 공모전 제6회 산업혁명 인재양성 공유·협업페스티발에 졸업작품 '레시피 공유 및 밀키트 판매 앱'을 출품해 캡스톤경진실적물/기타 부문에서 우수상을 수상했습니다.",
-            url1: null,
-            url2: null,
-            url3: null,
-        },
-        {
-            kind: "cooperation",
-            title: "앙꼬 상품 메뉴판(일러스트)",
-            platform: "ankko",
-            project: "ankko",
-            backImg: backImg2,
-            img: img2,
-            date: 2023,
-            contrib: "김주미(1명)",
-            content:
-                "식품 브랜드 '앙꼬'와 작업한 메뉴판입니다. 각 메뉴의 일러스트는 실제 이미지와 근접하도록 직접 그렸으며, 각 제품에 간단한 설명을 더해 쉬운 파악이 가능하도록 제작했습니다.",
-            url1: null,
-            url2: null,
-            url3: link.menu_pdf,
-        },
-        {
-            kind: "cooperation",
-            title: "앙꼬 상품 온라인몰 상세페이지",
-            platform: "ankko",
-            project: "ankko",
-            backImg: backImg3,
-            img: img3,
-            date: 2023,
-            contrib: "김주미(1명)",
-            content:
-                "식품 브랜드 '앙꼬'와의 두 번째 작업으로, 판매 제품인 도라야끼의 상세 페이지와 제품 기한카드를 제작했습니다. 상세 페이지에는 제품의 종류 및 맛 설명, 다른 브랜드와의 차별화 등을 담았습니다. 기한카드는 상반기와 하반기 제품으로 나뉘어 있으며, 판매 제품들의 소비기한과 보관 방법을 작성했습니다. \n\n전체 이미지는 아래 링크인 사용처 혹은 피그마에서 확인하실 수 있습니다.",
-
-            //     content:
-            //     "식품 브랜드 '앙꼬'와의 두 번째 작업으로, 판매 제품인 도라야끼의 상세 페이지와 제품 기한카드를 제작했습니다. 상세 페이지에는 제품의 종류 및 맛 설명, 다른 브랜드와의 차별화 등을 담았습니다. 기한카드는 상반기와 하반기 제품으로 나뉘어 있으며, 판매 제품들의 소비기한과 보관 방법을 작성했습니다.",
-            // content2: [
-            //     "전문은 아래 링크인 ",
-            //     <b>사용처</b>,
-            //     " 혹은 ",
-            //     <b>피그마</b>,
-            //     "에서 확인하실 수 있습니다.",
-            // ],
-            url1: link.outsource_use,
-            url2: link.outsource_figma,
-            url3: null,
-        },
-    ];
 
     const show = (i) => {
         let tl = gsap.timeline();
@@ -520,9 +459,22 @@ const Experience = () => {
                                                         <span>
                                                             Introduction
                                                         </span>
-                                                        <div>{s.content}</div>
+                                                        <div>
+                                                            <span>
+                                                                {s.content}
+                                                            </span>
+                                                            {s.content2 !==
+                                                            null ? (
+                                                                <span
+                                                                    className={
+                                                                        styles.mg_top
+                                                                    }
+                                                                >
+                                                                    {s.content2}
+                                                                </span>
+                                                            ) : null}
+                                                        </div>
                                                     </div>
-                                                    {/* <div>{s.content2}</div> */}
                                                     {s.url1 !== null &&
                                                     s.url2 !== null ? (
                                                         <>

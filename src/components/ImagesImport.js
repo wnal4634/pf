@@ -36,14 +36,16 @@ import js_3_img2 from "img/js_3/2.png";
 import js_3_img3 from "img/js_3/3.png";
 import js_3_img4 from "img/js_3/4.png";
 import js_3_img5 from "img/js_3/5.png";
-import repTimer from "img/js_3/repTimer.png";
+import timer from "img/js_3/timer.png";
 import js_4_img1 from "img/js_4/1.png";
 import js_4_img2 from "img/js_4/2.png";
 import js_4_img3 from "img/js_4/3.png";
+import toDo from "img/js_4/toDo.png";
 import js_5_img1 from "img/js_5/1.png";
 import js_6_img1 from "img/js_6/1.png";
 import js_6_img2 from "img/js_6/2.png";
 import js_6_img3 from "img/js_6/3.png";
+import weather from "img/js_6/weather.png";
 import bootstrap from "img/skills/bootstrap.png";
 import css from "img/skills/css.png";
 import dart from "img/skills/dart.png";
@@ -96,14 +98,16 @@ const images = {
     js_3_img3,
     js_3_img4,
     js_3_img5,
-    repTimer,
+    timer,
     js_4_img1,
     js_4_img2,
     js_4_img3,
+    toDo,
     js_5_img1,
     js_6_img1,
     js_6_img2,
     js_6_img3,
+    weather,
     bootstrap,
     css,
     dart,

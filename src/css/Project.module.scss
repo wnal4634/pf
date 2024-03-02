@@ -207,12 +207,8 @@
                     flex-direction: column;
                     padding: 0 10vw;
                     align-items: center;
-                    @for $i from 1 through 3 {
-                        & div:nth-child(#{$i}) {
-                            margin-bottom: 10px * $i;
-                        }
-                    }
                     .detail_title {
+                        margin: 25px 0 5px;
                         font: {
                             size: 2rem;
                             family: "neurimboGothicRegular";
@@ -220,11 +216,13 @@
                     }
                     .detail_sum {
                         // color: rgba(250, 250, 250, 0.7);
+                        margin-bottom: 25px;
                     }
                     .detail_info {
                         // color: rgb(227, 227, 227);
                         color: rgba(250, 250, 250, 0.5);
                         text-align: justify;
+                        margin-bottom: 30px;
                         font: {
                             family: "Pretendard-ExtraLight";
                             size: 1rem;

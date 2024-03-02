@@ -200,6 +200,13 @@
                                     }
                                     div {
                                         width: 70%;
+                                        flex-direction: column;
+                                        span {
+                                            all: unset;
+                                        }
+                                        .mg_top {
+                                            margin-top: 1rem;
+                                        }
                                     }
                                 }
                                 .title {
