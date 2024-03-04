@@ -91,14 +91,16 @@
     }
 }
 
-/* .reserve_wrap svg {
-    position: fixed;
-    right: 30px;
-    bottom: 35px;
-    color: rgba(0, 0, 0, 0.3);
-    transition: 0.1s;
+@media screen and (max-width: 479px) {
+    /* 모바일 */
+    .reserve {
+        margin: unset;
+        padding: 7vw;
+        .reserve_wrap {
+            padding: unset;
+            .contact_url {
+                margin-bottom: 30px;
+            }
+        }
+    }
 }
-.reserve_wrap svg:hover {
-    color: rgba(0, 0, 0, 0.5);
-    transition: 0.1s;
-} */

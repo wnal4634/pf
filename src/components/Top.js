@@ -3,26 +3,11 @@ import styled from "styled-components";
 import { Link } from "react-scroll";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import styles from "css/Top.module.css";
+import styles from "css/Top.module.scss";
 import { Mobile, PC } from "components/Responsive";
 import j_icon from "img/j_icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-
-const SideDiv = styled.div`
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid #d6d6d6;
-    z-index: 100;
-    font-family: "Pretendard-Regular";
-`;
 
 const Side = () => {
     const [isToggled, setIsToggled] = useState(false);
@@ -43,12 +28,6 @@ const Side = () => {
             delay: 0.5,
             ease: "expo.out",
         });
-        // gsap.from(appearLink_1.current, {
-        //     x: -20,
-        //     opacity: 0,
-        //     duration: 1,
-        //     delay: 1,
-        // });
     }, []);
 
     const reload = () => {
@@ -60,14 +39,6 @@ const Side = () => {
             <PC>
                 <div className={styles.header}>
                     <div className={styles.header_wrap}>
-                        {/* <div className={styles.initial} ref={appearInitial}>
-                            <img
-                                src={j_icon}
-                                width={25}
-                                alt="이니셜 아이콘"
-                                onClick={goTop}
-                            />
-                        </div> */}
                         <div className={styles.initial} onClick={reload}>
                             JM
                         </div>
@@ -109,7 +80,7 @@ const Side = () => {
                 </div>
             </PC>
             <Mobile>
-                <SideDiv className={styles.header}>
+                <div className={styles.header}>
                     {isToggled ? (
                         <div className={styles.nav_mobile}>
                             <FontAwesomeIcon
@@ -164,12 +135,9 @@ const Side = () => {
                         </div>
                     ) : (
                         <div className={styles.initial_mobile}>
-                            <img
-                                src={j_icon}
-                                width={25}
-                                alt="이니셜 아이콘"
-                                onClick={goTop}
-                            />
+                            <div className={styles.initial} onClick={reload}>
+                                JM
+                            </div>
                             <FontAwesomeIcon
                                 icon={faBars}
                                 onClick={() => {
@@ -179,7 +147,7 @@ const Side = () => {
                             />
                         </div>
                     )}
-                </SideDiv>
+                </div>
             </Mobile>
         </>
     );

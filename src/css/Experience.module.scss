@@ -29,6 +29,9 @@
                 }
                 .header {
                     flex: 1;
+                    // &:first-child {
+                    //     flex: 0.7;
+                    // } 얘는 되는데 아래 content에는 안먹힘 방법찾기
                     margin: 1.5vw 0;
                     text-transform: uppercase;
                     font: {
@@ -42,9 +45,13 @@
                     .gsap_before {
                         width: 100%;
                         .content {
+                            padding-right: 2vw;
                             opacity: 1;
                             flex: 1;
                             margin: 1.5vw 0;
+                            // &:first-child {
+                            //     flex: 0.7;
+                            // } 안먹힘
                             font: {
                                 size: 1rem;
                             }
@@ -305,114 +312,299 @@
     }
 }
 
-/* .modal_wrap {
-    flex-direction: row;
-    border: 1px solid rgb(219, 219, 219);
-    border-radius: 30px;
-    width: 340px;
-    height: 250px;
-    overflow: hidden;
-    transition: 0.3s;
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
-}
-.modal_wrap img:hover {
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
-}
-.modal_wrap:hover {
-    transition: 0.3s;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.11), 0 2px 7px rgba(0, 0, 0, 0.12);
-    border: 1px solid rgb(205, 205, 205);
-}
-.img {
-    width: 100%;
-    object-fit: contain;
-    -webkit-user-drag: none;
-    transition: 0.3s;
-}
-.modal svg {
-    position: absolute;
-    right: 20px;
-    color: rgba(0, 0, 0, 0.3);
-    transition: 0.1s;
-}
-.modal svg:hover {
-    color: rgba(0, 0, 0, 0.7);
-    transition: 0.1s;
-} */
-
 @media screen and (min-width: 1024px) {
     /* 데탑 */
-    /* .experience_wrap {
-        flex-direction: column;
-        margin: 30px auto 70px;
-        padding-top: 70px;
-        width: 700px;
-    }
-    .modal_img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        -webkit-user-drag: none;
-    }
-    .modal {
-        display: flex;
-    } */
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     /* 타블렛 */
-    .experience_wrap {
-        flex-direction: column;
-        margin: 30px auto 70px;
-        padding-top: 70px;
-        width: 630px;
-    }
-    .modal_img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        -webkit-user-drag: none;
-    }
-    .modal {
-        display: flex;
-    }
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
     /* 타블렛과 모바일 사이 */
-    .experience_wrap {
-        flex-direction: column;
-        margin: 0 auto 70px;
-        padding-top: 70px;
-        width: 500px;
-    }
-    .modal_img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        -webkit-user-drag: none;
-    }
 }
 
 @media screen and (max-width: 479px) {
     /* 모바일 */
-    .experience_wrap {
-        flex-direction: column;
-        margin: 0 auto 70px;
-        padding-top: 70px;
-        width: 350px;
-    }
-    .modal_wrap {
-        margin: 0 auto;
-    }
-    .modal_img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        -webkit-user-drag: none;
+    .ex_wrap {
+        margin: 50px 0 0;
+        padding: 100px 7vw 0;
+        .ex {
+            padding: unset;
+            width: 100%;
+            .text {
+                font-size: 3rem;
+                justify-content: right;
+                margin-bottom: 21vw;
+            }
+            .ex_content_wrap {
+                flex-direction: column;
+                .ex_list_content {
+                    .gsap_before {
+                        flex-direction: column;
+                        margin-bottom: 100px;
+                        font: {
+                            family: "StretchPro";
+                        }
+                        img {
+                            width: 90%;
+                            margin: 0 auto;
+                            // filter: grayscale(100%);
+                            // z-index: -1;
+                        }
+                        svg {
+                            position: absolute;
+                            transform: translate(-7vw, 170px) scale(1.5)
+                                rotate(-15deg);
+                            z-index: -1;
+                        }
+                        span {
+                            position: absolute;
+                            left: -5%;
+                            transform: translateY(-3.5rem);
+                            font: {
+                                size: 5rem;
+                                weight: 600;
+                            }
+                        }
+                        .content {
+                            width: 100%;
+                            transform: translateY(-1.5rem);
+                            justify-content: right;
+                            text-align: right;
+                            z-index: 1;
+                            line-height: 0.8;
+                            font: {
+                                size: 2rem;
+                                family: "neurimboGothicRegular";
+                            }
+                        }
+                        .gradient_bg_top {
+                            width: 100%;
+                            height: 50px;
+                            background: linear-gradient(
+                                to bottom,
+                                #f2f2ff,
+                                rgba(0, 0, 0, 0)
+                            );
+                            position: absolute;
+                        }
+                        .gradient_bg_bottom {
+                            width: 100%;
+                            height: 50px;
+                            position: absolute;
+                            transform: translateY(410px);
+                            background: linear-gradient(
+                                to top,
+                                #f2f2ff,
+                                rgba(0, 0, 0, 0)
+                            );
+                        }
+                    }
+                    &:nth-child(even) {
+                        svg {
+                            transform: translate(-7vw, 170px) scale(1.5)
+                                rotate(15deg);
+                        }
+                        .gradient_bg_bottom {
+                            transform: translateY(405px);
+                        }
+                    }
+                    &:last-child {
+                        svg {
+                            transform: translate(-7vw, 200px) scale(1.5)
+                                rotate(-15deg);
+                        }
+                        .gradient_bg_bottom {
+                            transform: translateY(435px);
+                        }
+                    }
+                    .gsap_bg {
+                        cursor: default;
+                        z-index: 10000;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100vw;
+                        height: 100vh;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        opacity: 0;
+                        pointer-events: none;
+                        .modal {
+                            background-color: #fff;
+                            width: 88vw;
+                            height: 84vh;
+                            position: inherit;
+                            top: 10vh;
+                            padding: 7vw 6vw;
+                            flex-direction: column;
+                            overflow-x: clip;
+                            filter: drop-shadow(0px 5px 7px rgba(0, 0, 0, 0.3));
+                            &:nth-child(2) {
+                                left: 51vw;
+                            }
+                            &::before {
+                                position: absolute;
+                                top: -2.5vh;
+                                left: 0;
+                                display: block;
+                                content: "";
+                                background: radial-gradient(
+                                    circle,
+                                    transparent 1.1vh,
+                                    white 1.15vh
+                                );
+                                background-size: 5vh 4vh;
+                                background-position: -2vh -2vh;
+                                width: 100%;
+                                height: 5vh;
+                                z-index: -3;
+                            }
+                            &::after {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                display: block;
+                                content: "";
+                                background: linear-gradient(
+                                    180deg,
+                                    rgb(255, 255, 255) 0%,
+                                    transparent 100%
+                                );
+                                width: 100%;
+                                height: 5vh;
+                                z-index: -3;
+                            }
+                            img {
+                                width: 70vw;
+                                padding: 2vw 10vw 5vw;
+                                height: fit-content;
+                            }
+                            .modal_content {
+                                flex-direction: column;
+                                white-space: pre-wrap;
+                                border: 1px solid #1500ff4e;
+                                text-align: justify;
+                                overflow: scroll;
+                                .cnt {
+                                    flex-direction: column;
+                                    padding: 2vw 3vw;
+                                    &:not(.cnt:last-child) {
+                                        border-bottom: 2px dotted #1500ff4e;
+                                    }
+                                    span {
+                                        margin-bottom: 7px;
+                                        text-align: left;
+                                        font: {
+                                            weight: 600;
+                                        }
+                                    }
+                                    div {
+                                        flex-direction: column;
+                                        span {
+                                            all: unset;
+                                        }
+                                        .mg_top {
+                                            margin-top: 1rem;
+                                        }
+                                    }
+                                }
+                                .content {
+                                    line-height: 1.4;
+                                }
+                                .check {
+                                    div {
+                                        all: unset;
+                                    }
+                                }
+                                .ex_url_wrap {
+                                    // padding: 1.5vw;
+                                    .ex_url {
+                                        div {
+                                            display: flex;
+                                            padding: 3px 7px;
+                                            border-radius: 5px;
+                                            align-items: center;
+                                            margin-right: 5px;
+                                            cursor: pointer;
+                                            transition: 0.3s;
+                                            &:hover {
+                                                background-color: #1500ff1c;
+                                                letter-spacing: 3px;
+                                                transition: 0.3s;
+                                            }
+                                        }
+                                        svg {
+                                            all: unset;
+                                            margin-left: 5px;
+                                            position: unset;
+                                            z-index: 0;
+                                            height: 1rem;
+                                            opacity: unset;
+                                            color: #1a1d3f;
+                                        }
+                                    }
+                                }
+                            }
+                            .noise {
+                                position: fixed;
+                                left: 0;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                z-index: -2;
+                                background-image: url("https://i.ibb.co/x3TCktM/645cbb8ec449398255b76326-noise.gif");
+                                background-position: 0 0;
+                                background-size: auto;
+                                pointer-events: none;
+                                opacity: 0.05;
+                                transition: opacity 0.2s
+                                    cubic-bezier(0.445, 0.05, 0.55, 0.95);
+                                visibility: visible;
+                                mix-blend-mode: overlay;
+                            }
+                            svg {
+                                position: absolute;
+                                z-index: -3;
+                                bottom: 0;
+                                left: -6vw;
+                                height: 100%;
+                                opacity: 0.7;
+                                transform: rotate(0);
+                            }
+                            .top {
+                                position: absolute;
+                                top: 1vw;
+                                width: 88vw;
+                                justify-content: space-between;
+                                align-items: baseline;
+                                & div {
+                                    &:first-child {
+                                        font-family: "JalnanGothic";
+                                    }
+                                    &:last-child:not(.close) {
+                                        font-family: "Pretendard-ExtraLight";
+                                    }
+                                }
+                                .close {
+                                    cursor: pointer;
+                                    font-weight: 600;
+                                }
+                            }
+                            .scroll {
+                                position: absolute;
+                                right: 5vw;
+                                bottom: 4vw;
+                                color: #fff;
+                                background-color: rgba(0, 0, 0, 0.3);
+                                padding: 5px;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -468,15 +660,5 @@
     100% {
         opacity: 0;
         transform: translate(-25vw, 0) rotate(-5deg);
-    }
-}
-@keyframes arrow {
-    0% {
-        opacity: 1;
-        stroke-dashoffset: 917.111px;
-    }
-    100% {
-        opacity: 1;
-        stroke-dashoffset: 0px;
     }
 }

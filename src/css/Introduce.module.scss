@@ -7,9 +7,9 @@
         width: 100%;
         flex-direction: column;
         z-index: 1;
-        padding: 120px 3vw 0;
+        padding: 15vh 3vw 0;
         font: {
-            size: 8rem;
+            size: 9vw;
             family: "neurimboGothicRegular";
             weight: bolder;
         }
@@ -54,105 +54,38 @@
     }
 }
 
-/* .introduce_wrap h1 {
-    margin: 50px 0 40px 0;
-}
-.intro {
-    flex-direction: row;
-}
-.intro img {
-    border-radius: 100px;
-    -webkit-user-drag: none;
-    width: 130px;
-    height: 173.33px;
-}
-.intro_url_wrap {
-    flex-direction: column;
-    font-weight: 300;
-    margin-left: 30px;
-    border: 1px solid rgb(232, 232, 232);
-    border-radius: 10px;
-    padding: 20px 25px;
-}
-.intro_url_wrap div:first-child {
-    text-align: justify;
-}
-.intro_url_wrap hr {
-    border: 0;
-    height: 1px;
-    background-color: rgb(232, 232, 232);
-    width: 100%;
-    margin: 30px 0 25px 0;
-}
-.url_wrap {
-    flex-direction: column;
-    height: 100%;
-}
-.url:not(.url:last-child) a {
-    margin-bottom: 10px;
-}
-.url a {
-    padding: 0 5px;
-    font-weight: 100;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0) 50%,
-        rgb(255, 221, 0) 50%
-    );
-    background-size: 200%;
-    transition: ease-in 0.3s;
-    margin-left: 5px;
-}
-.url a:hover {
-    color: black;
-    background-position: -100% 0;
-    transition: ease 0.3s;
-} */
-
 @media screen and (min-width: 1024px) {
     /* 데탑 */
-    /* .introduce_wrap {
-        flex-direction: column;
-        margin: 50px auto 0;
-        padding-top: 20px;
-        width: 1100px;
-        height: 837px;
-        background-color: rgb(209, 192, 255);
-    } */
+}
+@media screen and (min-width: 768px) and (max-width: 1340px) {
+    /* 타블렛 전*/
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     /* 타블렛 */
-    .introduce_wrap {
-        flex-direction: column;
-        margin: 50px auto 0;
-        padding-top: 20px;
-        width: 630px;
-    }
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
     /* 타블렛과 모바일 사이 */
-    .introduce_wrap {
-        flex-direction: column;
-        margin: 20px auto 0;
-        padding-top: 20px;
-        width: 500px;
-    }
 }
 
 @media screen and (max-width: 479px) {
     /* 모바일 */
     .introduce_wrap {
-        flex-direction: column;
-        margin: 20px auto 0;
-        padding-top: 20px;
-        width: 350px;
-    }
-    .intro {
-        flex-direction: column;
-    }
-    .intro_url_wrap {
-        margin: 20px 0 0 0;
+        padding: 0 7vw;
+        height: unset;
+        .main_text {
+            padding: 250px 0 130px;
+            font: {
+                size: 4rem;
+            }
+            .text {
+                span {
+                    font: {
+                        size: 2.3rem;
+                    }
+                }
+            }
+        }
     }
 }

@@ -21,11 +21,11 @@ const BgAni = () => {
                         ></animate>
                         <stop
                             offset="0%"
-                            stop-color="rgba(255, 0, 255, 1)"
+                            stopColor="rgba(255, 0, 255, 1)"
                         ></stop>
                         <stop
                             offset="100%"
-                            stop-color="rgba(255, 0, 255, 0)"
+                            stopColor="rgba(255, 0, 255, 0)"
                         ></stop>
                     </radialGradient>
                     <radialGradient //노랑
@@ -44,11 +44,11 @@ const BgAni = () => {
                         ></animate>
                         <stop
                             offset="0%"
-                            stop-color="rgba(255, 255, 0, 1)"
+                            stopColor="rgba(255, 255, 0, 1)"
                         ></stop>
                         <stop
                             offset="100%"
-                            stop-color="rgba(255, 255, 0, 0)"
+                            stopColor="rgba(255, 255, 0, 0)"
                         ></stop>
                     </radialGradient>
                     <radialGradient //파랑
@@ -67,11 +67,11 @@ const BgAni = () => {
                         ></animate>
                         <stop
                             offset="0%"
-                            stop-color="rgba(0, 255, 255, 1)"
+                            stopColor="rgba(0, 255, 255, 1)"
                         ></stop>
                         <stop
                             offset="100%"
-                            stop-color="rgba(0, 255, 255, 0)"
+                            stopColor="rgba(0, 255, 255, 0)"
                         ></stop>
                     </radialGradient>
                     <radialGradient
@@ -88,13 +88,10 @@ const BgAni = () => {
                             values="0%;5%;0%"
                             repeatCount="indefinite"
                         ></animate>
-                        <stop
-                            offset="0%"
-                            stop-color="rgba(0, 255, 0, 1)"
-                        ></stop>
+                        <stop offset="0%" stopColor="rgba(0, 255, 0, 1)"></stop>
                         <stop
                             offset="100%"
-                            stop-color="rgba(0, 255, 0, 0)"
+                            stopColor="rgba(0, 255, 0, 0)"
                         ></stop>
                     </radialGradient>
                     <radialGradient
@@ -111,11 +108,8 @@ const BgAni = () => {
                             values="0%;5%;0%"
                             repeatCount="indefinite"
                         ></animate>
-                        <stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop>
-                        <stop
-                            offset="100%"
-                            stop-color="rgba(0,0,255, 0)"
-                        ></stop>
+                        <stop offset="0%" stopColor="rgba(0,0,255, 1)"></stop>
+                        <stop offset="100%" stopColor="rgba(0,0,255, 0)"></stop>
                     </radialGradient>
                     <radialGradient
                         id="Gradient6"
@@ -131,11 +125,8 @@ const BgAni = () => {
                             values="0%;5%;0%"
                             repeatCount="indefinite"
                         ></animate>
-                        <stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop>
-                        <stop
-                            offset="100%"
-                            stop-color="rgba(255,0,0, 0)"
-                        ></stop>
+                        <stop offset="0%" stopColor="rgba(255,0,0, 1)"></stop>
+                        <stop offset="100%" stopColor="rgba(255,0,0, 0)"></stop>
                     </radialGradient>
                 </defs>
                 <rect

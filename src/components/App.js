@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AppRouter from "components/Router";
+import { RealMobile, PCMinusRealMobile } from "components/Responsive";
 import "css/App.css";
 
 function App() {
@@ -23,16 +24,29 @@ function App() {
 
     return (
         <>
-            <div id="progressBarContainer">
-                <div
-                    id="progressBar"
-                    style={{
-                        transform: `scale(1, ${scroll})`,
-                        opacity: 1,
-                        // opacity: `${scroll}`,
-                    }}
-                />
-            </div>
+            <PCMinusRealMobile>
+                <div id="progressBarContainer">
+                    <div
+                        id="progressBar"
+                        style={{
+                            transform: `scale(1, ${scroll})`,
+                            opacity: 1,
+                            // opacity: `${scroll}`,
+                        }}
+                    />
+                </div>
+            </PCMinusRealMobile>
+            <RealMobile>
+                <div id="progressBarContainer">
+                    <div
+                        id="progressBar"
+                        style={{
+                            transform: `scale(${scroll}, 1)`,
+                            opacity: 1,
+                        }}
+                    />
+                </div>
+            </RealMobile>
 
             <AppRouter />
         </>

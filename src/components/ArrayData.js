@@ -39,7 +39,7 @@ const ProjectData = [
         detail_info:
             "우측 하단의 플로팅 버튼을 통해 시간을 설정할 수 있고, 설정된 시간이 계속 반복됩니다. 시간을 설정하지 않았을 경우, 재생 버튼을 눌렀을 때 경고 문구가 뜹니다. 좌측 상단의 아이콘을 누르면 기본모드와 다크모드를 설정할 수 있습니다.",
         img: "https://source.unsplash.com/random/?nebula",
-        rep_img: images.repTimer,
+        rep_img: images.timer,
         github: link.interval_github,
         demo: link.interval_demo,
         figma: null,
@@ -93,10 +93,10 @@ const ProjectData = [
 
 const ExperienceData = [
     {
-        kind: "제6회 4차 산업혁명 인재양성 공유·협업페스티발",
+        kind: "award",
         title: "레시피 공유 및 밀키트 판매 어플리케이션",
         platform: "한국정보통신보안윤리학회",
-        project: "한국정보통신보안윤리학회",
+        project: "레시피 공유 및 밀키트 판매 어플리케이션",
         backImg: "https://source.unsplash.com/1rBg5YSi00c",
         img: img1,
         date: 2022,
@@ -107,12 +107,13 @@ const ExperienceData = [
         url1: null,
         url2: null,
         url3: null,
+        stroke: "#8E97F0",
     },
     {
         kind: "cooperation",
         title: "앙꼬 상품 메뉴판(일러스트)",
         platform: "ankko",
-        project: "ankko",
+        project: "메뉴판 일러스트",
         backImg: "https://source.unsplash.com/5TK1F5VfdIk",
         img: img2,
         date: 2023,
@@ -126,12 +127,13 @@ const ExperienceData = [
         url1: null,
         url2: null,
         url3: link.menu_pdf,
+        stroke: "#E0C7F2",
     },
     {
         kind: "cooperation",
         title: "앙꼬 상품 온라인몰 상세페이지",
         platform: "ankko",
-        project: "ankko",
+        project: "온라인몰 상세페이지",
         backImg: "https://source.unsplash.com/SAQl58G-RYs",
         img: img3,
         date: 2023,
@@ -154,6 +156,7 @@ const ExperienceData = [
         url1: link.outsource_use,
         url2: link.outsource_figma,
         url3: null,
+        stroke: "#868FAD",
     },
 ];
 

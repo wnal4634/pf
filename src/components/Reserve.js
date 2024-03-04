@@ -39,9 +39,7 @@ const Reserve = () => {
                         </a>
                     </div>
                     <div className={styles.reserve_n_top}>
-                        <div>
-                            ©{year.getFullYear()} KimJuMi. All Rights Reserved.
-                        </div>
+                        <div>©{year.getFullYear()} Kim Jumi.</div>
                         <a onClick={scrollToTop}>Back to top</a>
                     </div>
                 </div>
