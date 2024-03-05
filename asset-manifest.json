@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pf/static/css/main.e7317faf.css",
-    "main.js": "/pf/static/js/main.8cd5fa08.js",
+    "main.js": "/pf/static/js/main.ad2c59a0.js",
     "static/media/weather.png": "/pf/static/media/weather.637c8bceb253aa517f2f.png",
     "static/media/toDo.png": "/pf/static/media/toDo.e2b5e153b5fcd966d35f.png",
     "static/media/cookkitAdmin.png": "/pf/static/media/cookkitAdmin.3847aae118b4dc9b0eee.png",
@@ -39,10 +39,10 @@
     "static/media/js.png": "/pf/static/media/js.3dfb665e058d08c99f28.png",
     "index.html": "/pf/index.html",
     "main.e7317faf.css.map": "/pf/static/css/main.e7317faf.css.map",
-    "main.8cd5fa08.js.map": "/pf/static/js/main.8cd5fa08.js.map"
+    "main.ad2c59a0.js.map": "/pf/static/js/main.ad2c59a0.js.map"
   },
   "entrypoints": [
     "static/css/main.e7317faf.css",
-    "static/js/main.8cd5fa08.js"
+    "static/js/main.ad2c59a0.js"
   ]
 }
