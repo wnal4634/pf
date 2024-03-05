@@ -73,22 +73,22 @@ h2 {
 
 @media screen and (max-width: 479px) {
     /* 모바일 */
+    body {
+        overflow: hidden;
+    }
+
     #progressBarContainer {
         position: fixed;
         z-index: 10000000;
         width: 100%;
         top: 0;
-        left: 0; /* 변경 지점 */
+        left: 0;
     }
-
     #progressBar {
         background: black;
         transform-origin: top left;
         transform: scale(0, 0);
-        /* transform: scale(0, 0);
-        opacity: 0; */
     }
-
     #progressBarContainer,
     #progressBar {
         height: 7px;
@@ -170,3 +170,11 @@ h2 {
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 /* font-family: 'DM Serif Display', serif; */
+
+@font-face {
+    font-family: "OTEnjoystoriesBA";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}

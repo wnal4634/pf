@@ -16,6 +16,10 @@
             align-items: center;
             .initial {
                 cursor: pointer;
+                img {
+                    width: 40px;
+                    // border: 1px solid black;
+                }
             }
             .nav {
                 .link {
@@ -89,6 +93,11 @@
             animation-direction: normal;
             font: {
                 size: 0.9rem;
+            }
+            .initial {
+                img {
+                    width: 30px;
+                }
             }
         }
         .nav_mobile {

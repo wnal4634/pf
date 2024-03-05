@@ -1,6 +1,6 @@
 .ex_wrap {
-    margin-top: 125px;
-    padding: 70px 27px 0 20px;
+    margin-top: 50px;
+    padding: 100px 27px 0 20px;
     width: 100%;
     .ex {
         padding: 0 15vw;
@@ -215,8 +215,6 @@
                                             margin-top: 1rem;
                                         }
                                     }
-                                }
-                                .title {
                                 }
                                 .content {
                                     line-height: 1.4;
@@ -478,7 +476,7 @@
                             img {
                                 width: 70vw;
                                 padding: 2vw 10vw 5vw;
-                                height: fit-content;
+                                height: -webkit-fit-content;
                             }
                             .modal_content {
                                 flex-direction: column;

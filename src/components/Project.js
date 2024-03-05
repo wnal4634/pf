@@ -1,20 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import styles from "css/Project.module.scss";
-import Fade from "react-reveal/Fade";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import images from "components/ImagesImport";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import "css/Swiper-bundle.css";
-import colors from "components/SkillsColor";
-import link from "components/Link";
 import { WaveSVG, CircleSVG, RectSVG } from "components/SVG";
 import { ProjectData } from "components/ArrayData";
 import { gsap } from "gsap";
+import colors from "components/SkillsColor";
 
 const Projects = () => {
     let [data, setData] = useState(ProjectData);
@@ -208,59 +200,71 @@ const Projects = () => {
                                     {s.detail_info}
                                 </div>
                                 <div className={styles.detail_url}>
-                                    {s.github !== null ? (
-                                        <li
-                                            style={{
-                                                color: colors.Github,
-                                            }}
-                                            onClick={() => {
-                                                window.open(s.github);
-                                            }}
-                                        >
-                                            깃허브
-                                            <FontAwesomeIcon
-                                                icon={faArrowUpRightFromSquare}
-                                            />
-                                        </li>
-                                    ) : null}
-                                    {s.demo !== null ? (
-                                        <li
-                                            onClick={() => {
-                                                window.open(s.demo);
-                                            }}
-                                        >
-                                            데모
-                                            <FontAwesomeIcon
-                                                icon={faArrowUpRightFromSquare}
-                                            />
-                                        </li>
-                                    ) : null}
-                                    {s.figma !== null ? (
-                                        <li
-                                            style={{ color: colors.Figma }}
-                                            onClick={() => {
-                                                window.open(s.figma);
-                                            }}
-                                        >
-                                            피그마
-                                            <FontAwesomeIcon
-                                                icon={faArrowUpRightFromSquare}
-                                            />
-                                        </li>
-                                    ) : null}
-                                    {s.colab !== null ? (
-                                        <li
-                                            style={{ color: colors.Colab }}
-                                            onClick={() => {
-                                                window.open(s.colab);
-                                            }}
-                                        >
-                                            코랩
-                                            <FontAwesomeIcon
-                                                icon={faArrowUpRightFromSquare}
-                                            />
-                                        </li>
-                                    ) : null}
+                                    <div className={styles.skill}>{s.lan}</div>
+                                    <div className={styles.more}>
+                                        <span>더 알고 싶다면? →</span>
+                                        {s.github !== null ? (
+                                            <li
+                                                style={{
+                                                    color: colors.Github,
+                                                }}
+                                                onClick={() => {
+                                                    window.open(s.github);
+                                                }}
+                                            >
+                                                깃허브
+                                                <FontAwesomeIcon
+                                                    icon={
+                                                        faArrowUpRightFromSquare
+                                                    }
+                                                />
+                                            </li>
+                                        ) : null}
+                                        {s.demo !== null ? (
+                                            <li
+                                                onClick={() => {
+                                                    window.open(s.demo);
+                                                }}
+                                            >
+                                                데모
+                                                <FontAwesomeIcon
+                                                    icon={
+                                                        faArrowUpRightFromSquare
+                                                    }
+                                                />
+                                            </li>
+                                        ) : null}
+                                        {s.figma !== null ? (
+                                            <li
+                                                style={{ color: colors.Figma }}
+                                                onClick={() => {
+                                                    window.open(s.figma);
+                                                }}
+                                            >
+                                                피그마
+                                                <FontAwesomeIcon
+                                                    icon={
+                                                        faArrowUpRightFromSquare
+                                                    }
+                                                />
+                                            </li>
+                                        ) : null}
+                                        {s.colab !== null ? (
+                                            <li
+                                                style={{ color: colors.Colab }}
+                                                onClick={() => {
+                                                    window.open(s.colab);
+                                                }}
+                                            >
+                                                코랩
+                                                <FontAwesomeIcon
+                                                    icon={
+                                                        faArrowUpRightFromSquare
+                                                    }
+                                                />
+                                            </li>
+                                        ) : null}
+                                    </div>
                                 </div>
                             </div>
                         </div>

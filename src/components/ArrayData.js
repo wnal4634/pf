@@ -3,12 +3,17 @@ import link from "components/Link";
 import img1 from "img/ex/공모전_상장.png";
 import img2 from "img/ex/ankkoMenu.png";
 import img3 from "img/ex/ankkoDetailPage.png";
+import colors from "components/SkillsColor";
 
 const ProjectData = [
     {
         title: "레시피 공유 및 밀키트\n판매 어플리케이션",
-        info: "게시글 관련 기능과 유저간의 공유가 가능한 안드로이드 어플리케이션",
-        detail_sum: "자바와 PHP로 제작한 레시피 공유 및 밀키트 판매 앱입니다.",
+        info: "게시글 관련 기능과 유저간의 공유가 가능한 안드로이드 앱",
+        detail_sum: [
+            "자바와 PHP로 제작한 ",
+            <u>레시피 공유 및 밀키트 판매 앱</u>,
+            "입니다.",
+        ],
         detail_info:
             "앱은 자바와 MySQL을 활용해 제작했고, 앱 내 결제는 부트페이를 연동했습니다. (테스트 결제로 실제 결제가 이뤄지지 않습니다.) 관리자 페이지가 있어 회원 정보 등을 확인할 수 있습니다. 관리자 페이지(웹)는 PHP와 부트스트랩을 이용했습니다.\n사용자 페이지의 경우 회원가입, 로그인, 자동 로그인, 회원정보 수정, 게시글 작성, 게시글 수정, 게시글 삭제, 카테고리별 확인, 검색, 밀키트 구매, 제작할 밀키트 투표, 북마크, 공지사항 확인, 로그아웃이 가능합니다.",
         img: "https://source.unsplash.com/5YM26lUicfU",
@@ -17,25 +22,35 @@ const ProjectData = [
         demo: null,
         figma: link.recipe_figma,
         colab: null,
+        lan: [
+            <span style={{ color: colors.Java }}>JAVA</span>,
+            <span style={{ color: colors.PHP }}>PHP</span>,
+            <span style={{ color: colors.MySQL }}>MySQL</span>,
+        ],
     },
     {
-        title: "레시피 공유 및 밀키트\n판매 어플리케이션 관리자 페이지",
-        info: "위 어플리케이션의 관리자 페이지",
+        title: "레시피 공유 및 밀키트\n판매 앱 관리자 페이지",
+        info: "레시피 공유 및 밀키트 판매의 관리자 페이지",
         detail_sum:
-            "레시피 공유 및 밀키트 판매 어플리케이션의 관리자 페이지로, PHP와 부트스트랩을 이용해 제작했고, 데이터 시각화 자료는 파이썬을 사용했습니다.",
+            "레시피 공유 및 밀키트 판매 앱의 관리자 페이지로, PHP와 부트스트랩, 그리고 파이썬을 사용했습니다.",
         detail_info:
-            "회원관리, 레시피, 공지사항 작성, 공지사항 삭제, 밀키트 목록, 판매 데이터 시각화 자료 확인 등의 기능이 있습니다.",
+            "회원관리, 레시피, 공지사항 작성, 공지사항 삭제, 밀키트 목록, 판매 데이터 시각화 자료 확인 등의 기능이 있습니다. PHP로 안드로이드와 연동했으며, 데이터 시각화 자료의 경우, 파이썬으로 제작했습니다.",
         img: "https://source.unsplash.com/random/?black-abstract",
         rep_img: images.cookkitAdmin,
         github: link.recipe_php_github,
         demo: null,
         figma: null,
         colab: link.colab,
+        lan: [
+            <span style={{ color: colors.PHP }}>PHP</span>,
+            <span style={{ color: colors.Bootstrap }}>Bootstrap</span>,
+            <span style={{ color: colors.Python }}>Python</span>,
+        ],
     },
     {
         title: "인터벌 타이머",
         info: "지정한 시간만큼 계속 반복하는 타이머",
-        detail_sum: "플러터로 제작한 인터벌 타이머 앱 입니다.",
+        detail_sum: ["플러터로 제작한 ", <u>인터벌 타이머 앱</u>, "입니다."],
         detail_info:
             "우측 하단의 플로팅 버튼을 통해 시간을 설정할 수 있고, 설정된 시간이 계속 반복됩니다. 시간을 설정하지 않았을 경우, 재생 버튼을 눌렀을 때 경고 문구가 뜹니다. 좌측 상단의 아이콘을 누르면 기본모드와 다크모드를 설정할 수 있습니다.",
         img: "https://source.unsplash.com/random/?nebula",
@@ -44,11 +59,19 @@ const ProjectData = [
         demo: link.interval_demo,
         figma: null,
         colab: null,
+        lan: [
+            <span style={{ color: colors.Flutter }}>Flutter</span>,
+            <span style={{ color: colors.Dart }}>Dart</span>,
+        ],
     },
     {
         title: "투두리스트",
         info: "배경 이미지와 하단의 글귀가 새로고침 시에 랜덤으로 변경되는 투두리스트",
-        detail_sum: "바닐라 자바스크립트로 제작한 투두리스트입니다.",
+        detail_sum: [
+            "바닐라 자바스크립트로 제작한 ",
+            <u>투두리스트</u>,
+            "입니다.",
+        ],
         detail_info:
             "현재 시각을 한 눈에 볼 수 있으며 투두리스트를 작성하기 전, 이름 혹은 닉네임을 설정할 수 있습니다. 리스트를 작성한 후에 옆의 X버튼을 누르면 해당 리스트가 삭제됩니다. 리스트는 로컬 스토리지에 저장되어 브라우저에 재접속 하거나, 새로고침을 해도 남아 있습니다. 배경 이미지와 하단의 글귀는 새로고침을 할 때마다 랜덤으로 변경됩니다.",
         img: "https://source.unsplash.com/XaVNix5mpDQ",
@@ -57,11 +80,18 @@ const ProjectData = [
         demo: link.toDo_demo,
         figma: null,
         colab: null,
+        lan: [
+            <span style={{ color: colors.JS }}>JS</span>,
+            <span style={{ color: colors.CSS }}>CSS</span>,
+        ],
     },
     {
         title: "개인 웹 포트폴리오",
         info: "현재 화면의 포트폴리오",
-        detail_sum: "개인 웹 포트폴리오이며 반응형을 고려하여 작업하였습니다.",
+        detail_sum: [
+            <u>개인 웹 포트폴리오</u>,
+            "이며 반응형을 고려하여 작업했습니다.",
+        ],
         detail_info:
             "이미지는 모바일 화면의 크기일 때 보이는 모습으로, 웹 화면의 사이즈와 달리 상단의 메뉴가 접힌 모습으로 변경됩니다. 변경된 메뉴는 상단바 우측의 아이콘을 통해 펴고 닫을 수 있습니다.각 메뉴를 클릭하면 포트폴리오에서 해당하는 부분으로 이동합니다. 좌측의 아이콘은 화면이 어디에 있든 최상단으로 이동할 수 있습니다. 사용할 수 있는 기술들과 제작한 프로젝트들을 정리했습니다.",
         img: "https://source.unsplash.com/kCo-zEqc9IY",
@@ -70,24 +100,31 @@ const ProjectData = [
         demo: null,
         figma: null,
         colab: null,
+        lan: [
+            <span style={{ color: colors.React }}>React</span>,
+            <span style={{ color: colors.SCSS }}>SCSS</span>,
+        ],
     },
     {
         title: `서울시 실시간 날씨\n& 대기오염정보`,
         info: "공공데이터 API 사용,\n행정구별 날씨와 해당 기온에 맞는 옷 종류 제안하는 웹 페이지",
         detail_sum: [
-            `공공데이터 API를 사용해`,
-            <>&nbsp;</>,
+            "공공데이터 API를 사용해 ",
             <u>서울시 실시간 날씨와 대기오염정보</u>,
-            `를 확인할 수 있는 웹페이지입니다.`,
+            "를 확인할 수 있는 웹페이지입니다.",
         ],
         detail_info:
-            "정보는 각 행정구별로 확인할 수 있으며, 날씨와 더불어 해당 기온에 맞는 옷 종류를 추천합니다. 또한 비나 눈이 오는 경우에는 우산을, 미세먼지 수치가 높은 경우에는 마스크를 제안합니다. 미세먼지의 수치가 좋은 경우에는 아무것도 뜨지 않습니다.",
+            "정보를 각 행정구별로 확인할 수 있으며, 날씨와 더불어 해당 기온에 맞는 옷 종류를 추천합니다. 또한 비나 눈이 오는 경우에는 우산을, 미세먼지 수치가 높은 경우에는 마스크를 제안합니다. 미세먼지의 수치가 좋은 경우에는 제안을 하지 않습니다.",
         img: "https://source.unsplash.com/ExJRuwczytw",
         rep_img: images.weather,
         github: link.weatherRec_github,
         demo: link.weatherRec_demo,
         figma: null,
         colab: null,
+        lan: [
+            <span style={{ color: colors.React }}>React</span>,
+            <span style={{ color: colors.CSS }}>CSS</span>,
+        ],
     },
 ];
 

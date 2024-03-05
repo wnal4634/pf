@@ -269,6 +269,12 @@ li {
             position: relative;
             white-space: nowrap;
             padding: 0 15vw;
+            transition: 0.3s;
+            &:hover {
+                color: #1d1a3f;
+                transition: 0.3s;
+            }
+
             &:after {
                 text-align: center;
                 white-space: normal;
@@ -298,7 +304,7 @@ li {
             &::before {
                 border-style: solid;
                 border-width: 0 0.75em 1em 0.75em;
-                border-color: transparent transparent #3e474f transparent;
+                border-color: transparent transparent #1d1a3f transparent;
                 top: 110%;
                 content: "";
                 margin-left: -0.5em;
@@ -313,7 +319,7 @@ li {
 
             /*== speech bubble ==*/
             &::after {
-                background: #3e474f;
+                background: #1d1a3f;
                 border-radius: 0.25em;
                 top: 190%;
                 color: #edeff0;

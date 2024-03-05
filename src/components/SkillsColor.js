@@ -1,6 +1,7 @@
 const colors = {
     HTML: `#ff5722`,
     CSS: `#264de4`,
+    SCSS: `#cf649b`,
     JS: `#CCB100`,
     Dart: `#00579c`,
     React: `#5ed3f3`,

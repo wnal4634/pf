@@ -172,31 +172,6 @@
                 color: white;
                 flex: 1;
                 align-items: center;
-                // .swiper {
-                //     width: 35vw;
-                //     margin-bottom: 30px;
-                //     padding: 0 1vw;
-                //     -webkit-touch-callout: none;
-                //     -webkit-user-select: none;
-                //     -khtml-user-select: none;
-                //     -moz-user-select: none;
-                //     -ms-user-select: none;
-                //     user-select: text;
-                //     .mySwiper {
-                //         width: 50vw;
-                //         img {
-                //             filter: grayscale(0%);
-                //             width: 45vw;
-                //             height: auto;
-                //             margin: 0 auto;
-                //             object-fit: contain;
-                //         }
-                //         .detail_img {
-                //             background-color: #9b9b9b;
-                //             object-fit: contain;
-                //         }
-                //     }
-                // }
                 img {
                     filter: grayscale(0%);
                     padding: 0 10vw;
@@ -228,27 +203,42 @@
                         }
                     }
                     .detail_url {
-                        align-self: end;
-                        li {
-                            color: #1d1a3f;
-                            padding: 3px 7px;
-                            border-radius: 5px;
-                            background-color: #f2f2ffb9;
-                            cursor: pointer;
-                            transition: 0.3s;
-                            &:first-child {
-                                margin-right: 10px;
-                            }
-                            svg {
-                                margin-left: 5px;
-                                align-self: center;
-                                position: unset;
-                                opacity: 1;
-                            }
-                            &:hover {
-                                letter-spacing: 3px;
-                                transition: 0.3s;
+                        justify-content: space-between;
+                        width: 100%;
+                        .skill {
+                            span {
+                                // color: #1d1a3f;
+                                padding: 3px 7px;
+                                border-radius: 5px;
                                 background-color: #f2f2ff;
+                                margin-right: 5px;
+                            }
+                        }
+                        .more {
+                            span {
+                                font: {
+                                    family: "OTEnjoystoriesBA";
+                                    size: 1.3rem;
+                                }
+                            }
+                            li {
+                                color: #1d1a3f;
+                                padding: 3px 7px;
+                                border-radius: 5px;
+                                background-color: #f2f2ff;
+                                cursor: pointer;
+                                transition: 0.3s;
+                                margin-left: 10px;
+                                svg {
+                                    margin-left: 5px;
+                                    align-self: center;
+                                    position: unset;
+                                    opacity: 1;
+                                }
+                                &:hover {
+                                    letter-spacing: 3px;
+                                    transition: 0.3s;
+                                }
                             }
                         }
                     }
@@ -275,13 +265,16 @@
                     }
                 }
                 .img_inside {
+                    height: 100%;
                     img {
                         width: 40vw;
-                        height: 100vh;
+                        // height: 100vh;
+                        height: -webkit-fill-available;
                         z-index: 0;
                         filter: brightness(0.5) grayscale(100%);
                     }
                     .noise {
+                        position: absolute;
                         width: 40vw;
                         height: 100vh;
                         z-index: 10;

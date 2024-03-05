@@ -1,13 +1,13 @@
 .introduce_wrap {
     display: flex;
-    padding: 0 20px;
+    margin: 0 27px 0 20px;
     width: 100%;
     height: 100vh;
     .main_text {
         width: 100%;
         flex-direction: column;
         z-index: 1;
-        padding: 15vh 3vw 0;
+        padding: 15vh 5vw 0;
         font: {
             size: 9vw;
             family: "neurimboGothicRegular";
@@ -17,15 +17,15 @@
             width: 100%;
             color: rgba(182, 182, 182, 0.2);
             // color: #403973;
-            background: linear-gradient(to right, #b6b6b6, #b6b6b6) no-repeat;
-            -webkit-background-clip: text;
-            background: {
-                clip: text;
-                size: 0%;
-            }
-            transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
 
-            border-bottom: 1px solid #2f2b28;
+            // border-bottom: 1px solid #2f2b28;
+
+            background: rgba(182, 182, 182, 0.5);
+            color: transparent;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
 
             display: flex;
             flex-direction: column;
@@ -38,6 +38,7 @@
                 height: 100%;
                 background-color: #4246ce;
                 color: #0d0d0d;
+                text-shadow: none;
 
                 clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
                 transform-origin: center;
@@ -57,34 +58,80 @@
 @media screen and (min-width: 1024px) {
     /* 데탑 */
 }
-@media screen and (min-width: 768px) and (max-width: 1340px) {
+@media screen and (max-width: 1400px) {
     /* 타블렛 전*/
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    /* 타블렛 */
-}
-
-@media screen and (min-width: 480px) and (max-width: 767px) {
-    /* 타블렛과 모바일 사이 */
+    .introduce_wrap {
+        // background-color: pink;
+        height: unset;
+        .main_text {
+            width: 100%;
+            flex-direction: column;
+            z-index: 1;
+            padding: 15vh 5vw 0;
+            font: {
+                size: 15vw;
+                family: "neurimboGothicRegular";
+                weight: bolder;
+            }
+            .text {
+                margin-bottom: 40px;
+                color: #1d1a3f;
+                border-bottom: unset;
+                line-height: 0.9;
+                transition: 0.3s;
+                span {
+                    all: unset;
+                    line-height: normal;
+                    transition: 0.3s;
+                    position: unset;
+                    width: 100%;
+                    height: 100%;
+                    text-align: right;
+                    // background-color: #4246ce;
+                    background: rgba(128, 118, 190, 0.5);
+                    color: transparent;
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    background-clip: text;
+                    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+                    font: {
+                        size: 8vw;
+                    }
+                }
+                &:hover {
+                    // background: rgba(182, 182, 182, 1);
+                    // color: transparent;
+                    // -webkit-background-clip: text;
+                    // -moz-background-clip: text;
+                    // background-clip: text;
+                    // text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+                    // transition: 0.3s;
+                    span {
+                        clip-path: unset;
+                        // color: #1d1a3f;
+                        background: rgba(128, 118, 190, 1);
+                        color: transparent;
+                        -webkit-background-clip: text;
+                        -moz-background-clip: text;
+                        background-clip: text;
+                        text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 479px) {
     /* 모바일 */
     .introduce_wrap {
-        padding: 0 7vw;
+        padding: 15vh 7vw 0;
         height: unset;
         .main_text {
-            padding: 250px 0 130px;
-            font: {
-                size: 4rem;
-            }
+            padding: 0;
             .text {
-                span {
-                    font: {
-                        size: 2.3rem;
-                    }
-                }
+                border-bottom: unset;
             }
         }
     }

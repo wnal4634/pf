@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import styles from "css/Top.module.scss";
 import { Mobile, PC } from "components/Responsive";
 import j_icon from "img/j_icon.png";
+import logo from "img/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
@@ -40,7 +41,7 @@ const Side = () => {
                 <div className={styles.header}>
                     <div className={styles.header_wrap}>
                         <div className={styles.initial} onClick={reload}>
-                            JM
+                            <img src={logo} />
                         </div>
                         <div className={styles.nav} ref={appearLink}>
                             <Link
@@ -136,7 +137,7 @@ const Side = () => {
                     ) : (
                         <div className={styles.initial_mobile}>
                             <div className={styles.initial} onClick={reload}>
-                                JM
+                                <img src={logo} />
                             </div>
                             <FontAwesomeIcon
                                 icon={faBars}
