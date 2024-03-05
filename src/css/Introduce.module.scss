@@ -3,7 +3,6 @@
     margin: 0 27px 0 20px;
     width: 100%;
     height: 100vh;
-    height: -webkit-fill-available;
     .main_text {
         width: 100%;
         flex-direction: column;
@@ -12,7 +11,7 @@
         font: {
             size: 9vw;
             family: "neurimboGothicRegular";
-            weight: bolder;
+            weight: 600;
         }
         .text {
             width: 100%;
@@ -63,7 +62,15 @@
     /* 타블렛 전*/
     .introduce_wrap {
         // background-color: pink;
-        height: unset;
+        height: unset; //ios safari에서만 사용할 수치 정의
+        @supports (-webkit-touch-callout: none) {
+            :root {
+                --light: 300;
+            }
+        }
+        /* font weight */
+        $font-weight_b: var(--light, 600);
+
         .main_text {
             width: 100%;
             flex-direction: column;
@@ -72,12 +79,14 @@
             font: {
                 size: 15vw;
                 family: "neurimboGothicRegular";
-                weight: bolder;
+                weight: $font-weight_b;
             }
             .text {
+                all: unset;
+                display: flex;
+                flex-direction: column;
                 margin-bottom: 40px;
                 color: #1d1a3f;
-                border-bottom: unset;
                 line-height: 0.9;
                 transition: 0.3s;
                 span {
@@ -100,16 +109,8 @@
                     }
                 }
                 &:hover {
-                    // background: rgba(182, 182, 182, 1);
-                    // color: transparent;
-                    // -webkit-background-clip: text;
-                    // -moz-background-clip: text;
-                    // background-clip: text;
-                    // text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
-                    // transition: 0.3s;
                     span {
                         clip-path: unset;
-                        // color: #1d1a3f;
                         background: rgba(128, 118, 190, 1);
                         color: transparent;
                         -webkit-background-clip: text;
@@ -132,7 +133,10 @@
         .main_text {
             padding: 0;
             .text {
-                border-bottom: unset;
+                all: unset;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 40px;
             }
         }
     }

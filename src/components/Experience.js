@@ -297,8 +297,8 @@ const Experience = () => {
                             <div className={styles.ex_content_wrap}>
                                 <div className={styles.ex_list_header}>
                                     <div className={styles.header}>type</div>
-                                    <div className={styles.header}>project</div>
                                     <div className={styles.header}>host</div>
+                                    <div className={styles.header}>project</div>
                                 </div>
                                 {data.map((s, i) => (
                                     <div
@@ -323,10 +323,10 @@ const Experience = () => {
                                                 {s.kind}
                                             </div>
                                             <div className={styles.content}>
-                                                {s.project}
+                                                {s.platform}
                                             </div>
                                             <div className={styles.content}>
-                                                {s.platform}
+                                                {s.project}
                                             </div>
                                         </div>
                                         <div

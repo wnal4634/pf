@@ -22,16 +22,19 @@
                 flex-direction: column;
                 right: 7px;
                 // transform: translateY(50px);
-                width: 60vw;
+                width: 65vw;
                 .ex_list_header,
                 .ex_list_content {
                     border-bottom: 1px solid #1d1a3f;
                 }
                 .header {
                     flex: 1;
-                    // &:first-child {
-                    //     flex: 0.7;
-                    // } 얘는 되는데 아래 content에는 안먹힘 방법찾기
+                    &:first-child {
+                        flex: 0.8;
+                    }
+                    &:last-child {
+                        flex: 1.7;
+                    }
                     margin: 1.5vw 0;
                     text-transform: uppercase;
                     font: {
@@ -49,11 +52,14 @@
                             opacity: 1;
                             flex: 1;
                             margin: 1.5vw 0;
-                            // &:first-child {
-                            //     flex: 0.7;
-                            // } 안먹힘
                             font: {
                                 size: 1rem;
+                            }
+                            &:nth-last-of-type(1) {
+                                flex: 1.7;
+                            }
+                            &:nth-last-of-type(3) {
+                                flex: 0.8;
                             }
                         }
                         .rolling_wrap {
@@ -318,6 +324,15 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     /* 타블렛 */
+    .ex_wrap {
+        .ex {
+            .col {
+                .ex_content_wrap {
+                    // width: 80vw;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {

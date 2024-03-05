@@ -40,8 +40,22 @@ const PC = ({ children }) => {
 
     return <>{isPc && children}</>;
 };
+const PCMinusPC = ({ children }) => {
+    const isPCMinusPC = useMediaQuery({
+        query: "(min-width: 1401px)",
+    });
 
-export { Mobile, PC, RealMobile, PCMinusRealMobile };
+    return <>{isPCMinusPC && children}</>;
+};
+const MinusPC = ({ children }) => {
+    const isMinusPC = useMediaQuery({
+        query: "(max-width: 1400px)",
+    });
+
+    return <>{isMinusPC && children}</>;
+};
+
+export { Mobile, PC, RealMobile, PCMinusRealMobile, MinusPC, PCMinusPC };
 
 // @media screen and (min-width:1024px) {
 //     /* 데탑 */
