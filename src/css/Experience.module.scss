@@ -187,7 +187,9 @@
                             }
                             img {
                                 width: 100%;
-                                height: fit-content;
+                                // height: fit-content;
+                                object-fit: cover;
+                                height: 42vw;
                             }
                             .modal_content {
                                 flex-direction: column;
