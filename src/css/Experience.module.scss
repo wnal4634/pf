@@ -21,7 +21,6 @@
                 position: absolute;
                 flex-direction: column;
                 right: 7px;
-                // transform: translateY(50px);
                 width: 65vw;
                 .ex_list_header,
                 .ex_list_content {
@@ -68,7 +67,7 @@
                                 position: absolute;
                                 display: flex;
                                 align-items: center;
-                                width: 60vw;
+                                width: 65vw;
                                 height: 4.16vw;
                                 overflow: hidden;
                                 ul {
@@ -310,6 +309,26 @@
                                     font-weight: 600;
                                 }
                             }
+                        }
+                    }
+                }
+                .arrow {
+                    pointer-events: none;
+                    position: absolute;
+                    transform: translateY(90px);
+                    svg {
+                        stroke-dasharray: 3588.711px;
+                        opacity: 0;
+                        width: 30vw;
+                        transform: translateY(12vw);
+                        animation: arrowOut 0.7s ease-in-out forwards;
+                    }
+                }
+                &:hover {
+                    .arrow {
+                        svg {
+                            pointer-events: none;
+                            animation: arrow 1s ease-in-out forwards;
                         }
                     }
                 }
@@ -675,5 +694,25 @@
     100% {
         opacity: 0;
         transform: translate(-25vw, 0) rotate(-5deg);
+    }
+}
+@keyframes arrow {
+    0% {
+        opacity: 1;
+        stroke-dashoffset: 3588.711px;
+    }
+    100% {
+        opacity: 1;
+        stroke-dashoffset: 1810px;
+    }
+}
+@keyframes arrowOut {
+    0% {
+        opacity: 1;
+        stroke-dashoffset: 1810px;
+    }
+    100% {
+        opacity: 1;
+        stroke-dashoffset: 3588.711px;
     }
 }

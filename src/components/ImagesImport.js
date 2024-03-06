@@ -42,6 +42,7 @@ import js_4_img2 from "img/js_4/2.png";
 import js_4_img3 from "img/js_4/3.png";
 import toDo from "img/js_4/toDo.png";
 import js_5_img1 from "img/js_5/1.png";
+import pf from "img/js_5/pf.png";
 import js_6_img1 from "img/js_6/1.png";
 import js_6_img2 from "img/js_6/2.png";
 import js_6_img3 from "img/js_6/3.png";
@@ -104,6 +105,7 @@ const images = {
     js_4_img3,
     toDo,
     js_5_img1,
+    pf,
     js_6_img1,
     js_6_img2,
     js_6_img3,

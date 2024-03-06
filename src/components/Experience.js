@@ -1,71 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import styles from "css/Experience.module.scss";
-import Modal from "react-modal";
 import { gsap } from "gsap";
-import { ArrowSVG } from "components/SVG";
-import Fade from "react-reveal/Fade";
+import { ArrowSVG, ZigzagSVG } from "components/SVG";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faXmark,
-    faArrowUpRightFromSquare,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { RealMobile, PCMinusRealMobile } from "components/Responsive";
-import link from "components/Link";
 import BgAni from "./BgAni";
 import { ExperienceData } from "components/ArrayData";
-import { ZigzagSVG } from "components/SVG";
 
-const ModalStyle = {
-    overlay: {
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: "rgba(0, 0, 0, 0.5)",
-        zIndex: 1000,
-    },
-    content: {
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate3d(-51%, -50%, 0)",
-        // width: "50%",
-        height: "100%",
-        // border: "1px solid #ccc",
-        // background: "#fff",
-        overflow: "auto",
-        WebkitOverflowScrolling: "touch",
-        // borderRadius: "10px",
-        outline: "none",
-        // padding: "20px",
-    },
-};
-const ModalStyleMobile = {
-    overlay: {
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: "rgba(0, 0, 0, 0.3)",
-    },
-    content: {
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate3d(-50%, -50%, 0)",
-        width: "350px",
-        height: "550px",
-        // border: "1px solid #ccc",
-        background: "#fff",
-        overflow: "auto",
-        WebkitOverflowScrolling: "touch",
-        borderRadius: "10px",
-        outline: "none",
-        padding: "20px",
-    },
-};
 const ScrollDiv = () => {
     return (
         <div className={styles.rolling_text}>
@@ -507,6 +449,9 @@ const Experience = () => {
                                         </div>
                                     </div>
                                 ))}
+                                <div className={styles.arrow}>
+                                    <ArrowSVG />
+                                </div>
                             </div>
                         </div>
                     </div>
