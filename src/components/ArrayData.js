@@ -35,7 +35,7 @@ const ProjectData = [
             "레시피 공유 및 밀키트 판매 앱의 관리자 페이지로, PHP와 부트스트랩, 그리고 파이썬을 사용했습니다.",
         detail_info:
             "회원관리, 레시피, 공지사항 작성, 공지사항 삭제, 밀키트 목록, 판매 데이터 시각화 자료 확인 등의 기능이 있습니다. PHP로 안드로이드와 연동했으며, 데이터 시각화 자료의 경우, 파이썬으로 제작했습니다.",
-        img: "https://source.unsplash.com/random/?black-abstract",
+        img: "https://source.unsplash.com/rTZW4f02zY8",
         rep_img: images.cookkitAdmin,
         github: link.recipe_php_github,
         demo: null,
@@ -53,7 +53,7 @@ const ProjectData = [
         detail_sum: ["플러터로 제작한 ", <u>인터벌 타이머 앱</u>, "입니다."],
         detail_info:
             "우측 하단의 플로팅 버튼을 통해 시간을 설정할 수 있고, 설정된 시간이 계속 반복됩니다. 시간을 설정하지 않았을 경우, 재생 버튼을 눌렀을 때 경고 문구가 뜹니다. 좌측 상단의 아이콘을 누르면 기본모드와 다크모드를 설정할 수 있습니다.",
-        img: "https://source.unsplash.com/random/?nebula",
+        img: "https://source.unsplash.com/usmhPmT5sj0",
         rep_img: images.timer,
         github: link.interval_github,
         demo: link.interval_demo,
