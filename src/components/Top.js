@@ -13,7 +13,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 const Side = () => {
     const [isToggled, setIsToggled] = useState(false);
     const appearLink = useRef();
-
+    const v2 = "https://wnal4634.github.io/pf_v2/";
     const goTop = () => {
         window.scrollTo({
             top: 0,
@@ -76,6 +76,9 @@ const Side = () => {
                             >
                                 <div>contact me</div>
                             </Link>
+                            <a href={v2} className={styles.link}>
+                                <div>v2</div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -131,6 +134,11 @@ const Side = () => {
                                     >
                                         contact me
                                     </Link>
+                                </li>
+                                <li className={styles.menu_item}>
+                                    <a href={v2} className={styles.link}>
+                                        v2
+                                    </a>
                                 </li>
                             </ul>
                         </div>
