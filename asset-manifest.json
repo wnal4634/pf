@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pf/static/css/main.1a69ff9f.css",
-    "main.js": "/pf/static/js/main.b89e9b90.js",
+    "main.css": "/pf/static/css/main.21479833.css",
+    "main.js": "/pf/static/js/main.0e5c12ec.js",
     "static/media/weather.png": "/pf/static/media/weather.637c8bceb253aa517f2f.png",
     "static/media/toDo.png": "/pf/static/media/toDo.e2b5e153b5fcd966d35f.png",
     "static/media/cookkitAdmin.png": "/pf/static/media/cookkitAdmin.3847aae118b4dc9b0eee.png",
@@ -39,11 +39,11 @@
     "static/media/css.png": "/pf/static/media/css.4a6549b8c2b4cda8bb88.png",
     "static/media/js.png": "/pf/static/media/js.3dfb665e058d08c99f28.png",
     "index.html": "/pf/index.html",
-    "main.1a69ff9f.css.map": "/pf/static/css/main.1a69ff9f.css.map",
-    "main.b89e9b90.js.map": "/pf/static/js/main.b89e9b90.js.map"
+    "main.21479833.css.map": "/pf/static/css/main.21479833.css.map",
+    "main.0e5c12ec.js.map": "/pf/static/js/main.0e5c12ec.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a69ff9f.css",
-    "static/js/main.b89e9b90.js"
+    "static/css/main.21479833.css",
+    "static/js/main.0e5c12ec.js"
   ]
 }
